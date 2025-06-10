@@ -502,11 +502,12 @@ body {
 }
 
 .stat-description {
-    color: #55355f;
+    color: #5a2a6b;
     font-size: 1.1rem;
     opacity: 0.8;
     margin-bottom: 0;
     flex-grow: 1;
+
 }
 
 .stat-detail {
