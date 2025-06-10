@@ -1,28 +1,12 @@
 import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../css/LandingPage.css';
 
 const LandingPage = () => {
     return (
         <>
-            {/* Header */}
-            <header className="header">
-                <nav className="nav-container">
-                    <div className="logo">
-                        <span className="logo-icon">🧠</span>
-                        ADHD Self-Assessment Workbook
-                    </div>
-                    <ul className="nav-menu">
-                        <li><a href="#home">ADHD Resources</a></li>
-                        <li><a href="#shop">Shop</a></li>
-                        <li><a href="#about">About us</a></li>
-                    </ul>
-                    <div className="nav-actions">
-                        <input type="text" className="search-box" placeholder="Learn to find..." />
-                        <button className="btn-primary">Search</button>
-                        <button className="btn-secondary">Start ADHD test</button>
-                    </div>
-                </nav>
-            </header>
+            <Header />
 
             {/* Hero Section */}
             <section className="hero">
@@ -60,51 +44,68 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Features Section */}
+            {/* Features Section - New Layout */}
             <section className="features">
                 <div className="features-container">
                     <h2>Learn about ADHD with our illustrated content!</h2>
                     <p className="features-subtitle">We combine all traits to help you understand and find out something about yourself.</p>
                     
-                    <div className="features-layout">
-                        {/* Left Column */}
-                        <div className="left-column">
-                            <span className="cute-brain">🧠</span>
-                            <h3 className="brand-title">ADHD & Cute</h3>
-                            <p className="question-text">Do you think you may have ADHD?</p>
-                            <p className="subtitle-text">ADHD explained - Learn the facts</p>
-                            <p className="description-text">Do you think someone else should get assessed for ADHD? Send them our content to read! Raising early awareness for neurodivergency is crucial. We make learning about ADHD informative and accessible.</p>
+                    <div className="features-new-layout">
+                        {/* Left Large Card */}
+                        <div className="left-large-card">
+                            <div className="cute-brain-container">
+                                <span className="cute-brain">🧠</span>
+                                <div className="brand-badge">ADHD & CUTE</div>
+                            </div>
+                            <h3 className="main-question">Do you think you may have ADHD?</h3>
+                            <p className="subtitle-text">We created a free test based on the official ADHD symptoms described in the DSM-V to give you a sense of how likely you are to be ADHD, and what type of ADHD (Hyperactive-Impulsive, Inattentive or Combined).</p>
+                            <button className="cta-button">Try our Free ADHD Test</button>
                         </div>
 
-                        {/* Right Column - 4 Cards Grid */}
-                        <div className="features-grid">
-                            <div className="feature-card adhd">
-                                <span className="feature-emoji">🎀</span>
-                                <h3>ADHD</h3>
-                                <p>Basic Info</p>
+                        {/* Right Section */}
+                        <div className="right-section">
+                            {/* Top 4 Small Cards */}
+                            <div className="small-cards-grid">
+                                <div className="small-card adhd-awareness">
+                                    <div className="card-icon">
+                                        <span>🎀</span>
+                                    </div>
+                                    <h4>ADHD Awareness</h4>
+                                </div>
+                                <div className="small-card adhd-diagnosis">
+                                    <div className="card-icon">
+                                        <span>👨‍⚕️</span>
+                                    </div>
+                                    <h4>ADHD Diagnosis</h4>
+                                </div>
+                                <div className="small-card adhd-symptoms">
+                                    <div className="card-icon">
+                                        <span>📋</span>
+                                    </div>
+                                    <h4>ADHD Symptoms</h4>
+                                </div>
+                                <div className="small-card living-adhd">
+                                    <div className="card-icon">
+                                        <span>👥</span>
+                                    </div>
+                                    <h4>Living with ADHD</h4>
+                                </div>
                             </div>
-                            <div className="feature-card diagnosis">
-                                <span className="feature-emoji">📊</span>
-                                <h3>ADHD Diagnosis</h3>
-                                <p>Getting Assessed</p>
-                            </div>
-                            <div className="feature-card symptoms">
-                                <span className="feature-emoji">⚡</span>
-                                <h3>ADHD Symptoms</h3>
-                                <p>Signs & Traits</p>
-                            </div>
-                            <div className="feature-card living">
-                                <span className="feature-emoji">💖</span>
-                                <h3>Living with ADHD</h3>
-                                <p>Daily Life Tips</p>
+
+                            {/* Bottom Horizontal Card */}
+                            <div className="horizontal-card">
+                                <div className="horizontal-card-content">
+                                    <div className="workbook-icon">
+                                        <span>📖</span>
+                                    </div>
+                                    <div className="workbook-text">
+                                        <h3>Start your ADHD Diagnosis journey!</h3>
+                                        <p>Get the answers you are looking for and unlock your fullest potential with the ADHD self-assessment workbook!</p>
+                                        <a href="#" className="workbook-link">Get the ADHD Self-Assessment Workbook</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div className="cta-box">
-                        <h3>Start your ADHD Diagnosis Journey!</h3>
-                        <p>Get the answers you are looking for and make your ADHD self-assessment workbook with our specialized content.</p>
-                        <button className="btn-primary">Get The ADHD Assessment Workbook</button>
                     </div>
                 </div>
             </section>
@@ -116,15 +117,18 @@ const LandingPage = () => {
                         <h2>Why it's critical to raise awareness about ADHD:</h2>
                         <div className="stat-item">
                             <div className="stat-number">5%</div>
-                            <div className="stat-description">of adults have ADHD based on studies</div>
+                            <div className="stat-description">of adults have ADHD based on recent studies</div>
+                            <p className="stat-detail">Approximately 8 million adults in the United States are affected by ADHD. ADHD does not affect just children.</p>
                         </div>
                         <div className="stat-item">
                             <div className="stat-number">80%</div>
                             <div className="stat-description">of adults with ADHD are not diagnosed</div>
+                            <p className="stat-detail">Symptoms of adult ADHD can be misconstrued as those associated with depression, anxiety, or bipolar disorder.</p>
                         </div>
                         <div className="stat-item">
                             <div className="stat-number">75%</div>
-                            <div className="stat-description">of diagnosed adults with ADHD are never treated</div>
+                            <div className="stat-description">of diagnosed adults with ADHD are not getting treatment</div>
+                            <p className="stat-detail">This is due to a lack of understanding of ADHD, costly treatment expenses not always covered by insurance, and the stigma that ADD/ADHD still carries in some areas.</p>
                         </div>
                     </div>
                     <div className="stats-visual">
@@ -385,57 +389,7 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="footer">
-                <div className="footer-container">
-                    <div>
-                        <div className="footer-brand">
-                            <span className="footer-brand-emoji">🧠</span>
-                            The_mini_adhd_coach
-                        </div>
-                        <p>ADHD explained with cute doodles</p>
-                        <p>Getting diagnosed with ADHD at 29 changed my life and inspired me to help others like me. Seeing so much interest in my doodles on Instagram encouraged me to do even more so I created this website to do just that.</p>
-                        <p>#ADHD explained with cute doodles</p>
-                        <div className="social-icons">
-                            <a href="#" className="social-icon">📘</a>
-                            <a href="#" className="social-icon">📷</a>
-                            <a href="#" className="social-icon">🐦</a>
-                            <a href="#" className="social-icon">💼</a>
-                            <a href="#" className="social-icon">🎵</a>
-                        </div>
-                    </div>
-                    
-                    <div className="footer-section">
-                        <h3>Legal</h3>
-                        <ul>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Terms and conditions</a></li>
-                            <li><a href="#">Cookie policy</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div className="footer-section">
-                        <h3>ADHD Resources</h3>
-                        <ul>
-                            <li><a href="#">ADHD Awareness</a></li>
-                            <li><a href="#">ADHD Diagnosis</a></li>
-                            <li><a href="#">ADHD Symptoms</a></li>
-                            <li><a href="#">Living with ADHD</a></li>
-                        </ul>
-                        <p>Browse all our articles about ADHD →</p>
-                        
-                        <h3>Newsletter</h3>
-                        <div className="newsletter">
-                            <input type="email" placeholder="Your email address" />
-                            <button className="btn-secondary">Subscribe</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="footer-bottom">
-                    <p>Website by Sofia Odyssey</p>
-                </div>
-            </footer>
+            <Footer />
         </>
     );
 };

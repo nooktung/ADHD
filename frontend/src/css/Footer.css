@@ -1,0 +1,322 @@
+/* Footer Styles */
+.footer {
+    background-color: #356856;
+    color: #ffffff;
+    padding: 3rem 0 1rem;
+    margin-top: auto;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  /* Brand Section */
+  .footer-brand {
+    max-width: 400px;
+  }
+  
+  .brand-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e0c3fc 0%, #9bb5ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .brand-tagline {
+    font-size: 14px;
+    color: #b0c4de;
+    margin: 0;
+  }
+  
+  .brand-description {
+    margin-bottom: 1.5rem;
+  }
+  
+  .brand-description p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  }
+  
+  .brand-description p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .hashtag {
+    font-style: italic;
+    color: #b0c4de;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #2d4a6b;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b0c4de;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    background-color: #3d5a7b;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Instagram specific color */
+  .social-icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  
+  /* YouTube specific color */
+  .social-icon.youtube:hover {
+    background-color: #ff0000;
+  }
+  
+  /* Facebook specific color */
+  .social-icon.facebook:hover {
+    background-color: #1877f2;
+  }
+  
+  /* LinkedIn specific color */
+  .social-icon.linkedin:hover {
+    background-color: #0077b5;
+  }
+  
+  /* Twitter specific color */
+  .social-icon.twitter:hover {
+    background-color: #1da1f2;
+  }
+  
+  /* TikTok specific color */
+  .social-icon.tiktok:hover {
+    background-color: #000000;
+  }
+  
+  /* Footer Sections */
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-links a {
+    color: #b0c4de;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ffffff;
+  }
+  
+  .browse-all {
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+  
+  .browse-all:hover {
+    color: #93c5fd;
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    margin-top: 2rem;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .newsletter-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    background-color: #2d3748;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .newsletter-input::placeholder {
+    color: #a0aec0;
+  }
+  
+  .newsletter-input:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+  }
+  
+  .newsletter-btn {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .newsletter-btn:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 0;
+    font-style: italic;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    .footer-brand {
+      grid-column: 1 / -1;
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    
+    .footer {
+      padding: 2rem 0 1rem;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+    
+    .newsletter-form {
+      flex-direction: column;
+    }
+    
+    .newsletter-input {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 0 1rem;
+    }
+    
+    .brand-logo {
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .brand-description {
+      text-align: center;
+    }
+    
+    .footer-section {
+      text-align: center;
+    }
+    
+    .social-icons {
+      gap: 0.75rem;
+    }
+    
+    .social-icon {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .social-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+  }

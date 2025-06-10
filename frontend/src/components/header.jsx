@@ -1,55 +1,49 @@
-// components/Header.js
-import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import '../css/Header.css';
 
 const Header = () => {
-  const [showAccountMenu, setShowAccountMenu] = useState(false);
-  const accountRef = useRef(null);
- 
-  // Đóng menu khi click ra ngoài
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (accountRef.current && !accountRef.current.contains(event.target)) {
-        setShowAccountMenu(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
- 
+  const [searchText, setSearchText] = useState('');
+
   return (
-    <header>
-      <div className="container">
-        <nav>
-            <img
-              src="/logo1.png"
-              className="logo"
-              alt="Logo"
-            />
-          <ul className="nav-links">
-            <li><Link to="/LandingPage">TRANG CHỦ</Link></li>
-            <li><Link to="/near-me">GẦN TÔI</Link></li>
-            <li><Link to="/top-places">ĐỊA ĐIỂM HOT</Link></li>
-            <li><Link to="/blog">BLOG DU LỊCH</Link></li>
-            <li><Link to="/contact">LIÊN HỆ</Link></li>
-          </ul>
-          {/* Phần tài khoản với dropdown */}
-          <div
-            className="btn account-menu-wrapper"
-            ref={accountRef}
-            onClick={() => setShowAccountMenu((prev) => !prev)}
-            style={{ cursor: "pointer", userSelect: "none" }}
-          >
-            Tài khoản
-            {showAccountMenu && (
-              <ul className="account-dropdown">
-                <li><Link to="/Login">Login</Link></li>
-                <li><Link to="/Logout">Logout</Link></li>
-                <li><Link to="/Signup">Sign Up</Link></li>
-              </ul>
-            )}
+    <header className="header">
+      <div className="header-container">
+        {/* Logo Section */}
+        <div className="logo-section">
+          <div className="logo">
+            <img src="/logo-icon.png" alt="ADHD Coach" className="logo-icon" />
+            <span className="logo-text">ADHD Self-Assessment Workbook</span>
           </div>
+        </div>
+
+        {/* Navigation Menu */}
+        <nav className="nav-menu">
+          <div className="nav-item dropdown">
+            <span className="nav-link">ADHD Resources</span>
+            <div className="dropdown-content">
+              <a href="#">ADHD Awareness</a>
+              <a href="#">ADHD Diagnosis</a>
+              <a href="#">ADHD Symptoms</a>
+              <a href="#">Living with ADHD</a>
+            </div>
+          </div>
+          <a href="#" className="nav-link">Shop</a>
+          <a href="#" className="nav-link">About us</a>
         </nav>
+
+        {/* Search and CTA Section */}
+        <div className="header-actions">
+          <div className="search-container">
+            <input 
+              type="text" 
+              placeholder="I want to find..." 
+              className="search-input"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+            <button className="search-btn">Search</button>
+          </div>
+          <button className="cta-btn">Free ADHD Test</button>
+        </div>
       </div>
     </header>
   );
