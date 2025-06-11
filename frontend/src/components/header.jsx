@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Header.css';
 
 const Header = () => {
@@ -9,25 +10,25 @@ const Header = () => {
       <div className="header-container">
         {/* Logo Section */}
         <div className="logo-section">
-          <div className="logo">
-            <img src="/logo-icon.png" alt="ADHD Coach" className="logo-icon" />
-            <span className="logo-text">ADHD Self-Assessment Workbook</span>
-          </div>
+          <Link to="/" className="logo">
+            <img src="/2.png" alt="ADHD Coach" className="logo-icon" />
+            <span className="logo-text">Sổ Tay Tự Đánh Giá ADHD</span>
+          </Link>
         </div>
 
         {/* Navigation Menu */}
         <nav className="nav-menu">
           <div className="nav-item dropdown">
-            <span className="nav-link">ADHD Resources</span>
+            <span className="nav-link">Tài Nguyên ADHD</span>
             <div className="dropdown-content">
-              <a href="#">ADHD Awareness</a>
-              <a href="#">ADHD Diagnosis</a>
-              <a href="#">ADHD Symptoms</a>
-              <a href="#">Living with ADHD</a>
+              <a href="#">Nhận Thức về ADHD</a>
+              <a href="#">Chẩn Đoán ADHD</a>
+              <a href="#">Triệu Chứng ADHD</a>
+              <a href="#">Sống Chung với ADHD</a>
             </div>
           </div>
-          <a href="#" className="nav-link">Shop</a>
-          <a href="#" className="nav-link">About us</a>
+          <a href="#" className="nav-link">Cửa Hàng</a>
+          <a href="/ContactUs" className="nav-link">Về Chúng Tôi</a>
         </nav>
 
         {/* Search and CTA Section */}
@@ -35,14 +36,14 @@ const Header = () => {
           <div className="search-container">
             <input 
               type="text" 
-              placeholder="I want to find..." 
+              placeholder="Tôi muốn tìm..." 
               className="search-input"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
-            <button className="search-btn">Search</button>
+            <button className="search-btn">Tìm Kiếm</button>
           </div>
-          <button className="cta-btn">Free ADHD Test</button>
+          <button className="cta-btn">Kiểm Tra ADHD Miễn Phí</button>
         </div>
       </div>
     </header>

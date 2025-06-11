@@ -1,6 +1,6 @@
 /* Footer Styles */
 .footer {
-    background-color: #356856;
+    background-color: var(--dark-slate-grey);
     color: #ffffff;
     padding: 3rem 0 1rem;
     margin-top: auto;

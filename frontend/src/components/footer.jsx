@@ -21,17 +21,17 @@ const Footer = () => {
               <img src="/logo-icon.png" alt="Mini ADHD Coach" className="footer-logo-icon" />
               <span className="brand-name">The_mini_adhd_coach</span>
             </div>
-            <p className="brand-tagline">#ADHD explained with cute doodles</p>
+            <p className="brand-tagline">#ADHD được giải thích bằng hình vẽ dễ thương</p>
           </div>
           
           <div className="brand-description">
             <p>
-              Getting diagnosed with ADHD at 29 changed my life and inspired me 
-              to help others like me. Seeing so much interest in my doodles on 
-              Instagram encouraged me to do even more so I created this website to 
-              do just that.
+              Việc được chẩn đoán mắc ADHD ở tuổi 29 đã thay đổi cuộc đời tôi và truyền cảm hứng cho tôi 
+              để giúp đỡ những người khác như tôi. Thấy được sự quan tâm lớn đến những hình vẽ của tôi trên 
+              Instagram đã khuyến khích tôi làm nhiều hơn nữa, vì vậy tôi đã tạo trang web này để 
+              thực hiện điều đó.
             </p>
-            <p className="hashtag">#ADHD explained with cute doodles</p>
+            <p className="hashtag">#ADHD được giải thích bằng hình vẽ dễ thương</p>
           </div>
 
           {/* Social Media Icons */}
@@ -46,7 +46,7 @@ const Footer = () => {
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </a>
-            <a href="#" className="social-icon facebook" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61576988307181" className="social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
@@ -71,41 +71,41 @@ const Footer = () => {
 
         {/* Middle Section - Legal */}
         <div className="footer-section">
-          <h3 className="section-title">Legal</h3>
+          <h3 className="section-title">Pháp Lý</h3>
           <ul className="footer-links">
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Terms and conditions</a></li>
-            <li><a href="#">Cookie policy</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Điều khoản và điều kiện</a></li>
+            <li><a href="#">Chính sách cookie</a></li>
           </ul>
         </div>
 
         {/* Right Section - ADHD Resources & Newsletter */}
         <div className="footer-section">
-          <h3 className="section-title">ADHD Resources</h3>
+          <h3 className="section-title">Tài Nguyên ADHD</h3>
           <ul className="footer-links">
-            <li><a href="#">ADHD Awareness</a></li>
-            <li><a href="#">ADHD Diagnosis</a></li>
-            <li><a href="#">ADHD Symptoms</a></li>
-            <li><a href="#">Living with ADHD</a></li>
+            <li><a href="#">Nhận Thức về ADHD</a></li>
+            <li><a href="#">Chẩn Đoán ADHD</a></li>
+            <li><a href="#">Triệu Chứng ADHD</a></li>
+            <li><a href="#">Sống Chung với ADHD</a></li>
           </ul>
           <a href="#" className="browse-all">
-            Browse all our articles about ADHD →
+            Xem tất cả bài viết về ADHD →
           </a>
 
           {/* Newsletter Section */}
           <div className="newsletter-section">
-            <h3 className="section-title">Newsletter</h3>
+            <h3 className="section-title">Bản Tin</h3>
             <form onSubmit={handleSubscribe} className="newsletter-form">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder="Địa chỉ email của bạn"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="newsletter-input"
                 required
               />
               <button type="submit" className="newsletter-btn">
-                Subscribe
+                Đăng Ký
               </button>
             </form>
           </div>
@@ -114,7 +114,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>Website by Sales Odyssey</p>
+        <p>Website bởi Sales Odyssey</p>
       </div>
     </footer>
   );
