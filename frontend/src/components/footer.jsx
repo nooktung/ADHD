@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="brand-header">
             <div className="brand-logo">
-              <img src="/logo-icon.png" alt="Mini ADHD Coach" className="footer-logo-icon" />
+              <img src="/2.png" alt="Mini ADHD Coach" className="footer-logo-icon" />
               <span className="brand-name">The_mini_adhd_coach</span>
             </div>
             <p className="brand-tagline">#ADHD được giải thích bằng hình vẽ dễ thương</p>

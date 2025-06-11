@@ -12,13 +12,14 @@
   }
   
   .header-container {
-    max-width: 1300px;
+    max-width: 1550px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    gap: 2rem;
   }
   
   /* Logo Section */
@@ -55,9 +56,10 @@
   .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     flex: 1;
     justify-content: center;
+    margin: 0 2rem;
   }
   
   .nav-item {
@@ -127,8 +129,9 @@
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex: 0 0 auto;
+    margin-left: 2rem;
   }
   
   .search-container {
@@ -178,7 +181,7 @@
     background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
     color: white;
     border: none;
-    padding: 0.6rem 1.5rem;
+    padding: 0.6rem 1rem;
     border-radius: 25px;
     font-size: 14px;
     font-weight: 600;
