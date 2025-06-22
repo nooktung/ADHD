@@ -19,6 +19,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
     color: var(--dark-slate-grey);
+    padding-top: 100px;
+}
+
+/* Responsive padding for mobile */
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px;
+    }
 }
 
 code {

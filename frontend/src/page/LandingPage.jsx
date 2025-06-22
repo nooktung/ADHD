@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import "../css/LandingPage.css"
 import { useState, useRef } from "react"
+import { Link } from "react-router-dom"
 
 const LandingPage = () => {
   const stories = [
@@ -229,37 +230,25 @@ const LandingPage = () => {
       <section className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1>Làm Bài Kiểm Tra ADHD Miễn Phí: Trực Quan Hóa Các Đặc Điểm ADHD Của Bạn</h1>
+            <h1>WELCOME PAGE : ......</h1>
             <p>
               Tìm hiểu vị trí của bạn trên phổ ADHD bằng cách trả lời 28 câu hỏi lấy cảm hứng từ Thang Đánh Giá Tự Báo Cáo
               Người Lớn (ASRS).
             </p>
-            <button className="btn-primary">Làm Bài Kiểm Tra ADHD Miễn Phí</button>
           </div>
           <div className="hero-visual">
             <h3>Trực quan hóa các đặc điểm ADHD của bạn!</h3>
-            <div className="visual-cards">
-              <div className="card-row">
-                <div className="trait-card">
-                  <div className="stars">★★★★★</div>
-                  <small>Hiếu động</small>
-                </div>
-                <div className="trait-card">
-                  <div className="stars">★★★☆☆</div>
-                  <small>Chú ý</small>
-                </div>
-              </div>
-              <div className="card-row">
-                <div className="trait-card">
-                  <div className="stars">★★★★☆</div>
-                  <small>Bốc đồng</small>
-                </div>
-                <div className="trait-card">
-                  <div className="stars">★★☆☆☆</div>
-                  <small>Chức năng điều hành</small>
-                </div>
-              </div>
-            </div>
+            <img 
+              src="image.png" 
+              alt="ADHD Traits Visualization" 
+              className="hero-visual-image"
+              style={{
+                maxWidth: '50%',
+                height: 'auto',
+                borderRadius: '12px',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+              }}
+            />
           </div>
         </div>
       </section>
@@ -276,44 +265,44 @@ const LandingPage = () => {
             <div className="left-large-card">
               <div className="cute-brain-container">
                 <span className="cute-brain">🧠</span>
-                <div className="brand-badge">ADHD & DỄ THƯƠNG</div>
               </div>
-              <h3 className="main-question">Bạn có nghĩ mình có thể mắc ADHD không?</h3>
+              <h3 className="main-question">So sánh ADHD với lo âu</h3>
               <p className="subtitle-text">
                 Chúng tôi đã tạo một bài kiểm tra miễn phí dựa trên các triệu chứng ADHD chính thức được mô tả trong DSM-V để cho bạn biết
                 khả năng bạn mắc ADHD và loại ADHD nào (Hiếu động-Bốc đồng, Thiếu chú ý hoặc Kết hợp).
               </p>
-              <button className="cta-button">Thử Bài Kiểm Tra ADHD Miễn Phí</button>
             </div>
 
             <div className="right-section">
               <div className="small-cards-grid">
                 <div className="small-card adhd-awareness">
-                  <div className="card-icon">
-                    <span>🎀</span>
-                  </div>
-                  <h4>Nhận thức về ADHD</h4>
+                  <Link to="/AboutADHD">
+                    <div className="card-icon">
+                      <span>🎀</span>
+                    </div>
+                    <h4>Giới thiệu về ADHD</h4>
+                  </Link>
                 </div>
 
                 <div className="small-card adhd-diagnosis">
                   <div className="card-icon">
                     <span>👨‍⚕️</span>
                   </div>
-                  <h4>Chẩn đoán ADHD</h4>
+                  <h4>Dấu hiệu</h4>
                 </div>
 
                 <div className="small-card adhd-symptoms">
                   <div className="card-icon">
                     <span>📋</span>
                   </div>
-                  <h4>Triệu chứng ADHD</h4>
+                  <h4>Nguyên nhân</h4>
                 </div>
 
                 <div className="small-card living-adhd">
                   <div className="card-icon">
                     <span>👥</span>
                   </div>
-                  <h4>Sống với ADHD</h4>
+                  <h4>ADHD trong cuộc sống</h4>
                 </div>
               </div>
 
@@ -323,14 +312,7 @@ const LandingPage = () => {
                     <span>📖</span>
                   </div>
                   <div className="workbook-text">
-                    <h3>Bắt đầu hành trình chẩn đoán ADHD của bạn!</h3>
-                    <p>
-                      Nhận được câu trả lời bạn đang tìm kiếm và khai phá tiềm năng đầy đủ của bạn với sổ tay
-                      tự đánh giá ADHD!
-                    </p>
-                    <a href="#" className="workbook-link">
-                      Nhận Sổ Tay Đánh Giá ADHD
-                    </a>
+                    <h3>Cải thiện trong cuộc sống</h3>
                   </div>
                 </div>
               </div>
@@ -388,7 +370,6 @@ const LandingPage = () => {
               Trực quan hóa và đánh giá 25 đặc điểm ADHD và hiểu cách chúng ảnh hưởng đến cuộc sống của bạn. Sổ tay bao gồm
               60 trang với các ví dụ trực quan.
             </p>
-            <button className="workbook-cta-btn">Nhận Sổ Tay Đánh Giá</button>
           </div>
         </div>
       </section>
@@ -635,150 +616,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Visual Traits Section */}
-      <section className="visual-traits">
-        <div className="visual-traits-container">
-          <h2>Trực quan hóa các đặc điểm ADHD của bạn!</h2>
-          <p>Theo dõi tiến trình và hiểu hồ sơ ADHD độc đáo của bạn với các công cụ đánh giá toàn diện của chúng tôi.</p>
-          <div className="hero-visual">
-            <div className="visual-cards">
-              <div className="card-row">
-                <div className="trait-card">
-                  <div className="stars">★★★★★</div>
-                  <small>Tập trung</small>
-                </div>
-                <div className="trait-card">
-                  <div className="stars">★★★☆☆</div>
-                  <small>Tổ chức</small>
-                </div>
-              </div>
-              <div className="card-row">
-                <div className="trait-card">
-                  <div className="stars">★★★★☆</div>
-                  <small>Quản lý thời gian</small>
-                </div>
-                <div className="trait-card">
-                  <div className="stars">★★☆☆☆</div>
-                  <small>Lập kế hoạch</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button className="btn-primary">Làm Bài Kiểm Tra ADHD</button>
-        </div>
-      </section>
-
-      {/* Stories Section */}
-      <section className="stories-new">
-        <div className="stories-new-container">
-          <div className="stories-header">
-            <div className="stories-title-section">
-              <h2>Đọc các câu chuyện chẩn đoán ADHD mới nhất của chúng tôi!</h2>
-              <p className="stories-subtitle">Các thành viên trong cộng đồng chia sẻ câu chuyện nhận diện ADHD của họ</p>
-            </div>
-            <div className="stories-nav">
-              <button
-                className={`nav-arrow ${!canScrollLeft ? "disabled" : ""}`}
-                onClick={scrollLeft}
-                disabled={!canScrollLeft}
-              >
-                ←
-              </button>
-              <button
-                className={`nav-arrow ${!canScrollRight ? "disabled" : ""}`}
-                onClick={scrollRight}
-                disabled={!canScrollRight}
-              >
-                →
-              </button>
-            </div>
-          </div>
-
-          <div ref={scrollContainerRef} className="stories-scroll-container" onScroll={checkScrollButtons}>
-            {stories.map((story) => (
-              <div key={story.id} className="story-card-new">
-                <div className="story-header-new">
-                  <div className="story-avatar-new">{story.avatar}</div>
-                  <div className="story-info">
-                    <h3 className="story-name-new">{story.name}</h3>
-                    <p className="story-age">{story.age}</p>
-                  </div>
-                </div>
-
-                <h4 className="story-title-new">{story.title}</h4>
-
-                <div className="story-content-section">
-                  <h5 className="story-question-new">1. Điều gì khiến bạn quyết định đi khám?</h5>
-                  <p className="story-text-new">{story.content}</p>
-                </div>
-
-                <div className="story-stats">
-                  <div className="stat-box">
-                    <p className="stat-label">Tuổi:</p>
-                    <p className="stat-number-large">{story.currentAge}</p>
-                  </div>
-                  <div className="stat-box">
-                    <p className="stat-label">Quốc gia:</p>
-                    <p className="stat-country">{story.country}</p>
-                  </div>
-                  <div className="stat-box">
-                    <p className="stat-label">Chẩn đoán lúc:</p>
-                    <p className="stat-number-large">{story.diagnosedAt}</p>
-                  </div>
-                </div>
-
-                <button 
-                  className="story-btn-new" 
-                  style={{ backgroundColor: story.buttonColor }}
-                  onClick={() => handleStoryClick(story)}
-                >
-                  Đọc toàn bộ câu chuyện →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Coach Section */}
-      <section className="coach">
-        <div className="coach-container">
-          <h2>Mini ADHD Coach là gì</h2>
-          <p className="coach-subtitle">Hỗ trợ hành trình ADHD của bạn với tài nguyên dựa trên bằng chứng và cộng đồng</p>
-
-          <div className="coach-stats">
-            <div className="coach-stat">
-              <div className="coach-stat-number">500+</div>
-              <div className="coach-stat-text">Bài viết dựa trên bằng chứng giúp bạn hiểu về ADHD</div>
-            </div>
-            <div className="coach-stat">
-              <div className="coach-stat-number">530k</div>
-              <div className="coach-stat-text">Người tiếp cận với nội dung nâng cao nhận thức về ADHD</div>
-            </div>
-            <div className="coach-stat">
-              <div className="coach-stat-number">150+</div>
-              <div className="coach-stat-text">Câu chuyện thành công và đánh giá từ cộng đồng của chúng tôi</div>
-            </div>
-            <div className="coach-stat">
-              <div className="coach-stat-number">17k+</div>
-              <div className="coach-stat-text">Lượt tải xuống sổ tay đánh giá và tài nguyên của chúng tôi</div>
-            </div>
-          </div>
-
-          <div className="coach-visual-center">
-            <span className="cute-character">🧠</span>
-            <h3>Liệu có phải ADHD?</h3>
-            <p>Bắt đầu hành trình chẩn đoán ADHD của bạn!</p>
-            <p>
-              Nhận được câu trả lời bạn đang tìm kiếm và điền vào sổ tay tự đánh giá ADHD của bạn với nội dung chuyên biệt
-              của chúng tôi được tạo ra với sự dễ thương và khoa học.
-            </p>
-            <button className="btn-primary">Nhận Sổ Tay Đánh Giá ADHD</button>
-          </div>
-        </div>
-      </section>
-
       {/* Social Media Section */}
       <section className="social">
         <div className="social-container">
