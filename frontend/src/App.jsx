@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import LandingPage from './page/LandingPage';
 import ContactUs from './page/ContactUs';
-import AboutADHD from './page/AboutADHD'
+import AboutADHD from './page/AboutADHD';
+import Team from './page/Team'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/LandingPage" element={<LandingPage />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AboutADHD" element={<AboutADHD />} />
+        <Route path="/Team" element={<Team />} />
         {/* Các route khác có thể thêm sau */}
       </Routes>
     </BrowserRouter>

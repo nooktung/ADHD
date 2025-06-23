@@ -146,6 +146,7 @@ const Header = () => {
               </button>
             </div>
                        <Link to="/ContactUs" className="nav__link">Về Chúng Tôi</Link>
+                       <Link to="/Team" className="nav__link">Giới thiệu nhóm</Link>
           </nav>
 
           {/* Actions */}
