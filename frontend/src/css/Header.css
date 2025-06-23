@@ -424,7 +424,7 @@
 .menu-item__text {
   font-size: 14px;
   font-weight: 500;
-  color: var(--gray-700);
+  color: black;
 }
 
 .menu-item--active .menu-item__text {
