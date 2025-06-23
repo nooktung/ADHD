@@ -56,7 +56,7 @@ const MENU_ITEMS = [
   },
 ];
 
-const SIDEBAR_ITEMS = ["Sự thật ADHD", "Trợ giúp ADHD", "Điều trị ADHD", "Tất cả bài viết"];
+const SIDEBAR_ITEMS = ["Sự thật ADHD", "Trợ giúp ADHD", "Điều trị ADHD"];
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -266,7 +266,7 @@ const Header = () => {
                         <a
                           key={index}
                           href="#"
-                          className={`sidebar-item ${index === SIDEBAR_ITEMS.length - 1 ? 'sidebar-item--muted' : ''}`}
+                          className={`sidebar-item`}
                         >
                           {item}
                         </a>
