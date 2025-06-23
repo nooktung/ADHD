@@ -15,11 +15,7 @@ const AboutADHD = () => {
             <div className="adhd-book-illustration">
               <div className="adhd-book">
                 <div className="adhd-book-cover">
-                  <span className="adhd-adhd-text">ADHD</span>
-                  <div className="adhd-character">
-                    <div className="adhd-character-head"></div>
-                    <div className="adhd-character-body"></div>
-                  </div>
+                  <img src="/image.png" alt="ADHD Book Cover" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px'}} />
                 </div>
               </div>
             </div>
@@ -35,7 +31,9 @@ const AboutADHD = () => {
               <div className="adhd-publish-info">Published on 22.12.2023 • Updated on 11.01.2024</div>
 
               <div className="adhd-author-info">
-                <div className="adhd-author-avatar"></div>
+                <div className="adhd-author-avatar">
+                  <img src="/503708736_122100749948899610_5999541274990696006_n.jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
+                </div>
                 <div className="adhd-author-details">
                   <div className="adhd-author-name">Written by Taylor Hackett</div>
                   <div className="adhd-author-title">Mental Health Writer and ADHD Expert</div>

@@ -2,66 +2,82 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Header.css';
 
-// Menu configuration
+// Menu configuration - Updated with new ADHD content
 const MENU_ITEMS = [
   {
-    id: "awareness",
-    title: "Nhận Thức về ADHD",
+    id: "introduction",
+    title: "I. Giới thiệu ADHD",
     content: {
-      title: "Nhận Thức về ADHD",
-      description: "Tại sao chúng ta cần Nhận thức về ADHD?\nNhững sự thật về ADHD bạn nên biết là gì?\nTìm hiểu những câu trả lời này và nhiều hơn nữa trong trang danh mục Nhận thức về ADHD:",
-      link: "Tìm hiểu về Nhận thức ADHD",
+      title: "Giới thiệu ADHD",
+      description: "Tìm hiểu về định nghĩa, độ tuổi, giới tính và các dạng ADHD khác nhau.\nKhám phá kiến thức cơ bản về rối loạn tăng động giảm chú ý.",
+      link: "/adhd-introduction",
+      linkText: "Tìm hiểu về ADHD",
       icon: "📚",
     },
   },
   {
-    id: "diagnosis",
-    title: "Chẩn Đoán ADHD",
+    id: "signs",
+    title: "II. Dấu hiệu và biểu hiện ADHD",
     content: {
-      title: "Chẩn Đoán ADHD",
-      description: "Làm thế nào để được chẩn đoán ADHD?\nTại sao mọi người bị chẩn đoán sai hoặc không bao giờ được chẩn đoán?\nTìm hiểu tất cả những gì bạn cần biết về Chẩn đoán ADHD tại đây:",
-      link: "Tìm hiểu về Chẩn đoán ADHD",
+      title: "Dấu hiệu và biểu hiện ADHD",
+      description: "Nhận biết các dấu hiệu ADHD ở trẻ em, người lớn và người lớn tuổi.\nHiểu rõ cách ADHD biểu hiện ở từng độ tuổi khác nhau.",
+      link: "/adhd-signs",
+      linkText: "Tìm hiểu dấu hiệu ADHD",
       icon: "🩺",
     },
   },
   {
-    id: "symptoms",
-    title: "Triệu Chứng ADHD",
+    id: "causes",
+    title: "III. Nguyên nhân và cơ chế não bộ",
     content: {
-      title: "Triệu Chứng ADHD",
-      description: "Hiểu về các triệu chứng khác nhau của ADHD và cách chúng biểu hiện trong cuộc sống hàng ngày.",
-      link: "Tìm hiểu về Triệu chứng ADHD",
+      title: "Nguyên nhân và cơ chế não bộ ADHD",
+      description: "Khám phá các nguyên nhân gây ra ADHD và cơ chế hoạt động của não bộ.\nTìm hiểu về yếu tố di truyền và môi trường.",
+      link: "/adhd-causes",
+      linkText: "Tìm hiểu nguyên nhân ADHD",
       icon: "🧠",
     },
   },
   {
-    id: "living",
-    title: "Sống Chung với ADHD",
+    id: "life",
+    title: "IV. ADHD trong cuộc sống",
     content: {
-      title: "Sống Chung với ADHD",
-      description: "Mẹo và chiến lược để quản lý cuộc sống hàng ngày với ADHD.",
-      link: "Tìm hiểu về Sống chung với ADHD",
+      title: "ADHD trong cuộc sống",
+      description: "Tác động của ADHD đến học tập, công việc và sinh hoạt hàng ngày.\nCác ví dụ thực tế và kinh nghiệm sống chung với ADHD.",
+      link: "/adhd-in-life",
+      linkText: "Tìm hiểu ADHD trong cuộc sống",
       icon: "🏠",
     },
   },
   {
-    id: "stories",
-    title: "Câu chuyện ADHD",
+    id: "comparison",
+    title: "V. So sánh ADHD với rối loạn lo âu",
     content: {
-      title: "Câu chuyện ADHD",
-      description: "Trải nghiệm thực tế và câu chuyện từ những người sống với ADHD.",
-      link: "Đọc câu chuyện ADHD",
-      icon: "📖",
+      title: "So sánh ADHD với rối loạn lo âu",
+      description: "Phân biệt giữa ADHD và rối loạn lo âu trong các tình huống khác nhau.\nHiểu về sự khác biệt và điểm chung giữa hai tình trạng này.",
+      link: "/adhd-vs-anxiety",
+      linkText: "So sánh ADHD và lo âu",
+      icon: "⚖️",
+    },
+  },
+  {
+    id: "improvement",
+    title: "VI. Cách cải thiện trong đời sống",
+    content: {
+      title: "Cách cải thiện trong đời sống",
+      description: "Các phương pháp cải thiện chất lượng cuộc sống với ADHD.\nMẹo về giấc ngủ, ăn uống, tập thể dục và mối quan hệ.",
+      link: "/adhd-improvement",
+      linkText: "Cách cải thiện với ADHD",
+      icon: "🌟",
     },
   },
 ];
 
-const SIDEBAR_ITEMS = ["Sự thật ADHD", "Trợ giúp ADHD", "Điều trị ADHD"];
+const SIDEBAR_ITEMS = ["Kiến thức ADHD", "Hỗ trợ ADHD", "Cộng đồng ADHD"];
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
-  const [activeMenuItem, setActiveMenuItem] = useState("awareness");
+  const [activeMenuItem, setActiveMenuItem] = useState("introduction");
   const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef(null);
 
@@ -252,12 +268,12 @@ const Header = () => {
                     {activeContent.description}
                   </p>
 
-                  <a href="#" className="content-panel__link">
-                    {activeContent.link}
+                  <Link to={activeContent.link} className="content-panel__link">
+                    {activeContent.linkText}
                     <svg className="content-panel__link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <polyline points="9,18 15,12 9,6"></polyline>
                     </svg>
-                  </a>
+                  </Link>
 
                   {/* Sidebar Items */}
                   <div className="sidebar-section">

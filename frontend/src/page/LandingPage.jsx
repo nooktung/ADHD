@@ -139,6 +139,60 @@ const LandingPage = () => {
     },
   ]
 
+  // Updated blog posts with ADHD content from docx
+  const blogPosts = [
+    {
+      id: 1,
+      title: "I. Giới thiệu ADHD",
+      category: "Kiến thức cơ bản",
+      excerpt: "Tìm hiểu về định nghĩa, độ tuổi, giới tính và các dạng ADHD. ADHD là rối loạn phát triển thần kinh ảnh hưởng đến khả năng tập trung và kiểm soát hành vi.",
+      image: "image.png",
+      author: "Nhóm Alight",
+      date: "24/06/2025",
+      link: "/adhd-signs"
+    },
+    {
+      id: 3,
+      title: "III. Nguyên nhân và cơ chế não bộ ADHD",
+      category: "Khoa học",
+      excerpt: "Khám phá các nguyên nhân gây ra ADHD và cơ chế hoạt động của não bộ. Tìm hiểu về yếu tố di truyền, môi trường và chất dẫn truyền thần kinh.",
+      image: "image.png",
+      author: "Nhóm Alight",
+      date: "24/06/2025",
+      link: "/adhd-causes"
+    },
+    {
+      id: 4,
+      title: "IV. ADHD trong cuộc sống",
+      category: "Thực tế",
+      excerpt: "Tác động của ADHD đến học tập, công việc và sinh hoạt hàng ngày. Các ví dụ thực tế và kinh nghiệm sống chung với ADHD.",
+      image: "image.png",
+      author: "Nhóm Alight",
+      date: "24/06/2025",
+      link: "/adhd-in-life"
+    },
+    {
+      id: 5,
+      title: "V. So sánh ADHD với rối loạn lo âu",
+      category: "So sánh",
+      excerpt: "Phân biệt giữa ADHD và rối loạn lo âu trong các tình huống khác nhau. Hiểu về sự khác biệt và điểm chung giữa hai tình trạng này.",
+      image: "image.png",
+      author: "Nhóm Alight",
+      date: "24/06/2025",
+      link: "/adhd-vs-anxiety"
+    },
+    {
+      id: 6,
+      title: "VI. Cách cải thiện trong đời sống",
+      category: "Hướng dẫn",
+      excerpt: "Các phương pháp cải thiện chất lượng cuộc sống với ADHD. Mẹo về giấc ngủ, ăn uống, tập thể dục và mối quan hệ xã hội.",
+      image: "image.png",
+      author: "Nhóm Alight",
+      date: "24/06/2025",
+      link: "/adhd-improvement"
+    }
+  ]
+
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
   const [selectedStory, setSelectedStory] = useState(null)
@@ -226,14 +280,16 @@ const LandingPage = () => {
         </div>
       )}
 
-      {/* Hero Section */}
+      {/* Hero Section - Updated with content from "Lời mở đầu" */}
       <section className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1>WELCOME PAGE : ......</h1>
+            <h1>Bản Giao Hưởng Tập Trung</h1>
             <p>
-              Tìm hiểu vị trí của bạn trên phổ ADHD bằng cách trả lời 28 câu hỏi lấy cảm hứng từ Thang Đánh Giá Tự Báo Cáo
-              Người Lớn (ASRS).
+              Có những người vẫn luôn cố gắng từng ngày nhưng lại bị hiểu lầm là lười biếng. 
+              Có những người luôn khao khát được tập trung nhưng tâm trí lại cứ trôi dạt về nơi khác. 
+              ADHD không chỉ là khó khăn, ADHD còn là một khả năng. Chỉ cần được lắng nghe, 
+              được hiểu đúng, mọi nốt nhạc lệch nhịp đều có thể góp phần làm nên một bản giao hưởng trọn vẹn.
             </p>
           </div>
           <div className="hero-visual">
@@ -266,53 +322,59 @@ const LandingPage = () => {
               <div className="cute-brain-container">
                 <span className="cute-brain">🧠</span>
               </div>
-              <h3 className="main-question">So sánh ADHD với lo âu</h3>
+              <h3 className="main-question">Hiểu về ADHD toàn diện</h3>
               <p className="subtitle-text">
-                Chúng tôi đã tạo một bài kiểm tra miễn phí dựa trên các triệu chứng ADHD chính thức được mô tả trong DSM-V để cho bạn biết
-                khả năng bạn mắc ADHD và loại ADHD nào (Hiếu động-Bốc đồng, Thiếu chú ý hoặc Kết hợp).
+                Chúng tôi đã tạo một hệ thống thông tin toàn diện về ADHD dựa trên nghiên cứu khoa học 
+                để giúp bạn hiểu rõ về rối loạn tăng động giảm chú ý từ cơ bản đến nâng cao.
               </p>
             </div>
 
             <div className="right-section">
               <div className="small-cards-grid">
                 <div className="small-card adhd-awareness">
-                  <Link to="/AboutADHD">
+                  <Link to="/adhd-introduction">
                     <div className="card-icon">
-                      <span>🎀</span>
+                      <span>📚</span>
                     </div>
-                    <h4>Giới thiệu về ADHD</h4>
+                    <h4>Giới thiệu ADHD</h4>
                   </Link>
                 </div>
 
                 <div className="small-card adhd-diagnosis">
-                  <div className="card-icon">
-                    <span>👨‍⚕️</span>
-                  </div>
-                  <h4>Dấu hiệu</h4>
+                  <Link to="/adhd-signs">
+                    <div className="card-icon">
+                      <span>🩺</span>
+                    </div>
+                    <h4>Dấu hiệu ADHD</h4>
+                  </Link>
                 </div>
 
                 <div className="small-card adhd-symptoms">
-                  <div className="card-icon">
-                    <span>📋</span>
-                  </div>
-                  <h4>Nguyên nhân</h4>
+                  <Link to="/adhd-causes">
+                    <div className="card-icon">
+                      <span>🧠</span>
+                    </div>
+                    <h4>Nguyên nhân</h4>
+                  </Link>
                 </div>
 
                 <div className="small-card living-adhd">
-                  <div className="card-icon">
-                    <span>👥</span>
-                  </div>
-                  <h4>ADHD trong cuộc sống</h4>
+                  <Link to="/adhd-in-life">
+                    <div className="card-icon">
+                      <span>🏠</span>
+                    </div>
+                    <h4>ADHD trong cuộc sống</h4>
+                  </Link>
                 </div>
               </div>
 
               <div className="horizontal-card">
                 <div className="horizontal-card-content">
                   <div className="workbook-icon">
-                    <span>📖</span>
+                    <span>⚖️</span>
                   </div>
                   <div className="workbook-text">
-                    <h3>Cải thiện trong cuộc sống</h3>
+                    <h3>So sánh ADHD với lo âu & Cách cải thiện</h3>
                   </div>
                 </div>
               </div>
@@ -374,13 +436,13 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
+      {/* Blog Section - Updated with ADHD content */}
       <section className="blog">
         <div className="blog-container">
           <div className="blog-header">
             <div className="blog-title-section">
-              <h2>Bài Viết Mới Nhất</h2>
-              <p className="blog-subtitle">Khám phá thông tin chi tiết về ADHD và các chủ đề liên quan</p>
+              <h2>Kiến Thức ADHD Từ Báo Cáo</h2>
+              <p className="blog-subtitle">Khám phá thông tin chi tiết về ADHD từ nghiên cứu chuyên sâu</p>
             </div>
           </div>
 
@@ -394,228 +456,96 @@ const LandingPage = () => {
           </div>
 
           <div className="blog-scroll-container" ref={blogScrollContainerRef}>
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Nuôi dạy trẻ ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Nuôi dạy con</span>
-                <h3 className="blog-title">Hiểu về ADHD ở Trẻ em: Hướng dẫn cho Phụ huynh</h3>
-                <p className="blog-excerpt">
-                  Tìm hiểu về các dấu hiệu, triệu chứng và chiến lược hỗ trợ trẻ em mắc ADHD trong cuộc sống hàng ngày.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Sarah Johnson" className="author-avatar" />
-                    <span className="author-name">Sarah Johnson</span>
-                  </div>
-                  <span className="blog-date">15/03/2024</span>
+            {blogPosts.map((post) => (
+              <div key={post.id} className="blog-card-new">
+                <div className="blog-image-container">
+                  <img src={post.image} alt={post.title} className="blog-image" />
                 </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Dinh dưỡng ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Sức khỏe</span>
-                <h3 className="blog-title">Dinh dưỡng và ADHD: Thực phẩm giúp tập trung</h3>
-                <p className="blog-excerpt">
-                  Khám phá cách dinh dưỡng phù hợp có thể giúp quản lý các triệu chứng ADHD và cải thiện khả năng tập trung.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Dr. Lisa Chen" className="author-avatar" />
-                    <span className="author-name">Dr. Lisa Chen</span>
+                <div className="blog-content">
+                  <span className="blog-category">{post.category}</span>
+                  <h3 className="blog-title">{post.title}</h3>
+                  <p className="blog-excerpt">
+                    {post.excerpt}
+                  </p>
+                  <div className="blog-meta">
+                    <div className="blog-author">
+                      <img src="image.png" alt={post.author} className="author-avatar" />
+                      <span className="author-name">{post.author}</span>
+                    </div>
+                    <span className="blog-date">{post.date}</span>
                   </div>
-                  <span className="blog-date">14/03/2024</span>
                 </div>
+                <Link to={post.link} style={{position: 'absolute', inset: 0, zIndex: 1}} />
               </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Tập thể dục ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Lối sống</span>
-                <h3 className="blog-title">Tập thể dục và ADHD: Sức mạnh của vận động</h3>
-                <p className="blog-excerpt">
-                  Tìm hiểu cách hoạt động thể chất thường xuyên có thể giúp quản lý các triệu chứng ADHD và tăng cường sức khỏe tâm thần.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Mike Thompson" className="author-avatar" />
-                    <span className="author-name">Mike Thompson</span>
-                  </div>
-                  <span className="blog-date">13/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Mối quan hệ ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Mối quan hệ</span>
-                <h3 className="blog-title">Xây dựng mối quan hệ bền vững với ADHD</h3>
-                <p className="blog-excerpt">
-                  Mẹo và chiến lược để duy trì các mối quan hệ lành mạnh trong khi quản lý các triệu chứng ADHD.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Emma Rodriguez" className="author-avatar" />
-                    <span className="author-name">Emma Rodriguez</span>
-                  </div>
-                  <span className="blog-date">12/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Công nghệ ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Công nghệ</span>
-                <h3 className="blog-title">Ứng dụng và công cụ hàng đầu để quản lý ADHD</h3>
-                <p className="blog-excerpt">
-                  Hướng dẫn toàn diện về các công cụ và ứng dụng kỹ thuật số tốt nhất để quản lý các triệu chứng ADHD.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Alex Wong" className="author-avatar" />
-                    <span className="author-name">Alex Wong</span>
-                  </div>
-                  <span className="blog-date">11/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Giấc ngủ ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Sức khỏe</span>
-                <h3 className="blog-title">Cải thiện chất lượng giấc ngủ với ADHD</h3>
-                <p className="blog-excerpt">
-                  Chiến lược thực tế để vệ sinh giấc ngủ tốt hơn và quản lý các vấn đề về giấc ngủ liên quan đến ADHD.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Dr. James Wilson" className="author-avatar" />
-                    <span className="author-name">Dr. James Wilson</span>
-                  </div>
-                  <span className="blog-date">10/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Sáng tạo ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Sáng tạo</span>
-                <h3 className="blog-title">Khai thác tiềm năng sáng tạo của ADHD</h3>
-                <p className="blog-excerpt">
-                  Cách chuyển hóa các đặc điểm ADHD thành thế mạnh sáng tạo và tư duy đổi mới.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Sophie Martinez" className="author-avatar" />
-                    <span className="author-name">Sophie Martinez</span>
-                  </div>
-                  <span className="blog-date">09/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Giáo dục ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Giáo dục</span>
-                <h3 className="blog-title">Kỹ thuật học tập thân thiện với ADHD</h3>
-                <p className="blog-excerpt">
-                  Chiến lược học tập và phương pháp học tập hiệu quả cho học sinh mắc ADHD.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Prof. David Lee" className="author-avatar" />
-                    <span className="author-name">Prof. David Lee</span>
-                  </div>
-                  <span className="blog-date">08/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Chánh niệm ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Sức khỏe</span>
-                <h3 className="blog-title">Thực hành chánh niệm cho ADHD</h3>
-                <p className="blog-excerpt">
-                  Kỹ thuật chánh niệm đơn giản để giúp quản lý các triệu chứng ADHD và cải thiện khả năng tập trung.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Anna Patel" className="author-avatar" />
-                    <span className="author-name">Anna Patel</span>
-                  </div>
-                  <span className="blog-date">07/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Tổ chức ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Năng suất</span>
-                <h3 className="blog-title">Hệ thống tổ chức cho ADHD</h3>
-                <p className="blog-excerpt">
-                  Phương pháp và hệ thống tổ chức thực tế được thiết kế cho não bộ ADHD.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Rachel Kim" className="author-avatar" />
-                    <span className="author-name">Rachel Kim</span>
-                  </div>
-                  <span className="blog-date">06/03/2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="blog-card-new">
-              <div className="blog-image-container">
-                <img src="image.png" alt="Cảm xúc ADHD" className="blog-image" />
-              </div>
-              <div className="blog-content">
-                <span className="blog-category">Sức khỏe tâm thần</span>
-                <h3 className="blog-title">Quản lý điều hòa cảm xúc với ADHD</h3>
-                <p className="blog-excerpt">
-                  Hiểu và quản lý phản ứng cảm xúc và điều hòa tâm trạng trong ADHD.
-                </p>
-                <div className="blog-meta">
-                  <div className="blog-author">
-                    <img src="image.png" alt="Dr. Maria Garcia" className="author-avatar" />
-                    <span className="author-name">Dr. Maria Garcia</span>
-                  </div>
-                  <span className="blog-date">05/03/2024</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Stories Section */}
+      <section className="stories-new">
+        <div className="stories-new-container">
+          <div className="stories-header">
+            <div className="stories-title-section">
+              <h2>Câu Chuyện ADHD</h2>
+              <p className="stories-subtitle">Trải nghiệm thực tế từ những người sống với ADHD</p>
+            </div>
+          </div>
+
+          <div className="stories-nav">
+            <button className="nav-arrow" onClick={scrollLeft}>
+              ←
+            </button>
+            <button className="nav-arrow" onClick={scrollRight}>
+              →
+            </button>
+          </div>
+
+          <div className="stories-scroll-container" ref={scrollContainerRef} onScroll={checkScrollButtons}>
+            {stories.map((story) => (
+              <div key={story.id} className="story-card-new" onClick={() => handleStoryClick(story)}>
+                <div className="story-header-new">
+                  <div className="story-avatar-new">{story.avatar}</div>
+                  <div className="story-info">
+                    <h3 className="story-name-new">{story.name}</h3>
+                    <p className="story-age">{story.age}</p>
+                  </div>
+                </div>
+                <h4 className="story-title-new">{story.title}</h4>
+                <div className="story-content-section">
+                  <h5 className="story-question-new">Điều gì khiến bạn quyết định đi khám?</h5>
+                  <p className="story-text-new">{story.content}</p>
+                </div>
+                <div className="story-stats">
+                  <div className="stat-box">
+                    <p className="stat-label">Tuổi:</p>
+                    <p className="stat-number-large">{story.currentAge}</p>
+                  </div>
+                  <div className="stat-box">
+                    <p className="stat-label">Quốc gia:</p>
+                    <p className="stat-country">{story.country}</p>
+                  </div>
+                  <div className="stat-box">
+                    <p className="stat-label">Chẩn đoán lúc:</p>
+                    <p className="stat-number-large">{story.diagnosedAt}</p>
+                  </div>
+                </div>
+                <button 
+                  className="story-btn-new" 
+                  style={{backgroundColor: story.buttonColor}}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleStoryClick(story);
+                  }}
+                >
+                  Đọc thêm
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Social Media Section */}
       <section className="social">
         <div className="social-container">
@@ -663,10 +593,10 @@ const LandingPage = () => {
           <span className="cute-character">🧠</span>
           <h2>Chúng ta vẫn còn nhiều điều để học về ADHD</h2>
           <p>
-            Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi. Làm thế nào
-            chúng tôi có thể đảm bảo điều đó? Chúng tôi đã viết nội dung về ADHD trong nhiều năm và chúng tôi vẫn học được điều mới mỗi lần.
+            Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi. 
+            Việc được chẩn đoán mắc ADHD ở tuổi 29 đã thay đổi cuộc đời tôi và truyền cảm hứng cho tôi để giúp đỡ những người khác như tôi.
           </p>
-          <button className="btn-primary">Xem Blog ADHD của chúng tôi</button>
+          <button className="btn-primary">Khám phá kiến thức ADHD</button>
         </div>
       </section>
 

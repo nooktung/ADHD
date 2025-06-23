@@ -5,7 +5,13 @@ import './index.css';
 import LandingPage from './page/LandingPage';
 import ContactUs from './page/ContactUs';
 import AboutADHD from './page/AboutADHD';
-import Team from './page/Team'
+import Team from './page/Team';
+import ADHDIntroduction from './page/ADHDIntroduction';
+import ADHDSigns from './page/ADHDSigns';
+import ADHDCauses from './page/ADHDCauses';
+import ADHDInLife from './page/ADHDInLife';
+import ADHDVsAnxiety from './page/ADHDVsAnxiety';
+import ADHDImprovement from './page/ADHDImprovement';
 
 function App() {
   return (
@@ -16,7 +22,14 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AboutADHD" element={<AboutADHD />} />
         <Route path="/Team" element={<Team />} />
-        {/* Các route khác có thể thêm sau */}
+        
+        {/* New ADHD pages */}
+        <Route path="/adhd-introduction" element={<ADHDIntroduction />} />
+        <Route path="/adhd-signs" element={<ADHDSigns />} />
+        <Route path="/adhd-causes" element={<ADHDCauses />} />
+        <Route path="/adhd-in-life" element={<ADHDInLife />} />
+        <Route path="/adhd-vs-anxiety" element={<ADHDVsAnxiety />} />
+        <Route path="/adhd-improvement" element={<ADHDImprovement />} />
       </Routes>
     </BrowserRouter>
   );
