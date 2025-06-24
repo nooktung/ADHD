@@ -8,6 +8,7 @@ import AboutADHD from './page/AboutADHD';
 import Team from './page/Team';
 import ADHDIntroduction from './page/ADHDIntroduction';
 import ADHDSigns from './page/ADHDSigns';
+import ADHDSigns2 from './page/ADHDSigns2';
 import ADHDCauses from './page/ADHDCauses';
 import ADHDInLife from './page/ADHDInLife';
 import ADHDVsAnxiety from './page/ADHDVsAnxiety';
@@ -26,6 +27,7 @@ function App() {
         {/* New ADHD pages */}
         <Route path="/adhd-introduction" element={<ADHDIntroduction />} />
         <Route path="/adhd-signs" element={<ADHDSigns />} />
+        <Route path="/adhd-signs2" element={<ADHDSigns2 />} />
         <Route path="/adhd-causes" element={<ADHDCauses />} />
         <Route path="/adhd-in-life" element={<ADHDInLife />} />
         <Route path="/adhd-vs-anxiety" element={<ADHDVsAnxiety />} />

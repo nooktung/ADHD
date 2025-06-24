@@ -21,7 +21,7 @@ const MENU_ITEMS = [
     content: {
       title: "Dấu hiệu và biểu hiện ADHD",
       description: "Nhận biết các dấu hiệu ADHD ở trẻ em, người lớn và người lớn tuổi.\nHiểu rõ cách ADHD biểu hiện ở từng độ tuổi khác nhau.",
-      link: "/adhd-signs",
+      link: "/adhd-signs2",
       linkText: "Tìm hiểu dấu hiệu ADHD",
       icon: "🩺",
     },
@@ -216,23 +216,7 @@ const Header = () => {
                 <a href="#" className="feature-card__link">
                   Blog ADHD
                 </a>
-              </div>
-
-              {/* Self-Assessment Workbook Card */}
-              <div className="feature-card feature-card--cyan">
-                <div className="feature-card__header">
-                  <div className="feature-card__icon">
-                    <span>📋</span>
-                  </div>
-                </div>
-                <h3 className="feature-card__title">Sổ Tay Tự Đánh Giá ADHD</h3>
-                <p className="feature-card__description">
-                  Trực quan hóa và đánh giá 25 đặc điểm ADHD và hiểu cách chúng ảnh hưởng đến cuộc sống của bạn.
-                </p>
-                <a href="#" className="feature-card__link">
-                  Sổ Tay ADHD
-                </a>
-              </div>
+              </div> 
             </div>
 
             {/* Center - Menu Items */}

@@ -420,19 +420,6 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-
-          <div className="stats-visual">
-            <img
-              src="image.png"
-              alt="Sổ Tay Tự Đánh Giá ADHD"
-              className="workbook-image"
-            />
-            <h3>Sổ Tay Tự Đánh Giá ADHD</h3>
-            <p>
-              Trực quan hóa và đánh giá 25 đặc điểm ADHD và hiểu cách chúng ảnh hưởng đến cuộc sống của bạn. Sổ tay bao gồm
-              60 trang với các ví dụ trực quan.
-            </p>
-          </div>
         </div>
       </section>
 
