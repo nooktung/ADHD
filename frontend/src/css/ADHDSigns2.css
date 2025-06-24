@@ -16,7 +16,7 @@
 .adhd-signs2-header {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+  background: linear-gradient(135deg, #f2c2da 0%, #e0a3c7 100%);
   color: white;
 }
 
@@ -90,14 +90,6 @@
   }
 }
 
-.adhd-signs2-header-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 5rem;
-  background: linear-gradient(to top, #eff6ff 0%, transparent 100%);
-}
 
 .adhd-signs2-main {
   max-width: 80rem;

@@ -198,6 +198,7 @@ const LandingPage = () => {
   const [selectedStory, setSelectedStory] = useState(null)
   const scrollContainerRef = useRef(null)
   const blogScrollContainerRef = useRef(null)
+  const [selectedImage, setSelectedImage] = useState(null)
 
   const checkScrollButtons = () => {
     if (scrollContainerRef.current) {
@@ -238,6 +239,173 @@ const LandingPage = () => {
   const handleCloseModal = () => {
     setSelectedStory(null)
   }
+
+  // Social media posts data
+  const socialPosts = [
+    // 1. Ưu tiên ảnh social
+    {
+      id: 1,
+      image: "social1.jpg",
+      title: "DOPAMINE ADHD",
+      description: "Hiểu về hệ thống khen thưởng của não bộ"
+    },
+    {
+      id: 2,
+      image: "social2.jpg", 
+      title: "ADHD TẠI NƠI LÀM VIỆC",
+      description: "Mẹo năng suất cho nơi làm việc"
+    },
+    {
+      id: 3,
+      image: "social3.jpg",
+      title: "CHỨC NĂNG ĐIỀU HÀNH ADHD", 
+      description: "Khám phá thách thức về chức năng điều hành"
+    },
+    {
+      id: 4,
+      image: "social4.jpg",
+      title: "HỌC TẬP VỚI ADHD",
+      description: "Chiến lược học tập thực sự hiệu quả"
+    },
+    {
+      id: 5,
+      image: "social5.jpg",
+      title: "CHĂM SÓC BẢN THÂN ADHD",
+      description: "Chăm sóc bộ não thần kinh của bạn"
+    },
+    {
+      id: 6,
+      image: "social6.jpg",
+      title: "LỐI SỐNG ADHD",
+      description: "Sống cuộc sống ADHD tốt nhất của bạn"
+    },
+    {
+      id: 7,
+      image: "social7.jpg",
+      title: "QUẢN LÝ THỜI GIAN ADHD",
+      description: "Kỹ thuật quản lý thời gian hiệu quả"
+    },
+    
+    // 2. Ảnh có số 5 ở đầu
+    {
+      id: 8,
+      image: "502556097_122110621676899610_5360919057961847101_n.jpg",
+      title: "Nội dung ADHD",
+      description: "Chia sẻ kiến thức về ADHD"
+    },
+    {
+      id: 9,
+      image: "503708736_122100749948899610_5999541274990696006_n.jpg",
+      title: "Tài liệu ADHD",
+      description: "Tài liệu giáo dục về ADHD"
+    },
+    {
+      id: 10,
+      image: "504147273_122103731114899610_3230916345496143108_n.jpg",
+      title: "Thông tin ADHD",
+      description: "Thông tin hữu ích về ADHD"
+    },
+    {
+      id: 11,
+      image: "506056973_122106518582899610_4662102247950101763_n.jpg",
+      title: "Hướng dẫn ADHD",
+      description: "Hướng dẫn thực tế cho ADHD"
+    },
+    {
+      id: 12,
+      image: "508074673_122109727604899610_5371805931824660505_n.jpg",
+      title: "Kinh nghiệm ADHD",
+      description: "Chia sẻ kinh nghiệm sống với ADHD"
+    },
+    {
+      id: 13,
+      image: "508861087_122109851906899610_6194838264199444638_n.jpg",
+      title: "Cộng đồng ADHD",
+      description: "Kết nối cộng đồng ADHD"
+    },
+    {
+      id: 14,
+      image: "510503668_122111342870899610_4010299380198974512_n.jpg",
+      title: "Hỗ trợ ADHD",
+      description: "Hỗ trợ và tư vấn ADHD"
+    },
+    {
+      id: 15,
+      image: "510802217_122111342858899610_7342651295991454216_n.jpg",
+      title: "Giáo dục ADHD",
+      description: "Giáo dục và nâng cao nhận thức"
+    },
+    {
+      id: 16,
+      image: "511186419_122111342948899610_4326304319022005289_n (1).jpg",
+      title: "Nghiên cứu ADHD",
+      description: "Nghiên cứu và phát triển về ADHD"
+    },
+    
+    // 3. Ảnh tên người
+    {
+      id: 17,
+      image: "Bùi Thị Thúy Duyên.jpg",
+      title: "Bùi Thị Thúy Duyên",
+      description: "Thành viên nhóm Alight"
+    },
+    {
+      id: 18,
+      image: "Đỗ Bích Ngọc.jpg",
+      title: "Đỗ Bích Ngọc",
+      description: "Thành viên nhóm Alight"
+    },
+    {
+      id: 19,
+      image: "Lê Thị Thanh Hằng.jpg",
+      title: "Lê Thị Thanh Hằng",
+      description: "Thành viên nhóm Alight"
+    },
+    {
+      id: 20,
+      image: "Mai Thị Lan Anh.jpg",
+      title: "Mai Thị Lan Anh",
+      description: "Thành viên nhóm Alight"
+    },
+    {
+      id: 21,
+      image: "Nguyễn Thị Phương Thảo.jpg",
+      title: "Nguyễn Thị Phương Thảo",
+      description: "Thành viên nhóm Alight"
+    },
+    {
+      id: 22,
+      image: "Nguyễn Thùy Linh.jpg",
+      title: "Nguyễn Thùy Linh",
+      description: "Thành viên nhóm Alight"
+    },
+    {
+      id: 23,
+      image: "Vũ Thị Phương Linh.jpg",
+      title: "Vũ Thị Phương Linh",
+      description: "Thành viên nhóm Alight"
+    },
+    
+    // 4. Các ảnh khác
+    {
+      id: 24,
+      image: "2.png",
+      title: "Logo ADHD",
+      description: "Logo của The Mini ADHD Coach"
+    },
+    {
+      id: 25,
+      image: "image.png",
+      title: "Hình ảnh ADHD",
+      description: "Hình ảnh minh họa về ADHD"
+    },
+    {
+      id: 26,
+      image: "logo.jpg",
+      title: "Logo chính",
+      description: "Logo chính thức của dự án"
+    },
+  ]
 
   return (
     <>
@@ -533,45 +701,89 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Social Media Section */}
-      <section className="social">
-        <div className="social-container">
-          <h2>Theo dõi @the_mini_adhd_coach trên Mạng Xã Hội!</h2>
-          <p className="social-subtitle">Xem nội dung giáo dục hàng ngày của chúng tôi!</p>
+      {/* Social Media Section - Updated with Facebook Style */}
+      <section className="social-media-section">
+        <div className="social-media-container">
+          {/* Header */}
+          <div className="social-header">
+            <h2>Theo dõi @the_mini_adhd_coach trên Mạng Xã Hội!</h2>
+            <p className="social-subtitle">
+              Xem nội dung giáo dục hàng ngày của chúng tôi trên Facebook
+              <a href="https://www.facebook.com/profile.php?id=61576988307181" className="social-link">
+                ngay tại đây <span className="external-icon">↗</span>
+              </a>
+            </p>
+          </div>
 
-          <div className="social-grid">
-            <div className="social-post post1">
-              <span className="social-emoji">🧠</span>
-              <h4>DOPAMINE ADHD</h4>
-              <p>Hiểu về hệ thống khen thưởng của não bộ</p>
+          {/* Social Media Feed */}
+          <div className="social-feed-card">
+            <div className="social-feed-header">
+              <div className="social-profile">
+                <div className="profile-avatar">
+                  <span className="profile-initial">M</span>
+                </div>
+                <div className="profile-info">
+                  <h3>The Mini ADHD Coach</h3>
+                  <p>ADHD Resources & Tips</p>
+                </div>
+              </div>
             </div>
-            <div className="social-post post2">
-              <span className="social-emoji">📱</span>
-              <h4>ADHD TẠI NƠI LÀM VIỆC</h4>
-              <p>Mẹo năng suất cho nơi làm việc</p>
+
+            <div className="social-feed-content">
+              <div className="social-posts-grid">
+                {socialPosts.map((post) => (
+                  <div 
+                    key={post.id} 
+                    className="social-post-card"
+                    onClick={() => setSelectedImage(post.image)}
+                  >
+                    <div className="post-image-container">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="post-image"
+                      />
+                      <div className="post-overlay">
+                        <div className="post-content">
+                          <h4>{post.title}</h4>
+                          <p>{post.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="social-post post3">
-              <span className="social-emoji">💡</span>
-              <h4>CHỨC NĂNG ĐIỀU HÀNH ADHD</h4>
-              <p>Khám phá thách thức về chức năng điều hành</p>
-            </div>
-            <div className="social-post post4">
-              <span className="social-emoji">📚</span>
-              <h4>HỌC TẬP VỚI ADHD</h4>
-              <p>Chiến lược học tập thực sự hiệu quả</p>
-            </div>
-            <div className="social-post post5">
-              <span className="social-emoji">💖</span>
-              <h4>CHĂM SÓC BẢN THÂN ADHD</h4>
-              <p>Chăm sóc bộ não thần kinh của bạn</p>
-            </div>
-            <div className="social-post post6">
-              <span className="social-emoji">⭐</span>
-              <h4>LỐI SỐNG ADHD</h4>
-              <p>Sống cuộc sống ADHD tốt nhất của bạn</p>
+
+            <div className="social-feed-footer">
+              <button 
+                className="follow-button"
+                onClick={() => window.open('https://www.facebook.com/profile.php?id=61576988307181', '_blank')}
+              >
+                Theo dõi trên Facebook
+              </button>
             </div>
           </div>
         </div>
+
+        {/* Image Modal */}
+        {selectedImage && (
+          <div className="image-modal-overlay" onClick={() => setSelectedImage(null)}>
+            <div className="image-modal" onClick={(e) => e.stopPropagation()}>
+              <button 
+                className="modal-close-button" 
+                onClick={() => setSelectedImage(null)}
+              >
+                ×
+              </button>
+              <img 
+                src={selectedImage} 
+                alt="ADHD content enlarged"
+                className="modal-image"
+              />
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Final CTA Section */}
