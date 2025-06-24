@@ -71,15 +71,15 @@ body {
 /* Hero Section */
 .hero {
     background: #f2c2da;
-    padding: 8rem 2rem 4rem;
+    padding: 4rem 2rem 4rem;
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.5rem; /* Thay đổi từ 4rem xuống 1rem hoặc 0.5rem */
     align-items: center;
 }
 
@@ -104,18 +104,11 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
+    height: 400px;
+    width: 400px;
+    margin-left: 100px;
 }
 
-.hero-visual::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: float 6s ease-in-out infinite;
-}
 
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -970,7 +963,6 @@ body {
 /* Social Media Section - Updated Pinterest Style */
 .social-media-section {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
 }
 
@@ -987,13 +979,13 @@ body {
 
 .social-header h2 {
     font-size: 2.5rem;
-    color: white;
+    color: black;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .social-subtitle {
-    color: rgba(255, 255, 255, 0.9);
+    color: black;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -1093,26 +1085,19 @@ body {
 
 /* Posts Grid */
 .social-posts-grid {
-    columns: 4;
-    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
     padding: 1rem;
 }
 
 .social-post-card {
     break-inside: avoid;
-    margin-bottom: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px;
     overflow: hidden;
     background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     height: fit-content;
-}
-
-.social-post-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .post-image-container {
@@ -1123,12 +1108,11 @@ body {
 
 .post-image {
     width: 100%;
+    max-height: 250px; 
     height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-    object-fit: cover;
+    object-fit: contain; 
+    background: #fff;
 }
-
 .social-post-card:hover .post-image {
     transform: scale(1.05);
 }
@@ -1218,12 +1202,19 @@ body {
     max-width: 90vw;
     max-height: 90vh;
     background: transparent;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.image-modal::-webkit-scrollbar {
+    display: none;
 }
 
 .modal-close-button {
     position: absolute;
-    top: -40px;
-    right: 0;
+    top: -15px;
+    right: 300px;
     background: none;
     border: none;
     color: white;
@@ -1232,15 +1223,14 @@ body {
     padding: 0.5rem;
     border-radius: 50%;
     transition: background-color 0.3s ease;
+    z-index: 10;
 }
 
-.modal-close-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
+
 
 .modal-image {
-    max-width: 80%;
-    max-height: 80%;
+    max-width:45%;
+    max-height:45%;
     object-fit: contain;
     border-radius: 8px;
     display: block;

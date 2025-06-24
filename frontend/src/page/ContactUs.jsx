@@ -153,7 +153,7 @@ const ContactUs = () => {
           <div className="contact-map-container">
             <div className="map-wrapper">
               <img 
-                src="/map.png" 
+                src="/map.jpg" 
                 alt="Bản đồ vị trí văn phòng - Delta Đại Học FPT, Thạch Thất, Thạch Hòa" 
                 className="contact-map"
               />

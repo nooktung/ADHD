@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../css/Header.css';
 
 // Menu configuration - Updated with new ADHD content
@@ -21,7 +21,7 @@ const MENU_ITEMS = [
     content: {
       title: "Dấu hiệu và biểu hiện ADHD",
       description: "Nhận biết các dấu hiệu ADHD ở trẻ em, người lớn và người lớn tuổi.\nHiểu rõ cách ADHD biểu hiện ở từng độ tuổi khác nhau.",
-      link: "/adhd-signs2",
+      link: "/adhd-signs",
       linkText: "Tìm hiểu dấu hiệu ADHD",
       icon: "🩺",
     },
@@ -80,6 +80,7 @@ const Header = () => {
   const [activeMenuItem, setActiveMenuItem] = useState("introduction");
   const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef(null);
+  const navigate = useNavigate();
 
   // Dropdown handlers
   const handleMouseEnter = () => {
@@ -101,7 +102,10 @@ const Header = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      console.log('Searching for:', searchQuery);
+      console.log('Submitting search for:', searchQuery.trim()); // Debug log
+      const searchUrl = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      console.log('Navigating to:', searchUrl); // Debug log
+      navigate(searchUrl);
     }
   };
 

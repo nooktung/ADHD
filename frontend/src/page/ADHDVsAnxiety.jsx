@@ -31,7 +31,7 @@ const ADHDVsAnxiety = () => {
 
               <div className="adhd-author-info">
                 <div className="adhd-author-avatar">
-                  <img src="/511186419_122111342948899610_4326304319022005289_n (1).jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
+                  <img src="/teamname.jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
                 </div>
                 <div className="adhd-author-details">
                   <div className="adhd-author-name">Nhóm Alight</div>

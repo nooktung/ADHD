@@ -13,6 +13,7 @@ import ADHDCauses from './page/ADHDCauses';
 import ADHDInLife from './page/ADHDInLife';
 import ADHDVsAnxiety from './page/ADHDVsAnxiety';
 import ADHDImprovement from './page/ADHDImprovement';
+import SearchResults from './page/SearchResults';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AboutADHD" element={<AboutADHD />} />
         <Route path="/Team" element={<Team />} />
+        
+        {/* Search Results */}
+        <Route path="/search" element={<SearchResults />} />
         
         {/* New ADHD pages */}
         <Route path="/adhd-introduction" element={<ADHDIntroduction />} />

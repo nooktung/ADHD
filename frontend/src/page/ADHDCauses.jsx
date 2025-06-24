@@ -31,7 +31,7 @@ const ADHDCauses = () => {
 
               <div className="adhd-author-info">
                 <div className="adhd-author-avatar">
-                  <img src="/504147273_122103731114899610_3230916345496143108_n.jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
+                  <img src="/teamname.jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
                 </div>
                 <div className="adhd-author-details">
                   <div className="adhd-author-name">Nhóm Alight</div>

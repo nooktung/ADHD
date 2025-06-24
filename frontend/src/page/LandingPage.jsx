@@ -242,169 +242,44 @@ const LandingPage = () => {
 
   // Social media posts data
   const socialPosts = [
-    // 1. Ưu tiên ảnh social
-    {
-      id: 1,
-      image: "social1.jpg",
-      title: "DOPAMINE ADHD",
-      description: "Hiểu về hệ thống khen thưởng của não bộ"
-    },
-    {
-      id: 2,
-      image: "social2.jpg", 
-      title: "ADHD TẠI NƠI LÀM VIỆC",
-      description: "Mẹo năng suất cho nơi làm việc"
-    },
-    {
-      id: 3,
-      image: "social3.jpg",
-      title: "CHỨC NĂNG ĐIỀU HÀNH ADHD", 
-      description: "Khám phá thách thức về chức năng điều hành"
-    },
-    {
-      id: 4,
-      image: "social4.jpg",
-      title: "HỌC TẬP VỚI ADHD",
-      description: "Chiến lược học tập thực sự hiệu quả"
-    },
-    {
-      id: 5,
-      image: "social5.jpg",
-      title: "CHĂM SÓC BẢN THÂN ADHD",
-      description: "Chăm sóc bộ não thần kinh của bạn"
-    },
-    {
-      id: 6,
-      image: "social6.jpg",
-      title: "LỐI SỐNG ADHD",
-      description: "Sống cuộc sống ADHD tốt nhất của bạn"
-    },
-    {
-      id: 7,
-      image: "social7.jpg",
-      title: "QUẢN LÝ THỜI GIAN ADHD",
-      description: "Kỹ thuật quản lý thời gian hiệu quả"
-    },
-    
     // 2. Ảnh có số 5 ở đầu
     {
-      id: 8,
-      image: "502556097_122110621676899610_5360919057961847101_n.jpg",
+      id: 1,
+      image: "story1.jpg",
       title: "Nội dung ADHD",
       description: "Chia sẻ kiến thức về ADHD"
     },
     {
-      id: 9,
-      image: "503708736_122100749948899610_5999541274990696006_n.jpg",
+      id: 2,
+      image: "story2.jpg",
       title: "Tài liệu ADHD",
       description: "Tài liệu giáo dục về ADHD"
     },
     {
-      id: 10,
-      image: "504147273_122103731114899610_3230916345496143108_n.jpg",
+      id: 3,
+      image: "story3a.jpg",
       title: "Thông tin ADHD",
       description: "Thông tin hữu ích về ADHD"
     },
     {
-      id: 11,
-      image: "506056973_122106518582899610_4662102247950101763_n.jpg",
+      id: 4,
+      image: "story3b.jpg",
       title: "Hướng dẫn ADHD",
       description: "Hướng dẫn thực tế cho ADHD"
     },
     {
-      id: 12,
-      image: "508074673_122109727604899610_5371805931824660505_n.jpg",
+      id: 5,
+      image: "story3c.jpg",
       title: "Kinh nghiệm ADHD",
       description: "Chia sẻ kinh nghiệm sống với ADHD"
     },
     {
-      id: 13,
-      image: "508861087_122109851906899610_6194838264199444638_n.jpg",
+      id: 6,
+      image: "story4.jpg",
       title: "Cộng đồng ADHD",
       description: "Kết nối cộng đồng ADHD"
     },
-    {
-      id: 14,
-      image: "510503668_122111342870899610_4010299380198974512_n.jpg",
-      title: "Hỗ trợ ADHD",
-      description: "Hỗ trợ và tư vấn ADHD"
-    },
-    {
-      id: 15,
-      image: "510802217_122111342858899610_7342651295991454216_n.jpg",
-      title: "Giáo dục ADHD",
-      description: "Giáo dục và nâng cao nhận thức"
-    },
-    {
-      id: 16,
-      image: "511186419_122111342948899610_4326304319022005289_n (1).jpg",
-      title: "Nghiên cứu ADHD",
-      description: "Nghiên cứu và phát triển về ADHD"
-    },
     
-    // 3. Ảnh tên người
-    {
-      id: 17,
-      image: "Bùi Thị Thúy Duyên.jpg",
-      title: "Bùi Thị Thúy Duyên",
-      description: "Thành viên nhóm Alight"
-    },
-    {
-      id: 18,
-      image: "Đỗ Bích Ngọc.jpg",
-      title: "Đỗ Bích Ngọc",
-      description: "Thành viên nhóm Alight"
-    },
-    {
-      id: 19,
-      image: "Lê Thị Thanh Hằng.jpg",
-      title: "Lê Thị Thanh Hằng",
-      description: "Thành viên nhóm Alight"
-    },
-    {
-      id: 20,
-      image: "Mai Thị Lan Anh.jpg",
-      title: "Mai Thị Lan Anh",
-      description: "Thành viên nhóm Alight"
-    },
-    {
-      id: 21,
-      image: "Nguyễn Thị Phương Thảo.jpg",
-      title: "Nguyễn Thị Phương Thảo",
-      description: "Thành viên nhóm Alight"
-    },
-    {
-      id: 22,
-      image: "Nguyễn Thùy Linh.jpg",
-      title: "Nguyễn Thùy Linh",
-      description: "Thành viên nhóm Alight"
-    },
-    {
-      id: 23,
-      image: "Vũ Thị Phương Linh.jpg",
-      title: "Vũ Thị Phương Linh",
-      description: "Thành viên nhóm Alight"
-    },
-    
-    // 4. Các ảnh khác
-    {
-      id: 24,
-      image: "2.png",
-      title: "Logo ADHD",
-      description: "Logo của The Mini ADHD Coach"
-    },
-    {
-      id: 25,
-      image: "image.png",
-      title: "Hình ảnh ADHD",
-      description: "Hình ảnh minh họa về ADHD"
-    },
-    {
-      id: 26,
-      image: "logo.jpg",
-      title: "Logo chính",
-      description: "Logo chính thức của dự án"
-    },
   ]
 
   return (
@@ -461,13 +336,12 @@ const LandingPage = () => {
             </p>
           </div>
           <div className="hero-visual">
-            <h3>Trực quan hóa các đặc điểm ADHD của bạn!</h3>
             <img 
               src="image.png" 
               alt="ADHD Traits Visualization" 
               className="hero-visual-image"
               style={{
-                maxWidth: '50%',
+                maxWidth: '100%',
                 height: 'auto',
                 borderRadius: '12px',
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
@@ -795,7 +669,12 @@ const LandingPage = () => {
             Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi. 
             Việc được chẩn đoán mắc ADHD ở tuổi 29 đã thay đổi cuộc đời tôi và truyền cảm hứng cho tôi để giúp đỡ những người khác như tôi.
           </p>
-          <button className="btn-primary">Khám phá kiến thức ADHD</button>
+          <button
+            className="btn-primary"
+            onClick={() => window.location.href = "/"}
+          >
+            Khám phá kiến thức ADHD
+          </button>
         </div>
       </section>
 

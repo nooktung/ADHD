@@ -31,7 +31,7 @@ const ADHDInLife = () => {
 
               <div className="adhd-author-info">
                 <div className="adhd-author-avatar">
-                  <img src="/508074673_122109727604899610_5371805931824660505_n.jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
+                  <img src="/teamname.jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
                 </div>
                 <div className="adhd-author-details">
                   <div className="adhd-author-name">Nhóm Alight</div>
