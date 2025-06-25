@@ -11,13 +11,13 @@
 
 /* ===== MAIN HEADER ===== */
 .header {
-  background: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #e5e7eb;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1001;
-  margin-top: -100px;
 }
 
 .header__container {
