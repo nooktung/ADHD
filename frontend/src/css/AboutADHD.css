@@ -45,13 +45,16 @@
 
 .adhd-header-content {
   display: flex;
-  gap: 4rem;
+  justify-content: space-between;
   align-items: flex-start;
   background: var(--primary-color);
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
+  width: 100%;
+  box-sizing: border-box;
+  gap: 2rem;
 }
 
 .adhd-book-illustration {
@@ -62,7 +65,7 @@
   width: 300px;
   height: 300px;
   margin-left: 50px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin-top: 40px;
   border-radius: 12px;
   display: flex;
   align-items: center;

@@ -351,7 +351,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section - Updated with interactive cards */}
       <section className="features">
         <div className="features-container">
           <h2>Tìm hiểu về ADHD với nội dung minh họa của chúng tôi!</h2>
@@ -360,65 +360,41 @@ const LandingPage = () => {
           </p>
 
           <div className="features-new-layout">
-            <div className="left-large-card">
+            {/* Left Large Card - Clickable */}
+            <Link to="/adhd-introduction" className="left-large-card">
               <div className="cute-brain-container">
                 <span className="cute-brain">🧠</span>
               </div>
-              <h3 className="main-question">Hiểu về ADHD toàn diện</h3>
+              <h3 className="main-question">Nhận thức về ADHD</h3>
               <p className="subtitle-text">
                 Chúng tôi đã tạo một hệ thống thông tin toàn diện về ADHD dựa trên nghiên cứu khoa học 
                 để giúp bạn hiểu rõ về rối loạn tăng động giảm chú ý từ cơ bản đến nâng cao.
               </p>
-            </div>
+            </Link>
 
             <div className="right-section">
+              {/* Small Cards Grid - Clickable */}
               <div className="small-cards-grid">
                 <div className="small-card adhd-awareness">
-                  <Link to="/adhd-introduction">
+                  <Link to="/adhd-signs">
                     <div className="card-icon">
                       <span>📚</span>
                     </div>
-                    <h4>Giới thiệu ADHD</h4>
-                  </Link>
-                </div>
-
-                <div className="small-card adhd-diagnosis">
-                  <Link to="/adhd-signs">
-                    <div className="card-icon">
-                      <span>🩺</span>
-                    </div>
-                    <h4>Dấu hiệu ADHD</h4>
-                  </Link>
-                </div>
-
-                <div className="small-card adhd-symptoms">
-                  <Link to="/adhd-causes">
-                    <div className="card-icon">
-                      <span>🧠</span>
-                    </div>
-                    <h4>Nguyên nhân</h4>
-                  </Link>
-                </div>
-
-                <div className="small-card living-adhd">
-                  <Link to="/adhd-in-life">
-                    <div className="card-icon">
-                      <span>🏠</span>
-                    </div>
-                    <h4>ADHD trong cuộc sống</h4>
+                    <h4>Triệu chứng</h4>
                   </Link>
                 </div>
               </div>
 
+              {/* Horizontal Card - Clickable */}
               <div className="horizontal-card">
-                <div className="horizontal-card-content">
+                <Link to="/adhd-in-life">
                   <div className="workbook-icon">
                     <span>⚖️</span>
                   </div>
                   <div className="workbook-text">
-                    <h3>So sánh ADHD với lo âu & Cách cải thiện</h3>
+                    <h3>Sống chung với ADHD</h3>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

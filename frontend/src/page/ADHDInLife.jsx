@@ -1,254 +1,375 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../css/AboutADHD.css';
 
 const ADHDInLife = () => {
+  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [activeNav, setActiveNav] = useState('overview');
+
+  const toggleFAQ = (index) => {
+    setExpandedFAQ(expandedFAQ === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "ADHD có thực sự ảnh hưởng đến tất cả các khía cạnh của cuộc sống không?",
+      answer: "Có, ADHD có thể ảnh hưởng đến nhiều khía cạnh trong cuộc sống hằng ngày, từ công việc, mối quan hệ, sức khỏe đến việc quản lý cảm xúc. Tuy nhiên, với sự hỗ trợ và chiến lược phù hợp, những người mắc ADHD hoàn toàn có thể sống một cuộc sống trọn vẹn và thành công."
+    },
+    {
+      question: "Làm thế nào để quản lý tốt các triệu chứng ADHD trong cuộc sống hàng ngày?",
+      answer: "Việc quản lý ADHD hiệu quả thường bao gồm sự kết hợp giữa điều trị, các chiến lược đối phó cá nhân, tạo môi trường hỗ trợ và xây dựng thói quen có cấu trúc. Quan trọng nhất là tìm ra phương pháp phù hợp với bản thân và kiên trì thực hiện."
+    },
+    {
+      question: "ADHD có thể được 'chữa khỏi' hoàn toàn không?",
+      answer: "ADHD là một tình trạng thần kinh suốt đời, không thể 'chữa khỏi' hoàn toàn. Tuy nhiên, các triệu chứng có thể được quản lý hiệu quả thông qua điều trị, liệu pháp và các chiến lược sống. Nhiều người mắc ADHD có cuộc sống thành công và hạnh phúc khi biết cách quản lý tình trạng của mình."
+    }
+  ];
+
   return (
     <>
       <Header />
-      
       <div className="adhd-adhd-page">
         {/* Header Section */}
-        <header className="adhd-header-section">
+        <div className="adhd-header-section">
           <div className="adhd-header-content">
             <div className="adhd-book-illustration">
               <div className="adhd-book">
-                <div className="adhd-book-cover">
-                  <img src="/image.png" alt="ADHD Book Cover" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px'}} />
-                </div>
+                <img src="/image.png" alt="ADHD In Life" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px'}} />
               </div>
             </div>
-
+            
             <div className="adhd-header-text">
-              <div className="adhd-category">Bản Giao Hưởng ADHD • ADHD trong cuộc sống</div>
-              <h1 className="adhd-main-title">IV. ADHD trong cuộc sống</h1>
+              <div className="adhd-category">
+                Nhóm Alight • Sống Chung Với ADHD
+              </div>
+              
+              <h1 className="adhd-main-title">
+                Hiểu biết sâu sắc về Cuộc sống Hàng ngày với ADHD
+              </h1>
+              
               <p className="adhd-subtitle">
-                ADHD ở người trưởng thành không đơn thuần là một "hội chứng rối loạn" mà là một dạng khác biệt thần kinh 
-                ảnh hưởng đến nhiều khía cạnh trong đời sống - từ học tập, công việc cho tới sinh hoạt cá nhân.
+              Sống chung với ADHD bao gồm việc vượt qua những thách thức độc đáo và khai thác điểm mạnh của từng cá nhân. Điều này thường có nghĩa là phải đối mặt với sự tập trung không ổn định, kiểm soát sự bốc đồng và tìm ra các chiến lược để sắp xếp các công việc hàng ngày. Sống chung với não bộ ADHD cũng mang lại sự sáng tạo, khả năng thích ứng và tư duy nhanh nhạy. Quản lý hiệu quả thường bao gồm sự kết hợp giữa điều trị, hỗ trợ và các chiến lược đối phó cá nhân phù hợp với nhu cầu của từng cá nhân. Chia sẻ kinh nghiệm và học hỏi từ những người khác mắc ADHD có thể vô cùng hữu ích trong việc biến những trở ngại tiềm ẩn thành cơ hội để phát triển và thành công.
               </p>
-              <div className="adhd-publish-info">Cập nhật ngày 24.06.2025</div>
+              
+              <div className="adhd-publish-info">
+                Xuất bản ngày 24.06.2025 • Cập nhật ngày 26.06.2025
+              </div>
 
               <div className="adhd-author-info">
                 <div className="adhd-author-avatar">
-                  <img src="/teamname.jpg" alt="Author Avatar" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
+                  <img src="/teamname.jpg" alt="Nhóm Alight" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'}} />
                 </div>
-                <div className="adhd-author-details">
-                  <div className="adhd-author-name">Nhóm Alight</div>
-                  <div className="adhd-author-title">Nhóm nghiên cứu và phát triển nội dung ADHD</div>
+                <div>
+                  <div className="adhd-author-name">
+                    Nhóm Alight
+                  </div>
+                  <div className="adhd-author-title">
+                    Nhóm nghiên cứu và phát triển nội dung ADHD
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </header>
+        </div>
 
-        {/* Main Content Section */}
-        <main className="adhd-main-content">
+        {/* Main Content */}
+        <div className="adhd-main-content">
           <div className="adhd-content-wrapper">
-            {/* Sidebar */}
+            
+            {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Nội dung bài viết</h3>
+              <h3>Trong Bài Viết Này</h3>
+              
               <nav className="adhd-article-nav">
-                <a href="#study" className="adhd-nav-item">
-                  1. Học tập
+                <a
+                  href="#overview"
+                  className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('overview')}
+                >
+                  Tổng Quan Về Cuộc Sống Hằng Ngày
                 </a>
-                <a href="#work" className="adhd-nav-item">
-                  2. Công việc
+                <a
+                  href="#my-life"
+                  className={`adhd-nav-item${activeNav === 'my-life' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('my-life')}
+                >
+                  Đây Là Cuộc Sống Của Tôi Với ADHD
                 </a>
-                <a href="#daily-life" className="adhd-nav-item">
-                  3. Sinh hoạt
+                <a
+                  href="#work-impact"
+                  className={`adhd-nav-item${activeNav === 'work-impact' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('work-impact')}
+                >
+                  ADHD Ảnh Hưởng Đến Công Việc
                 </a>
-                <a href="#examples" className="adhd-nav-item">
-                  4. Ví dụ thực tế
+                <a
+                  href="#relationships"
+                  className={`adhd-nav-item${activeNav === 'relationships' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('relationships')}
+                >
+                  Duy Trì Các Mối Quan Hệ
+                </a>
+                <a
+                  href="#health-risks"
+                  className={`adhd-nav-item${activeNav === 'health-risks' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('health-risks')}
+                >
+                  Nguy Cơ ADHD Gây Ra Với Sức Khỏe
+                </a>
+                <a
+                  href="#comorbid-disorders"
+                  className={`adhd-nav-item${activeNav === 'comorbid-disorders' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('comorbid-disorders')}
+                >
+                  ADHD Và Các Rối Loạn Kèm Theo
+                </a>
+                <a
+                  href="#facing-challenges"
+                  className={`adhd-nav-item${activeNav === 'facing-challenges' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('facing-challenges')}
+                >
+                  Có Quá Nhiều Điều Phải Đối Mặt
+                </a>
+                <a
+                  href="#faqs"
+                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('faqs')}
+                >
+                  Câu Hỏi Thường Gặp
                 </a>
               </nav>
 
-              <div className="adhd-cta-section">
-                <div className="adhd-cta-illustration">
-                  <div className="adhd-cta-book"></div>
+              {/* CTA Section */}
+              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
+                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                 </div>
-                <h4>ADHD và cuộc sống!</h4>
-                <p>
-                  Tìm hiểu cách ADHD ảnh hưởng đến các khía cạnh khác nhau của cuộc sống 
-                  và cách thích nghi tích cực.
+                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Cuộc Sống ADHD!</h4>
+                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
+                  Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý cuộc sống hàng ngày với ADHD. 
+                  Từ mẹo tổ chức đến kỹ thuật quản lý cảm xúc, chúng tôi ở đây để hỗ trợ hành trình của bạn.
                 </p>
-                <button className="adhd-cta-button">Tìm hiểu thêm</button>
+                <button className="adhd-cta-button">
+                  Khám phá tài nguyên
+                </button>
               </div>
             </aside>
 
             {/* Main Article */}
             <article className="adhd-article-content">
-              <p>
-                Các biểu hiện thường thấy gồm khó duy trì sự tập trung, hay quên, trì hoãn và khó tổ chức công việc, 
-                đi kèm cảm xúc dễ dao động và mệt mỏi khi phải kiểm soát bản thân trong thời gian dài.
-              </p>
 
-              <section id="study">
-                <h2>1. Học tập</h2>
+              <section id="overview" className="adhd-section">
+                <h2>Tổng Quan Về Cuộc Sống Hằng Ngày Của Chúng Ta</h2>
                 <p>
-                  Trong môi trường học thuật, sinh viên đại học mắc ADHD thường gặp khó khăn trong việc duy trì sự chú ý, 
-                  tổ chức thời gian và hoàn thành bài tập đúng hạn. Những yếu tố này dẫn đến điểm GPA thấp hơn, 
-                  tỷ lệ rút môn nhiều hơn và tiến độ tốt nghiệp chậm hơn so với sinh viên không mắc ADHD.
+                  Một số người không mắc ADHD (người thần kinh điển hình - neurotypical) thường thắc mắc: liệu chứng 
+                  <strong>Rối loạn Tăng động Giảm chú ý (ADHD)</strong> ảnh hưởng như thế nào đến các khía cạnh khác nhau của cuộc sống 🤔. 
+                  Sau cùng thì, theo họ, họ cũng từng gặp phải những biểu hiện như hay quên, khó khăn trong việc tổ chức, 
+                  hoặc thậm chí hay mơ mộng. Dù đúng là những trải nghiệm này không chỉ riêng người có ADHD mới có, nhưng điều 
+                  quan trọng cần nhấn mạnh là: với những ai mắc chứng rối loạn thần kinh này, các đặc điểm đó thường xuyên làm xáo trộn cuộc sống.
                 </p>
-
-                <div className="adhd-adhd-types">
-                  <div className="adhd-type-item">
-                    <h3>📊 Thống kê đáng lo ngại</h3>
-                    <ul style={{listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.6'}}>
-                      <li><strong>70% sinh viên ADHD</strong> không thể tập trung quá 15 phút</li>
-                      <li>Thường xuyên quên deadline</li>
-                      <li>Mức độ suy giảm chức năng cao hơn hẳn trong học tập</li>
-                      <li>Ảnh hưởng đến các mối quan hệ xã hội và hoạt động hàng ngày</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="adhd-type-item">
-                    <h3>🎯 Các thách thức cụ thể</h3>
-                    <ul style={{listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.6'}}>
-                      <li>Khó duy trì sự chú ý trong giờ học dài</li>
-                      <li>Gặp khó khăn trong việc tổ chức ghi chép</li>
-                      <li>Trì hoãn làm bài tập và dự án</li>
-                      <li>Khó khăn trong việc quản lý thời gian</li>
-                      <li>Dễ bị phân tâm trong môi trường học tập</li>
-                    </ul>
-                  </div>
-                </div>
+                <p>
+                  Đó là lý do tại sao tôi hy vọng việc chia sẻ nhận thức và trải nghiệm từ góc nhìn của một người đã được chẩn đoán ADHD 
+                  sẽ giúp người khác hiểu hơn về cách não bộ của người mắc ADHD hoạt động.
+                </p>
+                <p>
+                  Mỗi người chúng ta có một cuộc sống khác nhau. Và điều này càng đúng với những người mắc chứng ADHD. Bởi vì ADHD là 
+                  một tình trạng phức tạp, các triệu chứng và mức độ nghiêm trọng của chúng có thể khác nhau tùy từng người. Một số người 
+                  gặp khó khăn trong việc tập trung hoặc thường xuyên bị "lạc trôi trong suy nghĩ", trong khi một số khác đã phát triển 
+                  được các kỹ năng đối phó với những biểu hiện đó. Điều đúng với tôi có thể không đúng với bạn 😉.
+                </p>
+                <p>
+                  Hiện tại, tôi có quá nhiều suy nghĩ về cách diễn đạt cuộc sống của người mắc ADHD. Có hàng ngàn ý tưởng quay cuồng 
+                  trong đầu tôi, nhưng đôi khi tôi không thể kiểm soát được chúng để biến thành điều gì đó dễ hiểu 😞. Tuy nhiên, 
+                  tôi sẽ cố gắng hết sức để kể cho bạn nghe về ADHD ảnh hưởng như thế nào đến cuộc sống hằng ngày của tôi. Vì với nhiều 
+                  người mắc ADHD, việc giữ cho cuộc sống có tổ chức giống như một cuộc chiến không hồi kết.
+                </p>
               </section>
 
-              <section id="work">
-                <h2>2. Công việc</h2>
+              <section id="my-life" className="adhd-section">
+                <h2>Đây Là Cuộc Sống Của Tôi Với ADHD</h2>
                 <p>
-                  Ở nơi làm việc, ADHD có thể dẫn đến tình trạng giảm năng suất, trễ deadline, khó làm việc nhóm và 
-                  rút lui khỏi các cơ hội nghề nghiệp. Người trưởng thành mắc ADHD có nguy cơ cao hơn trong việc mất việc 
-                  hoặc nghỉ làm do các vấn đề về chú ý, điều hành và cảm xúc.
+                  Trước khi được chẩn đoán và gặp các chuyên gia sức khỏe tâm thần, tôi cảm thấy lạc lối và không biết chính xác mình 
+                  đang đối mặt với điều gì 😢. Mỗi buổi sáng, tôi gặp khó khăn ngay từ việc ra khỏi giường cho đến bắt đầu một công việc mới. 
+                  Tôi không thể tìm thấy động lực. Nhưng khi có điều gì đó khiến tôi hứng thú, tôi có thể làm việc đó hàng giờ liền mà 
+                  không nghỉ ngơi hay ăn uống.
                 </p>
-
-                <div className="adhd-adhd-types">
-                  <div className="adhd-type-item">
-                    <h3>📉 Tác động tiêu cực</h3>
-                    <ul style={{listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.6'}}>
-                      <li>Trung bình <strong>22 ngày mất năng suất mỗi năm</strong></li>
-                      <li>Nguy cơ mất việc cao hơn</li>
-                      <li>Khó khăn trong việc duy trì mối quan hệ đồng nghiệp</li>
-                      <li>Stress cao do áp lực công việc</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="adhd-type-item">
-                    <h3>✨ Những ưu điểm độc đáo</h3>
-                    <p>
-                      Tuy nhiên, không thể phủ nhận rằng người ADHD cũng mang trong mình nhiều ưu điểm độc đáo:
-                    </p>
-                    <ul style={{listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.6'}}>
-                      <li><strong>Khả năng sáng tạo:</strong> Tư duy độc đáo và giải pháp khác biệt</li>
-                      <li><strong>Dũng cảm trong tư duy rủi ro:</strong> Sẵn sàng thử nghiệm ý tưởng mới</li>
-                      <li><strong>Trạng thái "hyperfocus":</strong> Tập trung cao độ vào việc yêu thích</li>
-                      <li><strong>Tư duy linh hoạt:</strong> Thích nghi nhanh với thay đổi</li>
-                      <li><strong>Giàu ý tưởng:</strong> Luôn có nhiều góc nhìn mới mẻ</li>
-                    </ul>
-                  </div>
-                </div>
+                <p>
+                  Những hoạt động như chơi game hay đọc sách một mạch khiến tôi cảm thấy như được sống đúng với bản thân, và đó là cách 
+                  để tôi thoát khỏi thực tại. Tôi thường cho phép bản thân đắm chìm hàng giờ như vậy, bởi vì tôi biết cảm giác phấn khích 
+                  đó rồi sẽ mất đi.
+                </p>
+                <p>
+                  Sau khi nhận được <strong>chẩn đoán ADHD chính thức</strong>, tôi bắt đầu học cách quản lý các triệu chứng của rối loạn 
+                  thần kinh này. Tuy nhiên, chẩn đoán không phải là chiếc chìa khóa vạn năng để giải quyết mọi vấn đề hằng ngày. Thay vào đó, 
+                  nó giống như một lối đi mở ra các bước cụ thể để xử lý và quản lý triệu chứng và khó khăn kèm theo 🙂.
+                </p>
+                <p>
+                  Tôi vẫn làm cháy đồ ăn vì mất tập trung khi nấu nướng; tôi vẫn né tránh đi chợ vì công việc đó khiến tôi choáng ngợp; 
+                  và có những dự án lớn vẫn còn dang dở vì tôi không biết bắt đầu từ đâu. Nhưng tôi đã học cách chấp nhận bản thân nhiều 
+                  hơn nhờ những chiến lược hiệu quả và việc chấp nhận bản thân có ADHD.
+                </p>
+                <p>
+                  Có những lúc ADHD vẫn chiếm lấy tôi, đặc biệt là trong <strong>quản lý thời gian</strong> ⏲️ và kiểm soát bản thân. 
+                  Tôi thường bị cuốn vào mạng xã hội và không biết thời gian đã trôi đi đâu, dẫn đến việc trì hoãn hàng loạt. Tôi cũng 
+                  dành quá nhiều thời gian cho việc nghỉ ngơi hơn là làm việc thực sự.
+                </p>
+                <p>
+                  Và có một điều tôi không thể kiểm soát được: <strong>giấc ngủ</strong>. Dù một ngày có mệt mỏi đến đâu, dù tôi có bận rộn 
+                  ra sao (thậm chí chỉ với một việc), tôi vẫn không thể chợp mắt 😪. Não ADHD của tôi không thể "tắt máy", khiến tôi thức 
+                  đến tận khuya hoặc đến giữa đêm.
+                </p>
               </section>
 
-              <section id="daily-life">
-                <h2>3. Sinh hoạt</h2>
+              <section id="work-impact" className="adhd-section">
+                <h2>ADHD Ảnh Hưởng Như Thế Nào Đến Công Việc Hằng Ngày?</h2>
                 <p>
-                  Trong đời sống thường nhật, người ADHD có thể gặp khó khăn trong việc duy trì trật tự sinh hoạt, 
-                  như quản lý thời gian, sắp xếp vật dụng, tuân thủ kế hoạch hoặc duy trì ổn định các mối quan hệ cá nhân.
+                  Những người trưởng thành mắc ADHD, đặc biệt là làm việc trong môi trường văn phòng hoặc thường xuyên phải giao tiếp xã hội, 
+                  sẽ không tránh khỏi những ảnh hưởng của chứng ADHD. Rất khó để giữ mọi thứ có tổ chức khi công việc dồn dập, hoặc duy trì 
+                  sự chú ý lâu dài khi phải tham gia cuộc họp hay hội thoại 😵‍💫.
                 </p>
-
-                <div className="adhd-adhd-types">
-                  <div className="adhd-type-item">
-                    <h3>🏠 Thách thức hàng ngày</h3>
-                    <ul style={{listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.6'}}>
-                      <li>Khó khăn trong việc quản lý thời gian</li>
-                      <li>Sắp xếp vật dụng và không gian sống</li>
-                      <li>Tuân thủ kế hoạch và thói quen</li>
-                      <li>Duy trì các mối quan hệ cá nhân ổn định</li>
-                      <li>Quản lý tài chính cá nhân</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="adhd-type-item">
-                    <h3>🌟 Những phẩm chất tích cực</h3>
-                    <p>
-                      Dù vậy, họ cũng thường là những người:
-                    </p>
-                    <ul style={{listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.6'}}>
-                      <li><strong>Tràn đầy năng lượng:</strong> Nhiệt huyết và năng động</li>
-                      <li><strong>Hài hước:</strong> Mang lại niềm vui cho mọi người</li>
-                      <li><strong>Có khả năng lan tỏa cảm hứng:</strong> Truyền động lực cho cộng đồng</li>
-                      <li><strong>Sáng tạo trong giải quyết vấn đề:</strong> Tìm ra cách làm độc đáo</li>
-                    </ul>
-                  </div>
-                </div>
+                <p>
+                  Nhiều báo cáo cho thấy người lớn mắc ADHD thường bị ảnh hưởng đến <strong>trí nhớ làm việc</strong>, khiến họ khó nhớ chỉ dẫn 
+                  và chi tiết công việc -- từ đó càng khó hoàn thành nhiệm vụ.
+                </p>
+                <p>
+                  Khi chúng ta làm việc kém hiệu quả hoặc mắc sai sót thường xuyên vì ADHD, như cảm thấy choáng ngợp trước chỉ đạo hoặc 
+                  không thể tập trung vào chi tiết, thì lòng tự trọng cũng bị tổn thương. Và khi vòng lặp của sự nghi ngờ bản thân và hiệu suất 
+                  thấp lặp đi lặp lại, ADHD có thể khiến ta cảm thấy như đang đấu tranh liên tục với chính mình 😭.
+                </p>
+                <p>
+                  Nhưng không phải trải nghiệm nào với ADHD cũng tiêu cực. Nếu có môi trường phù hợp và sự hỗ trợ đúng lúc, chúng ta hoàn toàn 
+                  có thể vượt qua kỳ vọng và làm tốt hơn những gì được giao. Khi duy trì được sự tập trung và giảm thiểu xao nhãng, chúng ta 
+                  sẽ ít lo âu hơn, giúp dễ ra quyết định hơn 😊. Ngoài ra, việc tư duy khác biệt và sáng tạo cũng là điểm mạnh bẩm sinh của 
+                  nhiều người mắc ADHD.
+                </p>
               </section>
 
-              <section id="examples">
-                <h2>4. Ví dụ thực tế</h2>
+              <section id="relationships" className="adhd-section">
+                <h2>Duy Trì Các Mối Quan Hệ Khi Sống Cùng ADHD</h2>
                 <p>
-                  Một số ví dụ thực tế cho thấy mức độ ảnh hưởng rõ rệt của ADHD đến đời sống người lớn:
+                  Nhiều triệu chứng cốt lõi của ADHD có thể ảnh hưởng đến cách chúng ta tương tác và duy trì mối quan hệ 🧑‍🤝‍🧑. Ví dụ, 
+                  khó giữ sự chú ý trong khi trò chuyện, thiếu kế hoạch khi tham gia các hoạt động với người khác, hay phản ứng bốc đồng 
+                  -- tất cả đều có thể khiến người đối diện hiểu nhầm rằng ta bất lịch sự hoặc thiếu quan tâm.
                 </p>
-
-                <div className="adhd-help-resources">
-                  <div className="adhd-resource">
-                    <h4>👩‍💼 Trường hợp Jen - 29 tuổi</h4>
-                    <p>
-                      Jen đã từng mất việc vì liên tục trễ deadline và quên lịch họp. Sau khi được chẩn đoán ADHD, 
-                      cô bắt đầu điều trị kết hợp thuốc và liệu pháp hành vi nhận thức (CBT), từ đó dần cải thiện 
-                      hiệu suất làm việc.
-                    </p>
-                  </div>
-                  
-                  <div className="adhd-resource">
-                    <h4>👨‍💻 Trường hợp bệnh nhân 23 tuổi</h4>
-                    <p>
-                      Một bệnh nhân 23 tuổi thường xuyên không thể tập trung ở nơi làm việc và cảm thấy kiệt sức 
-                      mỗi khi về nhà. Chỉ sau khi trải qua đánh giá chuyên sâu, họ mới nhận thức được nguyên nhân 
-                      đến từ ADHD.
-                    </p>
-                  </div>
-                  
-                  <div className="adhd-resource">
-                    <h4>🎯 Những dấu hiệu cần chú ý</h4>
-                    <ul style={{listStyle: 'disc', paddingLeft: '20px', lineHeight: '1.4'}}>
-                      <li>Liên tục trễ deadline dù đã cố gắng</li>
-                      <li>Quên các cuộc hẹn quan trọng</li>
-                      <li>Cảm thấy kiệt sức sau một ngày làm việc</li>
-                      <li>Khó khăn trong việc tổ chức công việc</li>
-                      <li>Mất tập trung trong các cuộc họp</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="adhd-resource">
-                    <h4>🏆 Câu chuyện thành công</h4>
-                    <p>
-                      Nhiều người nổi tiếng và thành đạt cũng sống với ADHD, chứng minh rằng với sự hỗ trợ đúng đắn, 
-                      ADHD không phải là rào cản cho thành công. Họ đã học cách biến những thách thức thành điểm mạnh 
-                      và tận dụng những đặc điểm độc đáo của mình.
-                    </p>
-                  </div>
-                </div>
+                <p>
+                  Chìa khóa để duy trì mối quan hệ tốt là <strong>quản lý cảm xúc và thấu hiểu bản thân</strong>. Nhưng điều này lại không dễ 
+                  với người trưởng thành mắc ADHD -- những người thường gặp khó khăn trong việc điều chỉnh cảm xúc. Vì vậy, việc có những người bạn, 
+                  người thân hiểu và chấp nhận tình trạng ADHD của bạn là vô cùng quan trọng 🤗.
+                </p>
+                <p>
+                  Nếu không, mỗi ngày có thể trở thành một cuộc chiến, đặc biệt nếu thiếu sự giao tiếp cởi mở.
+                </p>
+                <p>
+                  Khi cảm thấy bản thân đang thể hiện mặt tiêu cực, hoặc không thể kiểm soát cảm xúc và tâm trạng, chúng ta thường có xu hướng 
+                  đẩy người khác ra xa. Một số người lớn mắc ADHD còn chọn cách tự cô lập, né tránh xung đột vì không quen đối mặt, và chỉ biết 
+                  kìm nén cảm xúc. Điều này có thể dẫn đến lo âu, trầm cảm, thậm chí là lạm dụng chất kích thích 🍺 nếu không kiểm soát được 
+                  các triệu chứng ADHD.
+                </p>
               </section>
 
-              <section>
-                <h2>Kết luận</h2>
+              <section id="health-risks" className="adhd-section">
+                <h2>Nguy Cơ ADHD Gây Ra Với Sức Khỏe</h2>
                 <p>
-                  ADHD ảnh hưởng đến mọi khía cạnh của cuộc sống, từ học tập, công việc đến sinh hoạt hàng ngày. 
-                  Tuy nhiên, với sự hiểu biết đúng đắn, hỗ trợ phù hợp và cách tiếp cận tích cực, 
-                  những người mắc ADHD hoàn toàn có thể vượt qua các thách thức và phát huy được những điểm mạnh độc đáo của mình.
+                  Khi một người không thể quản lý tốt các triệu chứng ADHD, hệ lụy không chỉ dừng lại ở cảm xúc hay tinh thần. Một số người 
+                  ngoài cuộc bắt đầu nghĩ rằng ADHD chỉ là cái cớ để biện minh cho việc không biết quản lý thời gian. Nhưng sự thật là những 
+                  khó khăn ta đối mặt chỉ là phần nổi của tảng băng.
                 </p>
+                <p>
+                  <strong>ADHD là một cuộc chiến hằng ngày</strong> với rất nhiều triệu chứng ở nhiều mức độ khác nhau, và có thể ảnh hưởng đến 
+                  cả sức khỏe thể chất 😥.
+                </p>
+                <p>
+                  Ví dụ, một số người mắc ADHD thường bỏ qua việc rèn luyện sức khỏe, không tham gia trị liệu, và thức khuya triền miên -- 
+                  tất cả đều gây hại cho cơ thể. Bạn có thể hỏi: "Tại sao không chữa khỏi ADHD đi?" Giá mà có một công tắc để tắt các triệu chứng 
+                  thì tốt biết mấy 🔛.
+                </p>
+                <p>
+                  Nhưng tiếc rằng, với người ADHD, mọi thứ không đơn giản như vậy. Có những lúc, não bộ sẽ "chống" lại những mong muốn tích cực 
+                  nhất của bản thân, khiến ta dễ rơi vào mệt mỏi, kiệt sức và thậm chí buông xuôi.
+                </p>
+              </section>
+
+              <section id="comorbid-disorders" className="adhd-section">
+                <h2>ADHD Và Các Rối Loạn Tâm Lý Kèm Theo</h2>
+                <p>
+                  Nếu không có phương pháp điều trị phù hợp, ADHD có thể kéo theo nhiều rối loạn khác nghiêm trọng hơn. Trẻ em mắc ADHD có thể 
+                  gặp khó khăn trong việc học vì không thể tập trung, dễ bị phân tâm, hoặc không nghe hiểu tốt. Khi trưởng thành, những người 
+                  này dễ gặp vấn đề trong việc thích nghi với môi trường xã hội hoặc nơi làm việc.
+                </p>
+                <p>
+                  Theo <strong>CDC (Trung tâm Kiểm soát và Phòng ngừa Dịch bệnh Hoa Kỳ)</strong>, trẻ ADHD có nguy cơ mắc thêm các rối loạn 
+                  tâm thần khác. Và ở người lớn, con số này thậm chí còn cao hơn: lên đến <strong>80% có thể mắc ít nhất một dạng rối loạn 
+                  tâm thần khác</strong> 😯!
+                </p>
+                <p>
+                  Đó là lý do tại sao việc chẩn đoán đúng, chăm sóc cả thể chất lẫn tinh thần, và thực hiện trị liệu -- dùng thuốc nếu cần 
+                  -- là điều không thể xem nhẹ.
+                </p>
+              </section>
+
+              <section id="facing-challenges" className="adhd-section">
+                <h2>Có Quá Nhiều Điều Phải Đối Mặt</h2>
+                <p>
+                  ADHD ảnh hưởng đến rất nhiều khía cạnh trong cuộc sống hằng ngày. Từ việc phá vỡ hoạt động điều hành não bộ khiến các hoạt động 
+                  bị gián đoạn, cho đến việc tổn thương mối quan hệ, sức khỏe thể chất, và làm tăng nguy cơ mắc các bệnh tâm thần khác 🧠.
+                </p>
+                <p>
+                  Nhưng nếu có sự hỗ trợ phù hợp, môi trường tích cực, và những chiến lược hiệu quả, mọi chuyện sẽ dần trở nên dễ dàng hơn.
+                </p>
+                <p>
+                  Nhiều người mắc ADHD có thể cảm thấy cuộc sống chỉ toàn đau khổ và khó khăn -- nhưng không hẳn vậy. Với tư duy đúng đắn và 
+                  chiến lược phù hợp, chúng ta hoàn toàn có thể trải qua niềm vui, sự sáng tạo và cảm giác hài lòng. <strong>Tình trạng ADHD 
+                  không định nghĩa chúng ta</strong>. Và luôn có hy vọng cho một ngày mai tốt đẹp hơn.
+                </p>
+                <p>
+                  Hãy cùng tìm hiểu thêm về các chủ đề này -- từng bước một. Nhớ rằng bạn không hề đơn độc trên hành trình này.
+                </p>
+                <p style={{textAlign: 'center', fontWeight: 'bold', color: 'var(--dark-slate-grey)'}}>
+                  Tiếp tục cố gắng nhé! 💪🏻
+                </p>
+              </section>
+
+              <section id="faqs" className="adhd-section">
+                <h2>Câu Hỏi Thường Gặp Về Cuộc Sống Với ADHD</h2>
                 
-                <p>
-                  Quan trọng là chúng ta cần nhìn nhận ADHD như một dạng khác biệt thần kinh, không phải là khuyết tật. 
-                  Mỗi người mắc ADHD đều có những tài năng và khả năng riêng biệt, chỉ cần được khám phá và phát triển đúng cách.
-                </p>
+                <div className="adhd-faq-container">
+                  {faqs.map((faq, index) => (
+                    <div key={index} className="adhd-faq-item">
+                      <button
+                        onClick={() => toggleFAQ(index)}
+                        className="adhd-faq-question"
+                      >
+                        <span>{faq.question}</span>
+                        <span className="adhd-faq-toggle">
+                          {expandedFAQ === index ? '−' : '+'}
+                        </span>
+                      </button>
+                      <div className={`adhd-faq-answer${expandedFAQ === index ? ' open' : ''}`}>
+                        <p>{faq.answer}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </section>
+
+              {/* Additional sections can be added here based on the document content */}
+              <section className="adhd-section">
+                <h3>Lời Kết</h3>
+                <p>
+                  Cuộc sống với ADHD không bao giờ là dễ dàng, nhưng nó cũng không phải là bất khả thi. Mỗi ngày là một cơ hội mới để học hỏi, 
+                  thích nghi và phát triển. Với sự hiểu biết đúng đắn, hỗ trợ phù hợp và chiến lược cá nhân hóa, chúng ta có thể không chỉ 
+                  sống sót mà còn phát triển mạnh mẽ.
+                </p>
+                <p>
+                  Hãy nhớ rằng ADHD là một phần của bạn, nhưng không phải là tất cả về bạn. Bạn có nhiều điều tuyệt vời để cống hiến cho thế giới, 
+                  và ADHD có thể là một phần của những món quà độc đáo mà bạn mang lại.
+                </p>
+              </section>    
             </article>
           </div>
-        </main>
+        </div>
       </div>
-
       <Footer />
     </>
   );

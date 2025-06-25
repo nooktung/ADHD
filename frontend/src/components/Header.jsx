@@ -5,12 +5,12 @@ import '../css/Header.css';
 // Menu configuration - Updated with new ADHD content
 const MENU_ITEMS = [
   {
-    id: "introduction",
-    title: "I. Giới thiệu ADHD",
+    id: "LivingWithADHD",
+    title: "Sống chung với ADHD",
     content: {
-      title: "Giới thiệu ADHD",
-      description: "Tìm hiểu về định nghĩa, độ tuổi, giới tính và các dạng ADHD khác nhau.\nKhám phá kiến thức cơ bản về rối loạn tăng động giảm chú ý.",
-      link: "/adhd-introduction",
+      title: "Sống chung với ADHD",
+      description: "Sống chung với ADHD bao gồm việc vượt qua những thách thức độc đáo và khai thác điểm mạnh của từng cá nhân. Điều này thường có nghĩa là phải đối mặt với sự tập trung không ổn định, kiểm soát sự bốc đồng và tìm ra các chiến lược để sắp xếp các công việc hàng ngày.",
+      link: "/adhd-in-life",
       linkText: "Tìm hiểu về ADHD",
       icon: "📚",
     },
@@ -132,7 +132,7 @@ const Header = () => {
               <div className="logo__icon">
                 <img src="/logo.jpg" alt="ADHD Coach" />
               </div>
-              <span className="logo__text">Bản Giao Hưởng ADHD</span>
+              <span className="logo__text">Bản Giao Hưởng Tập Trung</span>
             </Link>
           </div>
 
@@ -165,7 +165,8 @@ const Header = () => {
                 </svg>
               </button>
             </div>
-                       <Link to="/ContactUs" className="nav__link">Về Chúng Tôi</Link>
+                       <Link to="/ContactUs" className="nav__link">Liên hệ</Link>
+                       <Link to="/HandBook" className="nav__link">HandBook</Link>
                        <Link to="/Team" className="nav__link">Giới thiệu nhóm</Link>
           </nav>
 
