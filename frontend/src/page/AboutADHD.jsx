@@ -336,12 +336,9 @@ const AboutADHD = () => {
                           {expandedFAQ === index ? '−' : '+'}
                         </span>
                       </button>
-                      
-                      {expandedFAQ === index && (
-                        <div className="adhd-faq-answer">
-                          <p>{faq.answer}</p>
-                        </div>
-                      )}
+                      <div className={`adhd-faq-answer${expandedFAQ === index ? ' open' : ''}`}>
+                        <p>{faq.answer}</p>
+                      </div>
                     </div>
                   ))}
                 </div>

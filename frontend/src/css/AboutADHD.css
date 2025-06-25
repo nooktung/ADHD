@@ -218,6 +218,7 @@
   font-weight: 600;
   margin-bottom: 0.2rem;
   color: var(--color);
+  padding: 0.7rem 1rem;
 }
 
 .adhd-article-nav {
@@ -230,7 +231,7 @@
 .adhd-nav-item {
   color: var(--dark-slate-grey);
   text-decoration: none;
-  padding: 0.5rem 0;
+  padding: 0.3rem 1rem;
   border-bottom: 1px solid rgba(1, 95, 122, 0.2);
   transition: color 0.3s ease;
   font-size: 12px;
@@ -287,7 +288,7 @@
   color: white;
   border: none;
   padding: 0.75rem 2rem;
-  border-radius: 6px;
+  border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
@@ -413,12 +414,23 @@
 }
 
 .adhd-faq-answer {
-  padding: 20px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), padding 0.4s;
+  padding: 0 20px;
   background-color: #f8f9fa;
   border-radius: 0 0 8px 8px;
   border: 1px solid #dee2e6;
   border-top: none;
   line-height: 1.6;
+}
+
+.adhd-faq-answer.open {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 /* Illustration Section */
