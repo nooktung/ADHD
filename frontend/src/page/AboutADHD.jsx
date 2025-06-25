@@ -5,6 +5,7 @@ import '../css/AboutADHD.css';
 
 const AboutADHD = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [activeNav, setActiveNav] = useState('symptoms');
 
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
@@ -83,13 +84,25 @@ const AboutADHD = () => {
               <h3>Trong Bài Viết Này</h3>
               
               <nav className="adhd-article-nav">
-                <a href="#symptoms" className="adhd-nav-item">
+                <a
+                  href="#symptoms"
+                  className={`adhd-nav-item${activeNav === 'symptoms' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('symptoms')}
+                >
                   Hiểu Biết Ngoài Các Triệu Chứng ADHD
                 </a>
-                <a href="#going-against" className="adhd-nav-item">
+                <a
+                  href="#going-against"
+                  className={`adhd-nav-item${activeNav === 'going-against' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('going-against')}
+                >
                   Khi Mọi Thứ Đi Ngược Lại Ý Muốn Của Chúng Ta
                 </a>
-                <a href="#faqs" className="adhd-nav-item">
+                <a
+                  href="#faqs"
+                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                  onClick={() => setActiveNav('faqs')}
+                >
                   Câu Hỏi Thường Gặp Về Nhận Thức ADHD
                 </a>
               </nav>

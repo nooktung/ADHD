@@ -210,7 +210,7 @@
   border-radius: 12px;
   backdrop-filter: blur(10px);
   position: sticky;
-  top: 20px;
+  top: 12vh;
 }
 
 .adhd-sidebar h3 {
@@ -237,8 +237,18 @@
   font-weight: 500;
 }
 
-.adhd-nav-item:hover {
-  color: var(--dark-slate-grey-2);
+.adhd-nav-item:hover,
+.adhd-nav-item:focus,
+.adhd-nav-item:active {
+  background: #e6f6fa;
+  color: var(--dark-slate-grey);
+  border-radius: 6px;
+}
+
+.adhd-nav-item.active {
+  background: #e6f6fa;
+  color: var(--dark-slate-grey);
+  border-radius: 6px;
 }
 
 .adhd-cta-section {
@@ -273,8 +283,8 @@
 }
 
 .adhd-cta-button {
-  background: var(--primary-color);
-  color: var(--dark-slate-grey);
+  background: var(--dark-slate-grey);
+  color: white;
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 6px;
@@ -285,7 +295,7 @@
 }
 
 .adhd-cta-button:hover {
-  background: var(--dark-slate-grey);
+  background: #0791b7;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(242, 194, 218, 0.3);
@@ -347,6 +357,7 @@
 
 .adhd-section {
   margin-bottom: 40px;
+  scroll-margin-top: 40vh;
 }
 
 .adhd-section h2 {
@@ -634,4 +645,8 @@
   .adhd-main-content {
     padding: 0 1rem 2rem;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
