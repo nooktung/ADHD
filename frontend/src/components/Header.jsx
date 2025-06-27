@@ -53,14 +53,14 @@ const MENU_ITEMS = [
     content: {
     },
     sidebarItems: [
-      { label: "Nguyễn Như Thành Đạt", link: "/" },
-      { label: "Nguyễn Ngọc Hiếu", link: "/" },
-      { label: "Phan Sỹ Hưng", link: "/" },
-      { label: "Trần Mai Thảo Vy", link: "/" },
-      { label: "Lê Khắc Hải", link: "/" },
-      { label: "Nguyễn Mai Trang", link: "/" },
-      { label: "Lương Ngọc Mai", link: "/" },
-      { label: "Tất cả câu chuyện", link: "/", className: "sidebar-item--all-stories" },
+      { label: "Nguyễn Như Thành Đạt", link: "/adhd-story1" },
+      { label: "Nguyễn Ngọc Hiếu", link: "/adhd-story2" },
+      { label: "Phan Sỹ Hưng", link: "/adhd-story3" },
+      { label: "Trần Mai Thảo Vy", link: "/adhd-story4" },
+      { label: "Lê Khắc Hải", link: "/adhd-story5" },
+      { label: "Nguyễn Mai Trang", link: "/adhd-story6" },
+      { label: "Lương Ngọc Mai", link: "/adhd-story7" },
+      { label: "Tất cả câu chuyện", link: "/all-story", className: "sidebar-item--all-stories" },
     ]
   },
 ];

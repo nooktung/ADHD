@@ -2,140 +2,108 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import "../css/LandingPage.css"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router-dom"
 
 const LandingPage = () => {
   const stories = [
     {
       id: 1,
-      name: "Jenna",
-      age: 16,
-      avatar: "J",
-      title: "Jenna được chẩn đoán ADHD ở tuổi 16 tại Hoa Kỳ",
+      name: "Nguyễn Như Thành Đạt",
+      age: 18,
+      avatar: "Đ",
+      title: "Nguyễn Như Thành Đạt được chẩn đoán ADHD ở tuổi 16 tại Việt Nam",
       content:
-        "Tôi thực ra đã được chẩn đoán mắc chứng tự kỷ từ những năm đầu đời, và bố tôi cũng mắc chứng tự kỷ. Người bạn thân nhất của tôi cũng mắc ADHD kết hợp. Tôi nghĩ rằng không ai có thể mắc cả tự kỷ và ADHD cùng lúc, nhưng sau đó họ hàng của tôi được chẩn đoán mắc cả hai. Tôi đã nghiên cứu về ADHD một thời gian để cố gắng hiểu người bạn thân của mình. Sau đó tôi nhận ra rằng tôi thực sự liên quan đến hầu hết các triệu chứng và tôi nghĩ 'Đợi đã... liệu tôi có mắc ADHD không?' Vì vậy tôi đã nhờ mẹ đưa tôi đi khám vài tháng trước sinh nhật 17 tuổi. Và đó là cách nó xảy ra.",
-      currentAge: 17,
-      country: "Hoa Kỳ",
+        "Tôi thực ra đã được chẩn đoán mắc chứng tự kỷ trong những năm đầu đời trước đây, và bố tôi cũng bị tự kỷ. Người bạn thân nhất của tôi cũng bị ADHD kết hợp. Tôi nghĩ rằng không ai có thể mắc chứng tự kỷ và ADHD cùng lúc nhưng sau đó anh tôi đã được chẩn đoán mắc cả 2 hội chứng này. Tôi đã nghiên cứu về ADHD một thời gian để cố gắng hiểu người bạn thân nhất của mình. Sau đó, tôi nhận ra rằng tôi thực sự liên quan đến hầu hết các hội chứng và tôi tự hỏi 'Khoan đã…mình có bị ADHD không?' Vì vậy tôi đã yêu cầu mẹ đưa tôi đi chẩn đoán trước sinh nhật 17 tuổi của tôi vài tháng. Và thật sự, điều đó đã xảy ra.",
+      currentAge: 18,
+      country: "Việt Nam",
       diagnosedAt: 16,
       buttonColor: "#ec4899",
+      link: "/adhd-story1",
     },
     {
       id: 2,
-      name: "Mick",
-      age: 18,
-      avatar: "M",
-      title: "Mick được chẩn đoán ADHD ở tuổi 18 tại Indonesia",
+      name: "Nguyễn Ngọc Hiếu",
+      age: 24,
+      avatar: "H",
+      title: "Nguyễn Ngọc Hiếu được chẩn đoán ADHD ở tuổi 18 tại Việt Nam",
       content:
-        "Tôi là người không thể tập trung quá lâu, tôi quên mọi thứ thường xuyên hơn người khác. Chữ viết tay của tôi rất tệ, và thường xuyên tôi không thể ngồi yên, giáo viên chủ nhiệm lớp 3 của tôi đã nói với bố mẹ tôi nên tham khảo ý kiến của một nhà tâm lý học. Khi tôi hỏi bố mẹ về chẩn đoán, bố mẹ tôi đã quên mất chẩn đoán là gì vì đó là từ rất lâu rồi. Đến hiện tại khi tôi đang học đại học, tôi vẫn gặp những vấn đề tương tự nên tôi quyết định đi khám bác sĩ tâm thần, và vâng, tôi đã có câu trả lời chính xác, đó là ADHD.",
-      currentAge: 18,
-      country: "Indonesia",
+        "Tôi đã từng là người không thể chú ý trong thời gian quá dài, tôi hay quên hơn những người khác, tôi viết chữ rất xấu và thường không thể ngồi yên, giáo viên chủ nhiệm lớp 3 của tôi đã bảo bố mẹ tôi thử tham khảo ý kiến ​​của một nhà tâm lý học. Tôi đã cố hỏi bố mẹ tôi về chẩn đoán và bố mẹ tôi đã quên mất chẩn đoán đó vì nó đã xảy ra từ rất lâu rồi. Đến thời điểm hiện tại khi tôi đang học đại học, tôi vẫn gặp phải những vấn đề tương tự nên lần này tôi quyết định đi khám bác sĩ tâm thần và vâng, tôi đã nhận được câu trả lời chính xác, đó là ADHD.",
+      currentAge: 24,
+      country: "Việt Nam",
       diagnosedAt: 18,
       buttonColor: "#0d9488",
+      link: "/adhd-story2",
     },
     {
       id: 3,
-      name: "Lyndsy",
-      age: 27,
-      avatar: "L",
-      title: "Lyndsy được chẩn đoán ADHD ở tuổi 27 tại Hoa Kỳ",
+      name: "Phan Sỹ Hưng",
+      age: 31,
+      avatar: "H",
+      title: "Phan Sỹ Hưng được chẩn đoán ADHD ở tuổi 27 tại Việt Nam",
       content:
-        "Tôi cảm thấy như cả cuộc đời tôi đã phải bù đắp cho những điều nhỏ nhặt khiến cuộc sống của tôi khó khăn hơn người khác. Khi Covid-19 xảy ra, tôi không nhận ra bộ não của mình cần cấu trúc đó đến mức nào. Khi tôi ngồi ở nhà với gia đình và con, tôi nhận thấy (những gì tôi biết bây giờ là triệu chứng ADHD/Tự kỷ) tôi đã chi tiêu bao nhiêu cho những món đồ vô nghĩa, hoặc ăn quá nhiều/vô thức. Tôi bắt đầu thấy rằng tất cả những điều tôi đang làm không 'bình thường' vì tôi thấy gia đình không gặp khó khăn với những điều tương tự.",
-      currentAge: 27,
-      country: "Hoa Kỳ",
+        "Tôi cảm thấy như cả cuộc đời mình, tôi đã phải bù đắp cho những điều nhỏ nhặt dường như khiến cuộc sống của tôi và của bất kỳ ai khác trở nên khó khăn hơn. Khi Covid-19 tấn công, tôi đã không nhận ra não mình cần cấu trúc đó đến mức nào. Khi ngồi ở nhà với gia đình và con, tôi nhận thấy (những gì tôi biết bây giờ là các triệu chứng của ADHD/Tự kỷ) mình đã chi bao nhiêu tiền cho những món đồ vô nghĩa, hoặc tôi đã ăn quá nhiều/vô thức như thế nào. Tôi bắt đầu nhận ra rằng tất cả những việc tôi đang làm đều không 'bình thường' vì tôi sẽ thấy gia đình mình không phải vật lộn với những điều tương tự.",
+      currentAge: 31,
+      country: "Việt Nam",
       diagnosedAt: 27,
       buttonColor: "#ec4899",
+      link: "/adhd-story3",
     },
     {
       id: 4,
-      name: "Alex",
-      age: 23,
-      avatar: "A",
-      title: "Alex được chẩn đoán ADHD ở tuổi 23 tại Canada",
+      name: "Trần Mai Thảo Vy",
+      age: 21,
+      avatar: "V",
+      title: "Trần Mai Thảo Vy được chẩn đoán ADHD ở tuổi 21 tại Việt Nam",
       content:
-        "Lớn lên, tôi luôn cảm thấy khác biệt với bạn bè. Tôi gặp khó khăn trong việc tập trung ở trường, liên tục ngọ nguậy, và khó hoàn thành nhiệm vụ. Giáo viên thường gắn mác tôi là lười biếng hoặc thiếu động lực. Mãi đến khi học đại học, một cố vấn mới gợi ý rằng tôi có thể mắc ADHD. Việc được chẩn đoán đã thay đổi cuộc đời tôi - đột nhiên mọi thứ trở nên có ý nghĩa.",
-      currentAge: 23,
-      country: "Canada",
-      diagnosedAt: 23,
+        "Tôi nghĩ mình đang tiến đến tình trạng kiệt sức vì áp lực công việc. ADHD luôn ở trong tâm trí tôi kể từ khi được một người quản lý mà tôi làm việc cùng nhắc đến cách đây 9 năm. Khi đó, bác sĩ tâm thần của tôi đã bác bỏ điều đó, người đang điều trị chứng trầm cảm cho tôi. Tôi đã nghiên cứu, nhưng vẫn hoài nghi. Cuối cùng, tôi chỉ đặt lịch hẹn vì tôi đang tiến đến tình trạng sụp đổ và cháy rụi.",
+      currentAge: 21,
+      country: "Việt Nam",
+      diagnosedAt: 21,
       buttonColor: "#3b82f6",
+      link: "/adhd-story4",
     },
     {
       id: 5,
-      name: "Sarah",
-      age: 31,
-      avatar: "S",
-      title: "Sarah được chẩn đoán ADHD ở tuổi 31 tại Úc",
+      name: "Lê Khắc Hải",
+      age: 23,
+      avatar: "H",
+      title: "Lê Khắc Hải được chẩn đoán ADHD ở tuổi 23 tại Việt Nam",
       content:
-        "Là một người mẹ đi làm, tôi nghĩ rằng việc liên tục cảm thấy quá tải và không thể tổ chức công việc chỉ là một phần của việc bận rộn. Khi con gái tôi được chẩn đoán mắc ADHD, tôi bắt đầu nghiên cứu và nhận ra nhiều triệu chứng ở bản thân. Việc được chẩn đoán ở tuổi 31 đã giúp tôi hiểu được những khó khăn suốt đời và tìm ra các chiến lược đối phó tốt hơn.",
-      currentAge: 31,
-      country: "Úc",
-      diagnosedAt: 31,
+        "Tôi đã vật lộn với sức khỏe tâm thần của mình trong nhiều năm và mặc dù đã dùng thuốc nhưng nó không giúp ích theo đúng cách. Tôi thấy mình đang dành từng chút năng lượng để cố gắng hoạt động 'bình thường'. Sau khi vật lộn ở trường đại học, tôi quyết định xem liệu có điều gì khác đang xảy ra không và cuối cùng nghĩ rằng đó có thể là ADHD.",
+      currentAge: 23,
+      country: "Việt Nam",
+      diagnosedAt: 23,
       buttonColor: "#22c55e",
+      link: "/adhd-story5",
     },
     {
       id: 6,
-      name: "David",
-      age: 19,
-      avatar: "D",
-      title: "David được chẩn đoán ADHD ở tuổi 19 tại Vương quốc Anh",
+      name: "Nguyễn Mai Trang",
+      age: 30,
+      avatar: "T",
+      title: "Nguyễn Mai Trang được chẩn đoán ADHD ở tuổi 27 tại Việt Nam",
       content:
-        "Đại học là hồi chuông cảnh tỉnh cho tôi. Không có cấu trúc của trường trung học, tôi thấy mình không thể quản lý thời gian hoặc tập trung vào các bài giảng. Điểm số của tôi giảm sút, và tôi cảm thấy lạc lõng. Một người bạn đề nghị tôi nói chuyện với ai đó về ADHD, và sau khi đánh giá, cuối cùng tôi đã có câu trả lời cho những khó khăn suốt đời với sự chú ý và hiếu động.",
-      currentAge: 19,
-      country: "Vương quốc Anh",
-      diagnosedAt: 19,
+        "Tôi luôn để lại các dự án ở trường đến phút cuối (kể cả những môn tôi thích) và đôi khi từ chối làm dự án ở những môn tôi ghét. Tôi không thích bài tập về nhà, tôi liên tục quên những thứ như đồ dùng học tập quan trọng và những cuộc trò chuyện tôi đã có vào ngày hôm trước. Tôi không lắng nghe trong lớp và luôn nhìn chằm chằm ra cửa sổ hoặc vẽ vào vở đã trống.",
+      currentAge: 30,
+      country: "Việt Nam",
+      diagnosedAt: 27,
       buttonColor: "#8b5cf6",
+      link: "/adhd-story6",
     },
     {
       id: 7,
-      name: "Maria",
-      age: 25,
-      avatar: "M",
-      title: "Maria được chẩn đoán ADHD ở tuổi 25 tại Tây Ban Nha",
-      content:
-        "Tôi luôn nghĩ mình chỉ là người hay mơ mộng. Ở trường, tôi thường xuyên mất tập trung trong các lớp học và gặp khó khăn trong việc hoàn thành bài tập đúng hạn. Khi trưởng thành, tôi tiếp tục gặp vấn đề với tổ chức và quản lý thời gian. Khi tôi tìm hiểu về ADHD ở phụ nữ, tôi nhận ra nhiều trải nghiệm của mình phù hợp với ADHD dạng thiếu chú ý.",
-      currentAge: 25,
-      country: "Tây Ban Nha",
-      diagnosedAt: 25,
-      buttonColor: "#f97316",
-    },
-    {
-      id: 8,
-      name: "James",
-      age: 29,
-      avatar: "J",
-      title: "James được chẩn đoán ADHD ở tuổi 29 tại New Zealand",
-      content:
-        "Làm việc trong môi trường doanh nghiệp khiến các triệu chứng ADHD của tôi rõ ràng hơn. Tôi gặp khó khăn với các cuộc họp dài, giấy tờ chi tiết, và duy trì tập trung vào các nhiệm vụ lặp đi lặp lại. Các đánh giá hiệu suất của tôi liên tục đề cập đến vấn đề về sự chú ý đến chi tiết. Sau khi nghiên cứu về ADHD, tôi tìm kiếm sự giúp đỡ chuyên môn và cuối cùng đã có được chẩn đoán giải thích tất cả.",
-      currentAge: 29,
-      country: "New Zealand",
-      diagnosedAt: 29,
-      buttonColor: "#6366f1",
-    },
-    {
-      id: 9,
-      name: "Emma",
+      name: "Lương Ngọc Mai",
       age: 22,
-      avatar: "E",
-      title: "Emma được chẩn đoán ADHD ở tuổi 22 tại Đức",
+      avatar: "M",
+      title: "Lương Ngọc Mai được chẩn đoán ADHD ở tuổi 20 tại Việt Nam",
       content:
-        "Tôi luôn là học sinh 'thông minh nhưng lộn xộn'. Tôi có thể siêu tập trung vào các môn học tôi yêu thích nhưng hoàn toàn bỏ bê những môn khác. Phòng của tôi luôn bừa bộn, tôi liên tục làm mất đồ, và tôi gặp khó khăn với việc quản lý thời gian. Khi tôi bắt đầu gặp khó khăn ở đại học, một giáo sư đã đề nghị tôi đi kiểm tra ADHD.",
+        "Tôi đang làm luận văn thạc sĩ thì nhận ra mình đã làm liên tục trong 8 tiếng mà không ăn gì. Sau đó, tôi nhận ra rằng trong suốt những năm qua, 'khả năng' tập trung tuyệt vời 'bất ngờ' (hoặc gần đến hạn chót) là lý do duy nhất khiến tôi vượt qua được kỳ thi đại học. Tôi không thể chú ý trong lớp học nên đây là giải pháp duy nhất của tôi. Nhưng tôi biết điều đó không lành mạnh và tôi đã đọc thêm về nó và tìm thấy thuật ngữ 'tập trung cao độ'.",
       currentAge: 22,
-      country: "Đức",
-      diagnosedAt: 22,
-      buttonColor: "#ef4444",
-    },
-    {
-      id: 10,
-      name: "Ryan",
-      age: 26,
-      avatar: "R",
-      title: "Ryan được chẩn đoán ADHD ở tuổi 26 tại Ireland",
-      content:
-        "Tôi đã trải qua thời học sinh nghĩ rằng mình không đủ thông minh. Tôi phải làm việc gấp đôi so với bạn cùng lớp để đạt được kết quả tương tự. Mãi đến khi đi làm và vẫn gặp khó khăn với sự tập trung và tổ chức, tôi mới tìm hiểu về ADHD ở người lớn. Việc được chẩn đoán đã giúp tôi hiểu rằng bộ não của tôi chỉ hoạt động khác biệt.",
-      currentAge: 26,
-      country: "Ireland",
-      diagnosedAt: 26,
-      buttonColor: "#10b981",
+      country: "Việt Nam",
+      diagnosedAt: 20,
+      buttonColor: "#f97316",
+      link: "/adhd-story7",
     },
   ]
 
@@ -282,6 +250,13 @@ const LandingPage = () => {
 
   ]
 
+  // Scroll to top when story modal link changes (for full story)
+  useEffect(() => {
+    if (selectedStory && selectedStory.link) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [selectedStory]);
+
   return (
     <>
       <Header />
@@ -317,6 +292,11 @@ const LandingPage = () => {
                   <p className="stat-label">Chẩn đoán lúc:</p>
                   <p className="stat-number-large">{selectedStory.diagnosedAt}</p>
                 </div>
+              </div>
+              <div style={{ textAlign: 'center', marginTop: 24 }}>
+                <Link to={selectedStory.link} className="full-story-btn" style={{ padding: '10px 24px', background: '#2563eb', color: '#fff', borderRadius: 8, fontWeight: 600, textDecoration: 'none', display: 'inline-block' }}>
+                  Đọc đầy đủ câu chuyện
+                </Link>
               </div>
             </div>
           </div>
@@ -409,21 +389,18 @@ const LandingPage = () => {
 
       {/* Stats Section */}
       <section className="stats">
-        <div className="stats-container">
-          <div className="stats-content">
+        <div className="stats-container" style={{display: 'flex', alignItems: 'flex-start', gap: 40, flexWrap: 'wrap', justifyContent: 'space-between'}}>
+          <div className="stats-content" style={{flex: 1, minWidth: 280}}>
             <h2>Tại sao việc nâng cao nhận thức về ADHD là rất quan trọng:</h2>
-
             <div className="stat-item">
               <div className="stat-number">5%</div>
               <div className="stat-text">
                 <div className="stat-description">người trưởng thành mắc ADHD theo các nghiên cứu gần đây</div>
                 <p className="stat-detail">
-                  Khoảng 8 triệu người trưởng thành ở Hoa Kỳ bị ảnh hưởng bởi ADHD. ADHD không chỉ ảnh hưởng đến
-                  trẻ em.
+                  Khoảng 8 triệu người trưởng thành ở Hoa Kỳ bị ảnh hưởng bởi ADHD. ADHD không chỉ ảnh hưởng đến trẻ em.
                 </p>
               </div>
             </div>
-
             <div className="stat-item">
               <div className="stat-number">80%</div>
               <div className="stat-text">
@@ -433,7 +410,6 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-
             <div className="stat-item">
               <div className="stat-number">75%</div>
               <div className="stat-text">
@@ -443,6 +419,9 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
+          </div>
+          <div className="stats-image" style={{flex: '0 0 340px', maxWidth: 340, minWidth: 220, display: 'flex', justifyContent: 'center'}}>
+            <img src="/image2.jpg" alt="Nâng cao nhận thức về ADHD" style={{width: '100%', height: 'auto', borderRadius: '16px', boxShadow: '0 2px 12px #0002'}} />
           </div>
         </div>
       </section>
@@ -579,7 +558,7 @@ const LandingPage = () => {
                   <span className="profile-initial">M</span>
                 </div>
                 <div className="profile-info">
-                  <h3>The Mini ADHD Coach</h3>
+                  <h3>BẢN GIAO HƯỞNG TẬP TRUNG</h3>
                   <p>ADHD Resources & Tips</p>
                 </div>
               </div>

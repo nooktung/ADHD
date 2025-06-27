@@ -21,6 +21,14 @@ import ADHDInattentive from './page/ADHDInattentive';
 import ADHDHyperactive from './page/ADHDHyperactive';
 import ADHDUnofficial from './page/ADHDUnofficial';
 import SearchResults from './page/SearchResults';
+import Story1 from './page/Story1';
+import Story2 from './page/Story2';
+import Story3 from './page/Story3';
+import Story4 from './page/Story4';
+import Story5 from './page/Story5';
+import Story6 from './page/Story6';
+import Story7 from './page/Story7';
+import AllStory from './page/AllStory';
 
 function App() {
   return (
@@ -50,6 +58,14 @@ function App() {
         <Route path="/adhd-inattentive" element={<ADHDInattentive />} />
         <Route path="/adhd-hyperactive" element={<ADHDHyperactive/>} />
         <Route path="/adhd-unofficial" element={<ADHDUnofficial/>} />
+        <Route path="/adhd-story1" element={<Story1/>} />
+        <Route path="/adhd-story2" element={<Story2/>} />
+        <Route path="/adhd-story3" element={<Story3/>} />
+        <Route path="/adhd-story4" element={<Story4/>} />
+        <Route path="/adhd-story5" element={<Story5/>} />
+        <Route path="/adhd-story6" element={<Story6/>} />
+        <Route path="/adhd-story7" element={<Story7/>} />
+        <Route path="/all-story" element={<AllStory/>} />
       </Routes>
     </BrowserRouter>
   );
