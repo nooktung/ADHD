@@ -51,10 +51,17 @@ const MENU_ITEMS = [
     id: "story",
     title: "Những câu chuyên về ADHD",
     content: {
-      title: "Những câu chuyên về ADHD",
-      description: "Tác động của ADHD đến học tập, công việc và sinh hoạt hàng ngày.\nCác ví dụ thực tế và kinh nghiệm sống chung với ADHD.",
-      icon: "🏠",
     },
+    sidebarItems: [
+      { label: "Nguyễn Như Thành Đạt", link: "/" },
+      { label: "Nguyễn Ngọc Hiếu", link: "/" },
+      { label: "Phan Sỹ Hưng", link: "/" },
+      { label: "Trần Mai Thảo Vy", link: "/" },
+      { label: "Lê Khắc Hải", link: "/" },
+      { label: "Nguyễn Mai Trang", link: "/" },
+      { label: "Lương Ngọc Mai", link: "/" },
+      { label: "Tất cả câu chuyện", link: "/", className: "sidebar-item--all-stories" },
+    ]
   },
 ];
 
@@ -217,7 +224,7 @@ const Header = () => {
                 </div>
                 <p className="feature-card__description">Duyệt qua tất cả các bài viết của chúng tôi!</p>
                 <a href="https://www.facebook.com/people/ADHD-B%E1%BA%A3n-Giao-H%C6%B0%E1%BB%9Fng-T%E1%BA%ADp-Trung/61576988307181/" className="feature-card__link" target="_blank" rel="noopener noreferrer">
-                  Page ADHD
+                  Handbook
                 </a>
               </div> 
             </div>
@@ -262,7 +269,7 @@ const Header = () => {
                         <Link
                           key={index}
                           to={item.link}
-                          className="sidebar-item"
+                          className={`sidebar-item ${item.className || ''}`}
                         >
                           {item.label}
                         </Link>

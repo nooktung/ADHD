@@ -215,8 +215,8 @@ body {
 
 .mega-dropdown__grid {
   display: grid;
-  grid-template-columns: 300px 1fr 350px;
-  gap: 3rem;
+  grid-template-columns: 330px 1fr 350px;
+  gap: 2rem;
   align-items: start;
 }
 
@@ -342,6 +342,7 @@ body {
 /* ===== RIGHT SECTION - CONTENT PANEL ===== */
 .mega-dropdown__right {
   position: relative;
+  width: 430px;
 }
 
 .content-panel {
@@ -412,7 +413,7 @@ body {
 /* ===== SIDEBAR SECTION ===== */
 .sidebar-section {
   border-top: 1px solid #e5e7eb;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 .sidebar-items {
@@ -423,8 +424,8 @@ body {
 
 .sidebar-item {
   display: block;
-  padding: 0.5rem 0.75rem;
-  color: #6b7280;
+  padding: 0.2rem 0.75rem;
+  color: black;
   text-decoration: none;
   font-size: 0.875rem;
   border-radius: 6px;
@@ -434,6 +435,19 @@ body {
 .sidebar-item:hover {
   background-color: #f3f4f6;
   color: #374151;
+}
+
+/* Special styling for "Tất cả câu chuyện" */
+.sidebar-item--all-stories {
+  font-size: 0.75rem !important;
+  font-style: italic !important;
+  text-decoration: underline !important;
+  color: #9ca3af !important;
+}
+
+.sidebar-item--all-stories:hover {
+  color: #6b7280 !important;
+  text-decoration: underline !important;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
