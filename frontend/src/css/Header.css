@@ -3,6 +3,16 @@
   box-sizing: border-box;
 }
 
+body {
+  padding-top: 90px; /* Khoảng trống cho header cố định */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Khoảng trống cho header mobile */
+  }
+}
+
 /* ===== HEADER WRAPPER ===== */
 .header-wrapper {
   position: relative;
@@ -177,8 +187,8 @@
 
 /* ===== MEGA DROPDOWN ===== */
 .mega-dropdown {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 90px; /* Chiều cao của header */
   left: 0;
   right: 0;
   background: #ffffff;
@@ -188,8 +198,7 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
-  z-index: 1000;
-  margin-top: -5px;
+  z-index: 999;
 }
 
 .mega-dropdown--open {
@@ -467,8 +476,25 @@
     font-size: 1.1rem;
   }
 
+  .mega-dropdown {
+    top: 60px; /* Điều chỉnh cho header mobile */
+  }
+
   .mega-dropdown__container {
     padding: 1.5rem 0.75rem;
+  }
+
+  .mega-dropdown__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mega-dropdown__center {
+    grid-column: 1;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding-right: 0;
+    padding-bottom: 1rem;
   }
 
   .feature-card {

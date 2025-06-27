@@ -7,12 +7,19 @@ import ContactUs from './page/ContactUs';
 import AboutADHD from './page/AboutADHD';
 import Team from './page/Team';
 import ADHDIntroduction from './page/ADHDIntroduction';
-import ADHDSigns from './page/ADHDSigns';
+import ADHDOrganization from './page/ADHDOrganization';
 import ADHDSigns2 from './page/ADHDSigns2';
-import ADHDCauses from './page/ADHDCauses';
-import ADHDInLife from './page/ADHDInLife';
-import ADHDVsAnxiety from './page/ADHDVsAnxiety';
-import ADHDImprovement from './page/ADHDImprovement';
+import ADHDRelationship from './page/ADHDRelationship';
+import ADHDLife from './page/ADHDLife';
+import ADHDAndHealth from './page/ADHDAndHealth';
+import ADHdEmotions from './page/ADHDEmotions';
+import ADHDWorkplace from './page/ADHDWorkplace';
+import ADHDAwareness from './page/ADHDAwareness';
+import ADHDFacts from './page/ADHDFacts';
+import ADHDSymptoms from './page/ADHDSymptoms';
+import ADHDInattentive from './page/ADHDInattentive';
+import ADHDHyperactive from './page/ADHDHyperactive';
+import ADHDUnofficial from './page/ADHDUnofficial';
 import SearchResults from './page/SearchResults';
 
 function App() {
@@ -30,12 +37,19 @@ function App() {
         
         {/* New ADHD pages */}
         <Route path="/adhd-introduction" element={<ADHDIntroduction />} />
-        <Route path="/adhd-signs" element={<ADHDSigns />} />
+        <Route path="/adhd-organization" element={<ADHDOrganization />} />
         <Route path="/adhd-signs2" element={<ADHDSigns2 />} />
-        <Route path="/adhd-causes" element={<ADHDCauses />} />
-        <Route path="/adhd-in-life" element={<ADHDInLife />} />
-        <Route path="/adhd-vs-anxiety" element={<ADHDVsAnxiety />} />
-        <Route path="/adhd-improvement" element={<ADHDImprovement />} />
+        <Route path="/adhd-relationship" element={<ADHDRelationship />} />
+        <Route path="/adhd-life" element={<ADHDLife />} />
+        <Route path="/adhd-and-health" element={<ADHDAndHealth />} />
+        <Route path="/adhd-emotions" element={<ADHdEmotions />} />
+        <Route path="/adhd-workplace" element={<ADHDWorkplace />} />
+        <Route path="/adhd-awareness" element={<ADHDAwareness />} />
+        <Route path="/adhd-facts" element={<ADHDFacts />} />
+        <Route path="/adhd-symptoms" element={<ADHDSymptoms />} />
+        <Route path="/adhd-inattentive" element={<ADHDInattentive />} />
+        <Route path="/adhd-hyperactive" element={<ADHDHyperactive/>} />
+        <Route path="/adhd-unofficial" element={<ADHDUnofficial/>} />
       </Routes>
     </BrowserRouter>
   );

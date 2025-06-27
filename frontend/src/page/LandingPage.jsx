@@ -279,7 +279,7 @@ const LandingPage = () => {
       title: "Cộng đồng ADHD",
       description: "Kết nối cộng đồng ADHD"
     },
-    
+
   ]
 
   return (
@@ -329,16 +329,16 @@ const LandingPage = () => {
           <div className="hero-content">
             <h1>Bản Giao Hưởng Tập Trung</h1>
             <p>
-              Có những người vẫn luôn cố gắng từng ngày nhưng lại bị hiểu lầm là lười biếng. 
-              Có những người luôn khao khát được tập trung nhưng tâm trí lại cứ trôi dạt về nơi khác. 
-              ADHD không chỉ là khó khăn, ADHD còn là một khả năng. Chỉ cần được lắng nghe, 
+              Có những người vẫn luôn cố gắng từng ngày nhưng lại bị hiểu lầm là lười biếng.
+              Có những người luôn khao khát được tập trung nhưng tâm trí lại cứ trôi dạt về nơi khác.
+              ADHD không chỉ là khó khăn, ADHD còn là một khả năng. Chỉ cần được lắng nghe,
               được hiểu đúng, mọi nốt nhạc lệch nhịp đều có thể góp phần làm nên một bản giao hưởng trọn vẹn.
             </p>
           </div>
           <div className="hero-visual">
-            <img 
-              src="image.png" 
-              alt="ADHD Traits Visualization" 
+            <img
+              src="image.png"
+              alt="ADHD Traits Visualization"
               className="hero-visual-image"
               style={{
                 maxWidth: '100%',
@@ -361,38 +361,44 @@ const LandingPage = () => {
 
           <div className="features-new-layout">
             {/* Left Large Card - Clickable */}
-            <Link to="/adhd-introduction" className="left-large-card">
+            <Link to="/adhd-awareness" className="left-large-card">
               <div className="cute-brain-container">
                 <span className="cute-brain">🧠</span>
               </div>
               <h3 className="main-question">Nhận thức về ADHD</h3>
               <p className="subtitle-text">
-                Chúng tôi đã tạo một hệ thống thông tin toàn diện về ADHD dựa trên nghiên cứu khoa học 
-                để giúp bạn hiểu rõ về rối loạn tăng động giảm chú ý từ cơ bản đến nâng cao.
+                Tăng cường nhận thức về ADHD rất quan trọng để giảm kỳ thị, giúp chẩn đoán và điều trị sớm,
+                từ đó nâng cao chất lượng cuộc sống cho người mắc bệnh.
               </p>
             </Link>
 
             <div className="right-section">
-              {/* Small Cards Grid - Clickable */}
-              <div className="small-cards-grid">
-                <div className="small-card adhd-awareness">
-                  <Link to="/adhd-signs">
-                    <div className="card-icon">
-                      <span>📚</span>
-                    </div>
-                    <h4>Triệu chứng</h4>
-                  </Link>
-                </div>
+              {/* Triệu chứng Card - Horizontal Layout */}
+              <div className="horizontal-card" style={{ marginBottom: '24px', background: '#e8c5e8' }}>
+                <Link to="/adhd-symptoms" style={{ display: 'flex', alignItems: 'center', gap: '24px', width: '100%', textDecoration: 'none', color: 'inherit' }}>
+                  <div className="workbook-icon" style={{ flex: '0 0 60px' }}>
+                    <span style={{ fontSize: '70px' }}>📚</span>
+                  </div>
+                  <div className="workbook-text" style={{ flex: 1 }}>
+                    <h3 className="main-question" style={{ fontSize: '25px', color: '#8b4a8b', marginBottom: '8px' }}>Triệu chứng</h3>
+                    <p className="subtitle-text" style={{ fontSize: '15px', color: '#8b4a8b', margin: 0, whiteSpace: 'normal' }}>
+                      Các triệu chứng ADHD thường bao gồm sự giảm chú ý, tính tăng động và tính xung động, nhưng có thể biểu hiện rất đa dạng về hình thái và cường độ, đôi khi bị che lấp hoặc không được nhận diện trong nhiều năm.
+                    </p>
+                  </div>
+                </Link>
               </div>
 
               {/* Horizontal Card - Clickable */}
               <div className="horizontal-card">
-                <Link to="/adhd-in-life">
+                <Link to="/adhd-life">
                   <div className="workbook-icon">
                     <span>⚖️</span>
                   </div>
                   <div className="workbook-text">
                     <h3>Sống chung với ADHD</h3>
+                    <p style={{ marginTop: '8px' }}>
+                      Sống chung với ADHD bao gồm việc vượt qua những thách thức độc đáo và khai thác điểm mạnh của từng cá nhân. Điều này thường có nghĩa là phải đối mặt với sự tập trung không ổn định, kiểm soát sự bốc đồng và tìm ra các chiến lược để sắp xếp các công việc hàng ngày
+                    </p>
                   </div>
                 </Link>
               </div>
@@ -480,7 +486,7 @@ const LandingPage = () => {
                     <span className="blog-date">{post.date}</span>
                   </div>
                 </div>
-                <Link to={post.link} style={{position: 'absolute', inset: 0, zIndex: 1}} />
+                <Link to={post.link} style={{ position: 'absolute', inset: 0, zIndex: 1 }} />
               </div>
             ))}
           </div>
@@ -535,9 +541,9 @@ const LandingPage = () => {
                     <p className="stat-number-large">{story.diagnosedAt}</p>
                   </div>
                 </div>
-                <button 
-                  className="story-btn-new" 
-                  style={{backgroundColor: story.buttonColor}}
+                <button
+                  className="story-btn-new"
+                  style={{ backgroundColor: story.buttonColor }}
                   onClick={(e) => {
                     e.stopPropagation();
                     handleStoryClick(story);
@@ -582,14 +588,14 @@ const LandingPage = () => {
             <div className="social-feed-content">
               <div className="social-posts-grid">
                 {socialPosts.map((post) => (
-                  <div 
-                    key={post.id} 
+                  <div
+                    key={post.id}
                     className="social-post-card"
                     onClick={() => setSelectedImage(post.image)}
                   >
                     <div className="post-image-container">
-                      <img 
-                        src={post.image} 
+                      <img
+                        src={post.image}
                         alt={post.title}
                         className="post-image"
                       />
@@ -606,7 +612,7 @@ const LandingPage = () => {
             </div>
 
             <div className="social-feed-footer">
-              <button 
+              <button
                 className="follow-button"
                 onClick={() => window.open('https://www.facebook.com/profile.php?id=61576988307181', '_blank')}
               >
@@ -620,14 +626,14 @@ const LandingPage = () => {
         {selectedImage && (
           <div className="image-modal-overlay" onClick={() => setSelectedImage(null)}>
             <div className="image-modal" onClick={(e) => e.stopPropagation()}>
-              <button 
-                className="modal-close-button" 
+              <button
+                className="modal-close-button"
                 onClick={() => setSelectedImage(null)}
               >
                 ×
               </button>
-              <img 
-                src={selectedImage} 
+              <img
+                src={selectedImage}
                 alt="ADHD content enlarged"
                 className="modal-image"
               />
@@ -642,7 +648,7 @@ const LandingPage = () => {
           <span className="cute-character">🧠</span>
           <h2>Chúng ta vẫn còn nhiều điều để học về ADHD</h2>
           <p>
-            Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi. 
+            Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi.
             Việc được chẩn đoán mắc ADHD ở tuổi 29 đã thay đổi cuộc đời tôi và truyền cảm hứng cho tôi để giúp đỡ những người khác như tôi.
           </p>
           <button

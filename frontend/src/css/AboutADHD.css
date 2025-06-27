@@ -27,6 +27,21 @@
   --primary-color: #f2c2da;
 }
 
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Offset for fixed header */
+}
+
+/* Ensure sections have proper scroll targets */
+.adhd-section {
+  scroll-margin-top: 120px; /* Additional offset for sections */
+}
+
+.adhd-section h2 {
+  scroll-margin-top: 120px; /* Offset for h2 headings */
+}
+
 .adhd-adhd-page {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
@@ -328,7 +343,6 @@
   color: black;
 }
 
-
 .adhd-article-content p {
   margin-bottom: 1.5rem;
   line-height: 1.7;
@@ -543,9 +557,14 @@
 
 .adhd-type-item {
   background: rgba(242, 194, 218, 0.3);
-  padding: 25px;
+  padding: 20px;
   border-radius: 8px;
   border-left: 4px solid var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.adhd-type-item:last-child {
+  margin-bottom: 0;
 }
 
 .adhd-type-item h3 {
@@ -660,8 +679,4 @@
   .adhd-main-content {
     padding: 0 1rem 2rem;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
