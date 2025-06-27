@@ -206,6 +206,20 @@ const Header = () => {
                   Page ADHD
                 </a>
               </div> 
+              <div className="feature-card feature-card--purple">
+                <div className="feature-card__header">
+                  <div className="feature-card__icon">
+                    <span>👩‍💻</span>
+                  </div>
+                  <div>
+                    <h3 className="feature-card__title">Nội Dung ADHD của Chúng Tôi</h3>
+                  </div>
+                </div>
+                <p className="feature-card__description">Duyệt qua tất cả các bài viết của chúng tôi!</p>
+                <a href="https://www.facebook.com/people/ADHD-B%E1%BA%A3n-Giao-H%C6%B0%E1%BB%9Fng-T%E1%BA%ADp-Trung/61576988307181/" className="feature-card__link" target="_blank" rel="noopener noreferrer">
+                  Page ADHD
+                </a>
+              </div> 
             </div>
 
             {/* Center - Menu Items */}
