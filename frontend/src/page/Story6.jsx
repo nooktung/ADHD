@@ -101,9 +101,9 @@ const Story6 = () => {
                                 alt=""
                                 className="max-width-medium"
                             />
-                            <div className="title_cta-col">Bắt đầu hành trình chẩn đoán ADHD!</div>
+                            <div className="title_cta-col">Bắt đầu hành trình khám phá ADHD!</div>
                             <p>Đánh giá các triệu chứng của bạn, sắp xếp suy nghĩ và chuẩn bị cho việc đánh giá chính thức.</p>
-                            <a href="/workbook" className="button-header1">Tìm hiểu thêm</a>
+                            <a href="/" className="button-header1">Tìm hiểu thêm</a>
                         </div>
                     </div>
                     {/* Content */}
