@@ -212,7 +212,7 @@ const Header = () => {
                     <span>👩‍💻</span>
                   </div>
                   <div>
-                    <h3 className="feature-card__title">Nội Dung ADHD của Chúng Tôi</h3>
+                    <h3 className="feature-card__title">Ấn phẩm sách</h3>
                   </div>
                 </div>
                 <p className="feature-card__description">Duyệt qua tất cả các bài viết của chúng tôi!</p>
