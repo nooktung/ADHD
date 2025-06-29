@@ -317,7 +317,7 @@ const LandingPage = () => {
           </div>
           <div className="hero-visual">
             <img
-              src="image.png"
+              src="logo.jpg"
               alt="ADHD Traits Visualization"
               className="hero-visual-image"
               style={{
@@ -541,7 +541,7 @@ const LandingPage = () => {
         <div className="social-media-container">
           {/* Header */}
           <div className="social-header">
-            <h2>Theo dõi @the_mini_adhd_coach trên Mạng Xã Hội!</h2>
+            <h2>Theo dõi chúng tôi trên Mạng Xã Hội!</h2>
             <p className="social-subtitle">
               Xem nội dung giáo dục hàng ngày của chúng tôi trên Facebook
               <a href="https://www.facebook.com/profile.php?id=61576988307181" className="social-link">
@@ -555,7 +555,7 @@ const LandingPage = () => {
             <div className="social-feed-header">
               <div className="social-profile">
                 <div className="profile-avatar">
-                  <span className="profile-initial">M</span>
+                  <img src="/logo.jpg" alt="Bản Giao Hưởng Tập Trung" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
                 </div>
                 <div className="profile-info">
                   <h3>BẢN GIAO HƯỞNG TẬP TRUNG</h3>
