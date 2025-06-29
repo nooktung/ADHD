@@ -75,7 +75,7 @@ const Story3 = () => {
                 <div className="container_blog-content">
                     {/* Sidebar */}
                     <div className="info-col">
-                        <div className="description">
+                        <section className="description">
                             <div className="div-block-40">
                                 <div className="grid-7">
                                     <div className="div-block-41">
@@ -94,7 +94,7 @@ const Story3 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className="box_info-col">
                             <img
                                 src="image.jpg"
@@ -107,7 +107,8 @@ const Story3 = () => {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="wrapper_blog-content">
+                    <section className="story-article-content">
+                      <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
                             <h2>Điều gì khiến bạn quyết định đi chuẩn đoán bệnh?</h2>
                             <p>Tôi cảm thấy như cả cuộc đời mình, tôi đã phải bù đắp cho những điều nhỏ nhặt dường như khiến cuộc sống của tôi và của bất kỳ ai khác trở nên khó khăn hơn. Khi Covid-19 tấn công, tôi đã không nhận ra não mình cần cấu trúc đó đến mức nào. Khi ngồi ở nhà với gia đình và con, tôi nhận thấy (những gì tôi biết bây giờ là các triệu chứng của ADHD/Tự kỷ) mình đã chi bao nhiêu tiền cho những món đồ vô nghĩa, hoặc tôi đã ăn quá nhiều/vô thức như thế nào. Tôi bắt đầu nhận ra rằng tất cả những việc tôi đang làm đều không "bình thường" vì tôi sẽ thấy gia đình mình không phải vật lộn với những điều tương tự.</p>
@@ -117,21 +118,6 @@ const Story3 = () => {
                             <h2>Bạn làm nghề gì?</h2>
                             <p>Trợ lý hành chính cho một trường Cao đẳng cộng đồng và Trường sau đại học.</p>
                         </div>
-
-                        <h2 className="h3-stories">Biểu hiện ADHD của bạn là gì?</h2>
-                        <p style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '2rem',
-                            color: 'var(--text-dark)',
-                            padding: '1rem 1.5rem',
-                            background: 'var(--warm-yellow)',
-                            borderRadius: '25px',
-                            display: 'inline-block',
-                            fontWeight: 700
-                        }}>
-                            Kết hợp
-                        </p>
 
                         <div id="content" className="richtext_blog">
                             <h2>Những năm đi học của bạn thế nào?</h2>
@@ -167,7 +153,8 @@ const Story3 = () => {
                             <h2>Lời khuyên của bạn cho những người đang thắc mắc liệu họ có mắc ADHD?</h2>
                             <p>Không có gì sai khi thực hiện một số nghiên cứu và làm các bài kiểm tra ADHD trực tuyến như RAADS-R. Tôi thường được bảo rằng những người thần kinh điển hình không kiểm tra xem họ có mắc ADHD không. Nếu nó gây ra những khó khăn hàng ngày trong cuộc sống của bạn thì đừng ngại thực hiện một số nghiên cứu và có thể được chẩn đoán. Bạn luôn là người ủng hộ tốt nhất của chính mình.</p>
                         </div>
-                    </div>
+                      </div>
+                    </section>
                 </div>
             </div>
             {/* Footer */}

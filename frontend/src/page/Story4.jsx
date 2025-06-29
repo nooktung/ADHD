@@ -75,7 +75,7 @@ const Story4 = () => {
                 <div className="container_blog-content">
                     {/* Sidebar */}
                     <div className="info-col">
-                        <div className="description">
+                        <section className="description">
                             <div className="div-block-40">
                                 <div className="grid-7">
                                     <div className="div-block-41">
@@ -86,7 +86,7 @@ const Story4 = () => {
                                         <div className="div-block-78">
                                             <div className="text-block-21">Quốc Tịch</div>
                                         </div>
-                                        <div className="text-block-23">Nam Phi</div>
+                                        <div className="text-block-23">Việt Nam</div>
                                     </div>
                                     <div className="div-block-42">
                                         <div className="text-block-24">Chẩn đoán lúc:</div>
@@ -94,7 +94,7 @@ const Story4 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className="box_info-col">
                             <img
                                 src="image.jpg"
@@ -107,7 +107,8 @@ const Story4 = () => {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="wrapper_blog-content">
+                    <section className="story-article-content">
+                      <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
                             <h2>Điều gì khiến bạn quyết định đi khám bệnh?</h2>
                             <p>Tôi nghĩ mình đang tiến đến tình trạng kiệt sức vì áp lực công việc. ADHD luôn ở trong tâm trí tôi kể từ khi được một người quản lý mà tôi làm việc cùng nhắc đến cách đây 9 năm. Khi đó, bác sĩ tâm thần của tôi đã bác bỏ điều đó, người đang điều trị chứng trầm cảm cho tôi. Tôi đã nghiên cứu, nhưng vẫn hoài nghi. Cuối cùng, tôi chỉ đặt lịch hẹn vì tôi đang tiến đến tình trạng sụp đổ và cháy rụi.</p>
@@ -117,21 +118,6 @@ const Story4 = () => {
                             <h2>Bạn làm nghề gì?</h2>
                             <p>Kiểm soát viên.</p>
                         </div>
-
-                        <h2 className="h3-stories">Biểu hiện ADHD của bạn là gì?</h2>
-                        <p style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '2rem',
-                            color: 'var(--text-dark)',
-                            padding: '1rem 1.5rem',
-                            background: 'var(--warm-yellow)',
-                            borderRadius: '25px',
-                            display: 'inline-block',
-                            fontWeight: 700
-                        }}>
-                            Kết hợp
-                        </p>
 
                         <div id="content" className="richtext_blog">
                             <h2>Những năm đi học của bạn thế nào?</h2>
@@ -155,7 +141,8 @@ const Story4 = () => {
                             <h2>Lời khuyên của bạn cho những người đang nghi ngờ bản thân họ có mắc ADHD không?</h2>
                             <p>Đừng trì hoãn nữa và hãy đặt lịch hẹn ngay. Và đừng nghi ngờ bản thân. Chỉ có bạn mới biết điều gì đang diễn ra trong đầu bạn.</p>
                         </div>
-                    </div>
+                      </div>
+                    </section>
                 </div>
             </div>
             {/* Footer */}

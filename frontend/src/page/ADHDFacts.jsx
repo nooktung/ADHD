@@ -5,10 +5,22 @@ import '../css/AboutADHD.css';
 
 const ADHDFacts = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
-  const [activeNav, setActiveNav] = useState('overview');
+  const [activeNav, setActiveNav] = useState('driving-impact');
 
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
   };
 
   const faqs = [
@@ -83,59 +95,58 @@ const ADHDFacts = () => {
             
             {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Trong Bài Viết Này</h3>
-              
-              <nav className="adhd-article-nav">
-                <a
-                  href="#driving-impact"
-                  className={`adhd-nav-item${activeNav === 'driving-impact' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('driving-impact')}
-                >
-                  ADHD Có Thể Ảnh Hưởng Đến Việc Lái Xe
-                </a>
-                <a
-                  href="#gender-differences"
-                  className={`adhd-nav-item${activeNav === 'gender-differences' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('gender-differences')}
-                >
-                  Biểu Hiện Khác Nhau Ở Trẻ Em Và Phụ Nữ
-                </a>
-                <a
-                  href="#adults-children"
-                  className={`adhd-nav-item${activeNav === 'adults-children' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('adults-children')}
-                >
-                  ADHD Ở Cả Người Lớn Và Trẻ Em
-                </a>
-                <a
-                  href="#causes"
-                  className={`adhd-nav-item${activeNav === 'causes' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('causes')}
-                >
-                  Nguyên Nhân Gây Ra ADHD
-                </a>
-                <a
-                  href="#faqs"
-                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
-                >
-                  Câu Hỏi Thường Gặp
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Trong Bài Viết Này</h3>
+                <nav className="adhd-article-nav">
+                  <a
+                    href="#driving-impact"
+                    className={`adhd-nav-item${activeNav === 'driving-impact' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('driving-impact')}
+                  >
+                    ADHD Có Thể Ảnh Hưởng Đến Việc Lái Xe
+                  </a>
+                  <a
+                    href="#gender-differences"
+                    className={`adhd-nav-item${activeNav === 'gender-differences' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('gender-differences')}
+                  >
+                    Biểu Hiện Khác Nhau Ở Trẻ Em Và Phụ Nữ
+                  </a>
+                  <a
+                    href="#adults-children"
+                    className={`adhd-nav-item${activeNav === 'adults-children' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('adults-children')}
+                  >
+                    ADHD Ở Cả Người Lớn Và Trẻ Em
+                  </a>
+                  <a
+                    href="#causes"
+                    className={`adhd-nav-item${activeNav === 'causes' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('causes')}
+                  >
+                    Nguyên Nhân Gây Ra ADHD
+                  </a>
+                  <a
+                    href="#faqs"
+                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('faqs')}
+                  >
+                    Câu Hỏi Thường Gặp
+                  </a>
+                </nav>
+              </div>
 
-              {/* CTA Section */}
-              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
-                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section">
+                  <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                  </div>
+                  <h4 style={{textAlign: 'center'}}>Hiểu Đúng Về ADHD!</h4>
+                  <p style={{textAlign: 'center'}}>Chúng tôi cung cấp thông tin khoa học chính xác về ADHD để giúp bạn hiểu rõ hơn về bản chất thần kinh học của tình trạng này. Từ nguyên nhân di truyền đến các yếu tố môi trường, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.</p>
+                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</button>
                 </div>
-                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hiểu Đúng Về ADHD!</h4>
-                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
-                  Chúng tôi cung cấp thông tin khoa học chính xác về ADHD để giúp bạn hiểu rõ hơn về bản chất thần kinh học của tình trạng này. 
-                  Từ nguyên nhân di truyền đến các yếu tố môi trường, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.
-                </p>
-                <button className="adhd-cta-button">
-                  Tìm hiểu thêm
-                </button>
               </div>
             </aside>
 

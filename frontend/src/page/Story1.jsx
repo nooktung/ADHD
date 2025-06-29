@@ -75,7 +75,7 @@ const Story1 = () => {
                 <div className="container_blog-content">
                     {/* Sidebar */}
                     <div className="info-col">
-                        <div className="description">
+                        <section className="description">
                             <div className="div-block-40">
                                 <div className="grid-7">
                                     <div className="div-block-41">
@@ -94,7 +94,7 @@ const Story1 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className="box_info-col">
                             <img 
                                 src="image.jpg" 
@@ -107,7 +107,8 @@ const Story1 = () => {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="wrapper_blog-content">
+                    <section className="story-article-content">
+                      <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
                             <h2>Điều gì khiến bạn quyết định đi chẩn đoán bệnh?</h2>
                             <p>Tôi thực ra đã được chẩn đoán mắc chứng tự kỷ trong những năm đầu đời trước đây, và bố tôi cũng bị tự kỷ. Người bạn thân nhất của tôi cũng bị ADHD kết hợp. Tôi nghĩ rằng không ai có thể mắc chứng tự kỷ và ADHD cùng lúc nhưng sau đó anh tôi đã được chẩn đoán mắc cả 2 hội chứng này. Tôi đã nghiên cứu về ADHD một thời gian để cố gắng hiểu người bạn thân nhất của mình. Sau đó, tôi nhận ra rằng tôi thực sự liên quan đến hầu hết các hội chứng và tôi tự hỏi "Khoan đã…mình có bị ADHD không?" Vì vậy tôi đã yêu cầu mẹ đưa tôi đi chẩn đoán trước sinh nhật 17 tuổi của tôi vài tháng. Và thật sự, điều đó đã xảy ra.</p>
@@ -117,21 +118,6 @@ const Story1 = () => {
                             <h2>Bạn làm nghề gì?</h2>
                             <p>Hiện tại tôi đang học trung học. Tôi hi vọng 1 ngày nào đó sẽ mở trang trại chăn nuôi gia súc và cừu của riêng mình.</p>
                         </div>
-
-                        <h2 className="h3-stories">Biểu hiện ADHD của bạn là gì?</h2>
-                        <p style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '2rem',
-                            color: 'var(--text-dark)',
-                            padding: '1rem 1.5rem',
-                            background: 'var(--warm-yellow)',
-                            borderRadius: '25px',
-                            display: 'inline-block',
-                            fontWeight: 700
-                        }}>
-                            Kết hợp
-                        </p>
 
                         <div id="content" className="richtext_blog">
                             <h2>Những năm đi học của bạn thế nào?</h2>
@@ -182,7 +168,8 @@ const Story1 = () => {
                             <h2>Bạn sẽ đưa ra lời khuyên gì cho những người đang thắc mắc liệu mình có mắc ADHD không?</h2>
                             <p>Đừng lo lắng về những gì mọi người nghĩ về bạn. Hãy là chính mình! Bạn rất xứng đáng được sống cuộc sống tốt nhất và có những người tuyệt vời xung quanh, tôi hứa với bạn. Chấn thương không có cách chữa trị vĩnh viễn, nhưng chúng sẽ thay đổi theo thời gian khi bạn tập trung vào việc chữa lành. Hãy tìm một điều gì đó vui vẻ để làm và thể hiện sự kích thích vui vẻ của bạn!!!</p>
                         </div>
-                    </div>
+                      </div>
+                    </section>
                 </div>
             </div>
             {/* Footer */}

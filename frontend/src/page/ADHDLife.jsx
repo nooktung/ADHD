@@ -11,6 +11,18 @@ const ADHDLife = () => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   const faqs = [
     {
       question: "Mắc ADHD có phải lúc nào cũng là điều tiêu cực không?",
@@ -83,66 +95,65 @@ const ADHDLife = () => {
             
             {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Trong Bài Viết Này</h3>
-              
-              <nav className="adhd-article-nav">
-                <a
-                  href="#overview"
-                  className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('overview')}
-                >
-                  Mắc ADHD Không Phải Lúc Nào Cũng Tiêu Cực
-                </a>
-                <a
-                  href="#discover-life"
-                  className={`adhd-nav-item${activeNav === 'discover-life' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('discover-life')}
-                >
-                  Khám Phá Cuộc Sống Cùng ADHD
-                </a>
-                <a
-                  href="#enjoy-life"
-                  className={`adhd-nav-item${activeNav === 'enjoy-life' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('enjoy-life')}
-                >
-                  ADHD Vẫn Có Thể Tận Hưởng Cuộc Sống
-                </a>
-                <a
-                  href="#coffee-talks"
-                  className={`adhd-nav-item${activeNav === 'coffee-talks' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('coffee-talks')}
-                >
-                  Buổi Trò Chuyện Cà Phê về ADHD
-                </a>
-                <a
-                  href="#living-with-challenges"
-                  className={`adhd-nav-item${activeNav === 'living-with-challenges' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('living-with-challenges')}
-                >
-                  Sống Với Những Khó Khăn Vì ADHD
-                </a>
-                <a
-                  href="#faqs"
-                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
-                >
-                  Câu Hỏi Thường Gặp
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Trong Bài Viết Này</h3>
+                <nav className="adhd-article-nav">
+                  <a
+                    href="#overview"
+                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('overview')}
+                  >
+                    Mắc ADHD Không Phải Lúc Nào Cũng Tiêu Cực
+                  </a>
+                  <a
+                    href="#discover-life"
+                    className={`adhd-nav-item${activeNav === 'discover-life' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('discover-life')}
+                  >
+                    Khám Phá Cuộc Sống Cùng ADHD
+                  </a>
+                  <a
+                    href="#enjoy-life"
+                    className={`adhd-nav-item${activeNav === 'enjoy-life' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('enjoy-life')}
+                  >
+                    ADHD Vẫn Có Thể Tận Hưởng Cuộc Sống
+                  </a>
+                  <a
+                    href="#coffee-talks"
+                    className={`adhd-nav-item${activeNav === 'coffee-talks' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('coffee-talks')}
+                  >
+                    Buổi Trò Chuyện Cà Phê về ADHD
+                  </a>
+                  <a
+                    href="#living-with-challenges"
+                    className={`adhd-nav-item${activeNav === 'living-with-challenges' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('living-with-challenges')}
+                  >
+                    Sống Với Những Khó Khăn Vì ADHD
+                  </a>
+                  <a
+                    href="#faqs"
+                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('faqs')}
+                  >
+                    Câu Hỏi Thường Gặp
+                  </a>
+                </nav>
+              </div>
 
-              {/* CTA Section */}
-              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
-                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section">
+                  <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                  </div>
+                  <h4 style={{textAlign: 'center'}}>Hỗ Trợ Cuộc Sống ADHD!</h4>
+                  <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý cuộc sống hàng ngày với ADHD. Từ mẹo tổ chức đến kỹ thuật quản lý cảm xúc, chúng tôi ở đây để hỗ trợ hành trình của bạn.</p>
+                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
                 </div>
-                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Cuộc Sống ADHD!</h4>
-                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
-                  Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý cuộc sống hàng ngày với ADHD. 
-                  Từ mẹo tổ chức đến kỹ thuật quản lý cảm xúc, chúng tôi ở đây để hỗ trợ hành trình của bạn.
-                </p>
-                <button className="adhd-cta-button">
-                  Khám phá tài nguyên
-                </button>
               </div>
             </aside>
 

@@ -11,6 +11,18 @@ const ADHDWorkplace = () => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   const faqs = [
     {
       question: "Tại sao việc tìm kiếm và duy trì công việc lại khó khăn với người mắc ADHD?",
@@ -87,59 +99,63 @@ const ADHDWorkplace = () => {
             
             {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Trong Bài Viết Này</h3>
-              
-              <nav className="adhd-article-nav">
-                <a
-                  href="#overview"
-                  className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('overview')}
-                >
-                  ADHD Ảnh Hưởng Đến Cách Làm Việc
-                </a>
-                <a
-                  href="#understanding-impact"
-                  className={`adhd-nav-item${activeNav === 'understanding-impact' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('understanding-impact')}
-                >
-                  Hiểu ADHD Ảnh Hưởng Đến Mức Độ Quan Tâm
-                </a>
-                <a
-                  href="#workplace-challenges"
-                  className={`adhd-nav-item${activeNav === 'workplace-challenges' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('workplace-challenges')}
-                >
-                  Người ADHD Trong Môi Trường Làm Việc
-                </a>
-                <a
-                  href="#positive-aspects"
-                  className={`adhd-nav-item${activeNav === 'positive-aspects' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('positive-aspects')}
-                >
-                  Mặt Tích Cực Của ADHD Trong Công Việc
-                </a>
-                <a
-                  href="#faqs"
-                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
-                >
-                  Câu Hỏi Thường Gặp
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Trong Bài Viết Này</h3>
+                <nav className="adhd-article-nav">
+                  <a
+                    href="#overview"
+                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('overview')}
+                  >
+                    ADHD Ảnh Hưởng Đến Cách Làm Việc
+                  </a>
+                  <a
+                    href="#understanding-impact"
+                    className={`adhd-nav-item${activeNav === 'understanding-impact' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('understanding-impact')}
+                  >
+                    Hiểu ADHD Ảnh Hưởng Đến Mức Độ Quan Tâm
+                  </a>
+                  <a
+                    href="#workplace-challenges"
+                    className={`adhd-nav-item${activeNav === 'workplace-challenges' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('workplace-challenges')}
+                  >
+                    Người ADHD Trong Môi Trường Làm Việc
+                  </a>
+                  <a
+                    href="#positive-aspects"
+                    className={`adhd-nav-item${activeNav === 'positive-aspects' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('positive-aspects')}
+                  >
+                    Mặt Tích Cực Của ADHD Trong Công Việc
+                  </a>
+                  <a
+                    href="#faqs"
+                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('faqs')}
+                  >
+                    Câu Hỏi Thường Gặp
+                  </a>
+                </nav>
+              </div>
 
-              {/* CTA Section */}
-              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
-                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section" style={{textAlign: 'left'}}>
+                  <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                  </div>
+                  <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Sự Nghiệp ADHD!</h4>
+                  <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
+                    Chúng tôi cung cấp các chiến lược để thành công trong sự nghiệp khi mắc ADHD. 
+                    Từ kỹ năng quản lý thời gian đến cách tận dụng điểm mạnh độc đáo của bạn.
+                  </p>
+                  <button className="adhd-cta-button">
+                    Khám phá tài nguyên
+                  </button>
                 </div>
-                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Sự Nghiệp ADHD!</h4>
-                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
-                  Chúng tôi cung cấp các chiến lược để thành công trong sự nghiệp khi mắc ADHD. 
-                  Từ kỹ năng quản lý thời gian đến cách tận dụng điểm mạnh độc đáo của bạn.
-                </p>
-                <button className="adhd-cta-button">
-                  Khám phá tài nguyên
-                </button>
               </div>
             </aside>
 
@@ -165,9 +181,6 @@ const ADHDWorkplace = () => {
                   Nhưng nếu chúng ta đã tìm được một công việc phù hợp, bộ não ADHD của chúng ta sẽ hoạt động như thế nào để dẫn đến thành công 🧠? Chúng ta cần chú ý điều gì khi đánh giá hiệu suất công việc? Các môi trường xã hội ảnh hưởng đến năng suất ra sao? Liệu người mắc ADHD có tỷ lệ nghỉ việc cao?
                 </p>
 
-                <p style={{textAlign: 'center', fontStyle: 'italic', color: 'var(--dark-slate-grey)'}}>
-                  Cùng tìm hiểu nhé.
-                </p>
               </section>
 
               <section id="understanding-impact" className="adhd-section">
@@ -226,7 +239,7 @@ const ADHDWorkplace = () => {
                   <p>
                     Chúng ta dễ quên lịch họp, không để ý deadline. Bàn làm việc bừa bộn, không tìm được đồ cần thiết, khiến mọi việc bị trì hoãn. Tình trạng mất trật tự này cũng diễn ra trong chính tâm trí 💭.
                   </p>
-                  <p style={{color: '#dc3545', fontWeight: 'bold'}}>→ Khi có nhiều tiếng ồn hoặc phiền nhiễu, khả năng tổ chức bị giảm sút rõ rệt.</p>
+                  <p style={{color: '#28a745', fontWeight: 'bold'}}>→ Khi có nhiều tiếng ồn hoặc phiền nhiễu, khả năng tổ chức bị giảm sút rõ rệt.</p>
                   <p>
                     Điều này có thể làm ta trông thiếu chuyên nghiệp. Vậy nên, cần tìm cách giảm thiểu sự xao nhãng và cải thiện không gian làm việc.
                   </p>
@@ -258,7 +271,7 @@ const ADHDWorkplace = () => {
                   <p>
                     Công việc ngày nào cũng như ngày nào khiến ta cảm thấy tẻ nhạt 🥱. Khi buồn chán, tâm trí dễ "lang thang", tìm kiếm điều gì đó thú vị hơn 👀.
                   </p>
-                  <p style={{color: '#dc3545', fontWeight: 'bold'}}>→ Cảm giác quen thuộc quá mức khiến ta mất động lực và dễ phạm lỗi.</p>
+                  <p style={{color: '#28a745', fontWeight: 'bold'}}>→ Cảm giác quen thuộc quá mức khiến ta mất động lực và dễ phạm lỗi.</p>
                   <p>
                     Giải pháp là biến công việc thú vị hơn, ví dụ như thay đổi cách tiếp cận, đề xuất hoạt động nhóm, hoặc tự tạo thử thách để bản thân cảm thấy hứng thú.
                   </p>
@@ -281,7 +294,7 @@ const ADHDWorkplace = () => {
                 </p>
 
                 <div style={{background: '#d4edda', padding: '25px', borderRadius: '12px', margin: '20px 0'}}>
-                  <h4 style={{marginBottom: '15px', color: '#155724'}}>✨ Những điểm mạnh của người mắc ADHD:</h4>
+                  <h4 style={{marginBottom: '15px', color: 'black'}}>✨ Những điểm mạnh của người mắc ADHD:</h4>
                   <ul style={{margin: 0, paddingLeft: '20px'}}>
                     <li style={{marginBottom: '10px'}}>
                       <strong>Sáng tạo & khác biệt:</strong> chúng ta suy nghĩ không theo lối mòn, đưa ra giải pháp mới.

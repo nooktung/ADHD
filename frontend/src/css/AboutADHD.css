@@ -223,7 +223,6 @@ html {
 
 /* Sidebar */
 .adhd-sidebar {
-  background: var(--primary-color);
   padding: 1.5rem;
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -234,7 +233,7 @@ html {
 .adhd-sidebar h3 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1.2rem;
   color: var(--color);
   padding: 0.7rem 1rem;
 }
@@ -242,15 +241,14 @@ html {
 .adhd-article-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  gap: 0.3rem;
+  margin-bottom: 0;
 }
 
 .adhd-nav-item {
   color: var(--dark-slate-grey);
   text-decoration: none;
   padding: 0.3rem 1rem;
-  border-bottom: 1px solid rgba(1, 95, 122, 0.2);
   transition: color 0.3s ease;
   font-size: 12px;
   font-weight: 500;
@@ -271,34 +269,21 @@ html {
 }
 
 .adhd-cta-section {
-  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .adhd-cta-illustration {
-  margin-bottom: 1rem;
-}
-
-.adhd-cta-book {
-  width: 60px;
-  height: 80px;
-  background: var(--emerald);
-  border-radius: 4px;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem !important;
 }
 
 .adhd-cta-section h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--color);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .adhd-cta-section p {
-  font-size: 0.9rem;
-  color: var(--dark-slate-grey-2);
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
 }
 
 .adhd-cta-button {
@@ -679,4 +664,27 @@ html {
   .adhd-main-content {
     padding: 0 1rem 2rem;
   }
+}
+
+.adhd-sidebar-navblock {
+  background: #e8f4fd;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.adhd-sidebar-navblock h3 {
+  margin-bottom: 0.7rem;
+}
+
+.adhd-sidebar-ctablock {
+  background: #e8f4fd;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.adhd-sidebar-divider {
+  display: none;
 }

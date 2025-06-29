@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../css/AboutADHD.css';
 
 const ADHDIntroduction = () => {
+  const [activeNav, setActiveNav] = useState('definition');
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   return (
     <>
       <Header />
@@ -47,29 +61,47 @@ const ADHDIntroduction = () => {
           <div className="adhd-content-wrapper">
             {/* Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Nội dung bài viết</h3>
-              <nav className="adhd-article-nav">
-                <a href="#definition" className="adhd-nav-item">
-                  Định nghĩa ADHD
-                </a>
-                <a href="#age-gender" className="adhd-nav-item">
-                  Độ tuổi và giới tính
-                </a>
-                <a href="#types" className="adhd-nav-item">
-                  Ba dạng ADHD
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Nội dung bài viết</h3>
+                <nav className="adhd-article-nav">
+                  <a 
+                    href="#definition" 
+                    className={`adhd-nav-item${activeNav === 'definition' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('definition')}
+                  >
+                    Định nghĩa ADHD
+                  </a>
+                  <a 
+                    href="#age-gender" 
+                    className={`adhd-nav-item${activeNav === 'age-gender' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('age-gender')}
+                  >
+                    Độ tuổi và giới tính
+                  </a>
+                  <a 
+                    href="#types" 
+                    className={`adhd-nav-item${activeNav === 'types' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('types')}
+                  >
+                    Ba dạng ADHD
+                  </a>
+                </nav>
+              </div>
 
-              <div className="adhd-cta-section">
-                <div className="adhd-cta-illustration">
-                  <div className="adhd-cta-book"></div>
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section">
+                  <div className="adhd-cta-illustration">
+                    <div className="adhd-cta-book"></div>
+                  </div>
+                  <h4>Tìm hiểu thêm về ADHD!</h4>
+                  <p>
+                    Khám phá thêm nhiều kiến thức về ADHD thông qua các bài viết chuyên sâu và 
+                    sổ tay tự đánh giá của chúng tôi.
+                  </p>
+                  <button className="adhd-cta-button">Xem thêm</button>
                 </div>
-                <h4>Tìm hiểu thêm về ADHD!</h4>
-                <p>
-                  Khám phá thêm nhiều kiến thức về ADHD thông qua các bài viết chuyên sâu và 
-                  sổ tay tự đánh giá của chúng tôi.
-                </p>
-                <button className="adhd-cta-button">Xem thêm</button>
               </div>
             </aside>
 

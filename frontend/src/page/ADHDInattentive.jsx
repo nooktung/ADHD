@@ -429,7 +429,7 @@ const ADHDInattentive = () => {
                             </div>
 
                             <h1 className="adhd-main-title">
-                                Hiểu về các triệu chứng của <strong>ADHD Thể Giảm chú ý</strong>
+                                Hiểu về các triệu chứng của ADHD Thể Giảm chú ý
                             </h1>
 
                             <p className="adhd-subtitle">
@@ -463,112 +463,81 @@ const ADHDInattentive = () => {
 
                         {/* Fixed Sidebar */}
                         <aside className="adhd-sidebar">
-                            <h3>Trong Bài Viết Này</h3>
+                            {/* Navigation Block */}
+                            <div className="adhd-sidebar-navblock">
+                                <h3>Trong Bài Viết Này</h3>
+                                <nav className="adhd-article-nav">
+                                    <a
+                                        href="#overview"
+                                        className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('overview'); scrollToSection('overview'); }}
+                                    >
+                                        Cảm Thấy Mất Tập Trung? Liệu Đó Có Phải Là ADHD Thể Không Chú Ý?
+                                    </a>
+                                    <a
+                                        href="#what-is"
+                                        className={`adhd-nav-item${activeNav === 'what-is' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('what-is'); scrollToSection('what-is'); }}
+                                    >
+                                        ADHD Thể Không Chú Ý là gì?
+                                    </a>
+                                    <a
+                                        href="#symptoms-criteria"
+                                        className={`adhd-nav-item${activeNav === 'symptoms-criteria' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('symptoms-criteria'); scrollToSection('symptoms-criteria'); }}
+                                    >
+                                        Các Triệu chứng và Tiêu chí của ADHD Thể Không Chú Ý
+                                    </a>
+                                    <a
+                                        href="#symptoms"
+                                        className={`adhd-nav-item${activeNav === 'symptoms' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('symptoms'); scrollToSection('symptoms'); }}
+                                    >
+                                        Các Triệu chứng Không Chú Ý Phổ Biến
+                                    </a>
+                                    <a
+                                        href="#challenges"
+                                        className={`adhd-nav-item${activeNav === 'challenges' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('challenges'); scrollToSection('challenges'); }}
+                                    >
+                                        Những thách thức và hiểu lầm xung quanh ADHD Thể không chú ý
+                                    </a>
+                                    <a
+                                        href="#personal-story"
+                                        className={`adhd-nav-item${activeNav === 'personal-story' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('personal-story'); scrollToSection('personal-story'); }}
+                                    >
+                                        Câu chuyện chẩn đoán cá nhân và những thách thức của tôi
+                                    </a>
+                                    <a
+                                        href="#management"
+                                        className={`adhd-nav-item${activeNav === 'management' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('management'); scrollToSection('management'); }}
+                                    >
+                                        Các chiến lược và phương pháp điều trị hiệu quả để quản lý ADHD Thể không chú ý
+                                    </a>
+                                    <a
+                                        href="#key-points"
+                                        className={`adhd-nav-item${activeNav === 'key-points' ? ' active' : ''}`}
+                                        onClick={(e) => { e.preventDefault(); setActiveNav('key-points'); scrollToSection('key-points'); }}
+                                    >
+                                        Những điểm chính cần ghi nhớ
+                                    </a>
+                                </nav>
+                            </div>
 
-                            <nav className="adhd-article-nav">
-                                <a
-                                    href="#overview"
-                                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('overview');
-                                        scrollToSection('overview');
-                                    }}
-                                >
-                                    Cảm Thấy Mất Tập Trung? Liệu Đó Có Phải Là ADHD Thể Không Chú Ý?
-                                </a>
-                                <a
-                                    href="#what-is"
-                                    className={`adhd-nav-item${activeNav === 'what-is' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('what-is');
-                                        scrollToSection('what-is');
-                                    }}
-                                >
-                                    ADHD Thể Không Chú Ý là gì?
-                                </a>
-                                <a
-                                    href="#symptoms-criteria"
-                                    className={`adhd-nav-item${activeNav === 'symptoms-criteria' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('symptoms-criteria');
-                                        scrollToSection('symptoms-criteria');
-                                    }}
-                                >
-                                    Các Triệu chứng và Tiêu chí của ADHD Thể Không Chú Ý
-                                </a>
-                                <a
-                                    href="#symptoms"
-                                    className={`adhd-nav-item${activeNav === 'symptoms' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('symptoms');
-                                        scrollToSection('symptoms');
-                                    }}
-                                >
-                                    Các Triệu chứng Không Chú Ý Phổ Biến
-                                </a>
-                                <a
-                                    href="#challenges"
-                                    className={`adhd-nav-item${activeNav === 'challenges' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('challenges');
-                                        scrollToSection('challenges');
-                                    }}
-                                >
-                                    Những thách thức và hiểu lầm xung quanh ADHD Thể không chú ý
-                                </a>
-                                <a
-                                    href="#personal-story"
-                                    className={`adhd-nav-item${activeNav === 'personal-story' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('personal-story');
-                                        scrollToSection('personal-story');
-                                    }}
-                                >
-                                    Câu chuyện chẩn đoán cá nhân và những thách thức của tôi
-                                </a>
-                                <a
-                                    href="#management"
-                                    className={`adhd-nav-item${activeNav === 'management' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('management');
-                                        scrollToSection('management');
-                                    }}
-                                >
-                                    Các chiến lược và phương pháp điều trị hiệu quả để quản lý ADHD Thể không chú ý
-                                </a>
-                                <a
-                                    href="#key-points"
-                                    className={`adhd-nav-item${activeNav === 'key-points' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('key-points');
-                                        scrollToSection('key-points');
-                                    }}
-                                >
-                                    Những điểm chính cần ghi nhớ
-                                </a>
-                            </nav>
-
-                            {/* CTA Section */}
-                            <div className="adhd-cta-section" style={{ textAlign: 'left' }}>
-                                <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
-                                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                            {/* CTA Block */}
+                            <div className="adhd-sidebar-ctablock">
+                                <div className="adhd-cta-section">
+                                    <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
+                                        <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                                    </div>
+                                    <h4 style={{ textAlign: 'center' }}>Hiểu Rõ ADHD Thể Không Chú Ý!</h4>
+                                    <p style={{ textAlign: 'center' }}>Chúng tôi cung cấp thông tin chi tiết về ADHD thể không chú ý - dạng thường bị bỏ sót nhưng rất phổ biến. Từ nhận diện triệu chứng đến chiến lược quản lý hiệu quả.</p>
+                                    <button className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
+                                        Tìm hiểu thêm
+                                    </button>
                                 </div>
-                                <h4 style={{ marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem' }}>Hiểu Rõ ADHD Thể Không Chú Ý!</h4>
-                                <p style={{ marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5 }}>
-                                    Chúng tôi cung cấp thông tin chi tiết về ADHD thể không chú ý - dạng thường bị bỏ sót nhưng rất phổ biến.
-                                    Từ nhận diện triệu chứng đến chiến lược quản lý hiệu quả.
-                                </p>
-                                <button className="adhd-cta-button">
-                                    Tìm hiểu thêm
-                                </button>
                             </div>
                         </aside>
 

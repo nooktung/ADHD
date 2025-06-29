@@ -75,7 +75,7 @@ const Story7 = () => {
                 <div className="container_blog-content">
                     {/* Sidebar */}
                     <div className="info-col">
-                        <div className="description">
+                        <section className="description">
                             <div className="div-block-40">
                                 <div className="grid-7">
                                     <div className="div-block-41">
@@ -86,7 +86,7 @@ const Story7 = () => {
                                         <div className="div-block-78">
                                             <div className="text-block-21">Quốc Tịch</div>
                                         </div>
-                                        <div className="text-block-23">Indonesia</div>
+                                        <div className="text-block-23">Việt Nam</div>
                                     </div>
                                     <div className="div-block-42">
                                         <div className="text-block-24">Chẩn đoán lúc:</div>
@@ -94,7 +94,7 @@ const Story7 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className="box_info-col">
                             <img
                                 src="image.jpg"
@@ -107,7 +107,8 @@ const Story7 = () => {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="wrapper_blog-content">
+                    <section className="story-article-content">
+                      <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
                             <h2>Điều gì khiến bạn quyết định đi khám bệnh?</h2>
                             <p>Tôi đang làm luận văn thạc sĩ thì nhận ra mình đã làm liên tục trong 8 tiếng mà không ăn gì. Sau đó, tôi nhận ra rằng trong suốt những năm qua, "khả năng" tập trung tuyệt vời "bất ngờ" (hoặc gần đến hạn chót) là lý do duy nhất khiến tôi vượt qua được kỳ thi đại học. Tôi không thể chú ý trong lớp học nên đây là giải pháp duy nhất của tôi. Nhưng tôi biết điều đó không lành mạnh và tôi đã đọc thêm về nó và tìm thấy thuật ngữ "tập trung cao độ".</p>
@@ -117,22 +118,7 @@ const Story7 = () => {
                             <h2>Bạn làm nghề gì?</h2>
                             <p>Tôi làm trong lĩnh vực tiếp thị.</p>
                         </div>
-
-                        <h2 className="h3-stories">Biểu hiện ADHD của bạn là gì?</h2>
-                        <p style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '2rem',
-                            color: 'var(--text-dark)',
-                            padding: '1rem 1.5rem',
-                            background: 'var(--warm-blue)',
-                            borderRadius: '25px',
-                            display: 'inline-block',
-                            fontWeight: 700
-                        }}>
-                            Không chú ý
-                        </p>
-
+                        
                         <div id="content" className="richtext_blog">
                             <h2>Những năm đi học của bạn như thế nào?</h2>
                             <p>Tôi luôn học tốt ở trường. Nhưng tôi luôn nghĩ đó là phép màu hoặc món quà mà tôi được sinh ra vì tôi không bao giờ học hay chú ý trong lớp. Nhưng ở trường đại học, khi các khóa học trở nên khó hơn nhiều với nhiều bài tập hơn, tôi đã chết đuối.</p>
@@ -164,7 +150,8 @@ const Story7 = () => {
                             <h2>Lời khuyên của bạn cho những người đang nghi ngờ bản thân họ mắc ADHD?</h2>
                             <p>Đọc càng nhiều càng tốt về nó, nhưng một khi bạn nghĩ rằng mình có thể mắc bệnh thì hãy đăng ký để được chẩn đoán. Đừng nghi ngờ bản thân quá nhiều vì cuối cùng bạn sẽ tự nhận được câu trả lời từ một chuyên gia.</p>
                         </div>
-                    </div>
+                      </div>
+                    </section>
                 </div>
             </div>
             {/* Footer */}

@@ -373,66 +373,67 @@ const ADHDHyperactive = () => {
 
                         {/* Fixed Sidebar */}
                         <aside className="adhd-sidebar">
-                            <h3>Trong Bài Viết Này</h3>
+                            {/* Navigation Block */}
+                            <div className="adhd-sidebar-navblock">
+                                <h3>Trong Bài Viết Này</h3>
+                                <nav className="adhd-article-nav">
+                                    <a
+                                        href="#overview"
+                                        className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                                        onClick={() => setActiveNav('overview')}
+                                    >
+                                        Tổng quan về Ba thể lâm sàng
+                                    </a>
+                                    <a
+                                        href="#misconceptions"
+                                        className={`adhd-nav-item${activeNav === 'misconceptions' ? ' active' : ''}`}
+                                        onClick={() => setActiveNav('misconceptions')}
+                                    >
+                                        Quan niệm sai lầm và sự đa dạng
+                                    </a>
+                                    <a
+                                        href="#symptoms"
+                                        className={`adhd-nav-item${activeNav === 'symptoms' ? ' active' : ''}`}
+                                        onClick={() => setActiveNav('symptoms')}
+                                    >
+                                        Các hành vi Tăng động và Bốc đồng
+                                    </a>
+                                    <a
+                                        href="#diagnosis"
+                                        className={`adhd-nav-item${activeNav === 'diagnosis' ? ' active' : ''}`}
+                                        onClick={() => setActiveNav('diagnosis')}
+                                    >
+                                        Quy trình Chẩn đoán
+                                    </a>
+                                    <a
+                                        href="#management"
+                                        className={`adhd-nav-item${activeNav === 'management' ? ' active' : ''}`}
+                                        onClick={() => setActiveNav('management')}
+                                    >
+                                        Chiến lược can thiệp và quản lý
+                                    </a>
+                                    <a
+                                        href="#faqs"
+                                        className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                                        onClick={() => setActiveNav('faqs')}
+                                    >
+                                        Câu Hỏi Thường Gặp
+                                    </a>
+                                </nav>
+                            </div>
 
-                            <nav className="adhd-article-nav">
-                                <a
-                                    href="#overview"
-                                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('overview')}
-                                >
-                                    Tổng quan về Ba thể lâm sàng
-                                </a>
-                                <a
-                                    href="#misconceptions"
-                                    className={`adhd-nav-item${activeNav === 'misconceptions' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('misconceptions')}
-                                >
-                                    Quan niệm sai lầm và sự đa dạng
-                                </a>
-                                <a
-                                    href="#symptoms"
-                                    className={`adhd-nav-item${activeNav === 'symptoms' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('symptoms')}
-                                >
-                                    Các hành vi Tăng động và Bốc đồng
-                                </a>
-                                <a
-                                    href="#diagnosis"
-                                    className={`adhd-nav-item${activeNav === 'diagnosis' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('diagnosis')}
-                                >
-                                    Quy trình Chẩn đoán
-                                </a>
-                                <a
-                                    href="#management"
-                                    className={`adhd-nav-item${activeNav === 'management' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('management')}
-                                >
-                                    Chiến lược can thiệp và quản lý
-                                </a>
-                                <a
-                                    href="#faqs"
-                                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('faqs')}
-                                >
-                                    Câu Hỏi Thường Gặp
-                                </a>
-                            </nav>
-
-                            {/* CTA Section */}
-                            <div className="adhd-cta-section" style={{ textAlign: 'left' }}>
-                                <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
-                                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                            {/* CTA Block */}
+                            <div className="adhd-sidebar-ctablock">
+                                <div className="adhd-cta-section">
+                                    <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
+                                        <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                                    </div>
+                                    <h4 style={{ textAlign: 'center' }}>Hiểu Đúng Về ADHD Tăng động - Bốc đồng!</h4>
+                                    <p style={{ textAlign: 'center' }}>Chúng tôi cung cấp thông tin khoa học chính xác về ADHD thể Tăng động - Bốc đồng để giúp bạn hiểu rõ hơn về các triệu chứng và phương pháp quản lý hiệu quả. Từ chẩn đoán đến các chiến lược can thiệp, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.</p>
+                                    <button className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
+                                        Tìm hiểu thêm
+                                    </button>
                                 </div>
-                                <h4 style={{ marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem' }}>Hiểu Đúng Về ADHD Tăng động - Bốc đồng!</h4>
-                                <p style={{ marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5 }}>
-                                    Chúng tôi cung cấp thông tin khoa học chính xác về ADHD thể Tăng động - Bốc đồng để giúp bạn hiểu rõ hơn về các triệu chứng và phương pháp quản lý hiệu quả.
-                                    Từ chẩn đoán đến các chiến lược can thiệp, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.
-                                </p>
-                                <button className="adhd-cta-button">
-                                    Tìm hiểu thêm
-                                </button>
                             </div>
                         </aside>
 

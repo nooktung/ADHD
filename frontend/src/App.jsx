@@ -29,10 +29,12 @@ import Story5 from './page/Story5';
 import Story6 from './page/Story6';
 import Story7 from './page/Story7';
 import AllStory from './page/AllStory';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/LandingPage" element={<LandingPage />} />

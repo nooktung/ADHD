@@ -7,6 +7,18 @@ const ADHDAndHealth = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
   const [activeNav, setActiveNav] = useState('overview');
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
@@ -79,66 +91,65 @@ const ADHDAndHealth = () => {
             
             {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Trong Bài Viết Này</h3>
-              
-              <nav className="adhd-article-nav">
-                <a
-                  href="#overview"
-                  className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('overview')}
-                >
-                  Lời khuyên và chiến lược từ chuyên gia
-                </a>
-                <a
-                  href="#health-happiness"
-                  className={`adhd-nav-item${activeNav === 'health-happiness' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('health-happiness')}
-                >
-                  ADHD liên quan gì đến sức khỏe và hạnh phúc?
-                </a>
-                <a
-                  href="#mental-health"
-                  className={`adhd-nav-item${activeNav === 'mental-health' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('mental-health')}
-                >
-                  Sức khỏe tâm thần và ADHD
-                </a>
-                <a
-                  href="#physical-health"
-                  className={`adhd-nav-item${activeNav === 'physical-health' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('physical-health')}
-                >
-                  ADHD ảnh hưởng đến sức khỏe thể chất
-                </a>
-                <a
-                  href="#lifestyle"
-                  className={`adhd-nav-item${activeNav === 'lifestyle' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('lifestyle')}
-                >
-                  Lối sống khỏe mạnh với ADHD
-                </a>
-                <a
-                  href="#faqs"
-                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
-                >
-                  Câu Hỏi Thường Gặp
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Trong Bài Viết Này</h3>
+                <nav className="adhd-article-nav">
+                  <a
+                    href="#overview"
+                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('overview')}
+                  >
+                    Lời khuyên và chiến lược từ chuyên gia
+                  </a>
+                  <a
+                    href="#health-happiness"
+                    className={`adhd-nav-item${activeNav === 'health-happiness' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('health-happiness')}
+                  >
+                    ADHD liên quan gì đến sức khỏe và hạnh phúc?
+                  </a>
+                  <a
+                    href="#mental-health"
+                    className={`adhd-nav-item${activeNav === 'mental-health' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('mental-health')}
+                  >
+                    Sức khỏe tâm thần và ADHD
+                  </a>
+                  <a
+                    href="#physical-health"
+                    className={`adhd-nav-item${activeNav === 'physical-health' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('physical-health')}
+                  >
+                    ADHD ảnh hưởng đến sức khỏe thể chất
+                  </a>
+                  <a
+                    href="#lifestyle"
+                    className={`adhd-nav-item${activeNav === 'lifestyle' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('lifestyle')}
+                  >
+                    Lối sống khỏe mạnh với ADHD
+                  </a>
+                  <a
+                    href="#faqs"
+                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('faqs')}
+                  >
+                    Câu Hỏi Thường Gặp
+                  </a>
+                </nav>
+              </div>
 
-              {/* CTA Section */}
-              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
-                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section">
+                  <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                  </div>
+                  <h4 style={{textAlign: 'center'}}>Hỗ Trợ Sức Khỏe ADHD!</h4>
+                  <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý sức khỏe và cải thiện chất lượng cuộc sống với ADHD. Từ lời khuyên dinh dưỡng đến kỹ thuật quản lý căng thẳng.</p>
+                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
                 </div>
-                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Sức Khỏe ADHD!</h4>
-                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
-                  Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý sức khỏe và cải thiện chất lượng cuộc sống với ADHD. 
-                  Từ lời khuyên dinh dưỡng đến kỹ thuật quản lý căng thẳng.
-                </p>
-                <button className="adhd-cta-button">
-                  Khám phá tài nguyên
-                </button>
               </div>
             </aside>
 

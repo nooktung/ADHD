@@ -159,7 +159,7 @@ body {
 .h1-blog-intro {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #015f7a;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -170,6 +170,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
+    font-weight: 1000;
 }
 
 .breadcrumb {
@@ -261,8 +262,8 @@ body {
 
 /* CTA Box */
 .box_info-col {
-    background: var(--accent-pink);
-    color: white;
+    background: linear-gradient(135deg, #f2c2da 0%, #e0a3c7 100%);
+    color: #015f7a;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -300,6 +301,13 @@ body {
 }
 
 /* Content Area */
+.section_blog-content {
+    padding: 2rem 0;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+}
+
 .wrapper_blog-content {
     max-width: none;
 }
@@ -307,10 +315,10 @@ body {
 .richtext_blog h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: #015f7a;
     margin: 2rem 0 1rem;
     padding-left: 1rem;
-    border-left: 4px solid var(--primary-blue);
+    border-left: 4px solid #015f7a;
 }
 
 .richtext_blog p {
@@ -597,4 +605,13 @@ body {
 
 .richtext_blog h2:nth-child(odd) {
     animation-delay: 0.2s;
+}
+
+/* Story Article Content (giống AboutADHD) */
+.story-article-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }

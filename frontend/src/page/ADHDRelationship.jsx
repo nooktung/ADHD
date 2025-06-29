@@ -7,6 +7,18 @@ const ADHDRelationship = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
   const [activeNav, setActiveNav] = useState('overview');
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
@@ -87,80 +99,79 @@ const ADHDRelationship = () => {
             
             {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Trong Bài Viết Này</h3>
-              
-              <nav className="adhd-article-nav">
-                <a
-                  href="#overview"
-                  className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('overview')}
-                >
-                  ADHD Ảnh Hưởng Đến Các Mối Quan Hệ
-                </a>
-                <a
-                  href="#importance"
-                  className={`adhd-nav-item${activeNav === 'importance' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('importance')}
-                >
-                  Tầm Quan Trọng Của Mối Quan Hệ Bền Vững
-                </a>
-                <a
-                  href="#friendship"
-                  className={`adhd-nav-item${activeNav === 'friendship' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('friendship')}
-                >
-                  Khó Khăn Trong Tình Bạn
-                </a>
-                <a
-                  href="#family"
-                  className={`adhd-nav-item${activeNav === 'family' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('family')}
-                >
-                  ADHD Và Mối Quan Hệ Gia Đình
-                </a>
-                <a
-                  href="#workplace"
-                  className={`adhd-nav-item${activeNav === 'workplace' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('workplace')}
-                >
-                  ADHD Trong Môi Trường Làm Việc
-                </a>
-                <a
-                  href="#romantic"
-                  className={`adhd-nav-item${activeNav === 'romantic' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('romantic')}
-                >
-                  Mối Quan Hệ Tình Cảm
-                </a>
-                <a
-                  href="#management"
-                  className={`adhd-nav-item${activeNav === 'management' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('management')}
-                >
-                  Quản Lý Mối Quan Hệ Tốt Hơn
-                </a>
-                <a
-                  href="#faqs"
-                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
-                >
-                  Câu Hỏi Thường Gặp
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Trong Bài Viết Này</h3>
+                <nav className="adhd-article-nav">
+                  <a
+                    href="#overview"
+                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('overview')}
+                  >
+                    ADHD Ảnh Hưởng Đến Các Mối Quan Hệ
+                  </a>
+                  <a
+                    href="#importance"
+                    className={`adhd-nav-item${activeNav === 'importance' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('importance')}
+                  >
+                    Tầm Quan Trọng Của Mối Quan Hệ Bền Vững
+                  </a>
+                  <a
+                    href="#friendship"
+                    className={`adhd-nav-item${activeNav === 'friendship' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('friendship')}
+                  >
+                    Khó Khăn Trong Tình Bạn
+                  </a>
+                  <a
+                    href="#family"
+                    className={`adhd-nav-item${activeNav === 'family' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('family')}
+                  >
+                    ADHD Và Mối Quan Hệ Gia Đình
+                  </a>
+                  <a
+                    href="#workplace"
+                    className={`adhd-nav-item${activeNav === 'workplace' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('workplace')}
+                  >
+                    ADHD Trong Môi Trường Làm Việc
+                  </a>
+                  <a
+                    href="#romantic"
+                    className={`adhd-nav-item${activeNav === 'romantic' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('romantic')}
+                  >
+                    Mối Quan Hệ Tình Cảm
+                  </a>
+                  <a
+                    href="#management"
+                    className={`adhd-nav-item${activeNav === 'management' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('management')}
+                  >
+                    Quản Lý Mối Quan Hệ Tốt Hơn
+                  </a>
+                  <a
+                    href="#faqs"
+                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('faqs')}
+                  >
+                    Câu Hỏi Thường Gặp
+                  </a>
+                </nav>
+              </div>
 
-              {/* CTA Section */}
-              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
-                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section">
+                  <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                  </div>
+                  <h4 style={{textAlign: 'center'}}>Hỗ Trợ Mối Quan Hệ ADHD!</h4>
+                  <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các chiến lược và kỹ năng để giúp bạn xây dựng và duy trì các mối quan hệ lành mạnh khi mắc ADHD. Từ kỹ năng giao tiếp đến quản lý cảm xúc trong các mối quan hệ.</p>
+                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
                 </div>
-                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Mối Quan Hệ ADHD!</h4>
-                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
-                  Chúng tôi cung cấp các chiến lược và kỹ năng để giúp bạn xây dựng và duy trì các mối quan hệ lành mạnh khi mắc ADHD. 
-                  Từ kỹ năng giao tiếp đến quản lý cảm xúc trong các mối quan hệ.
-                </p>
-                <button className="adhd-cta-button">
-                  Khám phá tài nguyên
-                </button>
               </div>
             </aside>
 

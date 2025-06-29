@@ -75,7 +75,7 @@ const Story5 = () => {
                 <div className="container_blog-content">
                     {/* Sidebar */}
                     <div className="info-col">
-                        <div className="description">
+                        <section className="description">
                             <div className="div-block-40">
                                 <div className="grid-7">
                                     <div className="div-block-41">
@@ -86,7 +86,7 @@ const Story5 = () => {
                                         <div className="div-block-78">
                                             <div className="text-block-21">Quốc Tịch</div>
                                         </div>
-                                        <div className="text-block-23">Vương Quốc Anh</div>
+                                        <div className="text-block-23">Việt Nam</div>
                                     </div>
                                     <div className="div-block-42">
                                         <div className="text-block-24">Chẩn đoán lúc:</div>
@@ -94,7 +94,7 @@ const Story5 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className="box_info-col">
                             <img
                                 src="image.jpg"
@@ -107,7 +107,8 @@ const Story5 = () => {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="wrapper_blog-content">
+                    <section className="story-article-content">
+                      <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
                             <h2>Điều gì khiến bạn quyết định chuẩn đoán bệnh?</h2>
                             <p>Tôi đã vật lộn với sức khỏe tâm thần của mình trong nhiều năm và mặc dù đã dùng thuốc nhưng nó không giúp ích theo đúng cách. Tôi thấy mình đang dành từng chút năng lượng để cố gắng hoạt động "bình thường". Sau khi vật lộn ở trường đại học, tôi quyết định xem liệu có điều gì khác đang xảy ra không và cuối cùng nghĩ rằng đó có thể là ADHD.</p>
@@ -117,21 +118,6 @@ const Story5 = () => {
                             <h2>Bạn làm nghề gì?</h2>
                             <p>Sinh viên năm cuối sắp bước vào thế giới việc làm.</p>
                         </div>
-
-                        <h2 className="h3-stories">Biểu hiện ADHD của bạn là gì?</h2>
-                        <p style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '2rem',
-                            color: 'var(--text-dark)',
-                            padding: '1rem 1.5rem',
-                            background: 'var(--warm-blue)',
-                            borderRadius: '25px',
-                            display: 'inline-block',
-                            fontWeight: 700
-                        }}>
-                            Không chú ý
-                        </p>
 
                         <div id="content" className="richtext_blog">
                             <h2>Những năm đi học của bạn thế nào?</h2>
@@ -164,7 +150,8 @@ const Story5 = () => {
                             <h2>Lời khuyên của bạn cho những người đang nghi ngờ bản thân họ mắc ADHD?</h2>
                             <p>Có thể đáng sợ nếu bạn nghĩ mình có thể bị ADHD, tôi sẽ cân nhắc làm các bài kiểm tra trực tuyến và cũng nói chuyện với một người mà bạn tin tưởng (đặc biệt nếu họ đã biết bạn trong một thời gian dài và có thể nhận xét về hành vi và lối sống của bạn). Sau đó, hãy đến gặp bác sĩ, nêu lên mối quan tâm của bạn và bắt đầu từ đó.</p>
                         </div>
-                    </div>
+                      </div>
+                    </section>
                 </div>
             </div>
             {/* Footer */}

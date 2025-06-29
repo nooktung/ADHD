@@ -7,6 +7,18 @@ const ADHDAwareness = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
   const [activeNav, setActiveNav] = useState('overview');
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
@@ -89,56 +101,56 @@ const ADHDAwareness = () => {
                 <a
                   href="#overview"
                   className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('overview')}
+                  onClick={() => handleNavClick('overview')}
                 >
                   Hiểu Biết Vượt Ra Ngoài Các Triệu Chứng
                 </a>
                 <a
                   href="#struggles"
                   className={`adhd-nav-item${activeNav === 'struggles' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('struggles')}
+                  onClick={() => handleNavClick('struggles')}
                 >
                   Thực Tế Của Những Cuộc Đấu Tranh
                 </a>
                 <a
                   href="#parenting-myth"
                   className={`adhd-nav-item${activeNav === 'parenting-myth' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('parenting-myth')}
+                  onClick={() => handleNavClick('parenting-myth')}
                 >
                   ADHD Có Phải Do Cách Nuôi Dạy?
                 </a>
                 <a
                   href="#adult-adhd"
                   className={`adhd-nav-item${activeNav === 'adult-adhd' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('adult-adhd')}
+                  onClick={() => handleNavClick('adult-adhd')}
                 >
                   ADHD Ở Người Lớn
                 </a>
                 <a
                   href="#misdiagnosis"
                   className={`adhd-nav-item${activeNav === 'misdiagnosis' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('misdiagnosis')}
+                  onClick={() => handleNavClick('misdiagnosis')}
                 >
                   Chẩn Đoán Sai Và Thiếu Điều Trị
                 </a>
                 <a
                   href="#community"
                   className={`adhd-nav-item${activeNav === 'community' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('community')}
+                  onClick={() => handleNavClick('community')}
                 >
                   Lan Truyền Nhận Thức Qua Cộng Đồng
                 </a>
                 <a
                   href="#awareness-month"
                   className={`adhd-nav-item${activeNav === 'awareness-month' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('awareness-month')}
+                  onClick={() => handleNavClick('awareness-month')}
                 >
                   Tháng Nâng Cao Nhận Thức ADHD
                 </a>
                 <a
                   href="#faqs"
                   className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
+                  onClick={() => handleNavClick('faqs')}
                 >
                   Câu Hỏi Thường Gặp
                 </a>

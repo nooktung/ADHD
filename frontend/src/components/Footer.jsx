@@ -26,10 +26,7 @@ const Footer = () => {
           
           <div className="brand-description">
             <p>
-              Việc được chẩn đoán mắc ADHD ở tuổi 29 đã thay đổi cuộc đời tôi và truyền cảm hứng cho tôi 
-              để giúp đỡ những người khác như tôi. Thấy được sự quan tâm lớn đến những hình vẽ của tôi trên 
-              Instagram đã khuyến khích tôi làm nhiều hơn nữa, vì vậy tôi đã tạo trang web này để 
-              thực hiện điều đó.
+            Nghiên cứu tại Đại học FPT khảo sát tác động của ADHD trong môi trường học đường thông qua ba nhóm đối tượng: sinh viên (đã chẩn đoán, có biểu hiện chưa chẩn đoán), giảng viên (có kinh nghiệm với sinh viên ADHD), và chuyên viên tư vấn học đường. Mục tiêu là hiểu rõ cách nhà trường hỗ trợ sinh viên ADHD và cải thiện môi trường học tập.
             </p>
             <p className="hashtag">#ADHD được giải thích bằng hình vẽ dễ thương</p>
           </div>

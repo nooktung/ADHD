@@ -7,6 +7,18 @@ const ADHDSymptoms = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
   const [activeNav, setActiveNav] = useState('overview');
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
@@ -211,52 +223,51 @@ const ADHDSymptoms = () => {
             
             {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Trong Bài Viết Này</h3>
-              
-              <nav className="adhd-article-nav">
-                <a
-                  href="#overview"
-                  className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('overview')}
-                >
-                  Các Triệu Chứng ADHD Chính Thức
-                </a>
-                <a
-                  href="#inattentive-type"
-                  className={`adhd-nav-item${activeNav === 'inattentive-type' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('inattentive-type')}
-                >
-                  ADHD Thể Không Chú Ý
-                </a>
-                <a
-                  href="#hyperactive-type"
-                  className={`adhd-nav-item${activeNav === 'hyperactive-type' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('hyperactive-type')}
-                >
-                  ADHD Thể Tăng Động-Xung Động
-                </a>
-                <a
-                  href="#faqs"
-                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
-                >
-                  Câu Hỏi Thường Gặp
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Trong Bài Viết Này</h3>
+                <nav className="adhd-article-nav">
+                  <a
+                    href="#overview"
+                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('overview')}
+                  >
+                    Các Triệu Chứng ADHD Chính Thức
+                  </a>
+                  <a
+                    href="#inattentive-type"
+                    className={`adhd-nav-item${activeNav === 'inattentive-type' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('inattentive-type')}
+                  >
+                    ADHD Thể Không Chú Ý
+                  </a>
+                  <a
+                    href="#hyperactive-type"
+                    className={`adhd-nav-item${activeNav === 'hyperactive-type' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('hyperactive-type')}
+                  >
+                    ADHD Thể Tăng Động-Xung Động
+                  </a>
+                  <a
+                    href="#faqs"
+                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('faqs')}
+                  >
+                    Câu Hỏi Thường Gặp
+                  </a>
+                </nav>
+              </div>
 
-              {/* CTA Section */}
-              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
-                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section">
+                  <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                  </div>
+                  <h4 style={{textAlign: 'center'}}>Nhận Diện Triệu Chứng ADHD!</h4>
+                  <p style={{textAlign: 'center'}}>Chúng tôi cung cấp thông tin chi tiết về các triệu chứng ADHD để giúp bạn nhận diện và hiểu rõ hơn về tình trạng này. Từ triệu chứng chính thức đến những biểu hiện thường bị bỏ qua, chúng tôi ở đây để hỗ trợ bạn.</p>
+                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu triệu chứng</button>
                 </div>
-                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Nhận Diện Triệu Chứng ADHD!</h4>
-                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
-                  Chúng tôi cung cấp thông tin chi tiết về các triệu chứng ADHD để giúp bạn nhận diện và hiểu rõ hơn về tình trạng này. 
-                  Từ triệu chứng chính thức đến những biểu hiện thường bị bỏ qua, chúng tôi ở đây để hỗ trợ bạn.
-                </p>
-                <button className="adhd-cta-button">
-                  Tìm hiểu triệu chứng
-                </button>
               </div>
             </aside>
 

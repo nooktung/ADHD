@@ -627,8 +627,8 @@ const LandingPage = () => {
           <span className="cute-character">🧠</span>
           <h2>Chúng ta vẫn còn nhiều điều để học về ADHD</h2>
           <p>
-            Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi.
-            Việc được chẩn đoán mắc ADHD ở tuổi 29 đã thay đổi cuộc đời tôi và truyền cảm hứng cho tôi để giúp đỡ những người khác như tôi.
+          Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi.
+
           </p>
           <button
             className="btn-primary"

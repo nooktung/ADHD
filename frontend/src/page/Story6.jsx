@@ -75,7 +75,7 @@ const Story6 = () => {
                 <div className="container_blog-content">
                     {/* Sidebar */}
                     <div className="info-col">
-                        <div className="description">
+                        <section className="description">
                             <div className="div-block-40">
                                 <div className="grid-7">
                                     <div className="div-block-41">
@@ -94,7 +94,7 @@ const Story6 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className="box_info-col">
                             <img
                                 src="image.jpg"
@@ -107,7 +107,8 @@ const Story6 = () => {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="wrapper_blog-content">
+                    <section className="story-article-content">
+                      <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
                             <h2>Điều gì khiến bạn quyết định đi khám bệnh?</h2>
                             <p>Tôi luôn để lại các dự án ở trường đến phút cuối (kể cả những môn tôi thích) và đôi khi từ chối làm dự án ở những môn tôi ghét. Tôi không thích bài tập về nhà, tôi liên tục quên những thứ như đồ dùng học tập quan trọng và những cuộc trò chuyện tôi đã có vào ngày hôm trước. Tôi không lắng nghe trong lớp và luôn nhìn chằm chằm ra cửa sổ hoặc vẽ vào vở đã trống.</p>
@@ -117,21 +118,6 @@ const Story6 = () => {
                             <h2>Bạn làm nghề gì để kiếm sống?</h2>
                             <p>Nhân viên rạp phim.</p>
                         </div>
-
-                        <h2 className="h3-stories">Biểu hiện ADHD của bạn là gì?</h2>
-                        <p style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '2rem',
-                            color: 'var(--text-dark)',
-                            padding: '1rem 1.5rem',
-                            background: 'var(--warm-blue)',
-                            borderRadius: '25px',
-                            display: 'inline-block',
-                            fontWeight: 700
-                        }}>
-                            Không chú ý
-                        </p>
 
                         <div id="content" className="richtext_blog">
                             <h2>Những năm đi học của bạn như thế nào?</h2>
@@ -158,7 +144,8 @@ const Story6 = () => {
                             <h2>Lời khuyên của bạn cho những người đang nghi ngờ bản thân họ mắc ADHD?</h2>
                             <p>Tiết kiệm để được kiểm tra bởi một người chuyên về ADHD và hỏi về kinh nghiệm của bạn. Đừng tin những người kiểm tra trí thông minh của bạn. Có rất nhiều người thông minh mắc ADHD!</p>
                         </div>
-                    </div>
+                      </div>
+                    </section>
                 </div>
             </div>
             {/* Footer */}

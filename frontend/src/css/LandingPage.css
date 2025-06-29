@@ -1089,13 +1089,14 @@ body {
 .profile-info h3 {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #333;
+    color: #015f7a;
     margin-bottom: 0.25rem;
 }
 
 .profile-info p {
-    color: #666;
+    color: #015f7a;
     font-size: 0.9rem;
+    font-weight: 200;
 }
 
 /* Feed Content */

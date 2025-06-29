@@ -7,6 +7,18 @@ const ADHdEmotions = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
   const [activeNav, setActiveNav] = useState('overview');
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleNavClick = (section) => {
+    setActiveNav(section);
+    scrollToTop();
+  };
+
   const toggleFAQ = (index) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
@@ -87,73 +99,72 @@ const ADHdEmotions = () => {
             
             {/* Fixed Sidebar */}
             <aside className="adhd-sidebar">
-              <h3>Trong Bài Viết Này</h3>
-              
-              <nav className="adhd-article-nav">
-                <a
-                  href="#overview"
-                  className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('overview')}
-                >
-                  Vượt Qua Những Làn Sóng Cảm Xúc
-                </a>
-                <a
-                  href="#understanding"
-                  className={`adhd-nav-item${activeNav === 'understanding' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('understanding')}
-                >
-                  Hiểu Mối Liên Hệ ADHD Và Cảm Xúc
-                </a>
-                <a
-                  href="#symptoms"
-                  className={`adhd-nav-item${activeNav === 'symptoms' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('symptoms')}
-                >
-                  Triệu Chứng ADHD Và Tác Động Cảm Xúc
-                </a>
-                <a
-                  href="#health-impact"
-                  className={`adhd-nav-item${activeNav === 'health-impact' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('health-impact')}
-                >
-                  Tác Động Đến Sức Khỏe
-                </a>
-                <a
-                  href="#strategies"
-                  className={`adhd-nav-item${activeNav === 'strategies' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('strategies')}
-                >
-                  Chiến Lược Quản Lý Cảm Xúc
-                </a>
-                <a
-                  href="#professional-support"
-                  className={`adhd-nav-item${activeNav === 'professional-support' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('professional-support')}
-                >
-                  Hỗ Trợ Chuyên Môn
-                </a>
-                <a
-                  href="#faqs"
-                  className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                  onClick={() => setActiveNav('faqs')}
-                >
-                  Câu Hỏi Thường Gặp
-                </a>
-              </nav>
+              {/* Navigation Block */}
+              <div className="adhd-sidebar-navblock">
+                <h3>Trong Bài Viết Này</h3>
+                <nav className="adhd-article-nav">
+                  <a
+                    href="#overview"
+                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('overview')}
+                  >
+                    Vượt Qua Những Làn Sóng Cảm Xúc
+                  </a>
+                  <a
+                    href="#understanding"
+                    className={`adhd-nav-item${activeNav === 'understanding' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('understanding')}
+                  >
+                    Hiểu Mối Liên Hệ ADHD Và Cảm Xúc
+                  </a>
+                  <a
+                    href="#symptoms"
+                    className={`adhd-nav-item${activeNav === 'symptoms' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('symptoms')}
+                  >
+                    Triệu Chứng ADHD Và Tác Động Cảm Xúc
+                  </a>
+                  <a
+                    href="#health-impact"
+                    className={`adhd-nav-item${activeNav === 'health-impact' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('health-impact')}
+                  >
+                    Tác Động Đến Sức Khỏe
+                  </a>
+                  <a
+                    href="#strategies"
+                    className={`adhd-nav-item${activeNav === 'strategies' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('strategies')}
+                  >
+                    Chiến Lược Quản Lý Cảm Xúc
+                  </a>
+                  <a
+                    href="#professional-support"
+                    className={`adhd-nav-item${activeNav === 'professional-support' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('professional-support')}
+                  >
+                    Hỗ Trợ Chuyên Môn
+                  </a>
+                  <a
+                    href="#faqs"
+                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                    onClick={() => handleNavClick('faqs')}
+                  >
+                    Câu Hỏi Thường Gặp
+                  </a>
+                </nav>
+              </div>
 
-              {/* CTA Section */}
-              <div className="adhd-cta-section" style={{textAlign: 'left'}}>
-                <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                  <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+              {/* CTA Block */}
+              <div className="adhd-sidebar-ctablock">
+                <div className="adhd-cta-section">
+                  <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
+                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                  </div>
+                  <h4 style={{textAlign: 'center'}}>Hỗ Trợ Quản Lý Cảm Xúc!</h4>
+                  <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các kỹ thuật và chiến lược để giúp bạn quản lý cảm xúc mãnh liệt khi mắc ADHD. Từ chánh niệm đến các phương pháp thư giãn hiệu quả.</p>
+                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
                 </div>
-                <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Quản Lý Cảm Xúc!</h4>
-                <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>
-                  Chúng tôi cung cấp các kỹ thuật và chiến lược để giúp bạn quản lý cảm xúc mãnh liệt khi mắc ADHD. 
-                  Từ chánh niệm đến các phương pháp thư giãn hiệu quả.
-                </p>
-                <button className="adhd-cta-button">
-                  Khám phá tài nguyên
-                </button>
               </div>
             </aside>
 

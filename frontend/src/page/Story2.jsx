@@ -75,7 +75,7 @@ const Story2 = () => {
                 <div className="container_blog-content">
                     {/* Sidebar */}
                     <div className="info-col">
-                        <div className="description">
+                        <section className="description">
                             <div className="div-block-40">
                                 <div className="grid-7">
                                     <div className="div-block-41">
@@ -94,7 +94,7 @@ const Story2 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                         <div className="box_info-col">
                             <img 
                                 src="image.jpg" 
@@ -107,7 +107,8 @@ const Story2 = () => {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="wrapper_blog-content">
+                    <section className="story-article-content">
+                      <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
                             <h2>Điều gì khiến bạn quyết định đi chuẩn đoán bệnh?</h2>
                             <p>Tôi đã từng là người không thể chú ý trong thời gian quá dài, tôi hay quên hơn những người khác, tôi viết chữ rất xấu và thường không thể ngồi yên, giáo viên chủ nhiệm lớp 3 của tôi đã bảo bố mẹ tôi thử tham khảo ý kiến ​​của một nhà tâm lý học. Tôi đã cố hỏi bố mẹ tôi về chẩn đoán và bố mẹ tôi đã quên mất chẩn đoán đó vì nó đã xảy ra từ rất lâu rồi. Đến thời điểm hiện tại khi tôi đang học đại học, tôi vẫn gặp phải những vấn đề tương tự nên lần này tôi quyết định đi khám bác sĩ tâm thần và vâng, tôi đã nhận được câu trả lời chính xác, đó là ADHD.</p>
@@ -117,21 +118,6 @@ const Story2 = () => {
                             <h2>Bạn làm nghề gì?</h2>
                             <p>Tôi là sinh viên đại học, chuyên ngành Thiết kế truyền thông trực quan.</p>
                         </div>
-
-                        <h2 className="h3-stories">Biểu hiện ADHD của bạn là gì?</h2>
-                        <p style={{
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '2rem',
-                            color: 'var(--text-dark)',
-                            padding: '1rem 1.5rem',
-                            background: 'var(--warm-blue)',
-                            borderRadius: '25px',
-                            display: 'inline-block',
-                            fontWeight: 700
-                        }}>
-                            Không chú ý
-                        </p>
 
                         <div id="content" className="richtext_blog">
                             <h2>Những năm đi học của bạn như thế nào?</h2>
@@ -164,7 +150,8 @@ const Story2 = () => {
                             <h2>Bạn sẽ đưa ra lời khuyên gì cho những người đang thắc mắc liệu mình có mắc ADHD không?</h2>
                             <p>Có một câu tục ngữ ở Indonesia rằng "Không muốn hỏi thì sẽ đi lạc đường". Nghĩa là nếu bạn sợ hỏi, chắc chắn bạn sẽ bị lạc và không biết phải làm gì. Vậy nên, nếu còn nghi ngờ, hãy thử hỏi. Đó là cách tôi luôn giải quyết những việc mà tôi không biết làm, hãy luôn thử nhờ giúp đỡ. Trong trường hợp này, hãy thử nhờ sự giúp đỡ của chuyên gia, không có gì sai khi hỏi những người có kinh nghiệm.</p>
                         </div>
-                    </div>
+                      </div>
+                    </section>
                 </div>
             </div>
             {/* Footer */}

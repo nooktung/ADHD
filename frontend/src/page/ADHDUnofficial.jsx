@@ -7,6 +7,18 @@ const ADHDUnofficial = () => {
     const [expandedFAQ, setExpandedFAQ] = useState(null);
     const [activeNav, setActiveNav] = useState('overview');
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    const handleNavClick = (section) => {
+        setActiveNav(section);
+        scrollToTop();
+    };
+
     const toggleFAQ = (index) => {
         setExpandedFAQ(expandedFAQ === index ? null : index);
     };
@@ -150,66 +162,67 @@ const ADHDUnofficial = () => {
 
                         {/* Fixed Sidebar */}
                         <aside className="adhd-sidebar">
-                            <h3>Trong Bài Viết Này</h3>
+                            {/* Navigation Block */}
+                            <div className="adhd-sidebar-navblock">
+                                <h3>Trong Bài Viết Này</h3>
+                                <nav className="adhd-article-nav">
+                                    <a
+                                        href="#overview"
+                                        className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
+                                        onClick={() => handleNavClick('overview')}
+                                    >
+                                        Có phải là ADHD?
+                                    </a>
+                                    <a
+                                        href="#frustration"
+                                        className={`adhd-nav-item${activeNav === 'frustration' ? ' active' : ''}`}
+                                        onClick={() => handleNavClick('frustration')}
+                                    >
+                                        Sự thất vọng khi không được công nhận
+                                    </a>
+                                    <a
+                                        href="#diversity"
+                                        className={`adhd-nav-item${activeNav === 'diversity' ? ' active' : ''}`}
+                                        onClick={() => handleNavClick('diversity')}
+                                    >
+                                        Sự đa dạng trong trải nghiệm ADHD
+                                    </a>
+                                    <a
+                                        href="#unofficial-symptoms"
+                                        className={`adhd-nav-item${activeNav === 'unofficial-symptoms' ? ' active' : ''}`}
+                                        onClick={() => handleNavClick('unofficial-symptoms')}
+                                    >
+                                        Các triệu chứng không chính thức
+                                    </a>
+                                    <a
+                                        href="#key-points"
+                                        className={`adhd-nav-item${activeNav === 'key-points' ? ' active' : ''}`}
+                                        onClick={() => handleNavClick('key-points')}
+                                    >
+                                        Những điểm chính cần nhớ
+                                    </a>
+                                    <a
+                                        href="#faqs"
+                                        className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
+                                        onClick={() => handleNavClick('faqs')}
+                                    >
+                                        Câu Hỏi Thường Gặp
+                                    </a>
+                                </nav>
+                            </div>
 
-                            <nav className="adhd-article-nav">
-                                <a
-                                    href="#overview"
-                                    className={`adhd-nav-item${activeNav === 'overview' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('overview')}
-                                >
-                                    Có phải là ADHD?
-                                </a>
-                                <a
-                                    href="#frustration"
-                                    className={`adhd-nav-item${activeNav === 'frustration' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('frustration')}
-                                >
-                                    Sự thất vọng khi không được công nhận
-                                </a>
-                                <a
-                                    href="#diversity"
-                                    className={`adhd-nav-item${activeNav === 'diversity' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('diversity')}
-                                >
-                                    Sự đa dạng trong trải nghiệm ADHD
-                                </a>
-                                <a
-                                    href="#unofficial-symptoms"
-                                    className={`adhd-nav-item${activeNav === 'unofficial-symptoms' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('unofficial-symptoms')}
-                                >
-                                    Các triệu chứng không chính thức
-                                </a>
-                                <a
-                                    href="#key-points"
-                                    className={`adhd-nav-item${activeNav === 'key-points' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('key-points')}
-                                >
-                                    Những điểm chính cần nhớ
-                                </a>
-                                <a
-                                    href="#faqs"
-                                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                                    onClick={() => setActiveNav('faqs')}
-                                >
-                                    Câu Hỏi Thường Gặp
-                                </a>
-                            </nav>
-
-                            {/* CTA Section */}
-                            <div className="adhd-cta-section" style={{ textAlign: 'left' }}>
-                                <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
-                                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                            {/* CTA Block */}
+                            <div className="adhd-sidebar-ctablock">
+                                <div className="adhd-cta-section">
+                                    <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
+                                        <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                                    </div>
+                                    <h4 style={{ textAlign: 'center' }}>Khám phá ADHD sâu hơn!</h4>
+                                    <p style={{ textAlign: 'center' }}>Hiểu rõ những dấu hiệu ADHD không chính thức nhưng thực sự ảnh hưởng đến cuộc sống hàng ngày của bạn. Từ nhận diện đến quản lý hiệu quả.</p>
+                                    <button className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
+                                        Tìm hiểu thêm
+                                    </button>
                                 </div>
-                                <h4 style={{ marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem' }}>Khám phá ADHD sâu hơn!</h4>
-                                <p style={{ marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5 }}>
-                                    Hiểu rõ những dấu hiệu ADHD không chính thức nhưng thực sự ảnh hưởng đến cuộc sống hàng ngày của bạn.
-                                    Từ nhận diện đến quản lý hiệu quả.
-                                </p>
-                                <button className="adhd-cta-button">
-                                    Tìm hiểu thêm
-                                </button>
                             </div>
                         </aside>
 
@@ -331,7 +344,7 @@ const ADHDUnofficial = () => {
                                 </p>
 
                                 <p>
-                                    Như bạn có thể đã đoán, các tiêu chí chẩn đoán cho ADHD không hoàn hảo.
+                                    Như bạn có thể đoán, các tiêu chí chẩn đoán cho ADHD không hoàn hảo.
                                 </p>
 
                                 <p>
@@ -388,7 +401,7 @@ const ADHDUnofficial = () => {
                                     Quản lý thời gian đôi khi có thể là một thách thức lớn đối với nhiều người mắc ADHD. Chúng ta vốn đã gặp khó khăn trong việc tổ chức các nhiệm vụ, đặc biệt là những nhiệm vụ đòi hỏi nỗ lực trí óc kéo dài vì chúng ta dễ bị phân tâm. Việc <strong>thanh toán hóa đơn đúng hạn, ước tính thời gian di chuyển từ nơi này đến nơi khác, hoàn thành bài tập ở trường, và đúng giờ</strong> có thể là một cuộc vật lộn. Việc nhớ các dịp quan trọng, <strong>như sinh nhật và ngày kỷ niệm,</strong> có thể khá khó khăn đối với chúng tôi. 📅 Chúng tôi có thể nhanh chóng quên các cuộc trò chuyện và sự kiện từ vài ngày trước, và có thể gặp khó khăn trong việc ghi nhớ một chuỗi các sự kiện.
                                 </p>
 
-                                <h2>3. Siêu tập trung và Tập trung cao độ (Hyperfocus and Hyperfixation)</h2>
+                                <h3>3. Siêu tập trung và Tập trung cao độ (Hyperfocus and Hyperfixation)</h3>
                                 <p>
                                     Bạn có quen thuộc với "bong bóng ADHD" không? Đó là khả năng <strong>tập trung cao độ như tia laser vào những thứ chúng ta quan tâm,</strong> mặc dù chúng ta thường <strong>dễ bị phân tâm</strong> với khoảng chú ý ngắn. Nó có thể dẫn đến năng suất và kỹ năng học tập tốt hơn, nhưng nó cũng có thể <strong>khiến chúng ta quên ăn</strong> (điều mà thuốc kích thích có thể làm tăng thêm) hoặc lỡ các cuộc hẹn. Siêu tập trung thực sự là một con dao hai lưỡi có thể khiến chúng ta cảm thấy tốt về bản thân, nhưng cũng có thể khiến chúng ta mất dấu thời gian.
                                 </p>
