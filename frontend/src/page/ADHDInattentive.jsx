@@ -3,6 +3,243 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../css/AboutADHD.css';
 
+// ADHD Flashcards Component
+const ADHDFlashcards = () => {
+    const [flippedCards, setFlippedCards] = useState({});
+
+    const flashcards = [
+        {
+            id: 1,
+            front: "Khó khăn trong việc giữ yên và luôn trong trạng thái bồn chồn (Fidgeting)",
+            back: "Các hành vi như liên tục cựa quậy, gõ ngón tay, rung chân khi ngồi là biểu hiện của một bộ não ADHD tăng động. Khi không thể ngồi yên, hệ thần kinh đang ở trạng thái kích thích quá mức và cố gắng tìm cách giải tỏa năng lượng. Biểu hiện này ở trẻ em rất dễ nhận biết: chúng thường không ngồi yên trên ghế, táy máy chân tay, nghịch mọi đồ vật trong tầm với. Ở người lớn, triệu chứng có thể biểu hiện kín đáo hơn như rung chân, đi đi lại lại khi nói chuyện điện thoại, hoặc bấm bút liên tục."
+        },
+        {
+            id: 2,
+            front: "Khó khăn trong việc thư giãn",
+            back: "Do không thể giải tỏa năng lượng dư thừa, người bệnh thường gặp khó khăn trong việc thư giãn thực sự. Ngay cả trong trạng thái không hoạt động, não bộ vẫn có thể duy trì hoạt động ở cường độ cao với vô số ý tưởng hoặc các dòng suy nghĩ miên man, dẫn đến tình trạng khó thư giãn."
+        },
+        {
+            id: 3,
+            front: "Nói nhiều quá mức (Excessive Talking)",
+            back: "Hành vi bốc đồng là một tiêu chí chẩn đoán cốt lõi. Sự suy giảm khả năng tự kiểm soát và nhận thức các tín hiệu xã hội khiến người bệnh có thể nói liên tục mà không nhận biết được thời điểm hoặc bối cảnh phù hợp. Một khi đã bắt đầu, họ rất khó để dừng lại. Họ có xu hướng chia sẻ thông tin cá nhân quá mức hoặc nói chuyện không ngừng nghỉ, gây ra xung đột trong các mối quan hệ xã hội."
+        },
+        {
+            id: 4,
+            front: "Tình trạng mệt mỏi và kiệt sức mạn tính",
+            back: "Một quan niệm sai lầm phổ biến là người mắc ADHD luôn tràn đầy năng lượng. Thực tế, do tình trạng não bộ liên tục ở trạng thái \"tăng tốc\" và khó thư giãn, họ thường xuyên cảm thấy mệt mỏi và kiệt sức. Sự tăng động của não bộ cản trở quá trình nghỉ ngơi và phục hồi năng lượng, đặc biệt là chất lượng giấc ngủ, dẫn đến tình trạng thiếu năng lượng vào ngày hôm sau."
+        },
+        {
+            id: 5,
+            front: "Ngắt lời và buột miệng trả lời (Interrupting & Blurting Out)",
+            back: "Đây là một biểu hiện kinh điển của tính bốc đồng. Người bệnh có thể không chờ người khác nói xong, nói xen vào hoặc trả lời trước khi câu hỏi được đặt ra hoàn chỉnh. Ở trẻ em, hành vi này thường bị coi là \"gây rối\" trong lớp học. Ở người lớn, điều này gây khó khăn trong các cuộc họp hoặc giao tiếp xã hội. Nguyên nhân sâu xa là do sự suy giảm khả năng ức chế phản ứng (impulse control) và nỗi sợ quên mất ý định muốn nói. Mặc dù người có sự phát triển thần kinh điển hình (neurotypical) cũng có thể ngắt lời, nhưng ở người mắc ADHD, hành vi này xảy ra với tần suất, cường độ cao hơn và gây ảnh hưởng tiêu cực đến các mối quan hệ và hoạt động chức năng."
+        },
+        {
+            id: 6,
+            front: "Các hành vi nguy cơ cao (Risky Behaviors)",
+            back: "Các triệu chứng tăng động - bốc đồng là nền tảng cho các hành vi nguy cơ cao như lái xe thiếu an toàn, chi tiêu không kiểm soát, hoặc lạm dụng chất. Nếu người bệnh đang phải đối mặt với các hành vi này, việc tìm kiếm sự can thiệp từ chuyên gia là tối quan trọng."
+        }
+    ];
+
+    const toggleCard = (cardId) => {
+        setFlippedCards(prev => ({
+            ...prev,
+            [cardId]: !prev[cardId]
+        }));
+    };
+
+    return (
+        <>
+            <style jsx>{`
+                .flashcards-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                    gap: 25px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+
+                .flashcard {
+                    height: 280px;
+                    perspective: 1000px;
+                }
+
+                .flashcard-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    transition: transform 0.6s ease-in-out;
+                    transform-style: preserve-3d;
+                    cursor: pointer;
+                }
+
+                .flashcard-inner.flipped {
+                    transform: rotateX(180deg);
+                }
+
+                .flashcard-front, .flashcard-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    border-radius: 16px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 20px;
+                    box-sizing: border-box;
+                }
+
+                .flashcard-front {
+                    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+                    border: 2px solid #e9ecef;
+                }
+
+                .flashcard-back {
+                    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                    color: white;
+                    transform: rotateX(180deg);
+                }
+
+                .flashcard-content {
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .flashcard-front .flashcard-content h4 {
+                    font-size: 1.2rem;
+                    margin: 0;
+                    color: #2c3e50;
+                    font-weight: 600;
+                    line-height: 1.4;
+                }
+
+                .flashcard-back .flashcard-content p {
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                    margin: 0;
+                    text-align: left;
+                    color: white;
+                }
+
+                .flip-hint {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                    background: rgba(0, 0, 0, 0.1);
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 0.8rem;
+                    color: #666;
+                }
+
+                .flashcard-back .flip-hint {
+                    color: rgba(255, 255, 255, 0.8);
+                    background: rgba(255, 255, 255, 0.2);
+                }
+
+                .card-number {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    background: #007bff;
+                    color: white;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                }
+
+                .flashcard-back .card-number {
+                    background: rgba(255, 255, 255, 0.3);
+                }
+
+                .progress-bar {
+                    margin-bottom: 20px;
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    height: 8px;
+                    max-width: 400px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .progress-fill {
+                    height: 100%;
+                    background: linear-gradient(90deg, #00f2fe, #4facfe);
+                    width: ${(Object.keys(flippedCards).filter(key => flippedCards[key]).length / flashcards.length) * 100}%;
+                    transition: width 0.3s ease;
+                }
+
+                @media (max-width: 768px) {
+                    .flashcards-grid {
+                        grid-template-columns: 1fr;
+                        gap: 20px;
+                        padding: 0 10px;
+                    }
+                    
+                    .flashcard {
+                        height: 250px;
+                    }
+                    
+                    .flashcard-front .flashcard-content h4 {
+                        font-size: 1.1rem;
+                    }
+                    
+                    .flashcard-back .flashcard-content p {
+                        font-size: 0.85rem;
+                    }
+                }
+            `}</style>
+
+            <div className="progress-bar">
+                <div className="progress-fill"></div>
+            </div>
+            <p style={{ fontSize: '0.9rem', marginBottom: '25px', opacity: 0.8, textAlign: 'center', color: 'white' }}>
+                Đã xem: {Object.keys(flippedCards).filter(key => flippedCards[key]).length}/{flashcards.length} thẻ
+            </p>
+
+            <div className="flashcards-grid">
+                {flashcards.map((card) => (
+                    <div key={card.id} className="flashcard">
+                        <div 
+                            className={`flashcard-inner ${flippedCards[card.id] ? 'flipped' : ''}`}
+                            onClick={() => toggleCard(card.id)}
+                        >
+                            <div className="flashcard-front">
+                                <div className="card-number">{card.id}</div>
+                                <div className="flashcard-content">
+                                    <h4>{card.front}</h4>
+                                </div>
+                                <div className="flip-hint">👆 Nhấp để xem</div>
+                            </div>
+                            <div className="flashcard-back">
+                                <div className="card-number">{card.id}</div>
+                                <div className="flashcard-content">
+                                    <p>{card.back}</p>
+                                </div>
+                                <div className="flip-hint">👆 Nhấp để đóng</div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div style={{ textAlign: 'center', marginTop: '30px', color: 'white' }}>
+                <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>
+                    💡 Mẹo: Hãy thử ghi nhớ nội dung trước khi lật thẻ để kiểm tra hiểu biết của bạn!
+                </p>
+            </div>
+        </>
+    );
+};
+
 const ADHDInattentive = () => {
     const [expandedFAQ, setExpandedFAQ] = useState(null);
     const [activeNav, setActiveNav] = useState('overview');
@@ -197,7 +434,6 @@ const ADHDInattentive = () => {
 
                             <p className="adhd-subtitle">
                                 ADHD thể Giảm chú ý được đặc trưng bởi những khó khăn trong việc duy trì sự tập trung, tuân thủ các hướng dẫn chi tiết và tổ chức công việc. Khác với thể Tăng động - Bốc đồng, các cá nhân này có thể có vẻ ngoài như đang mơ mộng, tỏ ra không lắng nghe hoặc dễ bị phân tâm bởi các kích thích bên ngoài. Dạng ADHD này thường không được chú ý đến (hoặc dễ bị bỏ sót) vì nó thiếu các biểu hiện tăng động và bốc đồng rõ rệt như các thể khác. Do đó, việc các nhà giáo dục và người chăm sóc có thể nhận ra những dấu hiệu kín đáo hơn này là cực kỳ quan trọng để cung cấp sự hỗ trợ và can thiệp phù hợp.
-
                             </p>
 
                             <div className="adhd-publish-info">
@@ -239,7 +475,7 @@ const ADHDInattentive = () => {
                                         scrollToSection('overview');
                                     }}
                                 >
-                                    I. Các triệu chứng của Rối loạn tăng động giảm chú ý
+                                    Cảm Thấy Mất Tập Trung? Liệu Đó Có Phải Là ADHD Thể Không Chú Ý?
                                 </a>
                                 <a
                                     href="#what-is"
@@ -272,62 +508,7 @@ const ADHDInattentive = () => {
                                         scrollToSection('symptoms');
                                     }}
                                 >
-                                    Các Triệu Chứng Không Chú Ý Phổ Biến
-                                </a>
-                                <a
-                                    href="#zoning-out"
-                                    className={`adhd-nav-item${activeNav === 'zoning-out' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('zoning-out');
-                                        scrollToSection('zoning-out');
-                                    }}
-                                >
-                                    Lơ đãng (Zoning Out) trong các cuộc trò chuyện
-                                </a>
-                                <a
-                                    href="#making-mistakes"
-                                    className={`adhd-nav-item${activeNav === 'making-mistakes' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('making-mistakes');
-                                        scrollToSection('making-mistakes');
-                                    }}
-                                >
-                                    Thường xuyên mắc lỗi
-                                </a>
-                                <a
-                                    href="#organization"
-                                    className={`adhd-nav-item${activeNav === 'organization' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('organization');
-                                        scrollToSection('organization');
-                                    }}
-                                >
-                                    Vật lộn với việc sắp xếp, tổ chức
-                                </a>
-                                <a
-                                    href="#avoiding-tasks"
-                                    className={`adhd-nav-item${activeNav === 'avoiding-tasks' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('avoiding-tasks');
-                                        scrollToSection('avoiding-tasks');
-                                    }}
-                                >
-                                    Tránh né các nhiệm vụ khó khăn
-                                </a>
-                                <a
-                                    href="#losing-things"
-                                    className={`adhd-nav-item${activeNav === 'losing-things' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('losing-things');
-                                        scrollToSection('losing-things');
-                                    }}
-                                >
-                                    Làm mất hoặc để lạc đồ đạc
+                                    Các Triệu chứng Không Chú Ý Phổ Biến
                                 </a>
                                 <a
                                     href="#challenges"
@@ -339,17 +520,6 @@ const ADHDInattentive = () => {
                                     }}
                                 >
                                     Những thách thức và hiểu lầm xung quanh ADHD Thể không chú ý
-                                </a>
-                                <a
-                                    href="#daily-challenges"
-                                    className={`adhd-nav-item${activeNav === 'daily-challenges' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('daily-challenges');
-                                        scrollToSection('daily-challenges');
-                                    }}
-                                >
-                                    Những thách thức và định kiến hàng ngày
                                 </a>
                                 <a
                                     href="#personal-story"
@@ -374,105 +544,6 @@ const ADHDInattentive = () => {
                                     Các chiến lược và phương pháp điều trị hiệu quả để quản lý ADHD Thể không chú ý
                                 </a>
                                 <a
-                                    href="#education"
-                                    className={`adhd-nav-item${activeNav === 'education' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('education');
-                                        scrollToSection('education');
-                                    }}
-                                >
-                                    Tìm hiểu thông tin và tự giáo dục bản thân về ADHD
-                                </a>
-                                <a
-                                    href="#support-system"
-                                    className={`adhd-nav-item${activeNav === 'support-system' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('support-system');
-                                        scrollToSection('support-system');
-                                    }}
-                                >
-                                    Phát triển một hệ thống hỗ trợ
-                                </a>
-                                <a
-                                    href="#routine"
-                                    className={`adhd-nav-item${activeNav === 'routine' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('routine');
-                                        scrollToSection('routine');
-                                    }}
-                                >
-                                    Tạo một thói quen và tuân theo nó
-                                </a>
-                                <a
-                                    href="#honesty"
-                                    className={`adhd-nav-item${activeNav === 'honesty' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('honesty');
-                                        scrollToSection('honesty');
-                                    }}
-                                >
-                                    Cởi mở và trung thực
-                                </a>
-                                <a
-                                    href="#tools-apps"
-                                    className={`adhd-nav-item${activeNav === 'tools-apps' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('tools-apps');
-                                        scrollToSection('tools-apps');
-                                    }}
-                                >
-                                    Sử dụng các công cụ và ứng dụng ADHD
-                                </a>
-                                <a
-                                    href="#health"
-                                    className={`adhd-nav-item${activeNav === 'health' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('health');
-                                        scrollToSection('health');
-                                    }}
-                                >
-                                    Giữ cho tâm trí và cơ thể khỏe mạnh
-                                </a>
-                                <a
-                                    href="#community"
-                                    className={`adhd-nav-item${activeNav === 'community' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('community');
-                                        scrollToSection('community');
-                                    }}
-                                >
-                                    Kết nối với cộng đồng ADHD
-                                </a>
-                                <a
-                                    href="#professional-help"
-                                    className={`adhd-nav-item${activeNav === 'professional-help' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('professional-help');
-                                        scrollToSection('professional-help');
-                                    }}
-                                >
-                                    Tìm kiếm lời khuyên y tế chuyên nghiệp
-                                </a>
-                                <a
-                                    href="#treatment-options"
-                                    className={`adhd-nav-item${activeNav === 'treatment-options' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('treatment-options');
-                                        scrollToSection('treatment-options');
-                                    }}
-                                >
-                                    Cởi mở với các phương pháp điều trị khác nhau
-                                </a>
-                                <a
                                     href="#key-points"
                                     className={`adhd-nav-item${activeNav === 'key-points' ? ' active' : ''}`}
                                     onClick={(e) => {
@@ -482,17 +553,6 @@ const ADHDInattentive = () => {
                                     }}
                                 >
                                     Những điểm chính cần ghi nhớ
-                                </a>
-                                <a
-                                    href="#faqs"
-                                    className={`adhd-nav-item${activeNav === 'faqs' ? ' active' : ''}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveNav('faqs');
-                                        scrollToSection('faqs');
-                                    }}
-                                >
-                                    Câu Hỏi Thường Gặp Về ADHD Thể Không Chú Ý
                                 </a>
                             </nav>
 
@@ -516,8 +576,7 @@ const ADHDInattentive = () => {
                         <article className="adhd-article-content">
 
                             <section id="overview" className="adhd-section">
-                                <h2>I. Các triệu chứng của Rối loạn tăng động giảm chú ý</h2>
-                                <h3>Cảm Thấy Mất Tập Trung? Liệu Đó Có Phải Là ADHD Thể Không Chú Ý?</h3>
+                                <h2>Cảm Thấy Mất Tập Trung? Liệu Đó Có Phải Là ADHD Thể Không Chú Ý?</h2>
 
                                 <p>
                                     Trong một thế giới không ngừng đòi hỏi sự chú ý của chúng ta, việc cảm thấy mất tập trung triền miên có thể không chỉ đơn thuần là căng thẳng hàng ngày hay một đêm mất ngủ. Sẽ ra sao nếu đó là dấu hiệu của ADHD thể không chú ý? Dạng phụ này của ADHD thường ít được nhận diện, bị lu mờ bởi người anh em được nhắc đến nhiều hơn của nó, ADHD thể tăng động-xung động.
@@ -529,7 +588,7 @@ const ADHDInattentive = () => {
 
                                 <div className="adhd-symptom-cards">
                                     <div className="adhd-symptom-card">
-                                        <h4>Các triệu chứng cốt lõi của ADHD thể không chú ý giúp phân biệt nó với các loại ADHD khác.</h4>
+                                        <h4>Các triệu chứng cốt lõi của ADHD thể không chú ý giúp phân biệt nó với các loại khác.</h4>
                                     </div>
                                     <div className="adhd-symptom-card">
                                         <h4>Những thách thức và hiểu lầm xung quanh ADHD thể không chú ý.</h4>
@@ -544,10 +603,6 @@ const ADHDInattentive = () => {
 
                                 <p>
                                     Nếu bạn cần một sự thấu hiểu toàn diện hơn về dạng biểu hiện thường bị bỏ qua này, bài viết này là dành cho bạn. ⭐
-                                </p>
-
-                                <p>
-                                    Dạng ADHD này thường không được chú ý đến (hoặc dễ bị bỏ sót) vì nó thiếu các biểu hiện tăng động và bốc đồng rõ rệt như các thể khác. Do đó, việc các nhà giáo dục và người chăm sóc có thể nhận ra những dấu hiệu kín đáo hơn này là cực kỳ quan trọng để cung cấp sự hỗ trợ và can thiệp phù hợp.
                                 </p>
                             </section>
 
@@ -565,8 +620,10 @@ const ADHDInattentive = () => {
                                 <p>
                                     Hầu hết các triệu chứng và tác động của nó đều thuộc về mặt tinh thần, vì vậy nó <strong>khó chẩn đoán hơn dựa trên các hành vi bên ngoài</strong>. Đó cũng là lý do tại sao nó bị hiểu lầm nhiều hơn - <strong>mọi người khó có thể hiểu những gì họ không thể nhìn thấy</strong>. 🙈
                                 </p>
+                            </section>
 
-                                <h2 id="symptoms-criteria">Các Triệu chứng và Tiêu chí của ADHD Thể Không Chú Ý</h2>
+                            <section id="symptoms-criteria" className="adhd-section">
+                                <h2>Các Triệu chứng và Tiêu chí của ADHD Thể Không Chú Ý</h2>
 
                                 <p>
                                     ADHD được chẩn đoán bởi các chuyên gia y tế sử dụng <strong>Sổ tay Chẩn đoán và Thống kê các Rối loạn Tâm thần, Phiên bản thứ Năm (DSM-5)</strong> của Hiệp hội Tâm thần học Hoa Kỳ.
@@ -621,11 +678,11 @@ const ADHDInattentive = () => {
                                 </div>
 
                                 <p>
-                                    Đối với ADHD thể không chú ý, việc chẩn đoán chủ yếu xem xét các triệu chứng <strong>không chú ý</strong>. Mặc dù <strong>một vài</strong> triệu chững tăng động-xung động có thể tồn tại, chúng <strong>không đủ đáng kể</strong> để phân loại vào thể tăng động-xung động hoặc thể kết hợp.
+                                    Đối với ADHD thể không chú ý, việc chẩn đoán chủ yếu xem xét các triệu chứng <strong>không chú ý</strong>. Mặc dù <strong>một vài</strong> triệu chứng tăng động-xung động có thể tồn tại, chúng <strong>không đủ đáng kể</strong> để phân loại vào thể tăng động-xung động hoặc thể kết hợp.
                                 </p>
 
                                 <p>
-                                    Nếu bạn biểu hiện <strong>đủ triệu chững từ cả hai bộ tiêu chí này và tiêu chí cho ADHD thể tăng động-xung động</strong>, bạn sẽ được chẩn đoán là <strong>thể kết hợp</strong>.
+                                    Nếu bạn biểu hiện <strong>đủ triệu chứng từ cả hai bộ tiêu chí này và tiêu chí cho ADHD thể tăng động-xung động</strong>, bạn sẽ được chẩn đoán là <strong>thể kết hợp</strong>.
                                 </p>
 
                                 <p>
@@ -634,10 +691,10 @@ const ADHDInattentive = () => {
                             </section>
 
                             <section id="symptoms" className="adhd-section">
-                                <h2>Các Triệu Chững Không Chú Ý Phổ Biến</h2>
+                                <h2>Các Triệu chứng Không Chú Ý Phổ Biến</h2>
 
                                 <p>
-                                    Mọi người trải nghiệm mọi thử một cách <strong>khác nhau</strong>, vì vậy mặc dù đây là một vài triệu chững của ADHD thể không chú ý mà bạn có thể trải qua, <strong>một số đặc điểm có thể phổ biến hơn những đặc điểm khác</strong>. Thậm chí còn có những <strong>triệu chững không chính thức</strong> không được liệt kê trong DSM-5.
+                                    Mọi người trải nghiệm mọi thứ một cách <strong>khác nhau</strong>, vì vậy mặc dù đây là một vài triệu chứng của ADHD thể không chú ý mà bạn có thể trải qua, <strong>một số đặc điểm có thể phổ biến hơn những đặc điểm khác</strong>. Thậm chí còn có những <strong>triệu chứng không chính thức</strong> không được liệt kê trong DSM-5.
                                 </p>
 
                                 <p>
@@ -649,10 +706,10 @@ const ADHDInattentive = () => {
                                 </p>
 
                                 <p>
-                                    Vì trải nghiệm khác nhau, đây là danh sách các triệu chững cụ thể về sự không chú ý mà tôi thường xuyên phải vật lộn với tư cách là một người mắc ADHD thể kết hợp.
+                                    Vì trải nghiệm khác nhau, đây là danh sách các triệu chứng cụ thể về sự không chú ý mà tôi thường xuyên phải vật lộn với tư cách là một người mắc ADHD thể kết hợp.
                                 </p>
 
-                                <h2 id="zoning-out">Lơ đãng (Zoning Out) trong các cuộc trò chuyện</h2>
+                                <h3>Lơ đãng (Zoning Out) trong các cuộc trò chuyện</h3>
                                 <p>
                                     Tôi có xu hướng lơ đãng trong các cuộc trò chuyện, bất kể chúng quan trọng đến đâu. Ngay cả khi tôi <em>thực sự</em> muốn lắng nghe.
                                 </p>
@@ -666,7 +723,7 @@ const ADHDInattentive = () => {
                                     Bạn thấy đấy, khi tâm trí tôi cho rằng tôi bị 'mắc kẹt' trong một cuộc trò chuyện không thú vị, <strong>tôi không thể không lơ đãng</strong> và nghĩ về tất cả những thứ khác đang chạy đua trong đầu. Tất nhiên, trong khi tôi biết bộ não ADHD của mình <strong>dễ bị phân tâm</strong>, điều đó có thể làm cho người kia <strong>cảm thấy như tôi không hề coi trọng những gì họ nói</strong>. Kiểu hiểu lầm này có thể rất phức tạp, đặc biệt nếu bạn ghét xung đột. 😞
                                 </p>
 
-                                <h2 id="making-mistakes">Thường xuyên mắc lỗi</h2>
+                                <h3>Thường xuyên mắc lỗi</h3>
                                 <p>
                                     Đúng vậy, những người có thần kinh điển hình (neurotypical) cũng mắc lỗi và phán đoán sai, nhưng đối với nhiều người bị ADHD, <strong>việc mắc phải những lỗi bất cẩn có thể là chuyện thường ngày</strong>. Cách chúng ta xử lý thông tin có xu hướng ảnh hưởng đến quyết định và phán đoán của chúng ta, dẫn đến nhiều lỗi hơn. Bộ não của chúng ta được cấu tạo khác biệt. 🧠
                                 </p>
@@ -680,7 +737,7 @@ const ADHDInattentive = () => {
                                     Thật thú vị, một <strong>nghiên cứu gần đây</strong> đã xác định 16.1% người lớn mắc ADHD cũng có chẩn đoán rối loạn ám ảnh cưỡng chế (OCD). Mặc dù nguyên nhân của mối quan hệ này vẫn chưa rõ ràng, nhưng chắc chắn đáng chú ý rằng một triệu chứng chính của OCD là <strong>kiểm tra một cách cưỡng chế</strong>, điều mà nhiều người mắc ADHD thể không chú ý cũng sử dụng như một <strong>hành vi che đậy</strong>.
                                 </p>
 
-                                <h2 id="organization">Vật lộn với việc sắp xếp, tổ chức</h2>
+                                <h3>Vật lộn với việc sắp xếp, tổ chức</h3>
                                 <p>
                                     Bộ não ADHD có rất nhiều thứ đang diễn ra - ý tưởng, suy nghĩ, lo lắng. Nó thường không sắp xếp những suy nghĩ này theo cách tuần tự hơn như ở người có thần kinh điển hình. Nó có thể khá hỗn loạn.
                                 </p>
@@ -697,7 +754,7 @@ const ADHDInattentive = () => {
                                     Khi phòng tôi bừa bộn, tôi cảm thấy căng thẳng. Tuy nhiên, do lịch trình eo hẹp (tôi luôn trễ giờ!) và khó khăn trong việc sắp xếp suy nghĩ, nó dường như luôn bừa bộn bất chấp những nỗ lực tốt nhất của tôi.
                                 </p>
 
-                                <h2 id="avoiding-tasks">Tránh né các nhiệm vụ khó khăn</h2>
+                                <h3>Tránh né các nhiệm vụ khó khăn</h3>
                                 <p>
                                     Với bất cứ điều gì liên quan đến ADHD, bạn sẽ thường xuyên nghe thấy cụm từ 'nỗ lực tinh thần kéo dài'.
                                 </p>
@@ -714,7 +771,7 @@ const ADHDInattentive = () => {
                                     Nếu có hạn chót để tôi thanh toán hóa đơn hoặc quyết toán thuế, bạn có thể đoán rằng tôi sẽ làm chúng chỉ vài giờ trước hạn. Đây là lúc chúng ta cần tìm các giải pháp thiết thực hơn hoặc yêu cầu sự hỗ trợ.
                                 </p>
 
-                                <h2 id="losing-things">Làm mất hoặc để lạc đồ đạc</h2>
+                                <h3>Làm mất hoặc để lạc đồ đạc</h3>
                                 <p>
                                     Rối loạn Tăng động Giảm chú ý (ADHD) <strong>có thể ảnh hưởng đến trí nhớ làm việc của chúng ta</strong> và các <strong>chức năng điều hành</strong> thiết yếu trong cuộc sống hàng ngày. Theo một <strong>nghiên cứu</strong> được đăng trên tạp chí của Hiệp hội Tâm lý học Hoa Kỳ, trí nhớ ngắn hạn của một người mắc ADHD có thể bị suy giảm, dẫn đến việc quên những điều vừa được nói hoặc không nhớ đã đặt thứ gì đó ở đâu.
                                 </p>
@@ -751,7 +808,7 @@ const ADHDInattentive = () => {
                                     Chà, ADHD thể không chú ý - chúng tôi nhìn thấy bạn! 👋
                                 </p>
 
-                                <h2 id="daily-challenges">Những thách thức và định kiến hàng ngày</h2>
+                                <h3>Những thách thức và định kiến hàng ngày</h3>
                                 <p>
                                     Cuộc sống hàng ngày có một chút khác biệt với ADHD. Các triệu chứng được liệt kê ở trên có thể gây ra hậu quả trong mọi lĩnh vực của cuộc sống. Trong môi trường học đường và công sở, việc bị xem là không chú ý hoặc mắc lỗi bất cẩn <strong>có thể ảnh hưởng đến hiệu suất</strong>.
                                 </p>
@@ -811,101 +868,84 @@ const ADHDInattentive = () => {
                                     Nhưng vì bạn đã ở đây, hãy cùng khám phá một số <strong>mẹo hữu ích để quản lý ADHD thể không chú ý bắt đầu từ hôm nay</strong>. ⬇️
                                 </p>
 
-                                <h2 id="education">Tìm hiểu thông tin và tự giáo dục bản thân về ADHD</h2>
-
+                                <h3>Tìm hiểu thông tin và tự giáo dục bản thân về ADHD</h3>
                                 <p>
                                     Việc tự giáo dục bản thân về những điều cơ bản của Rối loạn Tăng động Giảm chú ý (ADHD) đã có thể đưa bạn đi một chặng đường dài. Bạn không biết mình có thể đã tin vào bao nhiêu lầm tưởng hoặc quan niệm sai lầm cho đến khi bạn bắt đầu tìm hiểu sự thật.
                                 </p>
-
                                 <p>
                                     Bạn càng biết nhiều về cách nó hoạt động, và triệu chứng nào là của ADHD và không phải, bạn càng có thể <strong>nhận thức về hành vi của mình và bắt đầu quản lý chúng tốt hơn</strong>.
                                 </p>
-
                                 <p>
                                     Hãy nhớ luôn lấy thông tin từ các <strong>nguồn chất lượng cao hoặc đáng tin cậy từ những người điều trị hoặc sống chung với ADHD</strong> (như chúng tôi!) để bạn có thể tránh những quan niệm sai lầm phổ biến đó. 🔍
                                 </p>
 
-                                <h2 id="support-system">Phát triển một hệ thống hỗ trợ</h2>
-
+                                <h3>Phát triển một hệ thống hỗ trợ</h3>
                                 <p>
                                     Có những người xung quanh bạn hiểu tình trạng của bạn, hoặc cố gắng hiểu, có thể giúp bạn quản lý ADHD. Đó có thể là bạn bè, thành viên gia đình hoặc đồng nghiệp - bất kỳ ai sẵn sàng 100% <strong>hỗ trợ bạn trên hành trình ADHD của mình</strong>.
                                 </p>
-
                                 <p>
                                     Ở mức độ thực tế, những người này có thể <strong>nhắc nhở bạn về các cuộc hẹn, giúp bạn đi đúng hướng và thông cảm</strong> khi mọi việc không diễn ra như kế hoạch.
                                 </p>
-
                                 <p>
                                     Việc được chẩn đoán và sống chung với ADHD cũng có thể <strong>cực kỳ xúc động</strong>, vì vậy việc có một hệ thống hỗ trợ sẽ ở bên bạn về mặt tình cảm là điều cần thiết.
                                 </p>
 
-                                <h2 id="routine">Tạo một thói quen và tuân theo nó</h2>
-
+                                <h3>Tạo một thói quen và tuân theo nó</h3>
                                 <p>
                                     Tôi hiểu - thói quen rất khó. 😧 Nhưng một trong những điều tốt nhất bạn có thể làm để quản lý ADHD thể không chú ý là có một thói quen và tuân thủ nó càng nhiều càng tốt.
                                 </p>
-
                                 <p>
                                     Việc lập một <strong>danh sách việc cần làm có thể tăng năng suất đáng kể và giảm thiểu sự phân tâm</strong>. Khi mọi thứ được viết ra, bạn sẽ <strong>ít có khả năng quên</strong> chúng hơn. 📝
                                 </p>
 
-                                <h2 id="honesty">Cởi mở và trung thực</h2>
-
+                                <h3>Cởi mở và trung thực</h3>
                                 <p>
                                     Sẽ có những lúc bạn gặp khó khăn với các nhiệm vụ hoặc lơ đãng trong các cuộc trò chuyện.
                                 </p>
-
                                 <p>
                                     Khi điều này xảy ra, nếu bạn đang ở trong một môi trường an toàn, hãy cố gắng trung thực và cởi mở về nó với những người xung quanh bạn. Sẽ rất hữu ích nếu bạn nói với họ rằng bạn có quan tâm, và bạn có muốn lắng nghe. Bằng cách này, bạn cho phép họ thông cảm và giúp đỡ bạn hơn - họ không thể làm điều đó nếu bạn không giao tiếp. Điều này cũng giảm thiểu khả năng họ bị xúc phạm hoặc bạn bị hiểu lầm. 🙌
                                 </p>
 
-                                <h2 id="tools-apps">Sử dụng các công cụ và ứng dụng ADHD</h2>
-
+                                <h3>Sử dụng các công cụ và ứng dụng ADHD</h3>
                                 <p>
                                     Nếu bạn có quyền truy cập internet, bạn có <strong>quyền truy cập vào cả một thế giới công cụ và ứng dụng</strong> có thể giúp bạn quản lý các triệu chứng của mình và tìm cách giải quyết chúng.
                                 </p>
-
                                 <p>
                                     Có các ứng dụng cho hầu hết mọi thứ: <strong>tổ chức, quản lý công việc và gợi nhớ</strong>, để kể tên một vài. Những công cụ này có thể có lợi trong việc theo dõi các hoạt động hàng ngày. Bạn có thể tìm thấy các đề xuất của chúng tôi về các công cụ ADHD tiện lợi nhất để sử dụng <strong>tại đây</strong>.
                                 </p>
 
-                                <h2 id="health">Giữ cho tâm trí và cơ thể khỏe mạnh</h2>
-
+                                <h3>Giữ cho tâm trí và cơ thể khỏe mạnh</h3>
                                 <p>
                                     Theo một <strong>bài báo</strong> về ADHD & tập thể dục, 'tập thể dục thường xuyên có thể giúp giảm bớt một số triệu chứng của ADHD và cải thiện các chức năng điều hành.'
                                 </p>
-
                                 <p>
                                     Mặc dù việc thúc đẩy bản thân tập thể dục có thể cực kỳ khó khăn, nhưng nó thực sự quá có lợi để bỏ qua. Cố gắng kết hợp một số hình thức vận động, bất kể nhiều hay ít, vào thói quen hàng ngày của bạn. 🏃‍♀️
                                 </p>
 
-                                <h2 id="community">Kết nối với cộng đồng ADHD</h2>
-
+                                <h3>Kết nối với cộng đồng ADHD</h3>
                                 <p>
                                     Khi bạn cần nói chuyện với ai đó hiểu những gì bạn đang trải qua, hãy tìm đến một trong nhiều <strong>nhóm hỗ trợ trực tuyến và ngoại tuyến cho những người bị ADHD</strong>. 🤝
                                 </p>
-
                                 <p>
                                     Việc là một phần của cộng đồng có thể cung cấp <strong>sự hỗ trợ về mặt tình cảm và các mẹo hữu ích</strong> để quản lý tình trạng của bạn tốt hơn. Họ cũng có thể <strong>chia sẻ những câu chuyện chân thực</strong> của họ về cách họ đã học cách sống chung với ADHD, thay vì để nó kiểm soát cuộc sống của họ.
                                 </p>
 
-                                <h2 id="professional-help">Tìm kiếm lời khuyên y tế chuyên nghiệp</h2>
-
+                                <h3>Tìm kiếm lời khuyên y tế chuyên nghiệp</h3>
                                 <p>
                                     Bạn không nên cảm thấy mình phải vật lộn với các triệu chứng một mình. Nếu bạn nghi ngờ mình có các đặc điểm của ADHD thể không chú ý hoặc thậm chí là các triệu chứng tăng động-xung động, <strong>hãy nói chuyện với một chuyên gia sức khỏe tâm thần</strong>. Sau khi bạn nhận được chẩn đoán, các chuyên gia ADHD này có thể giúp bạn <strong>phát triển các kế hoạch điều trị ADHD, có thể bao gồm trị liệu hành vi hoặc thuốc</strong>. 👩‍⚕️
                                 </p>
 
-                                <h2 id="treatment-options">Cởi mở với các phương pháp điều trị khác nhau</h2>
-
+                                <h3>Cởi mở với các phương pháp điều trị khác nhau</h3>
                                 <p>
                                     Bác sĩ sức khỏe tâm thần của bạn <strong>có thể đề nghị thuốc kích thích</strong> nếu bạn mắc ADHD thể không chú ý. Đây là những loại thuốc được sử dụng rộng rãi nhất và có thể giúp <strong>cải thiện sự tập trung</strong>.
                                 </p>
-
                                 <p>
                                     <strong>Đào tạo kỹ năng xã hội</strong> cũng có thể được chỉ định để cải thiện tương tác với người khác và ngăn ngừa sự khó xử trong xã hội, hoặc thậm chí là rối loạn lo âu xã hội. <strong>Trị liệu hành vi</strong> cũng có thể được đề xuất cho cả người lớn và trẻ em mắc ADHD. Loại trị liệu này có thể giúp bạn hiểu và đối phó với tình trạng của mình.
                                 </p>
+                            </section>
 
-                                <h2 id="key-points">Những điểm chính cần ghi nhớ</h2>
+                            <section id="key-points" className="adhd-section">
+                                <h2>Những điểm chính cần ghi nhớ</h2>
                                 <div className="adhd-symptom-cards">
                                     <div className="adhd-symptom-card">
                                         <h4>ADHD thể không chú ý được đặc trưng bởi khó khăn trong việc duy trì sự tập trung, tuân thủ các chỉ dẫn và tổ chức công việc. Nó thiếu sự tăng động rõ rệt của các loại ADHD khác, thường xuất hiện dưới dạng mơ màng hoặc không lắng nghe.</h4>
@@ -923,10 +963,6 @@ const ADHDInattentive = () => {
                                         <h4>Ngoài hàng ngàn bài viết và nhiều phương pháp chúng ta có thể sử dụng để điều trị ADHD, điều duy nhất tạo nên sự khác biệt là nhận thức và tư duy của chính chúng ta. Những gì bạn có thể thiếu sót trong việc tổ chức và quản lý thời gian, bạn lại bù đắp bằng sự kiên cường và sáng tạo. Những người mắc ADHD làm được những điều tuyệt vời mỗi ngày, và bạn cũng có thể. 🤗</h4>
                                     </div>
                                 </div>
-                            </section>
-
-                            <section id="faqs" className="adhd-section">
-                                <h2>Câu Hỏi Thường Gặp Về ADHD Thể Không Chú Ý</h2>
 
                                 <div className="adhd-faq-container">
                                     {faqs.map((faq, index) => (

@@ -240,11 +240,16 @@ body {
 }
 
 .feature-card--purple {
-  background: linear-gradient(135deg, #f2c2da 0%, #e0a3c7 100%);
-  color: white;
+  background: #edccf5;
+  color: #8f485e;
   border: none;
 }
 
+.feature-card--blue {
+  background: #bbeaf6;
+  color: #015f7a;
+  border: none;
+}
 
 .feature-card__header {
   display: flex;
@@ -259,7 +264,7 @@ body {
 
 .feature-card__title {
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 650;
   margin: 0;
   line-height: 1.4;
 }
@@ -269,14 +274,15 @@ body {
   margin: 0 0 1rem 0;
   opacity: 0.9;
   line-height: 1.5;
+  color: #000000;
 }
 
 .feature-card__link {
   display: inline-flex;
   align-items: center;
-  color: inherit;
+  color: #4b82da;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.2);
@@ -298,7 +304,7 @@ body {
 .menu-items {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .menu-item {
@@ -306,20 +312,41 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.5rem;
   background: none;
   border: none;
   text-align: left;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 25px;
   transition: all 0.2s ease;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
 }
 
-.menu-item:hover,
-.menu-item--active {
+.menu-item:hover {
   background-color: #f3f4f6;
-  color: #667eea;
+}
+
+/* Active menu item styles based on background color */
+.menu-item--active[data-bg-color="purple"] {
+  background-color: #edccf5;
+  color: #8b5a9b;
+}
+
+.menu-item--active[data-bg-color="green"] {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.menu-item--active[data-bg-color="orange"] {
+  background-color: #ffe0b2;
+  color: #e65100;
+}
+
+.menu-item--active[data-bg-color="blue"] {
+  background-color: #bbeaf6;
+  color: #1565c0;
 }
 
 .menu-item__text {
@@ -336,13 +363,37 @@ body {
 .menu-item:hover .menu-item__arrow,
 .menu-item--active .menu-item__arrow {
   opacity: 1;
-  color: #667eea;
+  color: currentColor;
 }
 
 /* ===== RIGHT SECTION - CONTENT PANEL ===== */
 .mega-dropdown__right {
   position: relative;
   width: 430px;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Background colors for different sections */
+.mega-dropdown__right--purple {
+  background-color: #edccf5;
+}
+
+.mega-dropdown__right--green {
+  background-color: #c8e6c9;
+}
+
+.mega-dropdown__right--orange {
+  background-color: #ffe0b2;
+}
+
+.mega-dropdown__right--blue {
+  background-color: #bbeaf6;
+}
+
+.mega-dropdown__right--default {
+  background-color: #f8f9fa;
 }
 
 .content-panel {
@@ -354,6 +405,14 @@ body {
 .content-panel--visible {
   opacity: 1;
   transform: translateX(0);
+}
+
+.content-panel__wrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content-panel__header {
@@ -378,63 +437,62 @@ body {
 .content-panel__description {
   color: #6b7280;
   line-height: 1.6;
-  margin: 0 0 1.5rem 0;
+  margin: 0;
   white-space: pre-line;
-}
-
-.content-panel__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #667eea;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border: 1px solid #667eea;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  margin-bottom: 2rem;
-}
-
-.content-panel__link:hover {
-  background-color: #667eea;
-  color: white;
-  transform: translateX(2px);
-}
-
-.content-panel__link-arrow {
-  transition: transform 0.2s ease;
-}
-
-.content-panel__link:hover .content-panel__link-arrow {
-  transform: translateX(2px);
 }
 
 /* ===== SIDEBAR SECTION ===== */
 .sidebar-section {
-  border-top: 1px solid #e5e7eb;
-  padding-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Special styling for story section - remove background to show stories directly */
+.sidebar-section.no-bg {
+  background: none;
+  padding: 0;
 }
 
 .sidebar-items {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0rem;
 }
 
 .sidebar-item {
   display: block;
-  padding: 0.2rem 0.75rem;
-  color: black;
+  padding: 0.5rem 0.75rem;
+  color: #374151;
   text-decoration: none;
   font-size: 0.875rem;
   border-radius: 6px;
   transition: all 0.2s ease;
+  font-weight: 500;
 }
 
 .sidebar-item:hover {
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #1f2937;
+}
+
+/* Styling for story items with individual white background boxes */
+.sidebar-item--story {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.sidebar-item--story:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* Special styling for "Tất cả câu chuyện" */
@@ -442,12 +500,16 @@ body {
   font-size: 0.75rem !important;
   font-style: italic !important;
   text-decoration: underline !important;
-  color: #9ca3af !important;
+  color: #6b7280 !important;
+  font-weight: 400 !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px dashed rgba(255, 255, 255, 0.5) !important;
 }
 
 .sidebar-item--all-stories:hover {
-  color: #6b7280 !important;
+  color: #374151 !important;
   text-decoration: underline !important;
+  background: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -512,6 +574,14 @@ body {
   }
 
   .feature-card {
+    padding: 1rem;
+  }
+
+  .mega-dropdown__right {
+    padding: 1rem;
+  }
+
+  .content-panel__wrapper {
     padding: 1rem;
   }
 }

@@ -6,10 +6,51 @@ import '../css/AboutADHD.css';
 const ADHDHyperactive = () => {
     const [expandedFAQ, setExpandedFAQ] = useState(null);
     const [activeNav, setActiveNav] = useState('overview');
+    const [flippedCards, setFlippedCards] = useState({});
 
     const toggleFAQ = (index) => {
         setExpandedFAQ(expandedFAQ === index ? null : index);
     };
+
+    const toggleCard = (cardId) => {
+        setFlippedCards(prev => ({
+            ...prev,
+            [cardId]: !prev[cardId]
+        }));
+    };
+
+    const symptomCards = [
+        {
+            id: 'fidgeting',
+            title: 'Khó khăn trong việc giữ yên và luôn trong trạng thái bồn chồn (Fidgeting)',
+            content: 'Các hành vi như liên tục cựa quậy, gõ ngón tay, rung chân khi ngồi là biểu hiện của một bộ não ADHD tăng động. Khi không thể ngồi yên, hệ thần kinh đang ở trạng thái kích thích quá mức và cố gắng tìm cách giải tỏa năng lượng. Biểu hiện này ở trẻ em rất dễ nhận biết: chúng thường không ngồi yên trên ghế, táy máy chân tay, nghịch mọi đồ vật trong tầm với. Ở người lớn, triệu chứng có thể biểu hiện kín đáo hơn như rung chân, đi đi lại lại khi nói chuyện điện thoại, hoặc bấm bút liên tục.'
+        },
+        {
+            id: 'relaxation',
+            title: 'Khó khăn trong việc thư giãn',
+            content: 'Do không thể giải tỏa năng lượng dư thừa, người bệnh thường gặp khó khăn trong việc thư giãn thực sự. Ngay cả trong trạng thái không hoạt động, não bộ vẫn có thể duy trì hoạt động ở cường độ cao với vô số ý tưởng hoặc các dòng suy nghĩ miên man, dẫn đến tình trạng khó thư giãn.'
+        },
+        {
+            id: 'talking',
+            title: 'Nói nhiều quá mức (Excessive Talking)',
+            content: 'Hành vi bốc đồng là một tiêu chí chẩn đoán cốt lõi. Sự suy giảm khả năng tự kiểm soát và nhận thức các tín hiệu xã hội khiến người bệnh có thể nói liên tục mà không nhận biết được thời điểm hoặc bối cảnh phù hợp. Một khi đã bắt đầu, họ rất khó để dừng lại. Họ có xu hướng chia sẻ thông tin cá nhân quá mức hoặc nói chuyện không ngừng nghỉ, gây ra xung đột trong các mối quan hệ xã hội.'
+        },
+        {
+            id: 'fatigue',
+            title: 'Tình trạng mệt mỏi và kiệt sức mạn tính',
+            content: 'Một quan niệm sai lầm phổ biến là người mắc ADHD luôn tràn đầy năng lượng. Thực tế, do tình trạng não bộ liên tục ở trạng thái "tăng tốc" và khó thư giãn, họ thường xuyên cảm thấy mệt mỏi và kiệt sức. Sự tăng động của não bộ cản trở quá trình nghỉ ngơi và phục hồi năng lượng, đặc biệt là chất lượng giấc ngủ, dẫn đến tình trạng thiếu năng lượng vào ngày hôm sau.'
+        },
+        {
+            id: 'interrupting',
+            title: 'Ngắt lời và buột miệng trả lời (Interrupting & Blurting Out)',
+            content: 'Đây là một biểu hiện kinh điển của tính bốc đồng. Người bệnh có thể không chờ người khác nói xong, nói xen vào hoặc trả lời trước khi câu hỏi được đặt ra hoàn chỉnh. Ở trẻ em, hành vi này thường bị coi là "gây rối" trong lớp học. Ở người lớn, điều này gây khó khăn trong các cuộc họp hoặc giao tiếp xã hội. Nguyên nhân sâu xa là do sự suy giảm khả năng ức chế phản ứng (impulse control) và nỗi sợ quên mất ý định muốn nói.'
+        },
+        {
+            id: 'risky',
+            title: 'Các hành vi nguy cơ cao (Risky Behaviors)',
+            content: 'Các triệu chứng tăng động - bốc đồng là nền tảng cho các hành vi nguy cơ cao như lái xe thiếu an toàn, chi tiêu không kiểm soát, hoặc lạm dụng chất. Nếu người bệnh đang phải đối mặt với các hành vi này, việc tìm kiếm sự can thiệp từ chuyên gia là tối quan trọng.'
+        }
+    ];
 
     const faqs = [
         {
@@ -174,6 +215,112 @@ const ADHDHyperactive = () => {
             font-size: 13px;
           }
         }
+
+        .flip-card-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 25px;
+          margin: 30px 0;
+        }
+
+        .flip-card {
+          background-color: transparent;
+          width: 100%;
+          height: 250px;
+          perspective: 1000px;
+          cursor: pointer;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          border-radius: 15px;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        .flip-card-front {
+          background: #e3f4f2;
+          color: var(--dark-slate-grey);
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 1.4;
+        }
+
+        .flip-card-back {
+          background: #e3f4f2;
+          color: var(--dark-slate-grey);
+          transform: rotateY(180deg);
+          font-size: 14px;
+          line-height: 1.6;
+          overflow-y: auto;
+        }
+
+        .flip-card:hover .flip-card-inner {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card-front::after {
+          content: "👆 Nhấp để xem chi tiết";
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 12px;
+          opacity: 0.7;
+          font-weight: normal;
+        }
+
+        .flip-card-back::after {
+          content: "👆 Nhấp để quay lại";
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 12px;
+          opacity: 0.7;
+          font-weight: normal;
+        }
+
+        @media (max-width: 768px) {
+          .flip-card-container {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+          
+          .flip-card {
+            height: 200px;
+          }
+          
+          .flip-card-front {
+            font-size: 16px;
+          }
+          
+          .flip-card-back {
+            font-size: 13px;
+          }
+        }
       `}</style>
             <Header />
             <div className="adhd-adhd-page">
@@ -321,7 +468,7 @@ const ADHDHyperactive = () => {
                                     </div>
                                 </div>
 
-                                <h2>I Tổng quan về Ba thể lâm sàng của ADHD</h2>
+                                <h2>Tổng quan về Ba thể lâm sàng của ADHD</h2>
 
                                 <p>
                                     Để hiểu rõ về ADHD thể Tăng động - Bốc đồng, cần nhận thức đây là một trong ba thể lâm sàng (kiểu biểu hiện) chính của rối loạn này.
@@ -373,7 +520,7 @@ const ADHDHyperactive = () => {
                             </section>
 
                             <section id="misconceptions" className="adhd-section">
-                                <h2>II Quan niệm sai lầm và sự đa dạng trong biểu hiện lâm sàng</h2>
+                                <h2>Quan niệm sai lầm và sự đa dạng trong biểu hiện lâm sàng</h2>
 
                                 <p>
                                     Quan niệm phổ biến về <strong>Rối loạn tăng động giảm chú ý (ADHD)</strong> thường gắn liền với hình ảnh một cá nhân <strong>gây rối, khó kiểm soát và tìm kiếm sự chú ý.</strong>
@@ -393,7 +540,7 @@ const ADHDHyperactive = () => {
                             </section>
 
                             <section id="symptoms" className="adhd-section">
-                                <h2>III Các hành vi Tăng động và Bốc đồng phổ biến trong ADHD</h2>
+                                <h2>Các hành vi Tăng động và Bốc đồng phổ biến trong ADHD</h2>
 
                                 <p>
                                     Các triệu chứng Tăng động - Bốc đồng của ADHD có thể biểu hiện dưới nhiều hình thức khác nhau. Theo DSM-5, có <strong>chín triệu chứng</strong> tiềm tàng trong nhóm này. Để một chẩn đoán được thiết lập, cần có sự hiện diện của tối thiểu <strong>sáu triệu chứng</strong> (hoặc năm đối với thanh thiếu niên và người lớn), kéo dài và gây suy giảm chức năng trong các hoạt động hàng ngày.
@@ -403,39 +550,28 @@ const ADHDHyperactive = () => {
                                     Dưới đây là một số triệu chứng lâm sàng phổ biến:
                                 </p>
 
-                                <h2>Khó khăn trong việc giữ yên và luôn trong trạng thái bồn chồn (Fidgeting)</h2>
-                                <p>
-                                    Các hành vi như liên tục cựa quậy, gõ ngón tay, rung chân khi ngồi là biểu hiện của một bộ não ADHD tăng động. Khi không thể ngồi yên, hệ thần kinh đang ở trạng thái kích thích quá mức và cố gắng tìm cách giải tỏa năng lượng. Biểu hiện này ở trẻ em rất dễ nhận biết: chúng thường không ngồi yên trên ghế, táy máy chân tay, nghịch mọi đồ vật trong tầm với. Ở người lớn, triệu chứng có thể biểu hiện kín đáo hơn như rung chân, đi đi lại lại khi nói chuyện điện thoại, hoặc bấm bút liên tục.
-                                </p>
-
-                                <h2>Khó khăn trong việc thư giãn</h2>
-                                <p>
-                                    Do không thể giải tỏa năng lượng dư thừa, người bệnh thường gặp khó khăn trong việc thư giãn thực sự. Ngay cả trong trạng thái không hoạt động, não bộ vẫn có thể duy trì hoạt động ở cường độ cao với vô số ý tưởng hoặc các dòng suy nghĩ miên man, dẫn đến tình trạng khó thư giãn.
-                                </p>
-
-                                <h2>Nói nhiều quá mức (Excessive Talking)</h2>
-                                <p>
-                                    Hành vi bốc đồng là một tiêu chí chẩn đoán cốt lõi. Sự suy giảm khả năng tự kiểm soát và nhận thức các tín hiệu xã hội khiến người bệnh có thể nói liên tục mà không nhận biết được thời điểm hoặc bối cảnh phù hợp. Một khi đã bắt đầu, họ rất khó để dừng lại. Họ có xu hướng chia sẻ thông tin cá nhân quá mức hoặc nói chuyện không ngừng nghỉ, gây ra xung đột trong các mối quan hệ xã hội.
-                                </p>
-
-                                <h2>Tình trạng mệt mỏi và kiệt sức mạn tính</h2>
-                                <p>
-                                    Một quan niệm sai lầm phổ biến là người mắc ADHD luôn tràn đầy năng lượng. Thực tế, do tình trạng não bộ liên tục ở trạng thái "tăng tốc" và khó thư giãn, họ thường xuyên cảm thấy mệt mỏi và kiệt sức. Sự tăng động của não bộ cản trở quá trình nghỉ ngơi và phục hồi năng lượng, đặc biệt là chất lượng giấc ngủ, dẫn đến tình trạng thiếu năng lượng vào ngày hôm sau.
-                                </p>
-
-                                <h2>Ngắt lời và buột miệng trả lời (Interrupting & Blurting Out)</h2>
-                                <p>
-                                    Đây là một biểu hiện kinh điển của tính bốc đồng. Người bệnh có thể không chờ người khác nói xong, nói xen vào hoặc trả lời trước khi câu hỏi được đặt ra hoàn chỉnh. Ở trẻ em, hành vi này thường bị coi là "gây rối" trong lớp học. Ở người lớn, điều này gây khó khăn trong các cuộc họp hoặc giao tiếp xã hội. Nguyên nhân sâu xa là do sự suy giảm khả năng ức chế phản ứng (impulse control) và nỗi sợ quên mất ý định muốn nói. Mặc dù người có sự phát triển thần kinh điển hình (neurotypical) cũng có thể ngắt lời, nhưng ở người mắc ADHD, hành vi này xảy ra với tần suất, cường độ cao hơn và gây ảnh hưởng tiêu cực đến các mối quan hệ và hoạt động chức năng.
-                                </p>
-
-                                <h2>Các hành vi nguy cơ cao (Risky Behaviors)</h2>
-                                <p>
-                                    Các triệu chứng tăng động - bốc đồng là nền tảng cho các hành vi nguy cơ cao như lái xe thiếu an toàn, chi tiêu không kiểm soát, hoặc lạm dụng chất. Nếu người bệnh đang phải đối mặt với các hành vi này, việc tìm kiếm sự can thiệp từ chuyên gia là tối quan trọng.
-                                </p>
+                                <div className="flip-card-container">
+                                    {symptomCards.map((card) => (
+                                        <div 
+                                            key={card.id}
+                                            className={`flip-card ${flippedCards[card.id] ? 'flipped' : ''}`}
+                                            onClick={() => toggleCard(card.id)}
+                                        >
+                                            <div className="flip-card-inner">
+                                                <div className="flip-card-front">
+                                                    {card.title}
+                                                </div>
+                                                <div className="flip-card-back">
+                                                    {card.content}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </section>
 
                             <section id="diagnosis" className="adhd-section">
-                                <h2>IV Quy trình Chẩn đoán ADHD thể Tăng động - Bốc đồng</h2>
+                                <h2>Quy trình Chẩn đoán ADHD thể Tăng động - Bốc đồng</h2>
 
                                 <p>
                                     Việc chẩn đoán Rối loạn tăng động giảm chú ý (ADHD) <strong>chỉ được thực hiện bởi các chuyên gia sức khỏe tâm thần</strong> (bác sĩ tâm thần, nhà tâm lý lâm sàng) thông qua việc sử dụng các công cụ đánh giá chuẩn và đối chiếu với tiêu chuẩn của <strong>DSM-5</strong>.
@@ -475,7 +611,7 @@ const ADHDHyperactive = () => {
                             </section>
 
                             <section id="management" className="adhd-section">
-                                <h2>V Các chiến lược can thiệp và quản lý triệu chứng</h2>
+                                <h2>Các chiến lược can thiệp và quản lý triệu chứng</h2>
 
                                 <p>
                                     Các phương pháp can thiệp dựa trên bằng chứng khoa học bao gồm <strong>liệu pháp hành vi, điều trị bằng thuốc, và huấn luyện kỹ năng xã hội.</strong> Bên cạnh đó, việc điều chỉnh lối sống và thói quen cũng đóng vai trò quan trọng trong việc quản lý các triệu chứng.
@@ -506,7 +642,7 @@ const ADHDHyperactive = () => {
                                     </div>
                                 </div>
 
-                                <h2>Tổng kết các nội dung chính</h2>
+                                <h3>Tổng kết các nội dung chính</h3>
                                 <div className="adhd-symptom-cards">
                                     <div className="adhd-symptom-card">
                                         <h4>ADHD được phân thành ba thể lâm sàng chính: Thể ưu thế Tăng động - Bốc đồng, Thể ưu thế Giảm chú ý, và Thể kết hợp.</h4>
