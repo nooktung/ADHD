@@ -176,7 +176,7 @@ const Team = () => {
     {
       id: 1,
       name: "Công ty TNHH Phát triển Công nghệ Giáo dục",
-      category: "Nhà tài trợ chính",
+      category: "Bên chuyên môn ",
       image: "Mai Thị Lan Anh.jpg",
       shortBio: "Đối tác chiến lược trong lĩnh vực giáo dục",
       fullBio: "Công ty TNHH Phát triển Công nghệ Giáo dục là đối tác chiến lược hàng đầu của chúng tôi trong việc phát triển các giải pháp giáo dục số. Với kinh nghiệm hơn 10 năm trong lĩnh vực công nghệ giáo dục, công ty đã hỗ trợ chúng tôi không chỉ về mặt tài chính mà còn chia sẻ chuyên môn và kinh nghiệm quý báu.",
@@ -199,7 +199,7 @@ const Team = () => {
     {
       id: 2,
       name: "Quỹ Phát triển Khoa học và Công nghệ",
-      category: "Nhà tài trợ nghiên cứu",
+      category: "Bên chuyên môn ",
       image: "Mai Thị Lan Anh.jpg",
       shortBio: "Quỹ hỗ trợ nghiên cứu khoa học",
       fullBio: "Quỹ Phát triển Khoa học và Công nghệ là tổ chức phi lợi nhuận chuyên hỗ trợ các dự án nghiên cứu khoa học có tính ứng dụng cao. Quỹ đã tin tưởng và đầu tư vào dự án nghiên cứu về ADHD của chúng tôi, góp phần quan trọng vào việc phát triển những giải pháp hỗ trợ cộng đồng.",
@@ -419,7 +419,7 @@ const Team = () => {
             <button 
               className="hero-nav-arrow hero-nav-right"
               onClick={() => switchView('sponsors')}
-              aria-label="Xem nhà tài trợ"
+              aria-label="Xem Các bên chuyên môn "
               disabled={isTransitioning}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -443,12 +443,12 @@ const Team = () => {
 
           <div className="team-hero-content">
             <h1>
-              {currentView === 'team' ? 'Đội Ngũ Thành Viên' : 'Nhà Tài Trợ & Đối Tác'}
+              {currentView === 'team' ? 'Đội Ngũ Thành Viên' : 'Các bên chuyên môn '}
             </h1>
             <p>
               {currentView === 'team' 
                 ? 'Gặp gỡ những thành viên tài năng và nhiệt huyết của chúng tôi - những người đã cùng nhau xây dựng nên một dự án ý nghĩa về ADHD với kiến thức chuyên môn và tinh thần đồng đội tuyệt vời.'
-                : 'Chúng tôi xin trân trọng cảm ơn các nhà tài trợ và đối tác đã tin tưởng, hỗ trợ và đồng hành cùng chúng tôi trong hành trình phát triển dự án ADHD Coach, mang lại giá trị tích cực cho cộng đồng.'
+                : 'Chúng tôi xin trân trọng cảm ơn các Các bên chuyên môn  đã tin tưởng, hỗ trợ và đồng hành cùng chúng tôi trong hành trình phát triển dự án ADHD Coach, mang lại giá trị tích cực cho cộng đồng.'
               }
             </p>
           </div>
