@@ -1,41 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Document, Page, pdfjs } from "react-pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
+import "../css/Hanbook.css";
 
 const Hanbook = () => {
-  const [numPages, setNumPages] = useState(null);
-
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-  };
-
   return (
     <>
       <Header />
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "80vh", background: "#fff", padding: 24 }}>
-        <Document
-          file="/ADHD hanbook .pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-          loading={<div>Đang tải file PDF...</div>}
-          error={<div>Không thể tải file PDF.</div>}
+      {/* PDF Viewer Using iframe - Full width */}
+      <div className="pdf-viewer-container">
+        <iframe
+          src="/ADHD hanbook .pdf"
+          className="pdf-iframe"
+          title="ADHD Handbook"
         >
-          {Array.from(new Array(numPages), (el, index) => (
-            <Page
-              key={`page_${index + 1}`}
-              pageNumber={index + 1}
-              width={800}
-              renderTextLayer={false}
-              renderAnnotationLayer={false}
-            />
-          ))}
-        </Document>
+          <p>
+            Trình duyệt của bạn không hỗ trợ hiển thị PDF. 
+            <a href="/ADHD hanbook .pdf" download="ADHD_Handbook.pdf">
+              Nhấp vào đây để tải xuống
+            </a>
+          </p>
+        </iframe>
       </div>
       <Footer />
     </>
   );
 };
 
-export default Hanbook; 
+export default Hanbook;
