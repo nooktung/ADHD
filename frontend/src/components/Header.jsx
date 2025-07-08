@@ -161,7 +161,7 @@ const Header = () => {
             <Link to="/ContactUs" className="nav__link">
               Liên hệ
             </Link>
-            <Link to="/HandBook" className="nav__link">
+            <Link to="/hanbook" className="nav__link">
               HandBook
             </Link>
             <Link to="/Team" className="nav__link">

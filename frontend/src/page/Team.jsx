@@ -175,9 +175,9 @@ const Team = () => {
   const sponsors = [
     {
       id: 1,
-      name: "Công ty TNHH Phát triển Công nghệ Giáo dục",
+      name: "Nguyễn Trung Nghĩa",
       category: "Bên chuyên môn ",
-      image: "Mai Thị Lan Anh.jpg",
+      image: "Nguyễn Trung Nghĩa.jpg",
       shortBio: "Đối tác chiến lược trong lĩnh vực giáo dục",
       fullBio: "Công ty TNHH Phát triển Công nghệ Giáo dục là đối tác chiến lược hàng đầu của chúng tôi trong việc phát triển các giải pháp giáo dục số. Với kinh nghiệm hơn 10 năm trong lĩnh vực công nghệ giáo dục, công ty đã hỗ trợ chúng tôi không chỉ về mặt tài chính mà còn chia sẻ chuyên môn và kinh nghiệm quý báu.",
       website: "https://edutech.com.vn",
@@ -198,9 +198,9 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "Quỹ Phát triển Khoa học và Công nghệ",
+      name: "Huỳnh Thanh Tân",
       category: "Bên chuyên môn ",
-      image: "Mai Thị Lan Anh.jpg",
+      image: "Huỳnh Thanh Tân.jpg",
       shortBio: "Quỹ hỗ trợ nghiên cứu khoa học",
       fullBio: "Quỹ Phát triển Khoa học và Công nghệ là tổ chức phi lợi nhuận chuyên hỗ trợ các dự án nghiên cứu khoa học có tính ứng dụng cao. Quỹ đã tin tưởng và đầu tư vào dự án nghiên cứu về ADHD của chúng tôi, góp phần quan trọng vào việc phát triển những giải pháp hỗ trợ cộng đồng.",
       website: "https://sciencefund.gov.vn",
@@ -220,9 +220,9 @@ const Team = () => {
     },
     {
       id: 3,
-      name: "Tập đoàn Y tế và Sức khỏe Việt Nam",
+      name: "Nguyễn Minh Quyết",
       category: "Đối tác y tế",
-      image: "Mai Thị Lan Anh.jpg",
+      image: "Nguyễn Minh Quyết.jpg",
       shortBio: "Đối tác chuyên môn y tế",
       fullBio: "Tập đoàn Y tế và Sức khỏe Việt Nam là đối tác y tế chiến lược, cung cấp chuyên môn và hỗ trợ trong việc phát triển các giải pháp chăm sóc sức khỏe tâm thần. Với đội ngũ bác sĩ chuyên khoa tâm thần và tâm lý học hàng đầu, tập đoàn đã đóng góp quan trọng vào tính chính xác và độ tin cậy của dự án.",
       website: "https://vietnamhealth.vn",
@@ -241,29 +241,6 @@ const Team = () => {
         facebook: "https://facebook.com/vietnamhealth"
       }
     },
-    {
-      id: 4,
-      name: "Hiệp hội Tâm lý học Việt Nam",
-      category: "Đối tác chuyên môn",
-      image: "Mai Thị Lan Anh.jpg",
-      shortBio: "Tổ chức chuyên môn tâm lý học",
-      fullBio: "Hiệp hội Tâm lý học Việt Nam là tổ chức chuyên môn hàng đầu trong lĩnh vực tâm lý học tại Việt Nam. Hiệp hội đã hỗ trợ chúng tôi trong việc xây dựng các tiêu chuẩn chuyên môn, đảm bảo tính khoa học và hiệu quả của các giải pháp hỗ trợ ADHD.",
-      website: "https://vpa.org.vn",
-      phone: "+84 24 3573 8901",
-      location: "Hà Nội, Việt Nam",
-      partnership: "5+ năm",
-      industry: "Tâm lý học",
-      supportType: ["Chứng nhận chuyên môn", "Đào tạo", "Nghiên cứu"],
-      achievements: [
-        "Chứng nhận 15+ chương trình đào tạo",
-        "Hỗ trợ nghiên cứu cho 25+ luận văn",
-        "Tổ chức 10+ hội thảo chuyên môn"
-      ],
-      socialLinks: {
-        website: "https://vpa.org.vn",
-        linkedin: "https://linkedin.com/company/vpa"
-      }
-    }
   ];
 
   // Enhanced smooth transition function
@@ -448,7 +425,7 @@ const Team = () => {
             <p>
               {currentView === 'team' 
                 ? 'Gặp gỡ những thành viên tài năng và nhiệt huyết của chúng tôi - những người đã cùng nhau xây dựng nên một dự án ý nghĩa về ADHD với kiến thức chuyên môn và tinh thần đồng đội tuyệt vời.'
-                : 'Chúng tôi xin trân trọng cảm ơn các Các bên chuyên môn  đã tin tưởng, hỗ trợ và đồng hành cùng chúng tôi trong hành trình phát triển dự án ADHD Coach, mang lại giá trị tích cực cho cộng đồng.'
+                : 'Chúng tôi xin trân trọng cảm ơn các Các bên chuyên môn  đã tin tưởng, hỗ trợ và đồng hành cùng chúng tôi trong hành trình phát triển dự án ADHD-Bản giao hưởng tập trung, mang lại giá trị tích cực cho cộng đồng.'
               }
             </p>
           </div>

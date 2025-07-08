@@ -30,6 +30,7 @@ import Story6 from './page/Story6';
 import Story7 from './page/Story7';
 import AllStory from './page/AllStory';
 import ScrollToTop from './components/ScrollToTop';
+import Hanbook from './page/Hanbook';
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
         <Route path="/adhd-story6" element={<Story6/>} />
         <Route path="/adhd-story7" element={<Story7/>} />
         <Route path="/all-story" element={<AllStory/>} />
+        <Route path="/hanbook" element={<Hanbook />} />
       </Routes>
     </BrowserRouter>
   );

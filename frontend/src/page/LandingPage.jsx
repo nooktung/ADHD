@@ -421,7 +421,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="stats-image" style={{flex: '0 0 340px', maxWidth: 340, minWidth: 220, display: 'flex', justifyContent: 'center'}}>
-            <img src="/image2.jpg" alt="Nâng cao nhận thức về ADHD" style={{width: '100%', height: 'auto', borderRadius: '16px', boxShadow: '0 2px 12px #0002'}} />
+            <img src="/Hanbook.jpg" alt="Hanbook" style={{width: '80%', height: 'auto', borderRadius: '16px', boxShadow: '0 2px 12px #0002'}} />
           </div>
         </div>
       </section>

@@ -17,8 +17,10 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.514.0",
+    "pdfjs-dist": "^5.3.93",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-pdf": "^10.0.1",
     "react-router-dom": "^7.6.0",
     "tailwind-merge": "^3.3.1"
   },

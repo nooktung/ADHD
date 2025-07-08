@@ -404,7 +404,7 @@ body {
     gap: 40px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .stats-content {
@@ -419,7 +419,7 @@ body {
 }
 
 .stat-item {
-    margin-bottom: 25px;
+    margin-bottom: 55px;
     display: flex;
     align-items: flex-start;
     gap: 15px;
