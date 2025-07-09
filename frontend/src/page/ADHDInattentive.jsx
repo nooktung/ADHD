@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../css/AboutADHD.css';
+import RelatedArticles from './RelatedArticles';
 
 // ADHD Flashcards Component
 const ADHDFlashcards = () => {
@@ -966,6 +967,7 @@ const ADHDInattentive = () => {
                     </div>
                 </div>
             </div>
+            <RelatedArticles currentPage="inattentive" />
             <Footer />
         </>
     );

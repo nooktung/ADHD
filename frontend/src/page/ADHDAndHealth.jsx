@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../css/AboutADHD.css';
+import RelatedArticles from './RelatedArticles';
 
 const ADHDAndHealth = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
@@ -294,6 +295,7 @@ const ADHDAndHealth = () => {
             </article>
           </div>
         </div>
+        <RelatedArticles currentPage="and-health" />
       </div>
       <Footer />
     </>

@@ -30,7 +30,6 @@ const MENU_ITEMS = [
     },
     sidebarItems: [
       { label: "ADHD & Sức khỏe", link: "/adhd-and-health" },
-      { label: "Cuộc sống ADHD", link: "/adhd-life" },
       { label: "Mối quan hệ ADHD", link: "/adhd-relationship" },
       { label: "Cảm xúc ADHD", link: "/adhd-emotions" },
       { label: "Tổ chức ADHD", link: "/adhd-organization" },
@@ -127,7 +126,7 @@ const Header = () => {
           <div className="header__logo">
             <Link to="/" className="logo" onClick={() => (window.location.href = "/")}>
               <div className="logo__icon">
-                <img src="/logo.jpg" alt="ADHD Coach" />
+                <img src="/logo.jpg" alt="ADHD-Bản giao hưởng tập trung" />
               </div>
               <span className="logo__text">Bản Giao Hưởng Tập Trung</span>
             </Link>
@@ -158,14 +157,14 @@ const Header = () => {
               </button>
             </div>
 
-            <Link to="/ContactUs" className="nav__link">
+            <Link to="/contactus" className="nav__link">
               Liên hệ
             </Link>
             <Link to="/hanbook" className="nav__link">
               HandBook
             </Link>
-            <Link to="/Team" className="nav__link">
-              Giới thiệu nhóm
+            <Link to="/team" className="nav__link">
+              Thành viên và Cố vấn
             </Link>
           </nav>
 
@@ -213,7 +212,7 @@ const Header = () => {
                     <h3 className="feature-card__title">Nội Dung ADHD của Chúng Tôi</h3>
                   </div>
                 </div>
-                <p className="feature-card__description">Duyệt qua tất cả các bài viết của chúng tôi!</p>
+                <p className="feature-card__description">Xem tất cả các bài viết của chúng tôi!</p>
                 <a
                   href="https://www.facebook.com/people/ADHD-B%E1%BA%A3n-Giao-H%C6%B0%E1%BB%9Fng-T%E1%BA%ADp-Trung/61576988307181/"
                   className="feature-card__link"
@@ -233,7 +232,7 @@ const Header = () => {
                     <h3 className="feature-card__title">Ấn phẩm sách</h3>
                   </div>
                 </div>
-                <p className="feature-card__description">Duyệt qua tất cả các bài viết của chúng tôi!</p>
+                <p className="feature-card__description">Xem tất cả các bài viết của chúng tôi!</p>
                 <a
                   href="https://www.facebook.com/people/ADHD-B%E1%BA%A3n-Giao-H%C6%B0%E1%BB%9Fng-T%E1%BA%ADp-Trung/61576988307181/"
                   className="feature-card__link"
@@ -303,9 +302,6 @@ const Header = () => {
                         <>
                           <Link to="/adhd-and-health" className="sidebar-item">
                             ADHD & Sức khỏe
-                          </Link>
-                          <Link to="/adhd-life" className="sidebar-item">
-                            Cuộc sống ADHD
                           </Link>
                           <Link to="/adhd-relationship" className="sidebar-item">
                             Mối quan hệ ADHD

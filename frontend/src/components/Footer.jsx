@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="brand-header">
             <div className="brand-logo">
-              <img src="/logo.jpg" alt="Mini ADHD Coach" className="footer-logo-icon" />
+              <img src="/logo.jpg" alt="ADHD-Bản giao hưởng tập trung" className="footer-logo-icon" />
               <span className="brand-name">Bản giao hưởng tập trung</span>
             </div>
           </div>
@@ -56,11 +56,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="section-title">Tài Nguyên ADHD</h3>
           <ul className="footer-links">
-            <li><a href="adhd-awareness">Nhận Thức về ADHD</a></li>
-            <li><a href="adhd-symptoms">Triệu Chứng ADHD</a></li>
-            <li><a href="adhd-life">Sống Chung với ADHD</a></li>
+            <li><a href="/adhd-awareness">Nhận Thức về ADHD</a></li>
+            <li><a href="/adhd-symptoms">Triệu Chứng ADHD</a></li>
+            <li><a href="/adhd-life">Sống Chung với ADHD</a></li>
           </ul>
-          <a href="#" className="browse-all">
+          <a href="/landingpage" className="browse-all">
             Xem tất cả bài viết về ADHD →
           </a>
         </div>

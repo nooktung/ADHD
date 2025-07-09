@@ -38,10 +38,10 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/LandingPage" element={<LandingPage />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
-        <Route path="/AboutADHD" element={<AboutADHD />} />
-        <Route path="/Team" element={<Team />} />
+        <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/aboutadhd" element={<AboutADHD />} />
+        <Route path="/team" element={<Team />} />
         
         {/* Search Results */}
         <Route path="/search" element={<SearchResults />} />

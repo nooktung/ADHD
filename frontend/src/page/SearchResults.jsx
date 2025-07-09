@@ -332,7 +332,7 @@ const SearchResults = () => {
                   <span className="keyword-tag" onClick={() => window.location.href = '/search?q=điều trị'}>Điều trị</span>
                   <span className="keyword-tag" onClick={() => window.location.href = '/search?q=dieu tri'}>Điều trị (không dấu)</span>
                   <span className="keyword-tag" onClick={() => window.location.href = '/search?q=roi loan'}>Rối loạn (không dấu)</span>
-                  <span className="keyword-tag" onClick={() => window.location.href = '/search?q=Team'}>Team</span>
+                  <span className="keyword-tag" onClick={() => window.location.href = '/search?q=team'}>Team</span>
                 </div>
               </div>
             </div>

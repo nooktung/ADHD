@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../css/AboutADHD.css';
+import RelatedArticles from './RelatedArticles';
 
 const ADHDHyperactive = () => {
     const [expandedFAQ, setExpandedFAQ] = useState(null);
@@ -701,6 +702,7 @@ const ADHDHyperactive = () => {
                             </section>
                         </article>
                     </div>
+                    <RelatedArticles currentPage="hyperactive" />
                 </div>
             </div>
             <Footer />

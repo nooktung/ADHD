@@ -1,4 +1,4 @@
-// Enhanced Team.jsx - Component with Realistic Student Profiles and EmailJS Integration
+// Enhanced Team.jsx - Component with Realistic Student Profiles and EmailJS Integration (FIXED)
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -306,10 +306,10 @@ const Team = () => {
   const heroRef = useRef(null);
   const contentWrapperRef = useRef(null);
 
-  // EmailJS Configuration - Template mới để gửi email cho team members
+  // FIXED EmailJS Configuration - Đảm bảo sử dụng đúng template ID
   const EMAILJS_CONFIG = {
     SERVICE_ID: 'service_40nc14n',
-    TEMPLATE_ID: 'template_eivf0vn', // Template mới cho team contact
+    TEMPLATE_ID: 'template_li498ck', // Sử dụng template_li498ck thay vì template_eivf0vn
     PUBLIC_KEY: '-X79ZPUklb2a2uDnH'
   };
 
@@ -547,7 +547,7 @@ const Team = () => {
         "Tỷ lệ rối loạn trầm cảm tại cơ sở chăm sóc sức khỏe ban đầu tại Thành phố Hồ Chí Minh (Tạp chí Tạp chí Quốc tế về Tâm thần học trong Y học, 2022).",
         "Nhiều báo cáo khoa học khác về sức khỏe tâm thần trong đại dịch COVID-19."
       ],
-      philosophy :"“Trị liệu trên tinh thần hợp tác. Bạn là người hiểu nhất về cuộc đời mình và những vấn đề của mình. Tôi là người được đào tạo để có một chút hiểu biết về cách giải quyết các vấn đề đó. Chúng ta hợp tác cùng với nhau để vượt qua những khó khăn về sức khỏe tinh thần, cùng tìm kiếm hạnh phúc.” "
+      philosophy: "Trị liệu trên tinh thần hợp tác. Bạn là người hiểu nhất về cuộc đời mình và những vấn đề của mình. Tôi là người được đào tạo để có một chút hiểu biết về cách giải quyết các vấn đề đó. Chúng ta hợp tác cùng với nhau để vượt qua những khó khăn về sức khỏe tinh thần, cùng tìm kiếm hạnh phúc."
     },
     {
       id: 2,
@@ -576,7 +576,7 @@ const Team = () => {
         "Tác giả đề tài nghiên cứu cấp cơ sở về 'Lo âu, trầm cảm ở sinh viên các trường đại học tại TP.HCM năm 2023'.",
         "Tham luận tại Hội thảo Khoa học Quốc gia về 'Giải pháp phổ biến hoạt động tâm lý trị liệu trong nhà trường'."
       ],
-      philosophy :"“Mỗi người trong chúng ta đều có những khó khăn và thử thách trong cuộc sống, tôi chỉ là người may mắn hơn khi được đào tạo những kỹ năng và có những công cụ hỗ trợ để có thể đương đầu với cuộc sống. Tôi muốn chia sẻ với bạn những điều này, để chặng đường của bạn đỡ gian nan hơn”.  "
+      philosophy: "Mỗi người trong chúng ta đều có những khó khăn và thử thách trong cuộc sống, tôi chỉ là người may mắn hơn khi được đào tạo những kỹ năng và có những công cụ hỗ trợ để có thể đương đầu với cuộc sống. Tôi muốn chia sẻ với bạn những điều này, để chặng đường của bạn đỡ gian nan hơn."
     },
     {
       id: 3,
@@ -596,7 +596,7 @@ const Team = () => {
         "Tốt nghiệp Đại học Y Hà Nội.",
         "Hoàn thành chương trình Bác sĩ Nội trú chuyên ngành Tâm thần tại Đại học Y Hà Nội."
       ],
-      collaborate:[
+      collaborate: [
         "Bác sĩ khoa Tâm thần, Bệnh viện Nhi Trung ương.",
         "Giảng viên bộ môn Tâm thần, Đại học Y Hà Nội.",
         "Bác sĩ nội trú, Viện sức khỏe Tâm thần Bệnh viện Bạch Mai."
@@ -615,8 +615,8 @@ const Team = () => {
       program: [
         "Liên quan giữa nhân cách với nhóm triệu chứng da ở người bệnh rối loạn cơ thể hóa.",
         "Đặc điểm nhân cách ở người bệnh rối loạn cơ thể hóa điều trị nội trú tại Viện Sức khỏe Tâm thần."
-      ],
-    },
+      ]
+    }
   ];
 
   // Show notification
@@ -650,20 +650,29 @@ const Team = () => {
     document.body.style.overflow = 'unset';
   };
 
-  // Send email with EmailJS - Updated template params
+  // FIXED Send email with EmailJS - Updated template params to match template_li498ck
   const sendEmailWithEmailJS = async (formData, recipient) => {
     try {
+      // Validate required fields
+      if (!formData.senderName || !formData.senderEmail || !formData.message) {
+        showNotification('error', 'Vui lòng điền đầy đủ thông tin bắt buộc!');
+        return;
+      }
+
+      // Template params matching template_li498ck structure
       const templateParams = {
-        to_name: recipient.name,
-        to_email: recipient.email,
         from_name: formData.senderName,
         from_email: formData.senderEmail,
         phone: formData.phone || 'Không cung cấp',
-        message: formData.message,
         subject: formData.subject,
+        message: formData.message,
+        to_name: recipient.name,
+        to_email: recipient.email,
         reply_to: formData.senderEmail,
         website: 'ADHD - Bản Giao Hưởng Tập Trung'
       };
+
+      console.log('Sending email with params:', templateParams);
 
       const result = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
@@ -677,7 +686,17 @@ const Team = () => {
       return { success: true };
     } catch (error) {
       console.error('EmailJS Error:', error);
-      showNotification('error', `Có lỗi xảy ra khi gửi email. Vui lòng thử lại sau.`);
+      
+      // More specific error handling
+      if (error.status === 412) {
+        showNotification('error', 'Lỗi cấu hình template. Vui lòng liên hệ quản trị viên.');
+      } else if (error.status === 422) {
+        showNotification('error', 'Dữ liệu không hợp lệ. Vui lòng kiểm tra lại thông tin.');
+      } else if (error.status === 403) {
+        showNotification('error', 'Không có quyền truy cập. Vui lòng thử lại sau.');
+      } else {
+        showNotification('error', `Có lỗi xảy ra khi gửi email: ${error.text || 'Vui lòng thử lại sau.'}`);
+      }
       throw error;
     }
   };
@@ -1205,7 +1224,7 @@ const Team = () => {
                 )}
 
                 {/* Quá trình công tác cho bác sĩ Nguyễn Minh Quyết */}
-                {currentView === 'sponsors' && selectedMember.name === 'Thạc sĩ, Bác sĩ NGUYỄN MINH QUYẾT' && selectedMember.collaborate && (
+                {currentView === 'sponsors' && selectedMember.name === 'Thạc sĩ, Bác sĩ Nguyễn Minh Quyết' && selectedMember.collaborate && (
                   <section className="team-modal-section">
                     <h4>Quá trình công tác</h4>
                     <ul className="sponsor-expertise">
@@ -1327,7 +1346,9 @@ const Team = () => {
           padding: 8px;
           border-radius: 8px;
           transition: all 0.2s;
+          margin-left: 58vh;
           color: #6b7280;
+          position: fixed;
         }
 
         .email-modal-close:hover {

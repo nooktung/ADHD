@@ -276,11 +276,11 @@ const LandingPage = () => {
   ]
 
   // Scroll to top when story modal link changes (for full story)
-  useEffect(() => {
-    if (selectedStory && selectedStory.link) {
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }
-  }, [selectedStory]);
+  // useEffect(() => {
+  //   if (selectedStory && selectedStory.link) {
+  //     window.scrollTo({ top: 0, behavior: 'instant' });
+  //   }
+  // }, [selectedStory]);
 
   return (
     <>

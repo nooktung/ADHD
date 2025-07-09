@@ -123,7 +123,7 @@ const AllStory = () => {
         }}>
           <div style={{ flex: 1, minWidth: 260 }}>
             <h1 style={{ fontSize: 40, fontWeight: 800, color: '#6d3a5e', marginBottom: 18, lineHeight: 1.1 }}>
-              Câu chuyện ADHD từ cộng đồng<br />Mini ADHD Coach
+              Câu chuyện ADHD từ cộng đồng<br />ADHD-Bản giao hưởng tập trung
             </h1>
             <div style={{ color: '#a05c8c', fontSize: 18, marginBottom: 10, fontWeight: 500 }}>
               Đọc các bài phỏng vấn của chúng tôi với những người được chẩn đoán ADHD muộn. Dù bạn đang chờ chẩn đoán hay vừa nhận kết quả, bạn sẽ thấy mình không đơn độc <span role="img" aria-label="heart">💗</span> !
