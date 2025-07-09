@@ -107,57 +107,51 @@ const LandingPage = () => {
     },
   ]
 
-  // Updated blog posts with ADHD content from docx
+  // Updated blog posts with real ADHD articles
   const blogPosts = [
     {
       id: 1,
-      title: "I. Giới thiệu ADHD",
-      category: "Kiến thức cơ bản",
-      excerpt: "Tìm hiểu về định nghĩa, độ tuổi, giới tính và các dạng ADHD. ADHD là rối loạn phát triển thần kinh ảnh hưởng đến khả năng tập trung và kiểm soát hành vi.",
-      image: "image.png",
-      author: "Nhóm Alight",
-      date: "24/06/2025",
-      link: "/adhd-signs"
+      title: `ADHD: LÀ "NHÃN DÁN" THỜI THƯỢNG HAY MỘT CUỘC ĐẤU TRANH THẦM LẶNG?`,
+      category: "Facebook",
+      excerpt: `Phân tích về những định kiến và hiểu lầm xung quanh ADHD trong xã hội hiện đại. Bài viết đặt ra câu hỏi về việc ADHD có đang bị lạm dụng thành một 'nhãn dán' thời thượng hay thực sự là cuộc đấu tranh thầm lặng của những người mắc phải.`,
+      image: "blog1.jpeg",
+      author: "Giải Trí Văn Hóa",
+      date: "26/06/2025",
+      link: "https://www.facebook.com/story.php?story_fbid=1404067851126593&id=100045701747358&rdid=suOS8jOdfbuOKIP0#",
+      isExternal: true
+    },
+    {
+      id: 2,
+      title: "Nơi Giai Điệu Lạc Nhịp Được Cất Lời: Vượt Qua Màn Sương Định Kiến Về ADHD",
+      category: "Báo chí",
+      excerpt: `Khám phá câu chuyện về những sinh viên ADHD trong môi trường đại học, nơi những 'giai điệu lạc nhịp' thường bị hiểu nhầm là sự lười biếng. Bài viết đi sâu vào thực tại của những người đang vật lộn với ADHD và cách xã hội cần thay đổi cách nhìn nhận.`,
+      image: "logo.jpg",
+      author: "Nguyễn Thông",
+      date: "26/06/2025",
+      link: "https://www.giaitrivanhoa.vn/2025/06/noi-giai-ieu-lac-nhip-uoc-cat-loi-vuot.html",
+      isExternal: true
     },
     {
       id: 3,
-      title: "III. Nguyên nhân và cơ chế não bộ ADHD",
-      category: "Khoa học",
-      excerpt: "Khám phá các nguyên nhân gây ra ADHD và cơ chế hoạt động của não bộ. Tìm hiểu về yếu tố di truyền, môi trường và chất dẫn truyền thần kinh.",
-      image: "image.png",
-      author: "Nhóm Alight",
+      title: "DỰ ÁN ADHD - BẢN GIAO HƯỞNG TẬP TRUNG",
+      category: "Facebook",
+      excerpt: `Giới thiệu về dự án 'ADHD - Bản Giao Hưởng Tập Trung' được khởi xướng bởi nhóm Alight, nhằm tạo ra không gian đối thoại cởi mở, cung cấp tri thức chính xác và vun trồng thấu cảm cho cộng đồng về ADHD.`,
+      image: "banner.jpg",
+      author: "Giải Trí Văn Hóa",
       date: "24/06/2025",
-      link: "/adhd-causes"
+      link: "https://www.facebook.com/story.php?story_fbid=1401870821346296&id=100045701747358&rdid=m34IcLe34Wgxnp0h#",
+      isExternal: true
     },
     {
       id: 4,
-      title: "IV. ADHD trong cuộc sống",
-      category: "Thực tế",
-      excerpt: "Tác động của ADHD đến học tập, công việc và sinh hoạt hàng ngày. Các ví dụ thực tế và kinh nghiệm sống chung với ADHD.",
-      image: "image.png",
-      author: "Nhóm Alight",
+      title: "ADHD - Bản Giao Hưởng Tập Trung: Lời Hiệu Triệu Từ Những Giai Điệu Lạc Nhịp",
+      category: "Báo chí",
+      excerpt: "Bài viết chi tiết về sứ mệnh và mục tiêu của dự án, phân tích thực trạng nghịch lý trong môi trường đại học khi ADHD vừa bị hiểu nhầm, vừa bị lạm dụng. Đưa ra lời kêu gọi xây dựng môi trường học thuật công bằng và nhân văn.",
+      image: "banner.jpg",
+      author: "Nguyễn Thông",
       date: "24/06/2025",
-      link: "/adhd-in-life"
-    },
-    {
-      id: 5,
-      title: "V. So sánh ADHD với rối loạn lo âu",
-      category: "So sánh",
-      excerpt: "Phân biệt giữa ADHD và rối loạn lo âu trong các tình huống khác nhau. Hiểu về sự khác biệt và điểm chung giữa hai tình trạng này.",
-      image: "image.png",
-      author: "Nhóm Alight",
-      date: "24/06/2025",
-      link: "/adhd-vs-anxiety"
-    },
-    {
-      id: 6,
-      title: "VI. Cách cải thiện trong đời sống",
-      category: "Hướng dẫn",
-      excerpt: "Các phương pháp cải thiện chất lượng cuộc sống với ADHD. Mẹo về giấc ngủ, ăn uống, tập thể dục và mối quan hệ xã hội.",
-      image: "image.png",
-      author: "Nhóm Alight",
-      date: "24/06/2025",
-      link: "/adhd-improvement"
+      link: "https://www.giaitrivanhoa.vn/2025/06/adhd-ban-giao-huong-tap-trung-loi-hieu.html",
+      isExternal: true
     }
   ]
 
@@ -208,9 +202,17 @@ const LandingPage = () => {
     setSelectedStory(null)
   }
 
+  const handleBlogClick = (post) => {
+    if (post.isExternal) {
+      window.open(post.link, '_blank', 'noopener,noreferrer')
+    } else {
+      // For internal links, use React Router
+      window.location.href = post.link
+    }
+  }
+
   // Social media posts data
   const socialPosts = [
-    // 2. Ảnh có số 5 ở đầu
     {
       id: 1,
       image: "story1.jpg",
@@ -247,7 +249,30 @@ const LandingPage = () => {
       title: "Cộng đồng ADHD",
       description: "Kết nối cộng đồng ADHD"
     },
-
+    {
+      id: 7,
+      image: "story5.jpg",
+      title: "Cộng đồng ADHD",
+      description: "Kết nối cộng đồng ADHD"
+    },
+    {
+      id: 8,
+      image: "story6.jpg",
+      title: "Cộng đồng ADHD",
+      description: "Kết nối cộng đồng ADHD"
+    },
+    {
+      id: 9,
+      image: "story7.jpg",
+      title: "Cộng đồng ADHD",
+      description: "Kết nối cộng đồng ADHD"
+    },
+    {
+      id: 10,
+      image: "story8.jpg",
+      title: "Cộng đồng ADHD",
+      description: "Kết nối cộng đồng ADHD"
+    },
   ]
 
   // Scroll to top when story modal link changes (for full story)
@@ -426,13 +451,13 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Blog Section - Updated with ADHD content */}
+      {/* Blog Section - Updated with real ADHD articles */}
       <section className="blog">
         <div className="blog-container">
           <div className="blog-header">
             <div className="blog-title-section">
-              <h2>Kiến Thức ADHD Từ Báo Cáo</h2>
-              <p className="blog-subtitle">Khám phá thông tin chi tiết về ADHD từ nghiên cứu chuyên sâu</p>
+              <h2>Bài Báo Về ADHD</h2>
+              <p className="blog-subtitle">Khám phá các bài báo và nghiên cứu mới nhất về ADHD từ báo chí và cộng đồng</p>
             </div>
           </div>
 
@@ -447,7 +472,7 @@ const LandingPage = () => {
 
           <div className="blog-scroll-container" ref={blogScrollContainerRef}>
             {blogPosts.map((post) => (
-              <div key={post.id} className="blog-card-new">
+              <div key={post.id} className="blog-card-new" onClick={() => handleBlogClick(post)} style={{ cursor: 'pointer' }}>
                 <div className="blog-image-container">
                   <img src={post.image} alt={post.title} className="blog-image" />
                 </div>
@@ -459,13 +484,17 @@ const LandingPage = () => {
                   </p>
                   <div className="blog-meta">
                     <div className="blog-author">
-                      <img src="image.png" alt={post.author} className="author-avatar" />
+                      <img src="logoblog.jpeg" alt={post.author} className="author-avatar" />
                       <span className="author-name">{post.author}</span>
                     </div>
                     <span className="blog-date">{post.date}</span>
                   </div>
+                  {post.isExternal && (
+                    <div style={{ position: 'absolute', top: '10px', right: '10px', background: 'rgba(0,0,0,0.7)', color: 'white', padding: '4px 8px', borderRadius: '4px', fontSize: '12px' }}>
+                      ↗ External
+                    </div>
+                  )}
                 </div>
-                <Link to={post.link} style={{ position: 'absolute', inset: 0, zIndex: 1 }} />
               </div>
             ))}
           </div>
@@ -559,7 +588,7 @@ const LandingPage = () => {
                 </div>
                 <div className="profile-info">
                   <h3>BẢN GIAO HƯỞNG TẬP TRUNG</h3>
-                  <p>ADHD Resources & Tips</p>
+                  <p>Tài nguyên & Lời khuyên về ADHD</p>
                 </div>
               </div>
             </div>

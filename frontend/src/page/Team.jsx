@@ -515,78 +515,108 @@ const Team = () => {
       }
     }
   ];
-
   const sponsors = [
     {
       id: 1,
-      name: "Nguyễn Trung Nghĩa",
-      category: "Bên chuyên môn",
+      name: "ThS.BSCKI.BSNT. Nguyễn Trung Nghĩa",
+      specialty: "Tâm lý – Tâm thần",
       image: "Nguyễn Trung Nghĩa.jpg",
-      shortBio: "Đối tác chiến lược trong lĩnh vực giáo dục",
-      fullBio: "Nguyễn Trung Nghĩa là chuyên gia giáo dục với hơn 15 năm kinh nghiệm trong lĩnh vực tâm lý học giáo dục và phát triển chương trình đào tạo. Ông đã hỗ trợ dự án không chỉ về mặt chuyên môn mà còn chia sẻ kinh nghiệm quý báu trong việc tiếp cận và hỗ trợ học sinh có ADHD.",
-      email: "nghia.edu@example.com",
-      website: "https://edutech.com.vn",
-      phone: "024 3825 6789",
+      shortBio: "Phó Giám đốc Trung tâm Chăm sóc sức khỏe tinh thần, Bệnh viện Đa khoa Quốc tế Vinmec Times City",
+      fullBio: "ThS.BSCKI Nguyễn Trung Nghĩa là chuyên gia uy tín trong lĩnh vực Tâm lý - Tâm thần với kinh nghiệm dày đan trong cả điều trị lâm sàng và đào tạo. Bác sĩ đã tốt nghiệp Thủ khoa chương trình đào tạo Bác sĩ Nội tâm thần tượng tại Đại học Y Dược TP.HCM và liên tục tham gia các khóa đào tạo chuyên sâu tại nhiều quốc gia như Thái Lan, Malaysia, Nhật Bản, Hà Lan. Hiện bác sĩ đang giữ vai trò lãnh đạo tại Vinmec, giảng dạy tại VinUni và là tác giả sách, diễn giả cho hơn 120 tổ chức, doanh nghiệp về sức khỏe tinh thần.",
       location: "Hà Nội, Việt Nam",
-      partnership: "Đối tác dự án",
-      industry: "Giáo dục & Tâm lý học",
-      supportType: ["Tư vấn chuyên môn", "Đào tạo", "Hỗ trợ nghiên cứu"],
-      achievements: [
-        "Tư vấn phương pháp giáo dục cho 50+ trường học",
-        "Đào tạo 200+ giáo viên về ADHD",
-        "Xuất bản 5 nghiên cứu về giáo dục đặc biệt"
+      position: [
+        "Phó Giám đốc Trung tâm Chăm sóc sức khỏe tinh thần, Bệnh viện Đa khoa Quốc tế Vinmec Times City.",
+        "Trưởng phân môn Tâm thần, Viện Khoa học Sức khỏe, Trường Đại học VinUni."
       ],
-      socialLinks: {
-        linkedin: "https://linkedin.com/in/nguyentrungnghia"
-      }
+      training: [
+        "Tốt nghiệp Thủ khoa Bác sĩ Nội ngoại chuyên ngành Tâm thần, Đại học Y Dược TP.HCM.",
+        "Đào tạo về liệu pháp Kích thích từ xuyên sọ (TMS), Đại học Maastricht, Hà Lan.",
+        "Đào tạo về các phương pháp dựa trên Chánh niệm tại Trung tâm Làng Mai (Thái Lan) và Trung tâm Thở và Cười (Hong Kong).",
+        "Hoàn thành nhiều khóa đào tạo chuyên sâu về Tâm bệnh học, Y học giấc ngủ tại châu Á."
+      ],
+      expertise: [
+        "Tâm thần học chính xác và kỹ thuật cao (Kích thích từ xuyên sọ - TMS).",
+        "Tâm thần học Dinh dưỡng.",
+        "Phong cách tăng động giảm chú ý (ADHD) và Tự kỷ (ASD) ở người trưởng thành.",
+        "Kiểu nhân cách.",
+        "Y học ngủ.",
+        "Trị liệu Chấp nhận và Cam kết (ACT) & Chánh niệm (Chánh niệm)."
+      ],
+      program: [
+        "Tác dụng trung gian của việc thực hành chánh niệm đối với hoạt động não bộ của sinh viên đại học: Một nghiên cứu về điện não đồ (Tạp chí IBRO Neuroscience Reports, 2023).",
+        "Tỷ lệ rối loạn trầm cảm tại cơ sở chăm sóc sức khỏe ban đầu tại Thành phố Hồ Chí Minh (Tạp chí Tạp chí Quốc tế về Tâm thần học trong Y học, 2022).",
+        "Nhiều báo cáo khoa học khác về sức khỏe tâm thần trong đại dịch COVID-19."
+      ],
+      philosophy :"“Trị liệu trên tinh thần hợp tác. Bạn là người hiểu nhất về cuộc đời mình và những vấn đề của mình. Tôi là người được đào tạo để có một chút hiểu biết về cách giải quyết các vấn đề đó. Chúng ta hợp tác cùng với nhau để vượt qua những khó khăn về sức khỏe tinh thần, cùng tìm kiếm hạnh phúc.” "
     },
     {
       id: 2,
-      name: "Huỳnh Thanh Tân",
-      category: "Bên chuyên môn",
+      name: "ThS. BSCKI. BSNT. Huỳnh Thanh Tân",
+      specialty: "Tâm lý – Tâm thần",
       image: "Huỳnh Thanh Tân.jpg",
-      shortBio: "Chuyên gia tâm lý lâm sàng",
-      fullBio: "Thạc sĩ Huỳnh Thanh Tân là chuyên gia tâm lý lâm sàng với chuyên môn sâu về các rối loạn phát triển thần kinh, đặc biệt là ADHD. Với kinh nghiệm 10 năm trong lĩnh vực, anh đã đóng góp quan trọng vào việc xây dựng nội dung khoa học và chính xác cho dự án.",
-      email: "tan.psychology@example.com",
-      website: "https://tanlamsang.vn",
-      phone: "028 3976 5432",
-      location: "TP. Hồ Chí Minh, Việt Nam",
-      partnership: "Cố vấn chuyên môn",
-      industry: "Tâm lý lâm sàng",
-      supportType: ["Tư vấn chuyên môn", "Kiểm duyệt nội dung", "Đào tạo"],
-      achievements: [
-        "Điều trị thành công 300+ ca ADHD",
-        "Tác giả 15 bài báo khoa học về ADHD",
-        "Diễn giả tại 20+ hội thảo chuyên môn"
+      shortBio: "Bác sĩ Tâm thần, Trung tâm Chăm sóc Sức khỏe tinh thần, Bệnh viện Đa khoa Quốc tế Vinmec Times City",
+      fullBio: "ThS.BSCKI. Huỳnh Thanh Tân là một bác sĩ có nền tảng học vấn vững chắc từ các trường đại học y khoa hàng đầu. Sau khi hoàn thành chương trình Bác sĩ Nội trú tại Đại học Y Dược TP.HCM, bác sĩ đã có kinh nghiệm giảng dạy tại Đại học Y khoa Phạm Ngọc Thạch và nhiều trường đại học khác. Với sự nhiệt huyết và chuyên môn sâu, bác sĩ Tân tập trung vào việc áp dụng các liệu pháp hiện đại, bao gồm cả liệu pháp dùng thuốc và không dùng thuốc, để mang lại hiệu quả điều trị tối ưu cho người bệnh.",
+      location: "Hà Nội, Việt Nam",
+      position: [
+        "Trưởng phân môn Tâm thần, Viện Khoa học Sức khỏe, Trường Đại học VinUni."
       ],
-      socialLinks: {
-        website: "https://tanlamsang.vn",
-        linkedin: "https://linkedin.com/in/huynhthanhtan"
-      }
+      training: [
+        "Tốt nghiệp Bác sĩ Đa khoa, Đại học Y khoa Phạm Ngọc Thạch.",
+        "Hoàn thành chương trình Bác sĩ Nội trú, Bác sĩ Chuyên khoa I và Thạc sĩ chuyên ngành Tâm thần tại Đại học Y Dược TP.HCM.",
+        "Tham gia các khóa đào tạo chuyên sâu về phương pháp nghiên cứu khoa học và các liệu pháp tâm lý hiện đại như Trị liệu Chấp nhận và Cam kết (ACT)."
+      ],
+      expertise: [
+        "Chẩn đoán và điều trị toàn diện các rối loạn sức khỏe tinh thần (trầm cảm, lo âu, ADHD, tự kỷ, loạn thần, rối loạn lưỡng cực, rối loạn giấc ngủ...).",
+        "Hóa dược trị liệu (sử dụng thuốc).",
+        "Kích thích từ xuyên sọ (rTMS).",
+        "Y học giấc ngủ, đặc biệt là trị liệu nhận thức hành vi cho chứng mất ngủ (i-CBT)."
+      ],
+      program: [
+        "Báo cáo viên tại Hội nghị Quốc tế về Alzheimer & Sa sút trí tuệ lần thứ 4 (Barcelona, Tây Ban Nha) với đề tài về thang đo trầm cảm trong sa sút trí tuệ.",
+        "Tác giả đề tài nghiên cứu cấp cơ sở về 'Lo âu, trầm cảm ở sinh viên các trường đại học tại TP.HCM năm 2023'.",
+        "Tham luận tại Hội thảo Khoa học Quốc gia về 'Giải pháp phổ biến hoạt động tâm lý trị liệu trong nhà trường'."
+      ],
+      philosophy :"“Mỗi người trong chúng ta đều có những khó khăn và thử thách trong cuộc sống, tôi chỉ là người may mắn hơn khi được đào tạo những kỹ năng và có những công cụ hỗ trợ để có thể đương đầu với cuộc sống. Tôi muốn chia sẻ với bạn những điều này, để chặng đường của bạn đỡ gian nan hơn”.  "
     },
     {
       id: 3,
-      name: "Nguyễn Minh Quyết",
-      category: "Đối tác y tế",
+      name: "Thạc sĩ, Bác sĩ Nguyễn Minh Quyết",
+      specialty: "Tâm lý – Tâm thần",
       image: "Nguyễn Minh Quyết.jpg",
-      shortBio: "Bác sĩ chuyên khoa Nhi - Tâm thần",
-      fullBio: "Bác sĩ Nguyễn Minh Quyết là chuyên gia đầu ngành về ADHD ở trẻ em và thanh thiếu niên tại Việt Nam. Với kinh nghiệm hơn 12 năm trong chẩn đoán và điều trị ADHD, bác sĩ đã đóng góp quan trọng vào việc đảm bảo tính chính xác về mặt y khoa của toàn bộ dự án.",
-      email: "dr.quyet@hospital.gov.vn",
-      website: "https://benhviennhi.gov.vn",
-      phone: "024 3943 3556",
+      shortBio: "Bác sĩ Tâm thần tại Phòng Khám Chuyên khoa Yên Hoà",
+      fullBio: "Thạc sĩ, Bác sĩ Nguyễn Minh Quyết là chuyên gia uy tín trong lĩnh vực Sức khỏe Tâm thần, được đào tạo chuyên sâu và bài bản từ Đại học Y Hà Nội với chương trình Bác sĩ Nội trú Tâm thần danh giá. Với kinh nghiệm làm việc tại các đơn vị y tế tuyến đầu như Viện Sức khỏe Tâm thần - Bệnh viện Bạch Mai và Bệnh viện Nhi Trung ương, bác sĩ có chuyên môn sâu rộng trong việc chẩn đoán và điều trị các rối loạn tâm lý - tâm thần. Hiện nay, bác sĩ Quyết đang công tác tại Phòng khám Chuyên khoa Yên Hoà góp phần quan trọng vào công tác chăm sóc sức khỏe tinh thần",
       location: "Hà Nội, Việt Nam",
-      partnership: "Cố vấn y khoa",
-      industry: "Y tế - Nhi khoa",
-      supportType: ["Tư vấn y khoa", "Kiểm duyệt thông tin", "Đào tạo nhận thức"],
-      achievements: [
-        "Chẩn đoán và điều trị 500+ ca ADHD ở trẻ em",
-        "Tham gia 30+ nghiên cứu quốc tế về ADHD",
-        "Đào tạo 100+ bác sĩ trẻ về chẩn đoán ADHD"
+      position: [
+        "Bác sĩ điều trị tại Khoa Tâm thần, Bệnh viện Nhi Trung ương.",
+        "Giảng viên Bộ môn Tâm thần, Đại học Y Hà Nội.",
+        "Bác sĩ Nội trú, Viện sức khỏe Tâm thần Bệnh viện Bạch Mai.",
+        "Hiện nay, bác sĩ Quyết đang công tác tại Phòng Khám Chuyên khoa Yên Hoà."
       ],
-      socialLinks: {
-        website: "https://benhviennhi.gov.vn"
-      }
-    }
+      training: [
+        "Tốt nghiệp Đại học Y Hà Nội.",
+        "Hoàn thành chương trình Bác sĩ Nội trú chuyên ngành Tâm thần tại Đại học Y Hà Nội."
+      ],
+      collaborate:[
+        "Bác sĩ khoa Tâm thần, Bệnh viện Nhi Trung ương.",
+        "Giảng viên bộ môn Tâm thần, Đại học Y Hà Nội.",
+        "Bác sĩ nội trú, Viện sức khỏe Tâm thần Bệnh viện Bạch Mai."
+      ],
+      expertise: [
+        "Tâm thần, tâm lý.",
+        "Rối loạn tự kỷ: Chậm nói, giảm tương tác, ít nhìn mắt,…",
+        "Rối loạn tăng động giảm chú ý: Tăng hoạt động, không tập trung, học kém.",
+        "Rối loạn tic: Nháy mắt, nhếch mũi, khịt mũi, hắng giọng, thở rướn, thở dài.",
+        "Rối loạn giấc ngủ: Mất ngủ, khó vào giấc, ngủ hay tỉnh, hay mơ.",
+        "Rối loạn lo âu: Căng thẳng, lo lắng, hồi hộp, vã mồ hôi,…",
+        "Rối loạn trầm cảm: Buồn chán, mệt mỏi, thiếu tự tin, thiếu động lực.",
+        "Rối loạn stress: Căng thẳng, ăn kém, ngủ kém,…",
+        "Rối loạn dạng cơ thể: Đau đầu, đau ngực, đau bụng, mất ngủ, lo lắng,…"
+      ],
+      program: [
+        "Liên quan giữa nhân cách với nhóm triệu chứng da ở người bệnh rối loạn cơ thể hóa.",
+        "Đặc điểm nhân cách ở người bệnh rối loạn cơ thể hóa điều trị nội trú tại Viện Sức khỏe Tâm thần."
+      ],
+    },
   ];
 
   // Show notification
@@ -852,7 +882,7 @@ const Team = () => {
             <p>
               {currentView === 'team' 
                 ? 'Gặp gỡ những thành viên tài năng và nhiệt huyết của chúng tôi - những sinh viên FPT University đã cùng nhau xây dựng nên một dự án ý nghĩa về ADHD với tinh thần học hỏi và đồng đội tuyệt vời.'
-                : 'Chúng tôi xin trân trọng cảm ơn các chuyên gia đã tin tưởng, hỗ trợ và đồng hành cùng chúng tôi trong hành trình phát triển dự án ADHD-Bản giao hưởng tập trung, mang lại giá trị tích cực cho cộng đồng.'
+                : 'Chúng tôi xin trân trọng cảm ơn các chuyên gia Tâm lý - Tâm thần đã tin tưởng, hỗ trợ và đồng hành cùng chúng tôi trong hành trình phát triển dự án ADHD-Bản giao hưởng tập trung, mang lại giá trị tích cực cho cộng đồng.'
               }
             </p>
           </div>
@@ -933,17 +963,11 @@ const Team = () => {
                   {/* Content */}
                   <div className="team-card-content">
                     <h3 className="team-card-name">{sponsor.name}</h3>
-                    <p className="team-card-position sponsor-category">{sponsor.category}</p>
+                    <p className="team-card-position sponsor-category">{sponsor.specialty}</p>
                     <p className="team-card-bio">{sponsor.shortBio}</p>
 
                     {/* Contact Info */}
                     <div className="team-card-info">
-                      <div className="team-info-item">
-                        <svg className="team-info-icon" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-                        </svg>
-                        {sponsor.website || sponsor.industry}
-                      </div>
                       <div className="team-info-item">
                         <svg className="team-info-icon" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -958,7 +982,7 @@ const Team = () => {
                       className="team-card-button"
                       disabled={isTransitioning}
                     >
-                      Xem thêm
+                      Xem chi tiết
                     </button>
                   </div>
                 </div>
@@ -971,7 +995,7 @@ const Team = () => {
         {selectedMember && (
           <div className="team-modal-overlay" onClick={handleOverlayClick}>
             <div className="team-modal">
-              <div className="team-modal-header">
+              <div className={currentView === 'sponsors' ? 'sponsor-modal-header' : 'team-modal-header'}>
                 <button
                   onClick={closeModal}
                   className="team-modal-close"
@@ -994,13 +1018,13 @@ const Team = () => {
                   />
                   <div className="team-modal-info">
                     <h2>{selectedMember.name}</h2>
-                    <p>{selectedMember.position || selectedMember.category}</p>
+                    <p>{currentView === 'team' ? selectedMember.position : selectedMember.specialty}</p>
                     <div className="team-modal-meta">
                       <div className="team-modal-meta-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
-                        {selectedMember.experience || selectedMember.partnership}
+                        {currentView === 'team' ? selectedMember.experience : 'Chuyên gia Tâm lý - Tâm thần'}
                       </div>
                       <div className="team-modal-meta-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -1024,7 +1048,7 @@ const Team = () => {
                   <p>{selectedMember.fullBio}</p>
                 </section>
 
-                {/* Education & Experience / Industry & Partnership */}
+                {/* Education & Experience / Position & Training */}
                 {currentView === 'team' ? (
                   <>
                     <section className="team-modal-section">
@@ -1037,24 +1061,38 @@ const Team = () => {
                     </section>
                   </>
                 ) : (
-                  <div className="team-modal-grid">
-                    <section>
-                      <h4>Lĩnh vực</h4>
-                      <p>{selectedMember.industry}</p>
+                  <>
+                    <section className="team-modal-section">
+                      <h4>Chức vụ</h4>
+                      <ul className="sponsor-position-list">
+                        {selectedMember.position?.map((pos, index) => (
+                          <li key={index} className="sponsor-position-item">
+                            <span className="sponsor-position-bullet"></span>
+                            <span>{pos}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </section>
-                    <section>
-                      <h4>Vai trò</h4>
-                      <p>{selectedMember.partnership}</p>
+                    <section className="team-modal-section">
+                      <h4>Đào tạo & Chứng chỉ</h4>
+                      <ul className="sponsor-training-list">
+                        {selectedMember.training?.map((train, index) => (
+                          <li key={index} className="sponsor-training-item">
+                            <span className="sponsor-training-bullet"></span>
+                            <span>{train}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </section>
-                  </div>
+                  </>
                 )}
 
-                {/* Certifications / Support Types */}
-                {((currentView === 'team' && selectedMember.certifications) || (currentView === 'sponsors' && selectedMember.supportType)) && (
+                {/* Certifications / Expertise */}
+                {currentView === 'team' && selectedMember.certifications && (
                   <section className="team-modal-section">
-                    <h4>{currentView === 'team' ? 'Chứng chỉ & Kỹ năng' : 'Hình thức hỗ trợ'}</h4>
+                    <h4>Chứng chỉ & Kỹ năng</h4>
                     <div className="team-certifications">
-                      {(selectedMember.certifications || selectedMember.supportType)?.map((item, index) => (
+                      {selectedMember.certifications.map((item, index) => (
                         <span key={index} className="team-certification-tag">
                           {item}
                         </span>
@@ -1063,10 +1101,25 @@ const Team = () => {
                   </section>
                 )}
 
-                {/* Achievements */}
-                {selectedMember.achievements && selectedMember.achievements.length > 0 && (
+                {/* Expertise for Sponsors */}
+                {currentView === 'sponsors' && selectedMember.expertise && (
                   <section className="team-modal-section">
-                    <h4>{currentView === 'team' ? 'Thành tích học tập & Hoạt động' : 'Thành tựu chuyên môn'}</h4>
+                    <h4>Lĩnh vực chuyên môn sâu</h4>
+                    <ul className="sponsor-expertise">
+                      {selectedMember.expertise.map((item, index) => (
+                        <li key={index} className="sponsor-expertise-item">
+                          <span className="sponsor-expertise-bullet"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {/* Achievements / Research */}
+                {currentView === 'team' && selectedMember.achievements && selectedMember.achievements.length > 0 && (
+                  <section className="team-modal-section">
+                    <h4>Thành tích học tập & Hoạt động</h4>
                     <ul className="team-achievements">
                       {selectedMember.achievements.map((achievement, index) => (
                         <li key={index} className="team-achievement-item">
@@ -1078,64 +1131,93 @@ const Team = () => {
                   </section>
                 )}
 
-                {/* Contact & Social */}
-                <section className="team-modal-section">
-                  <h4>Liên hệ</h4>
-                  <div className="team-contact-links">
-                    {selectedMember.email && (
-                      <button
-                        onClick={() => openEmailModal(selectedMember)}
-                        className="team-contact-link email"
-                        type="button"
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        Gửi Email
-                      </button>
-                    )}
-                    {selectedMember.phone && (
-                      <a
-                        href={`tel:${selectedMember.phone.replace(/\s/g, '')}`}
-                        className="team-contact-link phone"
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        Gọi điện
-                      </a>
-                    )}
-                    {selectedMember.website && (
-                      <a
-                        href={selectedMember.website.startsWith('http') ? selectedMember.website : `https://${selectedMember.website}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="team-contact-link social"
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-                        </svg>
-                        Website
-                      </a>
-                    )}
-                    {selectedMember.socialLinks && Object.entries(selectedMember.socialLinks).map(([platform, url]) => (
-                      <a
-                        key={platform}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`team-contact-link social ${platform}`}
-                      >
-                        {platform !== 'facebook' && platform !== 'linkedin' && platform !== 'instagram' && (
+                {/* Research & Publications for Sponsors */}
+                {currentView === 'sponsors' && selectedMember.program && selectedMember.program.length > 0 && (
+                  <section className="team-modal-section">
+                    <h4>Nghiên cứu & Công trình khoa học</h4>
+                    <ul className="sponsor-research-list">
+                      {selectedMember.program.map((research, index) => (
+                        <li key={index} className="sponsor-research-item">
+                          <span className="sponsor-research-bullet"></span>
+                          <span>{research}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {/* Philosophy for Sponsors */}
+                {currentView === 'sponsors' && selectedMember.philosophy && (
+                  <section className="team-modal-section">
+                    <h4>Triết lý điều trị</h4>
+                    <div className="sponsor-philosophy">
+                      <p>{selectedMember.philosophy}</p>
+                    </div>
+                  </section>
+                )}
+
+                {/* Contact & Social - Only for Team Members */}
+                {currentView === 'team' && (
+                  <section className="team-modal-section">
+                    <h4>Liên hệ</h4>
+                    <div className="team-contact-links">
+                      {selectedMember.email && (
+                        <button
+                          onClick={() => openEmailModal(selectedMember)}
+                          className="team-contact-link email"
+                          type="button"
+                        >
                           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                           </svg>
-                        )}
-                        {platform === 'facebook' ? 'Facebook' : platform.charAt(0).toUpperCase() + platform.slice(1)}
-                      </a>
-                    ))}
-                  </div>
-                </section>
+                          Gửi Email
+                        </button>
+                      )}
+                      {selectedMember.phone && (
+                        <a
+                          href={`tel:${selectedMember.phone.replace(/\s/g, '')}`}
+                          className="team-contact-link phone"
+                        >
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                          </svg>
+                          Gọi điện
+                        </a>
+                      )}
+                      {selectedMember.socialLinks && Object.entries(selectedMember.socialLinks).map(([platform, url]) => (
+                        <a
+                          key={platform}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`team-contact-link social ${platform}`}
+                        >
+                          {platform !== 'facebook' && platform !== 'linkedin' && platform !== 'instagram' && (
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            </svg>
+                          )}
+                          {platform === 'facebook' ? 'Facebook' : platform.charAt(0).toUpperCase() + platform.slice(1)}
+                        </a>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {/* Quá trình công tác cho bác sĩ Nguyễn Minh Quyết */}
+                {currentView === 'sponsors' && selectedMember.name === 'Thạc sĩ, Bác sĩ NGUYỄN MINH QUYẾT' && selectedMember.collaborate && (
+                  <section className="team-modal-section">
+                    <h4>Quá trình công tác</h4>
+                    <ul className="sponsor-expertise">
+                      {selectedMember.collaborate.map((item, index) => (
+                        <li key={index} className="sponsor-expertise-item">
+                          <span className="sponsor-expertise-bullet"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
               </div>
             </div>
           </div>
