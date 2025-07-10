@@ -348,6 +348,7 @@ const RelatedArticles = ({ currentPage }) => {
     // Tìm category chứa trang hiện tại
     const findCategoryForPage = (pageId) => {
         for (const [categoryKey, categoryData] of Object.entries(categories)) {
+            if (categoryKey === pageId) return categoryKey; // Nếu là trang lớn
             if (categoryData.pages.some(page => page.id === pageId)) {
                 return categoryKey;
             }
@@ -355,12 +356,16 @@ const RelatedArticles = ({ currentPage }) => {
         return null;
     };
 
-    // Lấy các bài viết liên quan (tất cả bài trong category trừ trang hiện tại)
+    // Lấy các bài viết liên quan (tất cả bài trong category trừ trang hiện tại và trừ trang lớn nếu là trang con)
     const getRelatedArticles = (currentPageId) => {
         const categoryKey = findCategoryForPage(currentPageId);
         if (!categoryKey) return [];
-
         const categoryData = categories[categoryKey];
+        // Nếu currentPage là category lớn (id trùng key), hiển thị tất cả các trang con
+        if (categoryKey === currentPageId) {
+            return categoryData.pages;
+        }
+        // Nếu currentPage là trang con, chỉ hiển thị các trang con khác (không hiển thị trang lớn)
         return categoryData.pages.filter(page => page.id !== currentPageId);
     };
 
