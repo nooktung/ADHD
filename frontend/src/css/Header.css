@@ -185,7 +185,7 @@ body {
   color: #374151;
 }
 
-/* ===== MEGA DROPDOWN ===== */
+/* ===== MEGA DROPDOWN - 3 CỘT BẰNG NHAU ===== */
 .mega-dropdown {
   position: fixed;
   top: 90px; /* Chiều cao của header */
@@ -208,35 +208,35 @@ body {
 }
 
 .mega-dropdown__container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 1rem 7rem; /* Trên dưới 0.5rem, trái phải 3rem */
 }
 
 .mega-dropdown__grid {
   display: grid;
-  grid-template-columns: 330px 1fr 350px;
-  gap: 2rem;
+  grid-template-columns: 0.7fr 0.7fr 1fr; /* 3 cột bằng nhau */
+  gap: 3rem; /* Gap 3rem giữa các cột */
   align-items: start;
 }
 
-/* ===== LEFT SECTION - FEATURE CARDS ===== */
+/* ===== LEFT SECTION - FEATURE CARDS (COMPACT) ===== */
 .mega-dropdown__left {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem; /* Giảm gap từ 1rem xuống 0.75rem */
 }
 
 .feature-card {
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 1rem; /* Giảm padding từ 1.5rem xuống 1rem */
+  border-radius: 10px; /* Giảm border-radius */
   border: 1px solid #e5e7eb;
   transition: all 0.2s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px); /* Giảm hover effect */
+  box-shadow: 0 6px 20px -3px rgba(0, 0, 0, 0.1); /* Giảm shadow */
 }
 
 .feature-card--purple {
@@ -254,26 +254,26 @@ body {
 .feature-card__header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  gap: 0.5rem; /* Giảm gap từ 0.75rem xuống 0.5rem */
+  margin-bottom: 0.5rem; /* Giảm margin */
 }
 
 .feature-card__icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Giảm từ 1.5rem */
 }
 
 .feature-card__title {
-  font-size: 1.125rem;
-  font-weight: 650;
+  font-size: 1rem; /* Giảm từ 1.125rem */
+  font-weight: 600; /* Giảm từ 650 */
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3; /* Giảm line-height */
 }
 
 .feature-card__description {
-  font-size: 0.875rem;
-  margin: 0 0 1rem 0;
+  font-size: 0.8rem; /* Giảm từ 0.875rem */
+  margin: 0 0 0.75rem 0; /* Giảm margin */
   opacity: 0.9;
-  line-height: 1.5;
+  line-height: 1.4; /* Giảm line-height */
   color: #000000;
 }
 
@@ -283,28 +283,27 @@ body {
   color: #4b82da;
   text-decoration: none;
   font-weight: 400;
-  font-size: 0.875rem;
-  padding: 0.5rem 1rem;
+  font-size: 0.8rem; /* Giảm từ 0.875rem */
+  padding: 0.4rem 0.8rem; /* Giảm padding */
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
+  border-radius: 5px; /* Giảm border-radius */
   transition: all 0.2s ease;
 }
 
 .feature-card__link:hover {
   background: rgba(255, 255, 255, 0.3);
-  transform: translateX(2px);
+  transform: translateX(1px); /* Giảm hover effect */
 }
 
 /* ===== CENTER SECTION - MENU ITEMS ===== */
 .mega-dropdown__center {
-  border-right: 1px solid #e5e7eb;
-  padding-right: 2rem;
+  /* Bỏ border-right và padding-right vì giờ 3 cột bằng nhau */
 }
 
 .menu-items {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .menu-item {
@@ -312,14 +311,14 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1rem;
   background: none;
   border: none;
   text-align: left;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 8px;
   transition: all 0.2s ease;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #374151;
   font-weight: 500;
 }
@@ -352,12 +351,15 @@ body {
 .menu-item__text {
   font-weight: 500;
   color: inherit;
+  line-height: 1.3;
 }
 
 .menu-item__arrow {
   opacity: 0;
   transition: all 0.2s ease;
   color: #9ca3af;
+  width: 14px;
+  height: 14px;
 }
 
 .menu-item:hover .menu-item__arrow,
@@ -369,9 +371,8 @@ body {
 /* ===== RIGHT SECTION - CONTENT PANEL ===== */
 .mega-dropdown__right {
   position: relative;
-  width: 430px;
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 10px;
+  padding: 1rem;
   transition: all 0.3s ease;
 }
 
@@ -409,43 +410,44 @@ body {
 
 .content-panel__wrapper {
   background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Giảm từ 12px */
+  padding: 1rem; /* Giảm từ 1.5rem */
+  margin-bottom: 0.75rem; /* Giảm từ 1rem */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Giảm shadow */
 }
 
 .content-panel__header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  gap: 0.5rem; /* Giảm từ 0.75rem */
+  margin-bottom: 0.75rem; /* Giảm từ 1rem */
 }
 
 .content-panel__icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Giảm từ 1.5rem */
 }
 
 .content-panel__title {
-  font-size: 1.25rem;
+  font-size: 1.1rem; /* Giảm từ 1.25rem */
   font-weight: 600;
   color: #1f2937;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3; /* Giảm line-height */
 }
 
 .content-panel__description {
   color: #6b7280;
-  line-height: 1.6;
+  line-height: 1.5; /* Giảm từ 1.6 */
   margin: 0;
   white-space: pre-line;
+  font-size: 0.85rem; /* Thêm font-size nhỏ hơn */
 }
 
-/* ===== SIDEBAR SECTION ===== */
+/* ===== SIDEBAR SECTION (COMPACT) ===== */
 .sidebar-section {
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 6px; /* Giảm từ 8px */
+  padding: 0.75rem; /* Giảm từ 1rem */
 }
 
 /* Special styling for story section - remove background to show stories directly */
@@ -462,13 +464,14 @@ body {
 
 .sidebar-item {
   display: block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 0.6rem; /* Giảm padding từ 0.5rem 0.75rem */
   color: #374151;
   text-decoration: none;
-  font-size: 0.875rem;
-  border-radius: 6px;
+  font-size: 0.8rem; /* Giảm từ 0.875rem */
+  border-radius: 5px; /* Giảm từ 6px */
   transition: all 0.2s ease;
   font-weight: 500;
+  line-height: 1.3; /* Thêm line-height gọn */
 }
 
 .sidebar-item:hover {
@@ -479,31 +482,33 @@ body {
 /* Styling for story items with individual white background boxes */
 .sidebar-item--story {
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 50px;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 6px; /* Giảm từ 50px để gọn hơn */
+  padding: 0.5rem 0.75rem; /* Giảm padding từ 0.75rem 1rem */
+  margin-bottom: 0.35rem; /* Giảm margin từ 0.5rem */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* Giảm shadow */
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.2s ease;
   font-weight: 600;
-  font-size: 0.9em;
+  font-size: 0.8rem; /* Giảm từ 0.9em */
+  line-height: 1.2; /* Thêm line-height gọn */
 }
 
 .sidebar-item--story:hover {
   background: rgba(255, 255, 255, 1);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.5px); /* Giảm hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12); /* Giảm shadow */
 }
 
 /* Special styling for "Tất cả câu chuyện" */
 .sidebar-item--all-stories {
-  font-size: 0.75rem !important;
+  font-size: 0.7rem !important; /* Giảm từ 0.75rem */
   font-style: italic !important;
   text-decoration: underline !important;
   color: #6b7280 !important;
   font-weight: 400 !important;
   background: rgba(255, 255, 255, 0.6) !important;
   border: 1px dashed rgba(255, 255, 255, 0.5) !important;
+  padding: 0.35rem 0.6rem !important; /* Giảm padding */
 }
 
 .sidebar-item--all-stories:hover {
@@ -513,14 +518,29 @@ body {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .mega-dropdown__container {
+    max-width: 100%;
+    padding: 0.5rem 2.5rem; /* Trên dưới 0.5rem, trái phải giảm xuống 2.5rem */
+  }
+  
   .mega-dropdown__grid {
-    grid-template-columns: 1fr 2fr 2fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mega-dropdown__container {
+    padding: 0.5rem 2rem; /* Trên dưới 0.5rem, trái phải 2rem */
+  }
+  
+  .mega-dropdown__grid {
+    grid-template-columns: 1fr 1fr; /* 2 cột cho tablet */
     gap: 1.5rem;
   }
 
-  .mega-dropdown__center {
-    grid-column: span 2;
+  .mega-dropdown__right {
+    grid-column: span 2; /* Right section chiếm 2 cột */
   }
 
   .search__input {
@@ -557,32 +577,28 @@ body {
   }
 
   .mega-dropdown__container {
-    padding: 1.5rem 0.75rem;
+    padding: 0.5rem 1.5rem; /* Trên dưới 0.5rem, trái phải 1.5rem cho mobile */
   }
 
   .mega-dropdown__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 cột cho mobile */
     gap: 1rem;
   }
 
-  .mega-dropdown__center {
-    grid-column: 1;
-    border-right: none;
-    border-bottom: 1px solid #e5e7eb;
-    padding-right: 0;
-    padding-bottom: 1rem;
+  .mega-dropdown__right {
+    grid-column: 1; /* Reset grid-column cho mobile */
   }
 
   .feature-card {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .mega-dropdown__right {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .content-panel__wrapper {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 }
 
@@ -604,13 +620,17 @@ body {
     content: "Menu";
     font-size: 0.875rem;
   }
+  
+  .mega-dropdown__container {
+    padding: 0.5rem 1rem; /* Trên dưới 0.5rem, trái phải 1rem cho màn hình rất nhỏ */
+  }
 }
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(5px); /* Giảm animation distance */
   }
   to {
     opacity: 1;
@@ -619,15 +639,15 @@ body {
 }
 
 .mega-dropdown--open .feature-card:nth-child(1) {
-  animation: fadeInUp 0.3s ease 0.1s both;
+  animation: fadeInUp 0.2s ease 0.05s both; /* Giảm delay */
 }
 
 .mega-dropdown--open .feature-card:nth-child(2) {
-  animation: fadeInUp 0.3s ease 0.2s both;
+  animation: fadeInUp 0.2s ease 0.1s both; /* Giảm delay */
 }
 
 .mega-dropdown--open .menu-item {
-  animation: fadeInUp 0.3s ease 0.1s both;
+  animation: fadeInUp 0.2s ease 0.05s both; /* Giảm delay */
 }
 
 /* ===== ACCESSIBILITY ===== */
@@ -654,3 +674,6 @@ body {
     display: none;
   }
 }
+
+/* ===== SCROLLBAR STYLING - BỎ VÌ KHÔNG CÒN SCROLL ===== */
+/* Đã bỏ scrollbar styling vì không còn giới hạn max-height */
