@@ -3,7 +3,7 @@
     background-color: var(--bg-secondary);
     color: var(--text-primary);
 }
-  
+
 .dark-mode .contact-page-title h1 {
     color: var(--text-primary);
 }
@@ -208,6 +208,20 @@ textarea.contact-form-control {
     box-shadow: 0 10px 25px rgba(242, 194, 218, 0.4);
 }
 
+.contact-btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.contact-btn-submit .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
 .contact-map-section {
     padding: 60px 0;
     background: var(--white);
@@ -230,11 +244,10 @@ textarea.contact-form-control {
     margin: 0 auto 50px;
 }
 
-.contact-map-container img {
+.contact-map-container iframe {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    border: 0;
 }
 
 .contact-map-container:hover img {
@@ -304,6 +317,111 @@ textarea.contact-form-control {
     font-weight: 500;
 }
 
+/* Popup Notification Styles */
+.popup-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 400px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    animation: slideInRight 0.4s ease-out;
+    border: 1px solid;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-notification.success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-color: #10b981;
+    color: white;
+}
+
+.popup-notification.error {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-color: #ef4444;
+    color: white;
+}
+
+.popup-notification:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.popup-notification .icon {
+    flex-shrink: 0;
+}
+
+.popup-notification .content {
+    flex: 1;
+}
+
+.popup-notification .content .title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.popup-notification .content .message {
+    opacity: 0.9;
+    font-size: 13px;
+}
+
+.popup-notification .close-btn {
+    background: none;
+    border: none;
+    color: currentColor;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.popup-notification .close-btn:hover {
+    opacity: 1;
+}
+
+/* Map Action Buttons */
+.map-action-buttons {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+.map-action-button {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.map-action-button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 /* Animation for page load */
 @keyframes fadeInUp {
     from {
@@ -313,6 +431,22 @@ textarea.contact-form-control {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 

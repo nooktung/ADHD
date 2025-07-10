@@ -8,104 +8,39 @@ import emailjs from '@emailjs/browser';
 const PopupNotification = ({ type, message, isVisible, onClose }) => {
   if (!isVisible) return null;
 
-  const getNotificationStyle = () => {
-    const baseStyle = {
-      position: 'fixed',
-      top: '20px',
-      right: '20px',
-      maxWidth: '400px',
-      padding: '16px 20px',
-      borderRadius: '12px',
-      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '12px',
-      zIndex: 9999,
-      animation: 'slideInRight 0.4s ease-out',
-      border: '1px solid',
-      fontSize: '14px',
-      fontWeight: '500',
-      cursor: 'pointer',
-      transition: 'all 0.3s ease'
-    };
-
-    if (type === 'success') {
-      return {
-        ...baseStyle,
-        background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-        borderColor: '#10b981',
-        color: 'white'
-      };
-    } else {
-      return {
-        ...baseStyle,
-        background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
-        borderColor: '#ef4444',
-        color: 'white'
-      };
-    }
-  };
-
-  const getIcon = () => {
-    if (type === 'success') {
-      return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-          <polyline points="22,4 12,14.01 9,11.01"/>
-        </svg>
-      );
-    } else {
-      return (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="15" y1="9" x2="9" y2="15"/>
-          <line x1="9" y1="9" x2="15" y2="15"/>
-        </svg>
-      );
-    }
-  };
-
   return (
     <div 
-      style={getNotificationStyle()}
+      className={`popup-notification ${type}`}
       onClick={onClose}
-      onMouseEnter={(e) => {
-        e.target.style.transform = 'translateY(-2px)';
-        e.target.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.15)';
-      }}
-      onMouseLeave={(e) => {
-        e.target.style.transform = 'translateY(0)';
-        e.target.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.12)';
-      }}
     >
-      <div style={{ flexShrink: 0 }}>
-        {getIcon()}
+      <div className="icon">
+        {type === 'success' ? (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22,4 12,14.01 9,11.01"/>
+          </svg>
+        ) : (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+          </svg>
+        )}
       </div>
-      <div style={{ flex: 1 }}>
-        <div style={{ fontWeight: '600', marginBottom: '4px' }}>
+      <div className="content">
+        <div className="title">
           {type === 'success' ? 'Gửi thành công!' : 'Có lỗi xảy ra!'}
         </div>
-        <div style={{ opacity: 0.9, fontSize: '13px' }}>
+        <div className="message">
           {message}
         </div>
       </div>
       <button
+        className="close-btn"
         onClick={(e) => {
           e.stopPropagation();
           onClose();
         }}
-        style={{
-          background: 'none',
-          border: 'none',
-          color: 'currentColor',
-          cursor: 'pointer',
-          padding: '4px',
-          borderRadius: '4px',
-          opacity: 0.7,
-          transition: 'opacity 0.2s'
-        }}
-        onMouseEnter={(e) => e.target.style.opacity = '1'}
-        onMouseLeave={(e) => e.target.style.opacity = '0.7'}
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <line x1="18" y1="6" x2="6" y2="18"/>
@@ -141,8 +76,7 @@ const SimpleInteractiveMap = () => {
   };
 
   return (
-    <div style={{ position: 'relative', height: '400px', borderRadius: '20px', overflow: 'hidden', border: '3px solid #f2c2da' }}>
-      {/* Interactive Google Maps */}
+    <div className="contact-map-container">
       <iframe
         src={getEmbedUrl()}
         width="100%"
@@ -153,78 +87,17 @@ const SimpleInteractiveMap = () => {
         referrerPolicy="no-referrer-when-downgrade"
         title="Bản đồ tương tác Đại Học FPT"
       />
-
-      {/* Action Buttons */}
-      <div style={{
-        position: 'absolute',
-        top: '15px',
-        right: '15px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '8px',
-        zIndex: 10
-      }}>
+      <div className="map-action-buttons">
         <button
+          className="map-action-button"
           onClick={getDirections}
-          style={{
-            background: 'rgba(255, 255, 255, 0.95)',
-            border: '1px solid #ddd',
-            borderRadius: '8px',
-            padding: '10px 15px',
-            cursor: 'pointer',
-            fontSize: '13px',
-            fontWeight: '600',
-            color: '#333',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            transition: 'all 0.2s',
-            whiteSpace: 'nowrap'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.background = '#fff';
-            e.target.style.transform = 'translateY(-2px)';
-            e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.background = 'rgba(255, 255, 255, 0.95)';
-            e.target.style.transform = 'translateY(0)';
-            e.target.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-          }}
           title="Xem chỉ đường chi tiết"
         >
           🚗 Chỉ đường
         </button>
-
         <button
+          className="map-action-button"
           onClick={openGoogleMaps}
-          style={{
-            background: 'rgba(255, 255, 255, 0.95)',
-            border: '1px solid #ddd',
-            borderRadius: '8px',
-            padding: '10px 15px',
-            cursor: 'pointer',
-            fontSize: '13px',
-            fontWeight: '600',
-            color: '#333',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            transition: 'all 0.2s',
-            whiteSpace: 'nowrap'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.background = '#fff';
-            e.target.style.transform = 'translateY(-2px)';
-            e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.background = 'rgba(255, 255, 255, 0.95)';
-            e.target.style.transform = 'translateY(0)';
-            e.target.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-          }}
           title="Mở Google Maps ở tab mới"
         >
           🗺️ Mở Maps
@@ -248,11 +121,9 @@ const ContactUs = () => {
     message: ''
   });
 
-  // Refs for form elements
   const formRef = useRef(null);
   const nameInputRef = useRef(null);
 
-  // EmailJS Configuration
   const EMAILJS_CONFIG = {
     SERVICE_ID: 'service_40nc14n',
     TEMPLATE_ID: 'template_li498ck',
@@ -267,7 +138,6 @@ const ContactUs = () => {
     }));
   };
 
-  // Scroll to form and focus first input
   const scrollToForm = () => {
     if (formRef.current) {
       formRef.current.scrollIntoView({ 
@@ -275,14 +145,12 @@ const ContactUs = () => {
         block: 'center'
       });
       
-      // Focus first input after scroll animation
       setTimeout(() => {
         if (nameInputRef.current) {
           nameInputRef.current.focus();
           nameInputRef.current.style.boxShadow = '0 0 0 3px rgba(66, 153, 225, 0.3)';
           nameInputRef.current.style.borderColor = '#4299e1';
           
-          // Remove highlight after 2 seconds
           setTimeout(() => {
             nameInputRef.current.style.boxShadow = '';
             nameInputRef.current.style.borderColor = '';
@@ -292,7 +160,6 @@ const ContactUs = () => {
     }
   };
 
-  // Show notification
   const showNotification = (type, message) => {
     setNotification({
       isVisible: true,
@@ -300,18 +167,15 @@ const ContactUs = () => {
       message
     });
 
-    // Auto hide after 5 seconds
     setTimeout(() => {
       setNotification(prev => ({ ...prev, isVisible: false }));
     }, 5000);
   };
 
-  // Hide notification
   const hideNotification = () => {
     setNotification(prev => ({ ...prev, isVisible: false }));
   };
 
-  // Send email with EmailJS
   const sendEmailWithEmailJS = async (formData) => {
     try {
       const templateParams = {
@@ -344,7 +208,6 @@ const ContactUs = () => {
     setIsSubmitting(true);
 
     try {
-      // Validate form data
       if (!formData.name.trim()) {
         throw new Error('Vui lòng nhập họ và tên');
       }
@@ -355,10 +218,8 @@ const ContactUs = () => {
         throw new Error('Vui lòng nhập nội dung tin nhắn');
       }
 
-      // Send email with EmailJS
       await sendEmailWithEmailJS(formData);
 
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -366,9 +227,7 @@ const ContactUs = () => {
         message: ''
       });
 
-      // Show success notification
       showNotification('success', 'Chúng tôi đã nhận được tin nhắn của bạn và sẽ phản hồi sớm nhất có thể!');
-
     } catch (error) {
       console.error('Error sending email:', error);
       showNotification('error', 'Vui lòng thử lại hoặc liên hệ trực tiếp: alight.fpt@gmail.com');
@@ -380,21 +239,17 @@ const ContactUs = () => {
   return (
     <>
       <Header />
-
-      {/* Popup Notification */}
       <PopupNotification
         type={notification.type}
         message={notification.message}
         isVisible={notification.isVisible}
         onClose={hideNotification}
       />
-
       <div className="contact-page-title">
         <div className="container">
           <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
         </div>
       </div>
-
       <section className="contact-section">
         <div className="container">
           <div className="contact-content">
@@ -427,10 +282,8 @@ const ContactUs = () => {
                 </button>
               </div>
             </div>
-            
             <div className="contact-form" ref={formRef}>
               <h2>Gửi tin nhắn cho chúng tôi</h2>
-              
               <form onSubmit={handleSubmit}>
                 <div className="contact-form-group">
                   <input 
@@ -443,9 +296,6 @@ const ContactUs = () => {
                     onChange={handleInputChange}
                     required 
                     disabled={isSubmitting}
-                    style={{
-                      transition: 'all 0.3s ease'
-                    }}
                   />
                 </div>
                 <div className="contact-form-group">
@@ -487,22 +337,10 @@ const ContactUs = () => {
                   type="submit" 
                   className="contact-btn-submit"
                   disabled={isSubmitting}
-                  style={{
-                    opacity: isSubmitting ? 0.7 : 1,
-                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                    position: 'relative'
-                  }}
                 >
                   {isSubmitting ? (
                     <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
-                      <span className="spinner" style={{
-                        width: '16px',
-                        height: '16px',
-                        border: '2px solid transparent',
-                        borderTop: '2px solid white',
-                        borderRadius: '50%',
-                        animation: 'spin 1s linear infinite'
-                      }}></span>
+                      <span className="spinner"></span>
                       Đang gửi...
                     </span>
                   ) : (
@@ -514,13 +352,11 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-
       <section className="contact-map-section">
         <div className="container">
           <div className="contact-map-container">
             <SimpleInteractiveMap />
           </div>
-          
           <div className="contact-cards">
             <div className="contact-card">
               <div className="contact-card-icon">
@@ -571,31 +407,7 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-
       <Footer />
-
-      <style jsx>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(100%);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        .contact-social-icon:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-      `}</style>
     </>
   );
 };
