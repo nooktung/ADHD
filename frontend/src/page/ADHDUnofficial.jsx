@@ -220,9 +220,9 @@ const ADHDUnofficial = () => {
                                     </div>
                                     <h4 style={{ textAlign: 'center' }}>Khám phá ADHD sâu hơn!</h4>
                                     <p style={{ textAlign: 'center' }}>Hiểu rõ những dấu hiệu ADHD không chính thức nhưng thực sự ảnh hưởng đến cuộc sống hàng ngày của bạn. Từ nhận diện đến quản lý hiệu quả.</p>
-                                    <button className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
+                                    <a href="/hanbook" className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
                                         Tìm hiểu thêm
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </aside>

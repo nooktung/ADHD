@@ -149,7 +149,7 @@ const ADHDAndHealth = () => {
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Sức Khỏe ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý sức khỏe và cải thiện chất lượng cuộc sống với ADHD. Từ lời khuyên dinh dưỡng đến kỹ thuật quản lý căng thẳng.</p>
-                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
+                  <a href="/hanbook" className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</a>
                 </div>
               </div>
             </aside>

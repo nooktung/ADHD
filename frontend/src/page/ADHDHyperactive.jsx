@@ -431,9 +431,9 @@ const ADHDHyperactive = () => {
                                     </div>
                                     <h4 style={{ textAlign: 'center' }}>Hiểu Đúng Về ADHD Tăng động - Bốc đồng!</h4>
                                     <p style={{ textAlign: 'center' }}>Chúng tôi cung cấp thông tin khoa học chính xác về ADHD thể Tăng động - Bốc đồng để giúp bạn hiểu rõ hơn về các triệu chứng và phương pháp quản lý hiệu quả. Từ chẩn đoán đến các chiến lược can thiệp, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.</p>
-                                    <button className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
+                                    <a href="/hanbook" className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
                                         Tìm hiểu thêm
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </aside>

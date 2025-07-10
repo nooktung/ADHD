@@ -164,7 +164,7 @@ const ADHDOrganization = () => {
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Tổ Chức ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các công cụ và hệ thống tổ chức được thiết kế riêng cho người mắc ADHD. Từ kỹ thuật quản lý thời gian đến thiết lập không gian làm việc hiệu quả.</p>
-                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
+                  <a href="/hanbook" className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</a>
                 </div>
               </div>
             </aside>

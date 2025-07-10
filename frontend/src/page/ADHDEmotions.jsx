@@ -164,7 +164,7 @@ const ADHdEmotions = () => {
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Quản Lý Cảm Xúc!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các kỹ thuật và chiến lược để giúp bạn quản lý cảm xúc mãnh liệt khi mắc ADHD. Từ chánh niệm đến các phương pháp thư giãn hiệu quả.</p>
-                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
+                  <a href="/hanbook" className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</a>
                 </div>
               </div>
             </aside>

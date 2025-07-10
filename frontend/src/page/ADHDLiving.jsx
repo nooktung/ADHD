@@ -171,7 +171,7 @@ const ADHDLiving = () => {
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hiểu Rõ Cuộc Sống ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Khám phá những thách thức và điểm mạnh của cuộc sống với ADHD. Chúng tôi chia sẻ kinh nghiệm thực tế và chiến lược quản lý hiệu quả để bạn có thể sống tốt hơn với ADHD.</p>
-                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</button>
+                  <a href="/hanbook" className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</a>
                 </div>
               </div>
             </aside>

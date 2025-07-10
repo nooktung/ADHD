@@ -535,9 +535,9 @@ const ADHDInattentive = () => {
                                     </div>
                                     <h4 style={{ textAlign: 'center' }}>Hiểu Rõ ADHD Thể Không Chú Ý!</h4>
                                     <p style={{ textAlign: 'center' }}>Chúng tôi cung cấp thông tin chi tiết về ADHD thể không chú ý - dạng thường bị bỏ sót nhưng rất phổ biến. Từ nhận diện triệu chứng đến chiến lược quản lý hiệu quả.</p>
-                                    <button className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
+                                    <a href="/hanbook" className="adhd-cta-button" style={{ display: 'block', margin: '0 auto' }}>
                                         Tìm hiểu thêm
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </aside>

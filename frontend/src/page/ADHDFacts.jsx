@@ -146,7 +146,7 @@ const ADHDFacts = () => {
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hiểu Đúng Về ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp thông tin khoa học chính xác về ADHD để giúp bạn hiểu rõ hơn về bản chất thần kinh học của tình trạng này. Từ nguyên nhân di truyền đến các yếu tố môi trường, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.</p>
-                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</button>
+                  <a href="/hanbook" className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</a>
                 </div>
               </div>
             </aside>

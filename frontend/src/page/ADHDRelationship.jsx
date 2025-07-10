@@ -171,7 +171,7 @@ const ADHDRelationship = () => {
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Mối Quan Hệ ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các chiến lược và kỹ năng để giúp bạn xây dựng và duy trì các mối quan hệ lành mạnh khi mắc ADHD. Từ kỹ năng giao tiếp đến quản lý cảm xúc trong các mối quan hệ.</p>
-                  <button className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Khám phá tài nguyên</button>
+                  <a href="/hanbook" className="adhd-cta-button" style={{display: 'block', margin: '0 auto'}}>Tìm hiểu thêm</a>
                 </div>
               </div>
             </aside>

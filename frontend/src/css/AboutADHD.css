@@ -286,7 +286,7 @@ html {
   font-size: 0.95rem;
 }
 
-.adhd-cta-button {
+.adhd-cta-button, a.adhd-cta-button {
   background: var(--dark-slate-grey);
   color: white;
   border: none;
@@ -296,9 +296,12 @@ html {
   cursor: pointer;
   transition: all 0.2s;
   width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
-.adhd-cta-button:hover {
+.adhd-cta-button:hover, a.adhd-cta-button:hover {
   background: #0791b7;
   color: white;
   transform: translateY(-2px);
