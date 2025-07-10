@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../css/Story.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import RelatedArticles from '../page/RelatedArticles';
 
 const Story3 = () => {
     useEffect(() => {
@@ -159,6 +160,7 @@ const Story3 = () => {
             </div>
             {/* Footer */}
             <Footer />
+            <RelatedArticles currentPage="story3" />
         </div>
     );
 };

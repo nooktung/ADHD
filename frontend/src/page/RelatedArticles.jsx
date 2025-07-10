@@ -179,15 +179,6 @@ const RelatedArticles = ({ currentPage }) => {
             title: "Nhận thức về ADHD",
             pages: [
                 {
-                    id: "awareness",
-                    title: "Tầm quan trọng của việc hiểu về ADHD",
-                    excerpt: "Nhận thức về ADHD là điều cần thiết vì nó thúc đẩy một môi trường hỗ trợ nơi những người mắc ADHD có thể phát triển.",
-                    date: "24/06/2025",
-                    link: "/adhd-awareness",
-                    bgColor: "bg-green-100",
-                    borderColor: "border-green-200"
-                },
-                {
                     id: "facts",
                     title: "Sự thật về ADHD",
                     excerpt: "ADHD là rối loạn thần kinh thực sự với các triệu chứng giảm chú ý, tăng động và bốc đồng - không phải chỉ là hành vi nghịch ngợm. Nguyên nhân là rối loạn chức năng não bộ (vỏ não trước trán) và bất thường hệ thống dopamine/noradrenaline. Hiểu đúng về ADHD giúp chẩn đoán sớm và điều trị hiệu quả, tránh hệ quả tiêu cực.",
@@ -208,15 +199,6 @@ const RelatedArticles = ({ currentPage }) => {
                     excerpt: "ADHD không chỉ là một tình trạng hành vi; nó còn có tác động đáng kể đến sức khỏe thể chất và tinh thần. Việc quản lý đúng cách là rất quan trọng để giảm thiểu rủi ro liên quan đến các tình trạng bệnh lý đi kèm và cải thiện sức khỏe tổng thể.",
                     date: "24/06/2025",
                     link: "/adhd-and-health",
-                    bgColor: "bg-yellow-100",
-                    borderColor: "border-yellow-200"
-                },
-                {
-                    id: "life",
-                    title: "Cuộc sống ADHD",
-                    excerpt: "Sống chung với ADHD bao gồm việc áp dụng các thói quen có cấu trúc và các chiến lược để tăng cường sự tập trung, tổ chức và sức khỏe cảm xúc, đồng thời tìm kiếm sự hỗ trợ từ cộng đồng hiểu được trải nghiệm ADHD.",
-                    date: "24/06/2025",
-                    link: "/adhd-life",
                     bgColor: "bg-yellow-100",
                     borderColor: "border-yellow-200"
                 },
@@ -263,15 +245,6 @@ const RelatedArticles = ({ currentPage }) => {
             title: "Các triệu chứng ADHD",
             pages: [
                 {
-                    id: "symptoms",
-                    title: "Hiểu về phổ các triệu chứng của Rối loạn tăng động giảm chú ý (ADHD)",
-                    excerpt: "Các triệu chứng ADHD thường bao gồm sự giảm chú ý, tính tăng động và tính xung động, nhưng có thể biểu hiện rất đa dạng về hình thái và cường độ, đôi khi bị che lấp hoặc không được nhận diện trong nhiều năm.",
-                    date: "24/06/2025",
-                    link: "/adhd-symptoms",
-                    bgColor: "bg-purple-100",
-                    borderColor: "border-purple-200"
-                },
-                {
                     id: "inattentive",
                     title: "ADHD thể Giảm chú ý",
                     excerpt: "ADHD thể Giảm chú ý được đặc trưng bởi những khó khăn trong việc duy trì sự tập trung, tuân thủ các hướng dẫn chi tiết và tổ chức công việc. Khác với thể Tăng động - Bốc đồng, các cá nhân này có thể có vẻ ngoài như đang mơ mộng, tỏ ra không lắng nghe hoặc dễ bị phân tâm bởi các kích thích bên ngoài. Dạng ADHD này thường không được chú ý đến (hoặc dễ bị bỏ sót) vì nó thiếu các biểu hiện tăng động và bốc đồng rõ rệt như các thể khác. Do đó, việc các nhà giáo dục và người chăm sóc có thể nhận ra những dấu hiệu kín đáo hơn này là cực kỳ quan trọng để cung cấp sự hỗ trợ và can thiệp phù hợp.",
@@ -300,6 +273,76 @@ const RelatedArticles = ({ currentPage }) => {
                 }
             ]
         }
+    };
+
+    // Thêm lại category 'stories' cho các trang Story
+    categories.stories = {
+        title: "Câu chuyện ADHD",
+        pages: [
+            {
+                id: "story1",
+                title: "Nguyễn Như Thành Đạt - Chẩn đoán ADHD ở tuổi 16",
+                excerpt: "Câu chuyện về hành trình chẩn đoán ADHD của một thanh niên 18 tuổi tại Việt Nam, từ những khó khăn ban đầu đến việc tìm hiểu và chấp nhận tình trạng của mình.",
+                date: "24/06/2025",
+                link: "/adhd-story1",
+                bgColor: "bg-green-100",
+                borderColor: "border-green-200"
+            },
+            {
+                id: "story2",
+                title: "Nguyễn Ngọc Hiếu - Hành trình từ nghi ngờ đến chẩn đoán",
+                excerpt: "Trải nghiệm của một sinh viên đại học 24 tuổi khi phát hiện ra mình mắc ADHD và cách anh ấy đối phó với những thách thức trong học tập và cuộc sống.",
+                date: "24/06/2025",
+                link: "/adhd-story2",
+                bgColor: "bg-green-100",
+                borderColor: "border-green-200"
+            },
+            {
+                id: "story3",
+                title: "Phan Sỹ Hưng - ADHD và cuộc sống gia đình",
+                excerpt: "Câu chuyện của một người cha 31 tuổi về cách ADHD ảnh hưởng đến cuộc sống gia đình và cách anh ấy học cách quản lý các triệu chứng để trở thành người cha tốt hơn.",
+                date: "24/06/2025",
+                link: "/adhd-story3",
+                bgColor: "bg-green-100",
+                borderColor: "border-green-200"
+            },
+            {
+                id: "story4",
+                title: "Trần Mai Thảo Vy - ADHD trong môi trường công việc",
+                excerpt: "Trải nghiệm của một phụ nữ trẻ về việc sống với ADHD trong môi trường công việc và cách cô ấy tìm ra những chiến lược để thành công trong sự nghiệp.",
+                date: "24/06/2025",
+                link: "/adhd-story4",
+                bgColor: "bg-green-100",
+                borderColor: "border-green-200"
+            },
+            {
+                id: "story5",
+                title: "Lê Khắc Hải - Hành trình chữa lành với ADHD",
+                excerpt: "Câu chuyện về việc tìm kiếm chẩn đoán và điều trị ADHD của một sinh viên đại học, và cách anh ấy học cách chấp nhận và yêu thương bản thân.",
+                date: "24/06/2025",
+                link: "/adhd-story5",
+                bgColor: "bg-green-100",
+                borderColor: "border-green-200"
+            },
+            {
+                id: "story6",
+                title: "Nguyễn Mai Trang - ADHD và giáo dục",
+                excerpt: "Trải nghiệm của một phụ nữ về việc sống với ADHD trong hệ thống giáo dục và cách cô ấy vượt qua những thách thức để đạt được thành công.",
+                date: "24/06/2025",
+                link: "/adhd-story6",
+                bgColor: "bg-green-100",
+                borderColor: "border-green-200"
+            },
+            {
+                id: "story7",
+                title: "Lương Ngọc Mai - ADHD và nghiên cứu học thuật",
+                excerpt: "Câu chuyện về việc phát hiện ADHD trong quá trình làm luận văn thạc sĩ và cách một sinh viên học cách quản lý các triệu chứng để hoàn thành mục tiêu học tập.",
+                date: "24/06/2025",
+                link: "/adhd-story7",
+                bgColor: "bg-green-100",
+                borderColor: "border-green-200"
+            }
+        ]
     };
 
     // Tìm category chứa trang hiện tại

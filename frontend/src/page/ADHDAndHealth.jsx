@@ -295,7 +295,7 @@ const ADHDAndHealth = () => {
             </article>
           </div>
         </div>
-        <RelatedArticles currentPage="and-health" />
+        <RelatedArticles currentPage="health" />
       </div>
       <Footer />
     </>
