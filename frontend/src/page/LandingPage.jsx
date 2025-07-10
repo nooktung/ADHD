@@ -275,13 +275,6 @@ const LandingPage = () => {
     },
   ]
 
-  // Scroll to top when story modal link changes (for full story)
-  // useEffect(() => {
-  //   if (selectedStory && selectedStory.link) {
-  //     window.scrollTo({ top: 0, behavior: 'instant' });
-  //   }
-  // }, [selectedStory]);
-
   return (
     <>
       <Header />
@@ -293,10 +286,17 @@ const LandingPage = () => {
             <button className="modal-close-btn" onClick={handleCloseModal}>×</button>
             <div className="story-modal-content">
               <div className="story-modal-header">
-                <div className="story-avatar-new">{selectedStory.avatar}</div>
+                <div className="story-avatar-new">
+                  <img
+                    src={`/UStory${selectedStory.id}.jpg`}
+                    alt={selectedStory.name}
+                    className="story-avatar-img"
+                    style={{ width: '56px', height: '56px', objectFit: 'cover', borderRadius: '50%' }}
+                  />
+                </div>
                 <div className="story-info">
                   <h3 className="story-name-new">{selectedStory.name}</h3>
-                  <p className="story-age">{selectedStory.age}</p>
+                  <p className="story-age">{selectedStory.age} tuổi</p>
                 </div>
               </div>
               <h4 className="story-title-new">{selectedStory.title}</h4>
@@ -328,7 +328,7 @@ const LandingPage = () => {
         </div>
       )}
 
-      {/* Hero Section - Updated with content from "Lời mở đầu" */}
+      {/* Hero Section */}
       <section className="hero">
         <div className="hero-container">
           <div className="hero-content">
@@ -345,18 +345,12 @@ const LandingPage = () => {
               src="logo.jpg"
               alt="ADHD Traits Visualization"
               className="hero-visual-image"
-              style={{
-                maxWidth: '100%',
-                height: 'auto',
-                borderRadius: '12px',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
-              }}
             />
           </div>
         </div>
       </section>
 
-      {/* Features Section - Updated with interactive cards */}
+      {/* Features Section */}
       <section className="features">
         <div className="features-container">
           <h2>Tìm hiểu về ADHD với nội dung minh họa của chúng tôi!</h2>
@@ -379,30 +373,30 @@ const LandingPage = () => {
 
             <div className="right-section">
               {/* Triệu chứng Card - Horizontal Layout */}
-              <div className="horizontal-card" style={{ marginBottom: '24px', background: '#e8c5e8' }}>
-                <Link to="/adhd-symptoms" style={{ display: 'flex', alignItems: 'center', gap: '24px', width: '100%', textDecoration: 'none', color: 'inherit' }}>
-                  <div className="workbook-icon" style={{ flex: '0 0 60px' }}>
-                    <span style={{ fontSize: '70px' }}>📚</span>
+              <div className="horizontal-card symptoms-card">
+                <Link to="/adhd-symptoms" className="horizontal-card-link">
+                  <div className="workbook-icon">
+                    <span>📚</span>
                   </div>
-                  <div className="workbook-text" style={{ flex: 1 ,marginLeft:'20px'}}>
-                    <h3 className="main-question" style={{ fontSize: '25px', color: '#8b4a8b', marginBottom: '8px' }}>Triệu chứng</h3>
-                    <p className="subtitle-text" style={{ fontSize: '15px', color: '#8b4a8b', margin: 0, whiteSpace: 'normal' }}>
+                  <div className="workbook-text">
+                    <h3>Triệu chứng</h3>
+                    <p>
                       Các triệu chứng ADHD thường bao gồm sự giảm chú ý, tính tăng động và tính xung động, nhưng có thể biểu hiện rất đa dạng về hình thái và cường độ, đôi khi bị che lấp hoặc không được nhận diện trong nhiều năm.
                     </p>
                   </div>
                 </Link>
               </div>
 
-              {/* Horizontal Card - Clickable */}
-              <div className="horizontal-card">
-                <Link to="/adhd-living">
+              {/* Sống chung với ADHD Card - Horizontal Layout */}
+              <div className="horizontal-card living-card">
+                <Link to="/adhd-living" className="horizontal-card-link">
                   <div className="workbook-icon">
                     <span>⚖️</span>
                   </div>
                   <div className="workbook-text">
                     <h3>Sống chung với ADHD</h3>
-                    <p style={{ marginTop: '8px' }}>
-                      Sống chung với ADHD bao gồm việc vượt qua những thách thức độc đáo và khai thác điểm mạnh của từng cá nhân. Điều này thường có nghĩa là phải đối mặt với sự tập trung không ổn định, kiểm soát sự bốc đồng và tìm ra các chiến lược để sắp xếp các công việc hàng ngày
+                    <p>
+                      Sống chung với ADHD bao gồm việc vượt qua những thách thức độc đáo và khai thác điểm mạnh của từng cá nhân. Điều này thường có nghĩa là phải đối mặt với sự tập trung không ổn định, kiểm soát sự bốc đồng và tìm ra các chiến lược để sắp xếp các công việc hàng ngày.
                     </p>
                   </div>
                 </Link>
@@ -414,8 +408,8 @@ const LandingPage = () => {
 
       {/* Stats Section */}
       <section className="stats">
-        <div className="stats-container" style={{display: 'flex', alignItems: 'flex-start', gap: 40, flexWrap: 'wrap', justifyContent: 'space-between'}}>
-          <div className="stats-content" style={{flex: 1, minWidth: 280}}>
+        <div className="stats-container">
+          <div className="stats-content">
             <h2>Tại sao việc nâng cao nhận thức về ADHD là rất quan trọng:</h2>
             <div className="stat-item">
               <div className="stat-number">5%</div>
@@ -445,13 +439,13 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="stats-image" style={{flex: '0 0 340px', maxWidth: 340, minWidth: 220, display: 'flex', justifyContent: 'center'}}>
-            <img src="/Hanbook.jpg" alt="Hanbook" style={{width: '80%', height: 'auto', borderRadius: '16px', boxShadow: '0 2px 12px #0002'}} />
+          <div className="stats-image">
+            <img src="/Hanbook.jpg" alt="Hanbook" />
           </div>
         </div>
       </section>
 
-      {/* Blog Section - Updated with real ADHD articles */}
+      {/* Blog Section */}
       <section className="blog">
         <div className="blog-container">
           <div className="blog-header">
@@ -463,16 +457,16 @@ const LandingPage = () => {
 
           <div className="blog-nav">
             <button className="nav-arrow" onClick={scrollBlogLeft}>
-              ←
+              &lt;
             </button>
             <button className="nav-arrow" onClick={scrollBlogRight}>
-              →
+              &gt;
             </button>
           </div>
 
           <div className="blog-scroll-container" ref={blogScrollContainerRef}>
             {blogPosts.map((post) => (
-              <div key={post.id} className="blog-card-new" onClick={() => handleBlogClick(post)} style={{ cursor: 'pointer' }}>
+              <div key={post.id} className="blog-card-new" onClick={() => handleBlogClick(post)}>
                 <div className="blog-image-container">
                   <img src={post.image} alt={post.title} className="blog-image" />
                 </div>
@@ -490,7 +484,7 @@ const LandingPage = () => {
                     <span className="blog-date">{post.date}</span>
                   </div>
                   {post.isExternal && (
-                    <div style={{ position: 'absolute', top: '10px', right: '10px', background: 'rgba(0,0,0,0.7)', color: 'white', padding: '4px 8px', borderRadius: '4px', fontSize: '12px' }}>
+                    <div className="external-badge">
                       ↗ External
                     </div>
                   )}
@@ -513,24 +507,26 @@ const LandingPage = () => {
 
           <div className="stories-nav">
             <button className="nav-arrow" onClick={scrollLeft}>
-              ←
+              &lt;
             </button>
             <button className="nav-arrow" onClick={scrollRight}>
-              →
+              &gt;
             </button>
           </div>
 
           <div className="stories-scroll-container" ref={scrollContainerRef} onScroll={checkScrollButtons}>
             {stories.map((story) => (
               <div key={story.id} className="story-card-new" onClick={() => handleStoryClick(story)}>
-                <div className="story-header-new">
-                  <div className="story-avatar-new">{story.avatar}</div>
-                  <div className="story-info">
-                    <h3 className="story-name-new">{story.name}</h3>
-                    <p className="story-age">{story.age}</p>
-                  </div>
-                </div>
-                <h4 className="story-title-new">{story.title}</h4>
+                <img
+                  src={`/UStory${story.id}.jpg`}
+                  alt={story.name}
+                  className="story-image"
+                  style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '12px 12px 0 0', marginBottom: '12px' }}
+                />
+                <h4 className="story-title-new">
+                  <span style={{ display: 'block', fontWeight: 'bold', textAlign: 'center' }}>{story.name}</span>
+                  <span style={{ display: 'block', fontWeight: 'normal', textTransform: 'lowercase', textAlign: 'center' }}>{story.age} tuổi</span>
+                </h4>
                 <div className="story-content-section">
                   <h5 className="story-question-new">Điều gì khiến bạn quyết định đi khám?</h5>
                   <p className="story-text-new">{story.content}</p>
@@ -565,7 +561,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Social Media Section - Updated with Facebook Style */}
+      {/* Social Media Section */}
       <section className="social-media-section">
         <div className="social-media-container">
           {/* Header */}
@@ -584,7 +580,7 @@ const LandingPage = () => {
             <div className="social-feed-header">
               <div className="social-profile">
                 <div className="profile-avatar">
-                  <img src="/logo.jpg" alt="Bản Giao Hưởng Tập Trung" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                  <img src="/logo.jpg" alt="Bản Giao Hưởng Tập Trung" />
                 </div>
                 <div className="profile-info">
                   <h3>BẢN GIAO HƯỞNG TẬP TRUNG</h3>
@@ -656,8 +652,7 @@ const LandingPage = () => {
           <span className="cute-character">🧠</span>
           <h2>Chúng ta vẫn còn nhiều điều để học về ADHD</h2>
           <p>
-          Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi.
-
+            Bất kể bạn đang ở đâu trong hành trình ADHD, chúng tôi có thể đảm bảo rằng bạn có thể học hỏi từ nội dung của chúng tôi.
           </p>
           <button
             className="btn-primary"

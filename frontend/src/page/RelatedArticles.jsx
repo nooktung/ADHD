@@ -1,178 +1,9 @@
+// RelatedArticles.jsx - React Component for Related Articles
+import React from 'react';
 import { Calendar } from "lucide-react";
+import '../css/RelatedArticles.css';
 
 const RelatedArticles = ({ currentPage }) => {
-    // Styles object cho component
-    const styles = {
-        container: {
-            maxWidth: '80rem',
-            margin: '0 auto',
-            padding: '3rem 1rem',
-            backgroundColor: '#f9fafb',
-            position: 'relative',
-            zIndex: 1,
-            clear: 'both'
-        },
-        header: {
-            textAlign: 'center',
-            marginBottom: '2rem'
-        },
-        title: {
-            fontSize: '2.25rem',
-            fontWeight: '700',
-            color: '#1f2937',
-            marginBottom: '0.5rem'
-        },
-        subtitle: {
-            color: '#6b7280',
-            fontSize: '0.875rem'
-        },
-        grid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '1.5rem'
-        },
-        card: {
-            background: 'white',
-            borderRadius: '1rem',
-            padding: '1.5rem',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease',
-            border: '4px solid',
-            transform: 'translateY(0px) scale(1)',
-            boxShadow: 'none'
-        },
-        categorySection: {
-            textAlign: 'left',
-            marginBottom: '1rem'
-        },
-        categoryMain: {
-            fontSize: '1.5rem',
-            fontWeight: '700',
-            color: '#0f766e',
-            marginBottom: '0.25rem'
-        },
-        categorySub: {
-            fontSize: '1.25rem',
-            fontWeight: '700',
-            color: '#0f766e'
-        },
-        illustration: {
-            width: '100%',
-            height: '10rem',
-            borderRadius: '0.5rem',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: '1rem',
-            position: 'relative'
-        },
-        character: {
-            position: 'relative'
-        },
-        characterHair: {
-            width: '4rem',
-            height: '3rem',
-            backgroundColor: '#f9a8d4',
-            borderRadius: '50%',
-            marginBottom: '0.5rem'
-        },
-        characterFace: {
-            width: '3rem',
-            height: '3rem',
-            backgroundColor: 'white',
-            borderRadius: '50%',
-            margin: '0 auto',
-            position: 'relative'
-        },
-        characterEye: {
-            position: 'absolute',
-            top: '0.75rem',
-            width: '0.25rem',
-            height: '0.25rem',
-            backgroundColor: 'black',
-            borderRadius: '50%'
-        },
-        characterEyeLeft: {
-            left: '0.5rem'
-        },
-        characterEyeRight: {
-            right: '0.5rem'
-        },
-        characterSmile: {
-            position: 'absolute',
-            bottom: '0.75rem',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '1rem',
-            height: '0.5rem',
-            borderBottom: '2px solid black',
-            borderRadius: '50%'
-        },
-        characterBody: {
-            width: '2rem',
-            height: '2rem',
-            backgroundColor: '#f8bbd9',
-            borderRadius: '0.5rem',
-            margin: '0.25rem auto 0'
-        },
-        
-        articleTitle: {
-            fontWeight: '700',
-            color: '#1f2937',
-            fontSize: '1.125rem',
-            marginBottom: '0.75rem',
-            lineHeight: '1.375',
-            textAlign: 'left'
-        },
-        excerpt: {
-            color: '#6b7280',
-            fontSize: '0.875rem',
-            lineHeight: '1.75',
-            marginBottom: '1rem',
-            textAlign: 'left'
-        },
-        date: {
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            color: '#3b82f6',
-            fontSize: '0.875rem'
-        },
-        dateIcon: {
-            width: '1rem',
-            height: '1rem',
-            marginRight: '0.25rem'
-        }
-    };
-
-    // Border colors cho từng loại
-    const borderColors = {
-        'border-green-200': '#bbf7d0',
-        'border-blue-200': '#bfdbfe',
-        'border-purple-200': '#e9d5ff',
-        'border-pink-200': '#fce7f3',
-        'border-yellow-200': '#fef3c7',
-        'border-orange-200': '#fed7aa',
-        'border-red-200': '#fecaca',
-        'border-indigo-200': '#c7d2fe',
-        'border-cyan-200': '#a5f3fc',
-        'border-gray-200': '#e5e7eb'
-    };
-
-    // Background colors cho illustration
-    const bgColors = {
-        'bg-green-100': '#dcfce7',
-        'bg-blue-50': '#eff6ff',
-        'bg-purple-100': '#f3e8ff',
-        'bg-pink-100': '#fce7f3',
-        'bg-yellow-100': '#fef3c7',
-        'bg-orange-100': '#fed7aa',
-        'bg-red-100': '#fee2e2',
-        'bg-indigo-100': '#e0e7ff',
-        'bg-cyan-100': '#cffafe',
-        'bg-gray-100': '#f3f4f6'
-    };
-
     // Định nghĩa các categories và các trang thuộc về chúng
     const categories = {
         awareness: {
@@ -281,77 +112,76 @@ const RelatedArticles = ({ currentPage }) => {
                     borderColor: "border-purple-200"
                 }
             ]
-        }
-    };
+        },
 
-    // Thêm lại category 'stories' cho các trang Story
-    categories.stories = {
-        title: "Câu chuyện ADHD",
-        pages: [
-            {
-                id: "story1",
-                title: "Nguyễn Như Thành Đạt - Chẩn đoán ADHD ở tuổi 16",
-                excerpt: "Câu chuyện về hành trình chẩn đoán ADHD của một thanh niên 18 tuổi tại Việt Nam, từ những khó khăn ban đầu đến việc tìm hiểu và chấp nhận tình trạng của mình.",
-                date: "24/06/2025",
-                link: "/adhd-story1",
-                bgColor: "bg-green-100",
-                borderColor: "border-green-200"
-            },
-            {
-                id: "story2",
-                title: "Nguyễn Ngọc Hiếu - Hành trình từ nghi ngờ đến chẩn đoán",
-                excerpt: "Trải nghiệm của một sinh viên đại học 24 tuổi khi phát hiện ra mình mắc ADHD và cách anh ấy đối phó với những thách thức trong học tập và cuộc sống.",
-                date: "24/06/2025",
-                link: "/adhd-story2",
-                bgColor: "bg-green-100",
-                borderColor: "border-green-200"
-            },
-            {
-                id: "story3",
-                title: "Phan Sỹ Hưng - ADHD và cuộc sống gia đình",
-                excerpt: "Câu chuyện của một người cha 31 tuổi về cách ADHD ảnh hưởng đến cuộc sống gia đình và cách anh ấy học cách quản lý các triệu chứng để trở thành người cha tốt hơn.",
-                date: "24/06/2025",
-                link: "/adhd-story3",
-                bgColor: "bg-green-100",
-                borderColor: "border-green-200"
-            },
-            {
-                id: "story4",
-                title: "Trần Mai Thảo Vy - ADHD trong môi trường công việc",
-                excerpt: "Trải nghiệm của một phụ nữ trẻ về việc sống với ADHD trong môi trường công việc và cách cô ấy tìm ra những chiến lược để thành công trong sự nghiệp.",
-                date: "24/06/2025",
-                link: "/adhd-story4",
-                bgColor: "bg-green-100",
-                borderColor: "border-green-200"
-            },
-            {
-                id: "story5",
-                title: "Lê Khắc Hải - Hành trình chữa lành với ADHD",
-                excerpt: "Câu chuyện về việc tìm kiếm chẩn đoán và điều trị ADHD của một sinh viên đại học, và cách anh ấy học cách chấp nhận và yêu thương bản thân.",
-                date: "24/06/2025",
-                link: "/adhd-story5",
-                bgColor: "bg-green-100",
-                borderColor: "border-green-200"
-            },
-            {
-                id: "story6",
-                title: "Nguyễn Mai Trang - ADHD và giáo dục",
-                excerpt: "Trải nghiệm của một phụ nữ về việc sống với ADHD trong hệ thống giáo dục và cách cô ấy vượt qua những thách thức để đạt được thành công.",
-                date: "24/06/2025",
-                link: "/adhd-story6",
-                bgColor: "bg-green-100",
-                borderColor: "border-green-200"
-            },
-            {
-                id: "story7",
-                title: "Lương Ngọc Mai - ADHD và nghiên cứu học thuật",
-                excerpt: "Câu chuyện về việc phát hiện ADHD trong quá trình làm luận văn thạc sĩ và cách một sinh viên học cách quản lý các triệu chứng để hoàn thành mục tiêu học tập.",
-                date: "24/06/2025",
-                link: "/adhd-story7",
-                bgColor: "bg-green-100",
-                borderColor: "border-green-200"
-            }
-        ]
+        stories: {
+            title: "Câu chuyện ADHD",
+            pages: [
+                {
+                    id: "story1",
+                    title: "Nguyễn Như Thành Đạt - Chẩn đoán ADHD ở tuổi 16",
+                    excerpt: "Câu chuyện về hành trình chẩn đoán ADHD của một thanh niên 18 tuổi tại Việt Nam, từ những khó khăn ban đầu đến việc tìm hiểu và chấp nhận tình trạng của mình.",
+                    date: "24/06/2025",
+                    link: "/adhd-story1",
+                    bgColor: "bg-green-100",
+                    borderColor: "border-green-200"
+                },
+                {
+                    id: "story2",
+                    title: "Nguyễn Ngọc Hiếu - Hành trình từ nghi ngờ đến chẩn đoán",
+                    excerpt: "Trải nghiệm của một sinh viên đại học 24 tuổi khi phát hiện ra mình mắc ADHD và cách anh ấy đối phó với những thách thức trong học tập và cuộc sống.",
+                    date: "24/06/2025",
+                    link: "/adhd-story2",
+                    bgColor: "bg-green-100",
+                    borderColor: "border-green-200"
+                },
+                {
+                    id: "story3",
+                    title: "Phan Sỹ Hưng - ADHD và cuộc sống gia đình",
+                    excerpt: "Câu chuyện của một người cha 31 tuổi về cách ADHD ảnh hưởng đến cuộc sống gia đình và cách anh ấy học cách quản lý các triệu chứng để trở thành người cha tốt hơn.",
+                    date: "24/06/2025",
+                    link: "/adhd-story3",
+                    bgColor: "bg-green-100",
+                    borderColor: "border-green-200"
+                },
+                {
+                    id: "story4",
+                    title: "Trần Mai Thảo Vy - ADHD trong môi trường công việc",
+                    excerpt: "Trải nghiệm của một phụ nữ trẻ về việc sống với ADHD trong môi trường công việc và cách cô ấy tìm ra những chiến lược để thành công trong sự nghiệp.",
+                    date: "24/06/2025",
+                    link: "/adhd-story4",
+                    bgColor: "bg-green-100",
+                    borderColor: "border-green-200"
+                },
+                {
+                    id: "story5",
+                    title: "Lê Khắc Hải - Hành trình chữa lành với ADHD",
+                    excerpt: "Câu chuyện về việc tìm kiếm chẩn đoán và điều trị ADHD của một sinh viên đại học, và cách anh ấy học cách chấp nhận và yêu thương bản thân.",
+                    date: "24/06/2025",
+                    link: "/adhd-story5",
+                    bgColor: "bg-green-100",
+                    borderColor: "border-green-200"
+                },
+                {
+                    id: "story6",
+                    title: "Nguyễn Mai Trang - ADHD và giáo dục",
+                    excerpt: "Trải nghiệm của một phụ nữ về việc sống với ADHD trong hệ thống giáo dục và cách cô ấy vượt qua những thách thức để đạt được thành công.",
+                    date: "24/06/2025",
+                    link: "/adhd-story6",
+                    bgColor: "bg-green-100",
+                    borderColor: "border-green-200"
+                },
+                {
+                    id: "story7",
+                    title: "Lương Ngọc Mai - ADHD và nghiên cứu học thuật",
+                    excerpt: "Câu chuyện về việc phát hiện ADHD trong quá trình làm luận văn thạc sĩ và cách một sinh viên học cách quản lý các triệu chứng để hoàn thành mục tiêu học tập.",
+                    date: "24/06/2025",
+                    link: "/adhd-story7",
+                    bgColor: "bg-green-100",
+                    borderColor: "border-green-200"
+                }
+            ]
+        }
     };
 
     // Tìm category chứa trang hiện tại
@@ -382,34 +212,21 @@ const RelatedArticles = ({ currentPage }) => {
 
     // Component minh họa nhân vật
     const CharacterIllustration = ({ pageId, bgColor }) => {
-        const getIcon = () => {
-            return "";
-        };
-
-        const illustrationStyle = {
-            ...styles.illustration,
-            backgroundColor: bgColors[bgColor] || '#f3f4f6'
-        };
-
         return (
-            <div style={illustrationStyle}>
-                <div style={styles.character}>
+            <div className={`article-illustration ${bgColor}`}>
+                <div className="character">
                     {/* Hair */}
-                    <div style={styles.characterHair}></div>
+                    <div className="character-hair"></div>
                     {/* Face */}
-                    <div style={styles.characterFace}>
+                    <div className="character-face">
                         {/* Eyes */}
-                        <div style={{ ...styles.characterEye, ...styles.characterEyeLeft }}></div>
-                        <div style={{ ...styles.characterEye, ...styles.characterEyeRight }}></div>
+                        <div className="character-eye character-eye-left"></div>
+                        <div className="character-eye character-eye-right"></div>
                         {/* Smile */}
-                        <div style={styles.characterSmile}></div>
+                        <div className="character-smile"></div>
                     </div>
                     {/* Body */}
-                    <div style={styles.characterBody}></div>
-                    {/* Icon overlay */}
-                    <div style={styles.icon}>
-                        {getIcon()}
-                    </div>
+                    <div className="character-body"></div>
                 </div>
             </div>
         );
@@ -420,78 +237,81 @@ const RelatedArticles = ({ currentPage }) => {
         window.location.href = link;
     };
 
-    // Xử lý hover effect
-    const handleCardHover = (cardElement, isHovering, originalBorderColor) => {
-        if (isHovering) {
-            cardElement.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-            cardElement.style.transform = 'translateY(-8px) scale(1.02)';
-            // Giữ nguyên màu viền gốc
-        } else {
-            cardElement.style.boxShadow = 'none';
-            cardElement.style.transform = 'translateY(0px) scale(1)';
-            // Giữ nguyên màu viền gốc
-        }
-    };
-
     if (relatedArticles.length === 0) {
         return null;
     }
 
     return (
-        <div style={styles.container}>
+        <div className="related-articles-container">
             {/* Header Section */}
-            <div style={styles.header}>
-                <h2 style={styles.title}>
+            <div className="related-articles-header">
+                <h2 className="related-articles-title">
                     Bài viết liên quan bạn có thể quan tâm:
                 </h2>
-                <p style={styles.subtitle}>Khám phá thêm nhiều nội dung hữu ích về ADHD</p>
+                <p className="related-articles-subtitle">
+                    Khám phá thêm nhiều nội dung hữu ích về ADHD
+                </p>
             </div>
 
             {/* Articles Grid */}
-            <div style={{ ...styles.grid, gridTemplateColumns: 'repeat(3, 1fr)' }}>
-                {relatedArticles.map((article) => {
-                    const originalBorderColor = borderColors[article.borderColor] || '#e5e7eb';
-                    const cardStyle = {
-                        ...styles.card,
-                        borderColor: originalBorderColor
-                    };
-                    return (
-                        <div
-                            key={article.id}
-                            onClick={() => handleArticleClick(article.link)}
-                            style={cardStyle}
-                            onMouseEnter={(e) => handleCardHover(e.currentTarget, true, originalBorderColor)}
-                            onMouseLeave={(e) => handleCardHover(e.currentTarget, false, originalBorderColor)}
-                        >
-                            {/* Category Title */}
-                            <div style={styles.categorySection}>
-                                <h3 style={styles.categoryMain}>{article.category}</h3>
-                                <h4 style={styles.categorySub}>{article.subcategory}</h4>
-                            </div>
-                            {/* Character Illustration */}
-                            <CharacterIllustration
-                                pageId={article.id}
-                                bgColor={article.bgColor}
-                            />
-                            {/* Article Title */}
-                            <h4 style={styles.articleTitle}>
-                                {article.title}
-                            </h4>
-                            {/* Article Excerpt */}
-                            <p style={styles.excerpt}>
-                                {article.excerpt}
-                            </p>
-                            {/* Date */}
-                            <div style={styles.date}>
-                                <Calendar style={styles.dateIcon} />
-                                <span>{article.date}</span>
-                            </div>
+            <div className="related-articles-grid related-articles-grid-fixed">
+                {relatedArticles.map((article) => (
+                    <div
+                        key={article.id}
+                        onClick={() => handleArticleClick(article.link)}
+                        className={`related-article-card ${article.borderColor}`}
+                        tabIndex={0}
+                        role="button"
+                        aria-label={`Đọc bài viết: ${article.title}`}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                handleArticleClick(article.link);
+                            }
+                        }}
+                    >
+                        {/* Category Title */}
+                        <div className="category-section">
+                            <h3 className="category-main">{article.category}</h3>
+                            <h4 className="category-sub">{article.subcategory}</h4>
                         </div>
-                    );
-                })}
+                        
+                        {/* Character Illustration */}
+                        {article.id.startsWith('story') ? (
+                          <img
+                            src={`/UStory${article.id.replace('story', '')}.jpg`}
+                            alt={article.title}
+                            className="related-article-image"
+                            style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '12px', marginBottom: '12px' }}
+                          />
+                        ) : (
+                          <CharacterIllustration
+                            pageId={article.id}
+                            bgColor={article.bgColor}
+                          />
+                        )}
+                        
+                        {/* Article Title */}
+                        <h4 className="article-title">
+                            {article.title}
+                        </h4>
+                        
+                        {/* Article Excerpt */}
+                        <p className="article-excerpt">
+                            {article.excerpt}
+                        </p>
+                        
+                        {/* Date */}
+                        <div className="article-date">
+                            <Calendar className="date-icon" />
+                            <span>{article.date}</span>
+                        </div>
+                    </div>
+                ))}
+                
                 {/* Thêm thẻ rỗng nếu số thẻ không chia hết cho 3 */}
                 {Array.from({ length: (3 - (relatedArticles.length % 3)) % 3 }).map((_, i) => (
-                    <div key={`empty-${i}`} style={{ background: 'transparent', boxShadow: 'none', border: 'none', pointerEvents: 'none' }}></div>
+                    <div key={`empty-${i}`} className="empty-card"></div>
                 ))}
             </div>
         </div>

@@ -1,11 +1,11 @@
-// Enhanced Team.jsx - Component with Realistic Student Profiles and EmailJS Integration (FIXED)
+// Enhanced Team.jsx - Component with Realistic Student Profiles and EmailJS Integration
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../css/Team.css';
 import emailjs from '@emailjs/browser';
 
-// Popup Notification Component (reused from ContactUs)
+// Popup Notification Component
 const PopupNotification = ({ type, message, isVisible, onClose }) => {
   if (!isVisible) return null;
 
@@ -306,10 +306,10 @@ const Team = () => {
   const heroRef = useRef(null);
   const contentWrapperRef = useRef(null);
 
-  // FIXED EmailJS Configuration - Đảm bảo sử dụng đúng template ID
+  // EmailJS Configuration
   const EMAILJS_CONFIG = {
     SERVICE_ID: 'service_40nc14n',
-    TEMPLATE_ID: 'template_li498ck', // Sử dụng template_li498ck thay vì template_eivf0vn
+    TEMPLATE_ID: 'template_li498ck',
     PUBLIC_KEY: '-X79ZPUklb2a2uDnH'
   };
 
@@ -520,6 +520,7 @@ const Team = () => {
       }
     }
   ];
+
   const sponsors = [
     {
       id: 1,
@@ -684,7 +685,7 @@ const Team = () => {
     document.body.style.overflow = 'unset';
   };
 
-  // FIXED Send email with EmailJS - Updated template params to match template_li498ck
+  // Send email with EmailJS
   const sendEmailWithEmailJS = async (formData, recipient) => {
     try {
       // Validate required fields
@@ -693,7 +694,7 @@ const Team = () => {
         return;
       }
 
-      // Template params matching template_li498ck structure
+      // Template params matching template structure
       const templateParams = {
         from_name: formData.senderName,
         from_email: formData.senderEmail,
@@ -1345,229 +1346,6 @@ const Team = () => {
           </div>
         )}
       </div>
-
-      <style jsx>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(100%);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes modalSlideIn {
-          from {
-            opacity: 0;
-            transform: scale(0.9) translateY(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
-        }
-
-        /* Email Modal Styles */
-        .email-modal-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.7);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 10000;
-          backdrop-filter: blur(4px);
-        }
-
-        .email-modal {
-          background: white;
-          border-radius: 16px;
-          max-width: 500px;
-          width: 90%;
-          max-height: 80vh;
-          overflow-y: auto;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-          animation: modalSlideIn 0.3s ease-out;
-        }
-
-        .email-modal-header {
-          padding: 24px 24px 0;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          border-bottom: 1px solid #e5e7eb;
-          margin-bottom: 24px;
-        }
-
-        .email-modal-header h3 {
-          margin: 0;
-          color: #1f2937;
-          font-size: 18px;
-          font-weight: 600;
-        }
-
-        .email-modal-close {
-          background: none;
-          border: none;
-          cursor: pointer;
-          padding: 8px;
-          border-radius: 8px;
-          transition: all 0.2s;
-          margin-left: 58vh;
-          color: #6b7280;
-          position: fixed;
-        }
-
-        .email-modal-close:hover {
-          background: #f3f4f6;
-          color: #374151;
-        }
-
-        .email-modal-form {
-          padding: 0 24px 24px;
-        }
-
-        .email-form-group {
-          margin-bottom: 20px;
-        }
-
-        .email-form-group label {
-          display: block;
-          margin-bottom: 8px;
-          font-weight: 500;
-          color: #374151;
-          font-size: 14px;
-        }
-
-        .email-form-group input,
-        .email-form-group textarea {
-          width: 100%;
-          padding: 12px 16px;
-          border: 1px solid #d1d5db;
-          border-radius: 8px;
-          font-size: 14px;
-          transition: all 0.2s;
-          font-family: inherit;
-          box-sizing: border-box;
-        }
-
-        .email-form-group input:focus,
-        .email-form-group textarea:focus {
-          outline: none;
-          border-color: #3b82f6;
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .email-form-group textarea {
-          resize: vertical;
-          min-height: 120px;
-        }
-
-        .email-form-actions {
-          display: flex;
-          gap: 12px;
-          justify-content: flex-end;
-          padding-top: 16px;
-          border-top: 1px solid #e5e7eb;
-        }
-
-        .email-btn-cancel {
-          padding: 10px 20px;
-          border: 1px solid #d1d5db;
-          background: white;
-          color: #374151;
-          border-radius: 8px;
-          font-weight: 500;
-          cursor: pointer;
-          transition: all 0.2s;
-          font-size: 14px;
-        }
-
-        .email-btn-cancel:hover {
-          background: #f9fafb;
-          border-color: #9ca3af;
-        }
-
-        .email-btn-send {
-          padding: 10px 24px;
-          background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-weight: 500;
-          cursor: pointer;
-          transition: all 0.2s;
-          font-size: 14px;
-        }
-
-        .email-btn-send:hover:not(:disabled) {
-          transform: translateY(-1px);
-          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-        }
-
-        .email-btn-send:disabled {
-          opacity: 0.7;
-          cursor: not-allowed;
-          transform: none;
-        }
-
-        .team-contact-link.email {
-          background: none;
-          border: none;
-          color: inherit;
-          text-decoration: none;
-          cursor: pointer;
-          transition: all 0.2s;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding: 8px 12px;
-          border-radius: 6px;
-          font-size: 14px;
-          font-weight: 500;
-        }
-
-        .team-contact-link.email:hover {
-          background: #f3f4f6;
-          color: #3b82f6;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-          .email-modal {
-            width: 95%;
-            margin: 10px;
-          }
-          
-          .email-modal-header {
-            padding: 20px 20px 0;
-          }
-          
-          .email-modal-form {
-            padding: 0 20px 20px;
-          }
-          
-          .email-form-actions {
-            flex-direction: column-reverse;
-          }
-          
-          .email-btn-cancel,
-          .email-btn-send {
-            width: 100%;
-            justify-content: center;
-          }
-        }
-      `}</style>
 
       <Footer />
     </>

@@ -35,6 +35,192 @@
   --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* Keyframe Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes heroColorShift {
+  0% {
+    background: var(--gradient-hero);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+  }
+  100% {
+    background: var(--gradient-sponsor);
+    transform: scale(1);
+  }
+}
+
+@keyframes arrowSlideInRight {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(100px) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes arrowSlideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-100px) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes titleSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes subtitleSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95) rotateX(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
+}
+
+@keyframes contentExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.95) rotateX(-10deg);
+  }
+}
+
+@keyframes gridFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateX(15deg) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes sponsorCardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateY(15deg) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes modalSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
 /* Team Page */
 .team-page {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -496,6 +682,7 @@
   box-shadow: var(--shadow-xl);
   animation: modalSlideUp 0.5s var(--transition-bounce);
   transform-origin: center bottom;
+  position: relative;
 }
 
 .sponsor-modal-overlay {
@@ -521,6 +708,7 @@
   box-shadow: var(--shadow-xl);
   animation: modalSlideUp 0.5s var(--transition-bounce);
   transform-origin: center bottom;
+  position: relative;
 }
 
 /* Modal Header */
@@ -538,15 +726,14 @@
   color: #015f7a;
 }
 
+/* FIXED: Modal Close Button Positioning */
 .team-modal-close, .sponsor-modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
   background: rgba(255, 255, 255, 0.2);
   border: none;
-  margin-right: 40vh;
-  margin-top: 6vh;
-  color: black;
+  color: currentColor;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -555,8 +742,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; 
   z-index: 10;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 .sponsor-modal-close {
@@ -567,146 +755,6 @@
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.1) rotate(90deg);
 }
-
-/* Enhanced Keyframe Animations */
-@keyframes heroColorShift {
-  0% {
-    background: var(--gradient-hero);
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-    filter: brightness(1.1);
-  }
-  100% {
-    background: var(--gradient-sponsor);
-    transform: scale(1);
-  }
-}
-
-@keyframes arrowSlideInRight {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%) translateX(100px) rotate(180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0) rotate(0deg);
-  }
-}
-
-@keyframes arrowSlideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%) translateX(-100px) rotate(-180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-50%) translateX(0) rotate(0deg);
-  }
-}
-
-@keyframes titleSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes subtitleSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes contentEnter {
-  0% {
-    opacity: 0;
-    transform: translateY(60px) scale(0.95) rotateX(10deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotateX(0deg);
-  }
-}
-
-@keyframes contentExit {
-  0% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotateX(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-60px) scale(0.95) rotateX(-10deg);
-  }
-}
-
-@keyframes gridFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes cardSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px) rotateX(15deg) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg) scale(1);
-  }
-}
-
-@keyframes sponsorCardSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px) rotateY(15deg) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotateY(0deg) scale(1);
-  }
-}
-
-@keyframes modalFadeIn {
-  0% {
-    opacity: 0;
-    backdrop-filter: blur(0px);
-  }
-  100% {
-    opacity: 1;
-    backdrop-filter: blur(8px);
-  }
-}
-
-@keyframes modalSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Rest of the styles remain the same... */
-/* (Keeping all the existing modal, image zoom, contact, and responsive styles) */
 
 .team-modal-profile, .sponsor-modal-profile {
   display: flex;
@@ -879,8 +927,6 @@
   transition: all 0.3s ease;
 }
 
-
-
 .sponsor-position-bullet,
 .sponsor-training-bullet,
 .sponsor-research-bullet {
@@ -899,6 +945,7 @@
   padding: 0;
   margin: 0;
 }
+
 .sponsor-expertise-item {
   display: flex;
   align-items: flex-start;
@@ -909,6 +956,7 @@
   border-left: 3px solid #caf2e5;
   transition: all 0.3s ease;
 }
+
 .sponsor-expertise-bullet {
   width: 8px;
   height: 8px;
@@ -966,6 +1014,8 @@
 .team-contact-link.email {
   background: rgba(59, 130, 246, 0.1);
   color: #3b82f6;
+  border: none;
+  cursor: pointer;
 }
 
 .team-contact-link.phone {
@@ -981,6 +1031,11 @@
 .team-contact-link:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+.team-contact-link.email:hover {
+  background: #f3f4f6;
+  color: #3b82f6;
 }
 
 /* Image Zoom Modal */
@@ -1050,46 +1105,173 @@
   font-weight: 500;
 }
 
-@keyframes zoomIn {
-  from {
-      opacity: 0;
-      transform: scale(0.8);
-  }
-  to {
-      opacity: 1;
-      transform: scale(1);
-  }
-}
-
 /* View Transition Animation */
-@keyframes slideInRight {
-  from {
-      opacity: 0;
-      transform: translateX(100px);
-  }
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-      opacity: 0;
-      transform: translateX(-100px);
-  }
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
 .content-wrapper.team .team-grid.active {
   animation: slideInLeft 0.5s ease-out;
 }
 
 .content-wrapper.sponsors .team-grid.active {
   animation: slideInRight 0.5s ease-out;
+}
+
+/* Email Modal Styles */
+.email-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(4px);
+}
+
+.email-modal {
+  background: white;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+  position: relative;
+}
+
+.email-modal-header {
+  padding: 24px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.email-modal-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+  padding-right: 2rem;
+}
+
+/* FIXED: Email Modal Close Button */
+.email-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  color: #6b7280;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.email-modal-close:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.email-modal-form {
+  padding: 0 24px 24px;
+}
+
+.email-form-group {
+  margin-bottom: 20px;
+}
+
+.email-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+}
+
+.email-form-group input,
+.email-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.email-form-group input:focus,
+.email-form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.email-form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.email-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.email-btn-cancel {
+  padding: 10px 20px;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.email-btn-cancel:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.email-btn-send {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.email-btn-send:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.email-btn-send:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* Responsive Design */
@@ -1149,8 +1331,18 @@
       height: 280px;
   }
   
+  /* FIXED: Mobile Modal Header and Close Button */
   .team-modal-header, .sponsor-modal-header {
       padding: 1.5rem;
+      border-radius: 1.75rem 1.75rem 0 0;
+  }
+  
+  .team-modal-close, .sponsor-modal-close {
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      font-size: 1.1rem;
   }
   
   .team-modal-content, .sponsor-modal-content {
@@ -1198,6 +1390,45 @@
   .hero-nav-left {
       left: 0.5rem;
   }
+
+  /* FIXED: Mobile Email Modal */
+  .email-modal {
+      width: 95%;
+      margin: 10px;
+      max-height: 90vh;
+  }
+  
+  .email-modal-header {
+      padding: 20px 20px 0;
+      margin-bottom: 20px;
+  }
+  
+  .email-modal-header h3 {
+      font-size: 16px;
+      padding-right: 3rem;
+  }
+  
+  .email-modal-close {
+      top: 4px;
+      right: 4px;
+      width: 36px;
+      height: 36px;
+      font-size: 1.1rem;
+  }
+  
+  .email-modal-form {
+      padding: 0 20px 20px;
+  }
+  
+  .email-form-actions {
+      flex-direction: column-reverse;
+  }
+  
+  .email-btn-cancel,
+  .email-btn-send {
+      width: 100%;
+      justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1209,8 +1440,18 @@
       padding: 1rem;
   }
   
+  /* FIXED: Small Mobile Modal */
   .team-modal-header, .sponsor-modal-header {
       padding: 1rem;
+      border-radius: 1.5rem 1.5rem 0 0;
+  }
+  
+  .team-modal-close, .sponsor-modal-close {
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
   }
   
   .team-modal-content, .sponsor-modal-content {
@@ -1245,6 +1486,51 @@
       width: 40px;
       height: 40px;
   }
+
+  /* FIXED: Small Mobile Email Modal */
+  .email-modal {
+      width: 98%;
+      margin: 5px;
+      border-radius: 12px;
+  }
+  
+  .email-modal-header {
+      padding: 16px 16px 0;
+      margin-bottom: 16px;
+  }
+  
+  .email-modal-header h3 {
+      font-size: 15px;
+      padding-right: 2.5rem;
+  }
+  
+  .email-modal-close {
+      top: 2px;
+      right: 2px;
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+  }
+  
+  .email-modal-form {
+      padding: 0 16px 16px;
+  }
+  
+  .email-form-group {
+      margin-bottom: 16px;
+  }
+  
+  .email-form-group input,
+  .email-form-group textarea {
+      padding: 10px 12px;
+      font-size: 13px;
+  }
+  
+  .email-btn-cancel,
+  .email-btn-send {
+      padding: 10px 16px;
+      font-size: 13px;
+  }
 }
 
 /* Focus states for accessibility */
@@ -1256,7 +1542,8 @@
 .team-modal-avatar:focus,
 .sponsor-modal-avatar:focus,
 .image-zoom-close:focus,
-.hero-nav-arrow:focus {
+.hero-nav-arrow:focus,
+.email-modal-close:focus {
   outline: 2px solid var(--accent-teal);
   outline-offset: 2px;
 }
@@ -1328,7 +1615,8 @@
   
   .team-modal-overlay,
   .sponsor-modal-overlay,
-  .image-zoom-overlay {
+  .image-zoom-overlay,
+  .email-modal-overlay {
       display: none;
   }
 }

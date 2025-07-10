@@ -154,7 +154,7 @@ const ADHDWorkplace = () => {
                     Từ kỹ năng quản lý thời gian đến cách tận dụng điểm mạnh độc đáo của bạn.
                   </p>
                   <button className="adhd-cta-button">
-                    Khám phá tài nguyên
+                    Tìm hiểu thêm
                   </button>
                 </div>
               </div>
