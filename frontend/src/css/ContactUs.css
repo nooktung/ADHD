@@ -1,13 +1,3 @@
-/* Dark mode overrides for ContactUs page */
-.dark-mode .contact-page-title {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-}
-
-.dark-mode .contact-page-title h1 {
-    color: var(--text-primary);
-}
-
 :root {
     --primary-color: #f2c2da;
     --secondary-color: #e0a3c7;

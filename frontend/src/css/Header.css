@@ -1059,8 +1059,7 @@ body {
   outline-offset: 2px;
 }
 
-/* ===== DARK MODE SUPPORT ===== */
-@media (prefers-color-scheme: dark) {
+/* ===== DARK MODE SUPPORT ===== */@media (prefers-color-scheme: dark) {
   .header {
     background: #1f2937;
     border-bottom-color: #374151;
