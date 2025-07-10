@@ -147,8 +147,8 @@ const Story4 = () => {
                 </div>
             </div>
             {/* Footer */}
-            <Footer />
             <RelatedArticles currentPage="story4" />
+            <Footer />
         </div>
     );
 };

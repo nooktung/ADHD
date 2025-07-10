@@ -155,9 +155,9 @@ const Story5 = () => {
                     </section>
                 </div>
             </div>
+            <RelatedArticles currentPage="story5" />
             {/* Footer */}
             <Footer />
-            <RelatedArticles currentPage="story5" />
         </div>
     );
 };

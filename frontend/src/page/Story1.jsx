@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../css/Story.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import RelatedArticles from '../page/RelatedArticles';
+import RelatedArticles from './RelatedArticles';
 
 const Story1 = () => {
     useEffect(() => {
@@ -173,9 +173,11 @@ const Story1 = () => {
                     </section>
                 </div>
             </div>
+            {/* Related Articles */}
+            <RelatedArticles currentPage="story1" />
+            
             {/* Footer */}
             <Footer />
-            <RelatedArticles currentPage="story1" />
         </div>
     );
 };
