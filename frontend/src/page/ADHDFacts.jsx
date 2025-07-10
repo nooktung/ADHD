@@ -142,7 +142,7 @@ const ADHDFacts = () => {
               <div className="adhd-sidebar-ctablock">
                 <div className="adhd-cta-section">
                   <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                    <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hiểu Đúng Về ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp thông tin khoa học chính xác về ADHD để giúp bạn hiểu rõ hơn về bản chất thần kinh học của tình trạng này. Từ nguyên nhân di truyền đến các yếu tố môi trường, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.</p>

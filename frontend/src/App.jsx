@@ -20,6 +20,7 @@ import ADHDSymptoms from './page/ADHDSymptoms';
 import ADHDInattentive from './page/ADHDInattentive';
 import ADHDHyperactive from './page/ADHDHyperactive';
 import ADHDUnofficial from './page/ADHDUnofficial';
+import ADHDLiving from './page/ADHDLiving';
 import SearchResults from './page/SearchResults';
 import Story1 from './page/Story1';
 import Story2 from './page/Story2';
@@ -61,6 +62,7 @@ function App() {
         <Route path="/adhd-inattentive" element={<ADHDInattentive />} />
         <Route path="/adhd-hyperactive" element={<ADHDHyperactive/>} />
         <Route path="/adhd-unofficial" element={<ADHDUnofficial/>} />
+        <Route path="/adhd-living" element={<ADHDLiving/>} />
         <Route path="/adhd-story1" element={<Story1/>} />
         <Route path="/adhd-story2" element={<Story2/>} />
         <Route path="/adhd-story3" element={<Story3/>} />

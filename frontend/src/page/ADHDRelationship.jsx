@@ -167,7 +167,7 @@ const ADHDRelationship = () => {
               <div className="adhd-sidebar-ctablock">
                 <div className="adhd-cta-section">
                   <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                    <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Mối Quan Hệ ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các chiến lược và kỹ năng để giúp bạn xây dựng và duy trì các mối quan hệ lành mạnh khi mắc ADHD. Từ kỹ năng giao tiếp đến quản lý cảm xúc trong các mối quan hệ.</p>

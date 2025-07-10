@@ -146,7 +146,7 @@ const ADHDWorkplace = () => {
               <div className="adhd-sidebar-ctablock">
                 <div className="adhd-cta-section" style={{textAlign: 'left'}}>
                   <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                    <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                   </div>
                   <h4 style={{marginBottom: '1rem', color: 'var(--color)', fontWeight: 600, fontSize: '1rem'}}>Hỗ Trợ Sự Nghiệp ADHD!</h4>
                   <p style={{marginBottom: '1.5rem', color: 'var(--dark-slate-grey-2)', fontSize: '0.8rem', lineHeight: 1.5}}>

@@ -216,7 +216,7 @@ const ADHDUnofficial = () => {
                             <div className="adhd-sidebar-ctablock">
                                 <div className="adhd-cta-section">
                                     <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
-                                        <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                                        <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
                                     </div>
                                     <h4 style={{ textAlign: 'center' }}>Khám phá ADHD sâu hơn!</h4>
                                     <p style={{ textAlign: 'center' }}>Hiểu rõ những dấu hiệu ADHD không chính thức nhưng thực sự ảnh hưởng đến cuộc sống hàng ngày của bạn. Từ nhận diện đến quản lý hiệu quả.</p>

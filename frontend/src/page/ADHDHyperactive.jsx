@@ -427,7 +427,7 @@ const ADHDHyperactive = () => {
                             <div className="adhd-sidebar-ctablock">
                                 <div className="adhd-cta-section">
                                     <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
-                                        <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                                        <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
                                     </div>
                                     <h4 style={{ textAlign: 'center' }}>Hiểu Đúng Về ADHD Tăng động - Bốc đồng!</h4>
                                     <p style={{ textAlign: 'center' }}>Chúng tôi cung cấp thông tin khoa học chính xác về ADHD thể Tăng động - Bốc đồng để giúp bạn hiểu rõ hơn về các triệu chứng và phương pháp quản lý hiệu quả. Từ chẩn đoán đến các chiến lược can thiệp, chúng tôi ở đây để cung cấp kiến thức đáng tin cậy.</p>

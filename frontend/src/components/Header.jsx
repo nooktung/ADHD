@@ -19,17 +19,18 @@ const MENU_ITEMS = [
     sidebarItems: [{ label: "Sự thật về ADHD", link: "/adhd-facts" }],
   },
   {
-    id: "life",
+    id: "living",
     title: "Sống chung với ADHD",
     content: {
       title: "Sống chung với ADHD",
       description:
-        "Sống chung với ADHD bao gồm việc vượt qua những thách thức độc đáo và khai thác điểm mạnh của từng cá nhân.",
+        "Sống chung với ADHD bao gồm việc áp dụng các thói quen có cấu trúc và các chiến lược để tăng cường sự tập trung, tổ chức và sức khỏe cảm xúc, đồng thời tìm kiếm sự hỗ trợ từ cộng đồng hiểu được trải nghiệm ADHD.",
       icon: "🩺",
       bgColor: "green",
     },
     sidebarItems: [
       { label: "ADHD & Sức khỏe", link: "/adhd-and-health" },
+      { label: "Cuộc sống ADHD", link: "/adhd-life" },
       { label: "Mối quan hệ ADHD", link: "/adhd-relationship" },
       { label: "Cảm xúc ADHD", link: "/adhd-emotions" },
       { label: "Tổ chức ADHD", link: "/adhd-organization" },
@@ -298,10 +299,13 @@ const Header = () => {
                         </>
                       )}
                       
-                      {activeMenuItem === "life" && (
+                      {activeMenuItem === "living" && (
                         <>
                           <Link to="/adhd-and-health" className="sidebar-item">
                             ADHD & Sức khỏe
+                          </Link>
+                          <Link to="/adhd-life" className="sidebar-item">
+                            Cuộc sống ADHD
                           </Link>
                           <Link to="/adhd-relationship" className="sidebar-item">
                             Mối quan hệ ADHD

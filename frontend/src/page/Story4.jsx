@@ -55,8 +55,8 @@ const Story4 = () => {
                     <div className="wrapper-short-copy">
                         <div className="div-block-38">
                             <img
-                                src="logo.jpg"
-                                alt="Kristi"
+                                src="/UStory4.jpg" 
+                                alt="Kristi" 
                                 className="image-27"
                             />
                         </div>
@@ -97,14 +97,14 @@ const Story4 = () => {
                             </div>
                         </section>
                         <div className="box_info-col">
-                            <img
-                                src="image.jpg"
-                                alt=""
+                            <img 
+                                src="/Hanbook.jpg" 
+                                alt="" 
                                 className="max-width-medium"
                             />
                             <div className="title_cta-col">Bắt đầu hành trình khám phá ADHD!</div>
                             <p>Đánh giá các triệu chứng của bạn, sắp xếp suy nghĩ và chuẩn bị cho việc đánh giá chính thức.</p>
-                            <a href="/" className="button-header1">Tìm hiểu thêm</a>
+                            <a href="/hanbook" className="button-header1">Tìm hiểu thêm</a>
                         </div>
                     </div>
                     {/* Content */}

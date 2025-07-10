@@ -355,11 +355,13 @@ const Team = () => {
       experience: "Sinh viên năm 3",
       education: "Digital Marketing - Đại học FPT",
       certifications: [
-        "Academic Skills for University Success",
-        "Human Resource Management: HR for People Managers",
-        "Human Resource Management and Leadership",
-        "Information​ ​Systems",
-        "Social Media Marketing"
+        "Trưởng dự án ADHD",
+        "Đối ngoại CLB Branché - FPTU Fashion & Model",
+        "Trưởng ban tổ chức sự kiện Nguyệt Hạ Cốc - FPTU Chinese Club",
+        "Đối ngoại ICON 2025",
+        "Đối ngoại Inflame 2025",
+        "Takecare Chúc Đăng Điển 2024",
+        "Đối ngoại dự án Từ Tâm"
       ],
       achievements: [
         "Team Leader của 2 dự án môn học thành công",
@@ -391,10 +393,10 @@ const Team = () => {
         "Social Media Marketing"
       ],
       achievements: [
-        "Content Writer cho Fanpage chính thức FPU (1 năm)",
-        "Top 5 cuộc thi Viết content sáng tạo FPU 2024",
-        "Freelance content cho 3 doanh nghiệp nhỏ",
-        "Hoàn thành khóa thực tập Digital Marketing Agency",
+        "Content Creator + Designer + Photographer của dự án Nụ cười cho em",
+        "Content Creator dự án ADHD - Bản giao hưởng tập trung",
+        "Học bổng FPTU",
+        "English intensive UNIMAS - GPA 9.8"
       ],
       socialLinks: {
         facebook: "https://www.facebook.com/obichngoc.466733"
@@ -413,11 +415,12 @@ const Team = () => {
       experience: "Sinh viên năm 2",
       education: "Digital Marketing - Đại học FPT",
       certifications: [
-        "Academic Skills for University Success",
-        "Human Resource Management: HR for People Managers",
-        "Human Resource Management and Leadership",
-        "Information​ ​Systems",
-        "Social Media Marketing"
+        "Lead HR + Sup Design Dự án ADHD",
+        "Staff tại Ocean Fair City",
+        "Sales Assistant tại Bản Cuisine",
+        "Sub Lead Dự án từ thiện Ba Tô Cơm",
+        "Tham gia thi HSG Sinh cấp Tỉnh",
+        "Giải Khuyến Khích Dream Car - Toyota"
       ],
       achievements: [
         "Tham gia tổ chức FPU Orientation Day cho K20",
@@ -449,10 +452,9 @@ const Team = () => {
         "Social Media Marketing"
       ],
       achievements: [
-        "Trưởng ban tổ chức Ngày hội tuyển sinh FPU 2024",
-        "Giải Nhì cuộc thi 'Ý tưởng sự kiện sáng tạo' FPU",
-        "Hoàn thành thực tập tại công ty Event Marketing",
-        "Thành viên tích cực CLB Event & Marketing FPU"
+        "Lead Dự án Nét Việt",
+        "Lead Design Dự án ADHD - bản giao hưởng tập trung",
+        "Đạt học bổng của Đại học FPT"
       ],
       socialLinks: {
         facebook: "https://www.facebook.com/thuy.linh.423951"
@@ -478,9 +480,11 @@ const Team = () => {
         "Social Media Marketing"
       ],
       achievements: [
-        "Nhận học bổng khuyến khích học tập",
-        "Hoàn thành khóa thực tập Kế toán doanh nghiệp",
-        "GPA 3.3+ trong 4 kỳ học liên tiếp"
+        "2 kì svg liên tiếp",
+        "Tham gia dự án Từ Tâm (Truyền thông + nghĩ idea tạo doanh thu)",
+        "Lead tài chính dự án ADHD",
+        "Làm nội dung sách + web dự án ADHD",
+        "Nhân viên Sale trung tâm tiếng anh DOL English"
       ],
       socialLinks: {
         facebook: "https://www.facebook.com/bui.t.duyen.904"
@@ -506,9 +510,10 @@ const Team = () => {
         "Social Media Marketing"
       ],
       achievements: [
-        "Đại diện sinh viên tham gia Hội thảo Marketing 2024",
-        "Thành viên Ban đối ngoại Hội sinh viên khoa",
-        "Kết nối thành công 3 đối tác cho dự án nhóm",
+        "Financial lead dự án Ba tô cơm",
+        "Lead đối ngoại + Sup Design Dự án ADHD",
+        "Hậu cần FPTU Biz Case 2024",
+        "Hậu cần Inflame 2025"
       ],
       socialLinks: {
         facebook: "https://www.facebook.com/linh.phuongg.943173"
@@ -558,7 +563,9 @@ const Team = () => {
       fullBio: "ThS.BSCKI. Huỳnh Thanh Tân là một bác sĩ có nền tảng học vấn vững chắc từ các trường đại học y khoa hàng đầu. Sau khi hoàn thành chương trình Bác sĩ Nội trú tại Đại học Y Dược TP.HCM, bác sĩ đã có kinh nghiệm giảng dạy tại Đại học Y khoa Phạm Ngọc Thạch và nhiều trường đại học khác. Với sự nhiệt huyết và chuyên môn sâu, bác sĩ Tân tập trung vào việc áp dụng các liệu pháp hiện đại, bao gồm cả liệu pháp dùng thuốc và không dùng thuốc, để mang lại hiệu quả điều trị tối ưu cho người bệnh.",
       location: "Hà Nội, Việt Nam",
       position: [
-        "Trưởng phân môn Tâm thần, Viện Khoa học Sức khỏe, Trường Đại học VinUni."
+        "Trưởng phân môn Tâm thần, Viện Khoa học Sức khỏe, Trường Đại học VinUni.",
+        "Giảng viên thỉnh giảng, Viện khoa học sức khỏe,.... VinUni.",
+        "Nguyên giảng viên bộ môn Tâm thần, Khoa Y, Đại học Y Khoa Phạm Ngọc Thạch"
       ],
       training: [
         "Tốt nghiệp Bác sĩ Đa khoa, Đại học Y khoa Phạm Ngọc Thạch.",
@@ -583,18 +590,20 @@ const Team = () => {
       name: "Thạc sĩ, Bác sĩ Nguyễn Minh Quyết",
       specialty: "Tâm lý – Tâm thần",
       image: "Nguyễn Minh Quyết.jpg",
-      shortBio: "Bác sĩ Tâm thần tại Phòng Khám Chuyên khoa Yên Hoà",
-      fullBio: "Thạc sĩ, Bác sĩ Nguyễn Minh Quyết là chuyên gia uy tín trong lĩnh vực Sức khỏe Tâm thần, được đào tạo chuyên sâu và bài bản từ Đại học Y Hà Nội với chương trình Bác sĩ Nội trú Tâm thần danh giá. Với kinh nghiệm làm việc tại các đơn vị y tế tuyến đầu như Viện Sức khỏe Tâm thần - Bệnh viện Bạch Mai và Bệnh viện Nhi Trung ương, bác sĩ có chuyên môn sâu rộng trong việc chẩn đoán và điều trị các rối loạn tâm lý - tâm thần. Hiện nay, bác sĩ Quyết đang công tác tại Phòng khám Chuyên khoa Yên Hoà góp phần quan trọng vào công tác chăm sóc sức khỏe tinh thần",
+      shortBio: "Bác sĩ Tâm thần tại khoa Tâm thần - Bệnh viện Nhi Trung ương",
+      fullBio: "Thạc sĩ, Bác sĩ Nguyễn Minh Quyết là chuyên gia uy tín trong lĩnh vực Sức khỏe Tâm thần, được đào tạo chuyên sâu và bài bản từ Đại học Y Hà Nội với chương trình Bác sĩ Nội trú Tâm thần danh giá. Với kinh nghiệm làm việc tại các đơn vị y tế tuyến đầu như Viện Sức khỏe Tâm thần - Bệnh viện Bạch Mai và Bệnh viện Nhi Trung ương, bác sĩ có chuyên môn sâu rộng trong việc chẩn đoán và điều trị các rối loạn tâm lý - tâm thần. Hiện nay, bác sĩ Quyết đang công tác tại khoa Tâm thần - Bệnh viện Nhi Trung ương và Phòng khám Chuyên khoa Yên Hoà góp phần quan trọng vào công tác chăm sóc sức khỏe tinh thần",
       location: "Hà Nội, Việt Nam",
       position: [
-        "Bác sĩ điều trị tại Khoa Tâm thần, Bệnh viện Nhi Trung ương.",
-        "Giảng viên Bộ môn Tâm thần, Đại học Y Hà Nội.",
-        "Bác sĩ Nội trú, Viện sức khỏe Tâm thần Bệnh viện Bạch Mai.",
-        "Hiện nay, bác sĩ Quyết đang công tác tại Phòng Khám Chuyên khoa Yên Hoà."
+        "Bác sĩ điều trị tại Khoa Tâm thần, Bệnh viện Nhi Trung ương  (2020-nay).",
+        "Giảng viên Bộ môn Tâm thần, Đại học Y Hà Nội (2018-2020) .",
+        "Bác sĩ Nội trú, Viện sức khỏe Tâm thần Bệnh viện Bạch Mai."
       ],
       training: [
         "Tốt nghiệp Đại học Y Hà Nội.",
-        "Hoàn thành chương trình Bác sĩ Nội trú chuyên ngành Tâm thần tại Đại học Y Hà Nội."
+        "Hoàn thành chương trình Bác sĩ Nội trú chuyên ngành Tâm thần tại Đại học Y Hà Nội.",
+        "Hiện là bác sĩ điều trị tại khoa Tâm thần - Bệnh viện Nhi Trung ương.",
+        "Các khoá đào tạo ngắn hạn tại Đài Loan, Úc về tâm thần trẻ em và vị thành niên.",
+        " Các chứng chỉ đào tạo về tâm thần, tâm lý."
       ],
       collaborate: [
         "Bác sĩ khoa Tâm thần, Bệnh viện Nhi Trung ương.",
@@ -614,8 +623,33 @@ const Team = () => {
       ],
       program: [
         "Liên quan giữa nhân cách với nhóm triệu chứng da ở người bệnh rối loạn cơ thể hóa.",
-        "Đặc điểm nhân cách ở người bệnh rối loạn cơ thể hóa điều trị nội trú tại Viện Sức khỏe Tâm thần."
+        "Đặc điểm nhân cách ở người bệnh rối loạn cơ thể hóa điều trị nội trú tại Viện Sức khỏe Tâm thần.",
+        "Bắt nạt học đường và sức khỏe tâm thần củ học sinh trung học cơ sở tại Hà Nội."
       ]
+    },
+    {
+      id: 4,
+      name: "Phòng Tham vấn Tâm lý Cóc Kể - Đại học FPT Hà Nội",
+      specialty: "Tâm lý – Tâm thần",
+      image: "Cóc Kể.jpg",
+      shortBio: "Phòng Tham vấn Tâm lý Cóc Kể - Đại học FPT Hà Nội",
+      fullBio: "Phòng Tham vấn Tâm lý Cóc Kể là đơn vị chuyên trách về sức khỏe tinh thần, được thành lập chính thức vào tháng 12 năm 2016 tại Trường Đại học FPT cơ sở Hòa Lạc (Hà Nội). Với sứ mệnh lắng nghe, thấu hiểu và đồng hành cùng sinh viên cũng như cán bộ nhân viên, Cóc Kể đã trở thành một \"điểm tựa\" tinh thần tin cậy trong cộng đồng. Đơn vị tập trung vào việc hỗ trợ giải quyết các vấn đề tâm lý trong học tập, công việc và cuộc sống, qua đó góp phần nâng cao chất lượng đời sống tinh thần và thúc đẩy sự phát triển toàn diện của mỗi cá nhân.",
+      location: "Hà Nội, Việt Nam",
+      functions: [
+        "<strong>Đơn vị:</strong> Phòng Tham vấn Tâm lý, trực thuộc Khối Phát triển Cá nhân (Personal Development Program - PDP), Trường Đại học FPT Hà Nội",
+        "<strong>Chức năng:</strong> Cung cấp các dịch vụ tham vấn, tư vấn và giáo dục tâm lý chuyên nghiệp, bảo mật và miễn phí cho toàn thể sinh viên, cán bộ nhà trường"
+      ],
+      expertise: [
+        "<strong>Tham vấn cá nhân (1:1):</strong> Hỗ trợ các vấn đề liên quan đến căng thẳng (stress), lo âu, trầm cảm, áp lực học tập và đồng trang lứa, khó khăn trong các mối quan hệ (gia đình, bạn bè, tình cảm), khủng hoảng bản sắc và định hướng tương lai",
+        "<strong>Tổ chức Hội thảo & Chuyên đề (Workshop/Talkshow):</strong> Thường xuyên tổ chức các chương trình cung cấp kiến thức và kỹ năng thực tiễn về nhiều chủ đề đa dạng như: Trí tuệ cảm xúc (EQ), Kỹ năng đối mặt và vượt qua thất bại, Ngôn ngữ cơ thể, Tình yêu và các mối quan hệ lành mạnh",
+        "<strong>Truyền thông & Giáo dục tâm lý cộng đồng:</strong> Xây dựng nội dung, bài viết chuyên môn trên các kênh truyền thông (chủ yếu là Fanpage Cóc Kể Counseling Office) nhằm nâng cao nhận thức về sức khỏe tinh thần trong cộng đồng sinh viên"
+      ],
+      contributions: [
+        "Là đơn vị tiên phong trong việc xây dựng mô hình phòng tham vấn tâm lý học đường chuyên nghiệp và thân thiện tại Đại học FPT",
+        "Tổ chức thành công hàng trăm buổi tham vấn cá nhân mỗi học kỳ, giúp nhiều sinh viên vượt qua các giai đoạn khó khăn",
+        "Xây dựng và duy trì Fanpage Cóc Kể Counseling Office trở thành một kênh thông tin uy tín về sức khỏe tinh thần, thu hút sự quan tâm và tương tác lớn từ cộng đồng sinh viên"
+      ],
+      philosophy: "TÔN TRỌNG - BẢO MẬT - TRUNG THỰC."
     }
   ];
 
@@ -875,7 +909,7 @@ const Team = () => {
               aria-label="Xem Các bên chuyên môn"
               disabled={isTransitioning}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="9,18 15,12 9,6"></polyline>
               </svg>
             </button>
@@ -888,7 +922,7 @@ const Team = () => {
               aria-label="Xem đội ngũ"
               disabled={isTransitioning}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="15,18 9,12 15,6"></polyline>
               </svg>
             </button>
@@ -1081,28 +1115,46 @@ const Team = () => {
                   </>
                 ) : (
                   <>
-                    <section className="team-modal-section">
-                      <h4>Chức vụ</h4>
-                      <ul className="sponsor-position-list">
-                        {selectedMember.position?.map((pos, index) => (
-                          <li key={index} className="sponsor-position-item">
-                            <span className="sponsor-position-bullet"></span>
-                            <span>{pos}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </section>
-                    <section className="team-modal-section">
-                      <h4>Đào tạo & Chứng chỉ</h4>
-                      <ul className="sponsor-training-list">
-                        {selectedMember.training?.map((train, index) => (
-                          <li key={index} className="sponsor-training-item">
-                            <span className="sponsor-training-bullet"></span>
-                            <span>{train}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </section>
+                    {/* Functions for Cóc Kể */}
+                    {selectedMember.name === 'Phòng Tham vấn Tâm lý Cóc Kể - Đại học FPT Hà Nội' && selectedMember.functions ? (
+                      <section className="team-modal-section">
+                        <h4>Thông tin đơn vị</h4>
+                        <ul className="sponsor-position-list">
+                          {selectedMember.functions.map((func, index) => (
+                            <li key={index} className="sponsor-position-item">
+                              <span className="sponsor-position-bullet"></span>
+                              <span dangerouslySetInnerHTML={{ __html: func }}></span>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+                    ) : (
+                      <section className="team-modal-section">
+                        <h4>Chức vụ</h4>
+                        <ul className="sponsor-position-list">
+                          {selectedMember.position?.map((pos, index) => (
+                            <li key={index} className="sponsor-position-item">
+                              <span className="sponsor-position-bullet"></span>
+                              <span>{pos}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+                    )}
+                    
+                    {selectedMember.training && (
+                      <section className="team-modal-section">
+                        <h4>Đào tạo & Chứng chỉ</h4>
+                        <ul className="sponsor-training-list">
+                          {selectedMember.training.map((train, index) => (
+                            <li key={index} className="sponsor-training-item">
+                              <span className="sponsor-training-bullet"></span>
+                              <span>{train}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+                    )}
                   </>
                 )}
 
@@ -1123,12 +1175,17 @@ const Team = () => {
                 {/* Expertise for Sponsors */}
                 {currentView === 'sponsors' && selectedMember.expertise && (
                   <section className="team-modal-section">
-                    <h4>Lĩnh vực chuyên môn sâu</h4>
+                    <h4>
+                      {selectedMember.name === 'Phòng Tham vấn Tâm lý Cóc Kể - Đại học FPT Hà Nội' 
+                        ? 'Dịch vụ & Hoạt động chính' 
+                        : 'Lĩnh vực chuyên môn sâu'
+                      }
+                    </h4>
                     <ul className="sponsor-expertise">
                       {selectedMember.expertise.map((item, index) => (
                         <li key={index} className="sponsor-expertise-item">
                           <span className="sponsor-expertise-bullet"></span>
-                          <span>{item}</span>
+                          <span dangerouslySetInnerHTML={{ __html: item }}></span>
                         </li>
                       ))}
                     </ul>
@@ -1150,8 +1207,23 @@ const Team = () => {
                   </section>
                 )}
 
-                {/* Research & Publications for Sponsors */}
-                {currentView === 'sponsors' && selectedMember.program && selectedMember.program.length > 0 && (
+                {/* Contributions for Cóc Kể */}
+                {currentView === 'sponsors' && selectedMember.name === 'Phòng Tham vấn Tâm lý Cóc Kể - Đại học FPT Hà Nội' && selectedMember.contributions && (
+                  <section className="team-modal-section">
+                    <h4>Thành tựu & Đóng góp</h4>
+                    <ul className="sponsor-research-list">
+                      {selectedMember.contributions.map((contribution, index) => (
+                        <li key={index} className="sponsor-research-item">
+                          <span className="sponsor-research-bullet"></span>
+                          <span>{contribution}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {/* Research & Publications for Sponsors (except Cóc Kể) */}
+                {currentView === 'sponsors' && selectedMember.program && selectedMember.program.length > 0 && selectedMember.name !== 'Phòng Tham vấn Tâm lý Cóc Kể - Đại học FPT Hà Nội' && (
                   <section className="team-modal-section">
                     <h4>Nghiên cứu & Công trình khoa học</h4>
                     <ul className="sponsor-research-list">
@@ -1168,7 +1240,12 @@ const Team = () => {
                 {/* Philosophy for Sponsors */}
                 {currentView === 'sponsors' && selectedMember.philosophy && (
                   <section className="team-modal-section">
-                    <h4>Triết lý điều trị</h4>
+                    <h4>
+                      {selectedMember.name === 'Phòng Tham vấn Tâm lý Cóc Kể - Đại học FPT Hà Nội' 
+                        ? 'Giá trị cốt lõi' 
+                        : 'Triết lý điều trị'
+                      }
+                    </h4>
                     <div className="sponsor-philosophy">
                       <p>{selectedMember.philosophy}</p>
                     </div>

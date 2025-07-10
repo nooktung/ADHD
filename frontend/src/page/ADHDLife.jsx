@@ -149,7 +149,7 @@ const ADHDLife = () => {
               <div className="adhd-sidebar-ctablock">
                 <div className="adhd-cta-section">
                   <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                    <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Cuộc Sống ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý cuộc sống hàng ngày với ADHD. Từ mẹo tổ chức đến kỹ thuật quản lý cảm xúc, chúng tôi ở đây để hỗ trợ hành trình của bạn.</p>

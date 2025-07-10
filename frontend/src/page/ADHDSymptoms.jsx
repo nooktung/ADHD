@@ -263,7 +263,7 @@ const ADHDSymptoms = () => {
               <div className="adhd-sidebar-ctablock">
                 <div className="adhd-cta-section">
                   <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                    <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                   </div>
                   <h4 style={{textAlign: 'center'}}>Nhận Diện Triệu Chứng ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp thông tin chi tiết về các triệu chứng ADHD để giúp bạn nhận diện và hiểu rõ hơn về tình trạng này. Từ triệu chứng chính thức đến những biểu hiện thường bị bỏ qua, chúng tôi ở đây để hỗ trợ bạn.</p>

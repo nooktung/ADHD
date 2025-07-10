@@ -190,9 +190,18 @@ const RelatedArticles = ({ currentPage }) => {
             ]
         },
 
-        life: {
+        living: {
             title: "Sống chung với ADHD",
             pages: [
+                {
+                    id: "life",
+                    title: "Cuộc sống ADHD",
+                    excerpt: "Sống chung với ADHD bao gồm việc áp dụng các thói quen có cấu trúc và các chiến lược để tăng cường sự tập trung, tổ chức và sức khỏe cảm xúc, đồng thời tìm kiếm sự hỗ trợ từ cộng đồng hiểu được trải nghiệm ADHD.",
+                    date: "24/06/2025",
+                    link: "/adhd-life",
+                    bgColor: "bg-yellow-100",
+                    borderColor: "border-yellow-200"
+                },
                 {
                     id: "health",
                     title: "ADHD & Sức khỏe",

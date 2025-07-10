@@ -145,7 +145,7 @@ const ADHDAndHealth = () => {
               <div className="adhd-sidebar-ctablock">
                 <div className="adhd-cta-section">
                   <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                    <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Sức Khỏe ADHD!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các tài nguyên và chiến lược thực tế để giúp bạn quản lý sức khỏe và cải thiện chất lượng cuộc sống với ADHD. Từ lời khuyên dinh dưỡng đến kỹ thuật quản lý căng thẳng.</p>

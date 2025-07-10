@@ -531,7 +531,7 @@ const ADHDInattentive = () => {
                             <div className="adhd-sidebar-ctablock">
                                 <div className="adhd-cta-section">
                                     <div className="adhd-cta-illustration" style={{ marginBottom: '1rem' }}>
-                                        <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
+                                        <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{ width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto' }} />
                                     </div>
                                     <h4 style={{ textAlign: 'center' }}>Hiểu Rõ ADHD Thể Không Chú Ý!</h4>
                                     <p style={{ textAlign: 'center' }}>Chúng tôi cung cấp thông tin chi tiết về ADHD thể không chú ý - dạng thường bị bỏ sót nhưng rất phổ biến. Từ nhận diện triệu chứng đến chiến lược quản lý hiệu quả.</p>

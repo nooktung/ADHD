@@ -384,7 +384,7 @@ const LandingPage = () => {
                   <div className="workbook-icon" style={{ flex: '0 0 60px' }}>
                     <span style={{ fontSize: '70px' }}>📚</span>
                   </div>
-                  <div className="workbook-text" style={{ flex: 1 }}>
+                  <div className="workbook-text" style={{ flex: 1 ,marginLeft:'20px'}}>
                     <h3 className="main-question" style={{ fontSize: '25px', color: '#8b4a8b', marginBottom: '8px' }}>Triệu chứng</h3>
                     <p className="subtitle-text" style={{ fontSize: '15px', color: '#8b4a8b', margin: 0, whiteSpace: 'normal' }}>
                       Các triệu chứng ADHD thường bao gồm sự giảm chú ý, tính tăng động và tính xung động, nhưng có thể biểu hiện rất đa dạng về hình thái và cường độ, đôi khi bị che lấp hoặc không được nhận diện trong nhiều năm.
@@ -395,7 +395,7 @@ const LandingPage = () => {
 
               {/* Horizontal Card - Clickable */}
               <div className="horizontal-card">
-                <Link to="/adhd-life">
+                <Link to="/adhd-living">
                   <div className="workbook-icon">
                     <span>⚖️</span>
                   </div>

@@ -160,7 +160,7 @@ const ADHdEmotions = () => {
               <div className="adhd-sidebar-ctablock">
                 <div className="adhd-cta-section">
                   <div className="adhd-cta-illustration" style={{marginBottom: '1rem'}}>
-                    <img src="/Mai Thị Lan Anh.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
+                    <img src="/Hanbook.jpg" alt="Mai Thị Lan Anh" style={{width: '150px', height: '200px', borderRadius: '4px', objectFit: 'cover', display: 'block', margin: '0 auto'}} />
                   </div>
                   <h4 style={{textAlign: 'center'}}>Hỗ Trợ Quản Lý Cảm Xúc!</h4>
                   <p style={{textAlign: 'center'}}>Chúng tôi cung cấp các kỹ thuật và chiến lược để giúp bạn quản lý cảm xúc mãnh liệt khi mắc ADHD. Từ chánh niệm đến các phương pháp thư giãn hiệu quả.</p>
