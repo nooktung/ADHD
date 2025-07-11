@@ -105,12 +105,12 @@
   
   .hero-visual {
     background: var(--powder-blue);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: 400px;
+    height: auto;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -120,7 +120,7 @@
   }
   
   .hero-visual-image {
-    max-width: 100%;
+    max-width: calc(100% - 2rem);
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -1369,9 +1369,9 @@
     }
   
     .hero-visual {
-      height: 300px;
+      height: auto;
       max-width: 300px;
-      padding: 1.5rem;
+      padding: 1rem;
     }
   
     /* Features Section */
@@ -1592,7 +1592,7 @@
     }
   
     .hero-visual {
-      height: 250px;
+      height: auto;
       max-width: 250px;
       padding: 1rem;
     }
@@ -1743,8 +1743,9 @@
     }
     
     .hero-visual {
-      height: 200px;
+      height: auto;
       max-width: 200px;
+      padding: 1rem;
     }
     
     .social-feed-content {
