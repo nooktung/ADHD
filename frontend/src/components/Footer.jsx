@@ -68,7 +68,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>Website bởi Sales Odyssey</p>
+        <p>Website bởi NooktVera</p>
       </div>
     </footer>
   );
