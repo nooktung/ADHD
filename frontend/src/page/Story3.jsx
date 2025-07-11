@@ -111,7 +111,7 @@ const Story3 = () => {
                     <section className="story-article-content">
                       <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
-                            <h2>Điều gì khiến bạn quyết định đi chuẩn đoán bệnh?</h2>
+                            <h2>Điều gì khiến bạn quyết định đi chẩn đoán bệnh?</h2>
                             <p>Tôi cảm thấy như cả cuộc đời mình, tôi đã phải bù đắp cho những điều nhỏ nhặt dường như khiến cuộc sống của tôi và của bất kỳ ai khác trở nên khó khăn hơn. Khi Covid-19 tấn công, tôi đã không nhận ra não mình cần cấu trúc đó đến mức nào. Khi ngồi ở nhà với gia đình và con, tôi nhận thấy (những gì tôi biết bây giờ là các triệu chứng của ADHD/Tự kỷ) mình đã chi bao nhiêu tiền cho những món đồ vô nghĩa, hoặc tôi đã ăn quá nhiều/vô thức như thế nào. Tôi bắt đầu nhận ra rằng tất cả những việc tôi đang làm đều không "bình thường" vì tôi sẽ thấy gia đình mình không phải vật lộn với những điều tương tự.</p>
                         </div>
 
@@ -127,13 +127,13 @@ const Story3 = () => {
                             <h2>Đặc điểm ADHD rõ ràng nhất của bạn khi còn nhỏ là gì?</h2>
                             <p>Câu hỏi này khó trả lời, vì hồi đó ADHD không được nhắc đến nhiều. Nhất là khi nói đến phụ nữ. Tôi đã kìm nén rất nhiều thời thơ ấu của mình, nhưng tôi nhớ chắc chắn rằng tôi sẽ gặp rắc rối vì nói quá nhiều. Tôi luôn ký vào hồ sơ vì nói hoặc không chú ý. Một giáo viên từng nghĩ rằng tôi gian lận với bạn mình trong bài kiểm tra (10 tuổi) khi thực ra tôi đang nói với cô ấy rằng tôi "không biết đáp án là gì".</p>
 
-                            <h2>Việc chuẩn đoán có khó khăn không?</h2>
+                            <h2>Việc chẩn đoán có khó khăn không?</h2>
                             <p>Thật khó khăn! Trong nhiều năm, các bác sĩ sẽ cố gắng nói với tôi rằng đó chỉ là lo lắng hoặc trầm cảm, sau đó kê đơn thuốc cho tôi. Tôi thậm chí còn có một bác sĩ tim nói với tôi rằng đó là một chứng loạn nhịp tim nhỏ! Ngay cả khi đánh giá giấy ADHD tại phòng khám của tôi cho điểm rất cao, họ vẫn nói không vì tôi không "trông" giống như vậy.</p>
 
-                            <h2>Bạn đã chuẩn bị như thế nào cho việc chuẩn đoán của mình?</h2>
+                            <h2>Bạn đã chuẩn bị như thế nào cho việc chẩn đoán của mình?</h2>
                             <p>Tôi đã viết ra những ghi chú trên điện thoại của mình về tất cả các triệu chứng mà tôi đã cảm thấy trong năm qua. Tôi cũng đã viết ra các loại thuốc và chẩn đoán trước đây mà tôi đã được đưa ra. Tôi đã cố gắng viết ra những điều mà tôi cảm thấy đã bị bỏ qua khi tôi còn nhỏ mà có thể là ADHD.</p>
 
-                            <h2>Bạn cảm thấy thế nào khi nhận được chuẩn đoán?</h2>
+                            <h2>Bạn cảm thấy thế nào khi nhận được chẩn đoán?</h2>
                             <p>Mặc dù tôi hài lòng với sự xác nhận của mình và rằng tôi không "điên", tôi vẫn đấu tranh với cảm giác như thể tôi đang giả vờ. Tôi có những ngày tốt đẹp khi được chấp nhận và những ngày tôi cảm thấy như mình đã lừa cô ấy chẩn đoán cho tôi. Thật buồn cười, tôi đã nghiên cứu ADHD một cách chuyên nghiệp nhưng nó lại khác khi nó là vấn đề cá nhân.</p>
 
                             <h2>Bạn có nghĩ mình giống với hình mẫu ADHD không?</h2>
@@ -145,10 +145,10 @@ const Story3 = () => {
                             <h2>Điểm mạnh của bạn về chứng ADHD là gì?</h2>
                             <p>Tôi thích nghĩ về bản thân mình như một người rất sáng tạo, dù là về mặt nghệ thuật hay thông qua giải quyết vấn đề. Tôi cũng rất giỏi trong việc tìm ra sở thích hoặc mối quan tâm mới. Âm nhạc là ngôn ngữ thứ hai của tôi và tôi tự hào về khả năng học một nhạc cụ mới nhanh chóng.</p>
 
-                            <h2>Việc chuẩn đoán ADHD có giúp ích cho bạn không?</h2>
+                            <h2>Việc chẩn đoán ADHD có giúp ích cho bạn không?</h2>
                             <p>Có và KHÔNG. Có, vì cuối cùng tôi cũng cảm thấy có người tin tôi và coi trọng tôi. Tôi cảm thấy mình là chính mình hơn bao giờ hết, và điều đó giúp tôi hiểu tại sao tôi lại làm những việc tôi làm. Không, vì tôi vẫn đang trong giai đoạn 6 tháng chẩn đoán và thỉnh thoảng phải đấu tranh với hội chứng kẻ mạo danh đó.</p>
 
-                            <h2>Gia đình, bạn bè bạn phản ứng như thế nào khi bạn được chuẩn đoán mắc bệnh?</h2>
+                            <h2>Gia đình, bạn bè bạn phản ứng như thế nào khi bạn được chẩn đoán mắc bệnh?</h2>
                             <p>Tôi đã được chẩn đoán mắc AuDHD (tự kỷ và ADHD). Tôi đã nói với chị gái mình vào ngày hôm sau về cả hai và tôi hơi bất ngờ trước phản ứng của chị ấy. Chị ấy không tin tôi mắc chứng tự kỷ vì tôi không "trông" giống đồng nghiệp nam của chị ấy. Đối với ADHD, chị ấy nói rằng mọi người đều có những triệu chứng đó và có thể chuyên gia tư vấn đã sai.</p>
 
                             <h2>Lời khuyên của bạn cho những người đang thắc mắc liệu họ có mắc ADHD?</h2>

@@ -127,13 +127,13 @@ const Story7 = () => {
                             <h2>Đặc điểm ADHD rõ ràng nhất của bạn khi còn nhỏ là gì?</h2>
                             <p>Không bao giờ chú ý trong lớp, mơ mộng, luôn mắc lỗi bất cẩn, làm phiền bạn cùng lớp vì buồn chán, luôn thiếu tổ chức...</p>
 
-                            <h2>Việc chuẩn đoán có khó không?</h2>
+                            <h2>Việc chẩn đoán có khó không?</h2>
                             <p>Hiện tại tôi đang sống ở Hà Lan nên điều đó không quá khó khăn với tôi (mặc dù phải chờ đợi 8 tháng). Nhưng tôi chắc chắn rằng nếu tôi ở Indonesia, điều đó sẽ khó khăn hơn nhiều vì không có nhiều bác sĩ tâm thần chuyên về ADHD ở người lớn (nó vẫn thường được coi là tình trạng chỉ xảy ra ở trẻ em).</p>
 
-                            <h2>Bạn đã chuẩn bị như thế nào cho việc chuẩn đoán của mình?</h2>
+                            <h2>Bạn đã chuẩn bị như thế nào cho việc chẩn đoán của mình?</h2>
                             <p>Tôi đã có một giai đoạn tập trung cao độ vào việc nghiên cứu về ADHD --- đọc các bài viết, xem video trên Youtube, v.v. Vì vậy, tôi cảm thấy mình đã biết rất nhiều về ADHD và thời gian chờ đợi 8 tháng chắc chắn đã làm mất đi sự mới lạ của nó (vào ngày chẩn đoán, tôi nghĩ đó không phải là vấn đề lớn).</p>
 
-                            <h2>Bạn cảm thấy như thế nào sau khi nhận được chuẩn đoán?</h2>
+                            <h2>Bạn cảm thấy như thế nào sau khi nhận được chẩn đoán?</h2>
                             <p>Tôi nghĩ đó là sự nhẹ nhõm hơn. Tôi không ngạc nhiên, nó giống như một chiếc hộp mà cuối cùng tôi cũng đánh dấu được. Nhưng cùng ngày hôm đó, tôi được dùng thử thuốc và tôi ngay lập tức trải nghiệm sự khác biệt (trong khi làm xét nghiệm qB) mà thuốc có thể tạo ra bên trong đầu tôi (tôi mô tả nó như thể tôi cuối cùng cũng đạt được trạng thái thiền!).</p>
 
                             <h2>Bạn có nghĩ mình "giống" hình mẫu ADHD không?</h2>
@@ -145,7 +145,7 @@ const Story7 = () => {
                             <h2>Điểm mạnh của bạn về chứng ADHD là gì?</h2>
                             <p>Tôi là người thợ của mọi nghề. Sở thích của tôi thay đổi liên tục --- có lần tôi học cách vẽ và dành 5 giờ mỗi ngày để vẽ, học nấu ăn và nướng bánh, học cách sản xuất nhạc, danh sách cứ dài ra. Tôi cảm thấy mình đã phát triển kỹ năng trong nhiều thứ và điều đó là có thể vì tôi rất thích những thứ tôi thích!</p>
 
-                            <h2>Gia đình, người thân của bạn phản ứng như thế nào khi bạn nhận được chuẩn đoán?</h2>
+                            <h2>Gia đình, người thân của bạn phản ứng như thế nào khi bạn nhận được chẩn đoán?</h2>
                             <p>Họ không ngạc nhiên nhưng cuối cùng bố và chị gái tôi đã tự mình đi tìm chẩn đoán.</p>
 
                             <h2>Lời khuyên của bạn cho những người đang nghi ngờ bản thân họ mắc ADHD?</h2>

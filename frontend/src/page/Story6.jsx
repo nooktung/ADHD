@@ -127,10 +127,10 @@ const Story6 = () => {
                             <h2>Đặc điểm ADHD rõ ràng nhất của bạn khi còn nhỏ là gì?</h2>
                             <p>Không bao giờ lắng nghe trong lớp và nhìn chằm chằm ra cửa sổ thay vì cố gắng chú ý và sau đó hỏi giáo viên đang nói gì sau giờ học.</p>
 
-                            <h2>Việc chuẩn đoán có khó khăn không?</h2>
+                            <h2>Việc chẩn đoán có khó khăn không?</h2>
                             <p>Lần đầu tiên tôi được kiểm tra, bác sĩ tâm lý nói rằng kết quả không thuyết phục vì họ không thể bác bỏ các triệu chứng của tôi, nhưng tôi đã vượt qua các thành phần về trí thông minh và trí nhớ khiến tôi cảm thấy bối rối hơn nữa. Họ đổ lỗi cho các triệu chứng của tôi là do sự lo lắng của tôi, điều này cũng khiến tôi cảm thấy khá tức giận. Bác sĩ tâm lý thứ hai mà tôi gặp nhiều năm sau đó đã có thể hiểu ngay sau khi lắng nghe những trải nghiệm của tôi.</p>
 
-                            <h2>Bạn cảm thấy như thế nào sau khi nhận chuẩn đoán?</h2>
+                            <h2>Bạn cảm thấy như thế nào sau khi nhận chẩn đoán?</h2>
                             <p>Tê liệt. Tôi vẫn thấy lạ khi nói điều đó và kể với mọi người. Nhưng tôi vui vì cuối cùng tôi đã có lời giải thích cho những trải nghiệm của mình và rằng đó không phải là lỗi của chứng lo âu.</p>
 
                             <h2>Bạn đang gặp khó khăn gì vì chứng ADHD?</h2>

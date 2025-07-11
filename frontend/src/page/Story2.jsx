@@ -111,7 +111,7 @@ const Story2 = () => {
                     <section className="story-article-content">
                       <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
-                            <h2>Điều gì khiến bạn quyết định đi chuẩn đoán bệnh?</h2>
+                            <h2>Điều gì khiến bạn quyết định đi chẩn đoán bệnh?</h2>
                             <p>Tôi đã từng là người không thể chú ý trong thời gian quá dài, tôi hay quên hơn những người khác, tôi viết chữ rất xấu và thường không thể ngồi yên, giáo viên chủ nhiệm lớp 3 của tôi đã bảo bố mẹ tôi thử tham khảo ý kiến ​​của một nhà tâm lý học. Tôi đã cố hỏi bố mẹ tôi về chẩn đoán và bố mẹ tôi đã quên mất chẩn đoán đó vì nó đã xảy ra từ rất lâu rồi. Đến thời điểm hiện tại khi tôi đang học đại học, tôi vẫn gặp phải những vấn đề tương tự nên lần này tôi quyết định đi khám bác sĩ tâm thần và vâng, tôi đã nhận được câu trả lời chính xác, đó là ADHD.</p>
                         </div>
 
@@ -127,10 +127,10 @@ const Story2 = () => {
                             <h2>Đặc điểm ADHD rõ ràng nhất của bạn khi còn nhỏ là gì?</h2>
                             <p>Ví dụ, tôi không thể chú ý vào những lớp học nhàm chán trừ khi tôi muốn, tôi không thể ngừng rung chân khi ngồi vào bàn ăn (điều này khiến bố mẹ tôi hay cằn nhằn), tôi là một đứa trẻ rất nhạy cảm khi lớn lên, chữ viết tay rất xấu, và tôi ghét một số loại quần áo mà mẹ tôi bắt tôi phải mặc.</p>
 
-                            <h2>Việc chuẩn đoán có khó khăn không?</h2>
+                            <h2>Việc chẩn đoán có khó khăn không?</h2>
                             <p>Đối với tôi, bản thân chẩn đoán không khó, quá trình chỉ là: bác sĩ tâm thần có một loạt câu hỏi, tôi trả lời. Việc nói với bố mẹ tôi rằng tôi cần một câu trả lời chính xác là rất khó vì nhận thức về sức khỏe tâm thần không cao ở đất nước tôi đang sống. Vì vậy, sự kỳ thị về bệnh tâm thần điên rồ vẫn còn rất mạnh mẽ.</p>
 
-                            <h2>Bạn cảm thấy như thế nào sau khi nhận được chuẩn đoán?</h2>
+                            <h2>Bạn cảm thấy như thế nào sau khi nhận được chẩn đoán?</h2>
                             <p>Tôi ổn với điều đó, tôi có thể chung sống tốt với ADHD như tôi vẫn luôn như vậy, tôi chỉ cần quản lý nó nhiều hơn. Tôi chỉ hy vọng rằng mọi người có thể hiểu tại sao tôi lại hành động theo cách đó. Sức khỏe tâm thần là điều rất quan trọng trong xã hội ngày nay và tôi nghĩ mọi người nên nhận thức rất nhiều về nó.</p>
 
                             <h2>Bạn có nghĩ mình giống với hình mẫu ADHD không?</h2>
@@ -142,10 +142,10 @@ const Story2 = () => {
                             <h2>Điểm mạnh của bạn về chứng ADHD là gì?</h2>
                             <p>Tôi biết rất nhiều sự thật khó hiểu về những thứ ngẫu nhiên mà tôi quan tâm. Đây là một sự thật nhỏ dành cho bạn, Bạn có biết rằng tim của tôm nằm trên đầu của nó không? Tôi cũng làm nghệ thuật để thể hiện bản thân, hoặc để trút bỏ những ý tưởng mà tôi không thể giải thích bằng lời, vì vậy việc đăng ký Thiết kế truyền thông trực quan là một cách giúp tôi truyền đạt tốt hơn. Và tôi thực sự thích học các ngôn ngữ khó hiểu, tôi muốn học các ngôn ngữ địa phương có ở đây.</p>
 
-                            <h2>Việc chuẩn đoán ADHD có giúp ích cho bạn không?</h2>
+                            <h2>Việc chẩn đoán ADHD có giúp ích cho bạn không?</h2>
                             <p>Vâng, chắc chắn rồi, tôi cảm thấy mình có thể nghỉ ngơi thoải mái vì tôi biết điều gì đang làm phiền mình suốt thời gian qua; tôi cảm thấy nhẹ nhõm khi cuối cùng tôi đã biết nguyên nhân gốc rễ là gì.</p>
 
-                            <h2>Gia đình và bạn bè bạn phản ứng như thế nào khi biết kết quả chuẩn đoán của bạn?</h2>
+                            <h2>Gia đình và bạn bè bạn phản ứng như thế nào khi biết kết quả chẩn đoán của bạn?</h2>
                             <p>Anh chị em tôi vẫn chưa biết chuyện này. Bố mẹ tôi nói rằng họ sẽ luôn ủng hộ tôi và sẽ cố gắng giúp đỡ tôi hết sức có thể. Tất cả bạn bè tôi cũng chấp nhận sự thật này và họ sẽ cố gắng hết sức để hiểu tôi hơn.</p>
 
                             <h2>Bạn sẽ đưa ra lời khuyên gì cho những người đang thắc mắc liệu mình có mắc ADHD không?</h2>

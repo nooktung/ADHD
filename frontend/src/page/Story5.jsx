@@ -111,7 +111,7 @@ const Story5 = () => {
                     <section className="story-article-content">
                       <div className="wrapper_blog-content">
                         <div id="content" className="richtext_blog">
-                            <h2>Điều gì khiến bạn quyết định chuẩn đoán bệnh?</h2>
+                            <h2>Điều gì khiến bạn quyết định chẩn đoán bệnh?</h2>
                             <p>Tôi đã vật lộn với sức khỏe tâm thần của mình trong nhiều năm và mặc dù đã dùng thuốc nhưng nó không giúp ích theo đúng cách. Tôi thấy mình đang dành từng chút năng lượng để cố gắng hoạt động "bình thường". Sau khi vật lộn ở trường đại học, tôi quyết định xem liệu có điều gì khác đang xảy ra không và cuối cùng nghĩ rằng đó có thể là ADHD.</p>
                         </div>
 
@@ -127,13 +127,13 @@ const Story5 = () => {
                             <h2>Đặc điểm ADHD rõ ràng nhất của bạn khi còn nhỏ là gì?</h2>
                             <p>Với tôi, đó chỉ là sự tò mò thuần túy về mọi thứ và liên tục thay đổi những gì tôi đang làm vì tôi muốn làm mọi thứ.</p>
 
-                            <h2>Việc chuẩn đoán có khó khăn không?</h2>
+                            <h2>Việc chẩn đoán có khó khăn không?</h2>
                             <p>Ở Anh, danh sách chờ để được chẩn đoán kéo dài khoảng 1,5-2 năm. Lúc đó tôi tuyệt vọng đến mức quyết định đi khám tư. Cách này rất hiệu quả nhưng rõ ràng là rất tốn kém. Tôi rất may mắn khi có thể đi khám tư nhưng thật không may là nhiều người ở Anh không đủ khả năng chi trả cho lựa chọn này.</p>
 
-                            <h2>Bạn đã chuẩn bị như thế nào cho việc chuẩn đoán của mình?</h2>
+                            <h2>Bạn đã chuẩn bị như thế nào cho việc chẩn đoán của mình?</h2>
                             <p>Tôi đã nghiên cứu rất nhiều về các triệu chứng của ADHD, không chỉ trên các trang web chăm sóc sức khỏe (thường nói về các triệu chứng mà nam giới gặp phải), mà còn trên các trải nghiệm cá nhân của mọi người trên phương tiện truyền thông xã hội. Sau đó, tôi nhìn lại cuộc sống của mình để xem liệu tôi đã từng trải qua những triệu chứng đó chưa và ghi lại chúng để tôi không quên khi nói chuyện với bác sĩ tâm thần.</p>
 
-                            <h2>Bạn cảm thấy như thế nào sau khi nhận chuẩn đoán?</h2>
+                            <h2>Bạn cảm thấy như thế nào sau khi nhận chẩn đoán?</h2>
                             <p>Tôi vẫn chưa chắc chắn mình cảm thấy thế nào. Tôi mới bắt đầu dùng thuốc ở mức có tác dụng (liều trước của tôi chỉ để cơ thể quen với thuốc). Tôi có thể nhận ra sự khác biệt nhưng giờ tôi đang ở giai đoạn mà tôi tự hỏi "liệu đây có phải là cảm giác mà tôi nên cảm thấy hay vẫn còn chỗ để cải thiện?"</p>
 
                             <h2>Bạn có nghĩ mình "giống" với hình mẫu ADHD không?</h2>
@@ -145,7 +145,7 @@ const Story5 = () => {
                             <h2>Điểm mạnh của bạn về chứng ADHD?</h2>
                             <p>Có lẽ là sự nhiệt tình và sức chịu đựng của tôi. Tôi vẫn đam mê nhiều thứ khác nhau và đã học được qua những khó khăn trong nhiều năm rằng đến cuối ngày, tôi sẽ vượt qua được.</p>
 
-                            <h2>Gia đình/ bạn bè phản ứng như thế nào khi bạn nhận được chuẩn đoán mắc bệnh?</h2>
+                            <h2>Gia đình/ bạn bè phản ứng như thế nào khi bạn nhận được chẩn đoán mắc bệnh?</h2>
                             <p>Mẹ tôi thực ra là người đã đưa ADHD ra với tôi. Tôi đã tin rằng mình không mắc chứng bệnh này nhưng sau khi mẹ tôi chỉ cho tôi tất cả các triệu chứng khác nhau có thể liên quan đến ADHD, tôi bắt đầu nhận ra rằng mình mắc rất nhiều triệu chứng. Bố tôi là một ông bố người Anh điển hình, người hơi bỏ qua các vấn đề về sức khỏe tâm thần, vì chúng không thực sự được xem xét khi ông còn nhỏ.</p>
 
                             <h2>Lời khuyên của bạn cho những người đang nghi ngờ bản thân họ mắc ADHD?</h2>

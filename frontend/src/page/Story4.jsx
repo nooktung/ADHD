@@ -127,16 +127,16 @@ const Story4 = () => {
                             <h2>Đặc điểm ADHD rõ ràng nhất của bạn khi còn nhỏ?</h2>
                             <p>Tôi luôn mơ mộng, vẽ nguệch ngoạc trong lớp, vội vã làm bài kiểm tra và mất kiên nhẫn. Tôi đã và vẫn cực kỳ bừa bộn và vô tổ chức, tôi thường xuyên làm mất đồ. Mẹ tôi cũng lo lắng vì tôi có thể đọc sách viễn tưởng hàng giờ liền mà không di chuyển hay ăn uống.</p>
 
-                            <h2>Việc chuẩn đoán có khó không?</h2>
+                            <h2>Việc chẩn đoán có khó không?</h2>
                             <p>Không hề. Tôi đã nghiên cứu về ADHD trong vài tháng và sau đó chỉ cần tìm kiếm bác sĩ tâm thần trong khu vực của tôi và đặt lịch hẹn. Tôi chỉ phải đợi ba tuần và bác sĩ đã chẩn đoán tôi trong buổi đầu tiên. Đó là 6 tuần trước.</p>
 
-                            <h2>Bạn cảm thấy thế nào sau khi nhận được chuẩn đoán?</h2>
+                            <h2>Bạn cảm thấy thế nào sau khi nhận được chẩn đoán?</h2>
                             <p>Tôi cảm thấy như một gánh nặng đã được trút bỏ khỏi vai mình. Nhưng rồi tôi đã trải qua năm giai đoạn đau buồn. Tôi tự hỏi liệu chẩn đoán có đúng không, tôi tức giận vì nó đến quá muộn (đặc biệt là sau khi cố gắng đề cập đến vấn đề này cách đây 9 năm), tôi cảm thấy chán nản về cuộc sống mà tôi có thể có. Bây giờ tôi chấp nhận điều đó và thay vào đó cảm thấy tự hào về những gì tôi đã đạt được, bất chấp những khó khăn của mình.</p>
 
                             <h2>Điểm mạnh của bạn về chứng ADHD?</h2>
                             <p>Tôi yêu công việc của mình. Vì vậy, tôi có xu hướng tập trung cao độ vào nó. Và tôi có rất nhiều lòng trắc ẩn.</p>
 
-                            <h2>Gia đình/ bạn bè của bạn phản ứng như thế nào khi bạn được chuẩn đoán mắc bệnh?</h2>
+                            <h2>Gia đình/ bạn bè của bạn phản ứng như thế nào khi bạn được chẩn đoán mắc bệnh?</h2>
                             <p>Tôi phát hiện ra rằng anh em họ của tôi cũng bị ADHD! Hầu hết mọi người đều rất ủng hộ. Một số người ủng hộ nhiều hơn những người khác, vì "mọi người đều được chẩn đoán mắc ADHD những ngày này". Một người bạn làm việc thậm chí còn in ra một danh sách các triệu chứng và yêu cầu tôi giải thích chúng là gì và chúng biểu hiện như thế nào ở tôi.</p>
 
                             <h2>Lời khuyên của bạn cho những người đang nghi ngờ bản thân họ có mắc ADHD không?</h2>
