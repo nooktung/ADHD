@@ -366,7 +366,7 @@ const Header = () => {
                     <h3 className="feature-card__title">Ấn phẩm sách</h3>
                   </div>
                 </div>
-                <p className="feature-card__description">Xem tất cả các bài viết của chúng tôi!</p>
+                <p className="feature-card__description">Xem sản phẩm đầu tay của chúng tôi</p>
                 <a
                   href="https://www.facebook.com/people/ADHD-B%E1%BA%A3n-Giao-H%C6%B0%E1%BB%9Fng-T%E1%BA%ADp-Trung/61576988307181/"
                   className="feature-card__link"

@@ -83,7 +83,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
     width: 100%;
   }
@@ -105,7 +105,7 @@
   
   .hero-visual {
     background: var(--powder-blue);
-    padding: 1rem;
+    padding: 1rem 0rem;
     border-radius: 20px;
     text-align: center;
     position: relative;

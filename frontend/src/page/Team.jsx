@@ -321,8 +321,8 @@ const Team = () => {
       image: "Mai Thị Lan Anh.jpg",
       shortBio: "K18 - Digital Marketing",
       fullBio: "Mai Thị Lan Anh là sinh viên năm 3 chuyên ngành Digital Marketing tại FPT University. Là Internal Coordinator của nhóm, Lan Anh có khả năng quản lý và tổ chức các hoạt động nội bộ hiệu quả, đảm bảo mọi thành viên trong nhóm đều có thể phát huy tối đa năng lực của mình. Với tính cách nhiệt tình và trách nhiệm cao, em luôn là cầu nối tin cậy giữa các bộ phận trong dự án.",
-      email: "nookhanhtungf5@gmail.com",
-      phone: "0987654321",
+      email: "maianh3504@gmail.com",
+      phone: "0379340731",
       location: "Thanh Hóa, Việt Nam",
       experience: "Sinh viên năm 3",
       education: "Digital Marketing - Đại học FPT",
@@ -334,6 +334,7 @@ const Team = () => {
         "Social Media Marketing"
       ],
       achievements: [
+        "Trưởng nhóm dự án \"Từ Tâm\"",
         "Sinh viên giỏi kỳ Summer 2024",
         "Sinh viên suất sắc kỳ Fall 2024",
         "Sinh viên suất sắc kỳ Spring 2025",
@@ -497,7 +498,7 @@ const Team = () => {
       image: "Vũ Thị Phương Linh.jpg",
       shortBio: "K19 - Digital Marketing",
       fullBio: "Chào mọi người, mình là Vũ Thị Phương Linh, một mảnh ghép của nhóm Alight, đồng thời đảm nhiệm vai trò External Relations. Mình đang học năm 2 ngành Digital Marketing và phụ trách việc kết nối, xây dựng mối quan hệ với các đối tác bên ngoài. Mình tin rằng ADHD không phải là 'thiếu tập trung' hay 'bệnh lười biếng' mà là một hội chứng cần được hiểu đúng và nhìn nhận với sự cảm thông.",
-      email: "linhvt@fpt.edu.vn",
+      email: "vulinh206005@gmail.com",
       phone: "0903456789",
       location: "Hải Phòng, Việt Nam",
       experience: "Sinh viên năm 2",

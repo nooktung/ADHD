@@ -451,7 +451,7 @@ const LandingPage = () => {
           <div className="blog-header">
             <div className="blog-title-section">
               <h2>Bài Báo Về ADHD</h2>
-              <p className="blog-subtitle">Khám phá các bài báo và nghiên cứu mới nhất về ADHD từ báo chí và cộng đồng</p>
+              <p className="blog-subtitle">Theo dõi các bài báo truyền thông của nhóm trên mạng xã hội</p>
             </div>
           </div>
 
@@ -501,7 +501,7 @@ const LandingPage = () => {
           <div className="stories-header">
             <div className="stories-title-section">
               <h2>Câu Chuyện ADHD</h2>
-              <p className="stories-subtitle">Trải nghiệm thực tế từ những người sống với ADHD</p>
+              <p className="stories-subtitle">Câu chuyện của những người sống với ADHD</p>
             </div>
           </div>
 
@@ -568,7 +568,7 @@ const LandingPage = () => {
           <div className="social-header">
             <h2>Theo dõi chúng tôi trên Mạng Xã Hội!</h2>
             <p className="social-subtitle">
-              Xem nội dung giáo dục hàng ngày của chúng tôi trên Facebook
+             Xem nội dung hàng ngày của chúng tôi trên Facebook
               <a href="https://www.facebook.com/profile.php?id=61576988307181" className="social-link">
                 ngay tại đây <span className="external-icon">↗</span>
               </a>
